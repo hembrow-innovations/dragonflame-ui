@@ -1,0 +1,13 @@
+.heio/logs/
+.DS_Store
+.env
+.env.*
+!.env.example
+/target
+node_modules/
+.opencode/node_modules/
+docs/99_scribble
+*.out.js
+*.out.js.map
+*.out
+*.dSYM
