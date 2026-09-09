@@ -1,0 +1,50 @@
+---
+id: "slice-75-portable-web-import"
+title: "Portable web import"
+kind: slice
+status: frozen
+sprint: "web-tracers"
+blocked_by:
+  - "slice-70-counter-on-dom"
+tags: []
+created_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T23:30:00Z"
+---
+
+# Portable web import
+
+## Why
+
+Boundary demo. Portable UI imports the thin Draconic surface, not `document`.
+
+## Done
+
+A portable Program compiles against the portability API. Importing `document` from portable code hard-errors. Wrong-target use is not a runtime no-op.
+
+## Blocked by
+
+[[slice-70-counter-on-dom]]: a portable tree exists first.
+
+## Non-goals
+
+Host I/O as a browser. Native `extern "C"` path. Second IR.
+
+## Oracle checklist
+
+- [ ] O1: portable import
+  CHECK: node --test tests/portable-import.test.mjs
+  EXPECT: pass
+  EVIDENCE: pending
+- [ ] O2: document import hard-errors
+  CHECK: node --test tests/portable-wrong-target.test.mjs
+  EXPECT: pass
+  EVIDENCE: pending
+
+## Pool
+
+- [[task-102-spec-port-web]]
+- [[task-103-red-green-portable]]
+
+## See also
+
+- [[location-41-renderer-portability]]
