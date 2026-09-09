@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `owner.dispose:unmount`. Oracle command:
+Tests for this folder. They lock `owner.dispose:unmount`. Oracle command:
 
 - node --test tests/owner-dispose.test.mjs
 
@@ -30,4 +30,3 @@ Tests for this folder. They will lock `owner.dispose:unmount`. Oracle command:
 ## Gaps
 
 - No test yet for `owner.dispose:forbid-fiber` or `owner.dispose:forbid-inherited-widget`.
-- The oracle test is not in the repo yet. This folder is ladder only.

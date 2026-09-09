@@ -2,7 +2,7 @@
 id: "task-93-red-green-unmount"
 title: "Red-green: unmount disposes"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-92-spec-owner"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-71-unmount-disposes"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:01:54Z"
 ---
 
 # Red-green: unmount disposes
@@ -37,3 +37,7 @@ scope: library owner module, tests/owner-dispose.test.mjs
 
 - [[slice-71-unmount-disposes]]
 - [[task-92-spec-owner]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/owner-dispose.test.mjs` win. Gap: none.
