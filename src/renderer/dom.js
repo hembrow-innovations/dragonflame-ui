@@ -44,7 +44,15 @@ function mount(tree, parent) {
 		el.textContent = value;
 	}
 	const children = props.children;
-	if (children != null) {
+	if (children != null && typeof children.get === "function") {
+		follow(
+			() => children.get(),
+			(next) => {
+				el.textContent = "";
+				if (next) mount(next, el);
+			},
+		);
+	} else if (children != null) {
 		for (const child of [].concat(children)) {
 			if (child) mount(child, el);
 		}

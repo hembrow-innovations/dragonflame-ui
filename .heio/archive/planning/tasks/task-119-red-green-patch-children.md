@@ -2,7 +2,7 @@
 id: "task-119-red-green-patch-children"
 title: "Red-green: patch children"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-118-red-green-patch-style"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-116-patch-attrs-children"
 tags: []
 created_at: "2026-09-10T09:15:00Z"
-updated_at: "2026-09-10T09:15:00Z"
+updated_at: "2026-09-10T12:30:00Z"
 ---
 
 # Red-green: patch children
@@ -39,3 +39,7 @@ scope: src/renderer/, tests/patch-children.test.mjs
 
 - [[slice-116-patch-attrs-children]]
 - [[task-118-red-green-patch-style]]
+
+## Gauntlet
+
+round 1, `node --test tests/patch-children.test.mjs`, win, children signal write patches one host vnode under the retained parent and the component does not re-run
