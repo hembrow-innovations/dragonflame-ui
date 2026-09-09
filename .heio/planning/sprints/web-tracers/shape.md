@@ -31,6 +31,7 @@ Location: [[location-17-web-component-library]]. Thin vertical demos on the JS b
 - [[slice-129-signal-dirtying-honesty]]: signal dirtying honesty. blocked_by: [[slice-70-counter-on-dom]]
 - [[slice-133-crate-workspace-honesty]]: crate workspace honesty. blocked_by: [[slice-69-importable-package]]
 - [[slice-137-render-object-honesty]]: render object honesty. blocked_by: [[slice-70-counter-on-dom]]
+- [[slice-141-web-layout-honesty]]: web layout honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
 
 ## Slices out
 
