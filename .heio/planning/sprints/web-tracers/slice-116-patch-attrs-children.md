@@ -2,13 +2,13 @@
 id: "slice-116-patch-attrs-children"
 title: "Patch attrs and children"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T09:15:00Z"
-updated_at: "2026-09-10T09:15:00Z"
+updated_at: "2026-09-10T13:00:00Z"
 ---
 
 # Patch attrs and children
@@ -31,14 +31,14 @@ Show, keyed For, child-list patch of a changing array, a public patch or reconci
 
 ## Oracle checklist
 
-- [ ] O1: style signal write patches the same host node
+- [x] O1: style signal write patches the same host node
   CHECK: node --test tests/patch-style.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: children signal write patches one child under the same parent
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: children signal write patches one child under the same parent
   CHECK: node --test tests/patch-children.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
