@@ -2,13 +2,13 @@
 id: "slice-73-testid-pressable"
 title: "Test ID pressable"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T14:30:00Z"
 ---
 
 # Test ID pressable
@@ -31,10 +31,10 @@ ARIA-only as the native model. Native semantics tree is [[slice-83-talk-and-meas
 
 ## Oracle checklist
 
-- [ ] O1: test ID and a11y props
+- [x] O1: test ID and a11y props
   CHECK: node --test tests/testid-a11y.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2 pass 0 fail
 
 ## Pool
 
