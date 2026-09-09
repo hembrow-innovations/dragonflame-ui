@@ -43,11 +43,17 @@ Open product questions are non-empty until a wayfinder or planning sitting close
 
 ## Rules
 
+- TDD, DRY, YAGNI; prefer one-liner solutions when clear
+- for scripting only use js/mjs not bash or sh
 - Markdown: never tables — use `- **{text}**: {text}`
-- Git: commit every work package when the user asks. Never stage `.heio/` or `.opencode/node_modules/`
+- Commits as work packages: `<type>(<scope>): <description>` — `feat` | `fix` | `test` | `refactor` | `chore` 
+- No `Co-Authored-By` lines
+- No CI/CD or GitHub Actions
 - Do not invent work when the user did not name a task and planning has not published ready tasks
-- Do not edit `.hivemind/hivemind.yaml`, `.pi/` copies, or heio-stack operating notes
-
-## Next sitting
-
-Next planning step is a design-tree sitting: counterpart is the user in chat; notebook is the wayfinder round under `.heio/planning/rounds/`. Do not publish slices or tasks until that sitting confirms.
+- Extremely concise output
+- No em dashes (`—`)
+- Prefer matching this repo's existing patterns over inventing new ones.
+- Do not commit secrets or credentials.
+- Always keep the `target` directory below 10GB
+- File size target ≤1000 LOC, hard limit 1250 (prove fails over 1200)
+- Also create sub folders in packages so that its no one flat file list
