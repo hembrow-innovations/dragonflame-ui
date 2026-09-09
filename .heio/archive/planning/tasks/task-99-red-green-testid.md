@@ -2,7 +2,7 @@
 id: "task-99-red-green-testid"
 title: "Red-green: test ID pressable"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-98-spec-testid"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-73-testid-pressable"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:31:07Z"
 ---
 
 # Red-green: test ID pressable

@@ -16,6 +16,8 @@ function mount(tree, parent) {
 	const el = document.createElement(tag);
 	const props = tree.props ?? {};
 	if (props.style) Object.assign(el.style, props.style);
+	if (props.testID != null) el["data-testid"] = props.testID;
+	if (props.accessibilityLabel != null) el["aria-label"] = props.accessibilityLabel;
 	const value = props.text;
 	if (value != null && typeof value.get === "function") {
 		follow(

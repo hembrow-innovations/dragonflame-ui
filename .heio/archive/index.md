@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-99-red-green-testid**: first-class test ID and a11y props; pressable found by test ID.
 - **task-98-spec-testid**: a11y and test ID spec ladder; first-class props on web leaves.
 - **task-97-red-green-input-pressable**: text input and pressable render on DOM; closed set complete.
 - **task-96-red-green-image-scroll**: image and scroll leaves render on DOM.
