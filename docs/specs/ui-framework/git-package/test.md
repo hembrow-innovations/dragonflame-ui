@@ -17,16 +17,26 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-No code tests yet. All promises are asserted, not locked: `git-package.identity:name`, `git-package.identity:library-product`, `git-package.identity:forbid-public-site-rewrite`, `git-package.layout:library-first`, `git-package.layout:no-empty-crates`.
+Red tests for this folder. They lock `git-package.identity:name`, `git-package.identity:library-product`, `git-package.identity:forbid-public-site-rewrite`, `git-package.layout:library-first`, and `git-package.layout:no-empty-crates`. Import and library-first are not true yet.
 
 ## Tests
 
-- (none)
+- **tests/git-package.test.mjs**: `working product name, folder, git package, and GitHub repo are dragonflame-ui`
+  - **How:** asserts the checkout folder and GitHub remote are dragonflame-ui, and that package.json names dragonflame-ui
+  - **Why:** promise `git-package.identity:name`
+- **tests/git-package.test.mjs**: `dragonflame-ui imports as a library product in this repo`
+  - **How:** `import("dragonflame-ui")` from this checkout
+  - **Why:** promise `git-package.identity:library-product`
+- **tests/git-package.test.mjs**: `public site stays TanStack Start and is not a rewrite destination`
+  - **How:** asserts this repo has no TanStack Start app.config
+  - **Why:** promise `git-package.identity:forbid-public-site-rewrite`
+- **tests/crate-layout.test.mjs**: `the first package is the dragonflame-ui library`
+  - **How:** asserts package.json exists and its name is dragonflame-ui
+  - **Why:** promise `git-package.layout:library-first`
+- **tests/crate-layout.test.mjs**: `there are no empty Rust crates`
+  - **How:** walks the tree for Cargo.toml whose crate has no non-empty .rs files
+  - **Why:** promise `git-package.layout:no-empty-crates`
 
 ## Gaps
 
-- No test yet for promise `git-package.identity:name`. Planned path: tests/git-package.test.mjs
-- No test yet for promise `git-package.identity:library-product`. Planned path: tests/git-package.test.mjs
-- No test yet for promise `git-package.identity:forbid-public-site-rewrite`. Planned path: tests/git-package.test.mjs
-- No test yet for promise `git-package.layout:library-first`. Planned path: tests/crate-layout.test.mjs
-- No test yet for promise `git-package.layout:no-empty-crates`. Planned path: tests/crate-layout.test.mjs
+- (none)
