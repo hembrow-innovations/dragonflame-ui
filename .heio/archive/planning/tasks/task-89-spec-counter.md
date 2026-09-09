@@ -2,7 +2,7 @@
 id: "task-89-spec-counter"
 title: "Spec the counter demo"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-88-green-package-import"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T12:00:00Z"
 ---
 
 # Spec the counter demo
