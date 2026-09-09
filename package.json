@@ -1,0 +1,5 @@
+{
+  "name": "dragonflame-ui",
+  "type": "module",
+  "exports": "./src/index.js"
+}

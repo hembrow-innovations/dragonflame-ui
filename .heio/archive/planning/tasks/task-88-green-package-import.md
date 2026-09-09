@@ -2,7 +2,7 @@
 id: "task-88-green-package-import"
 title: "Green: package import"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-87-red-package-import"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T05:30:00Z"
 ---
 
 # Green: package import

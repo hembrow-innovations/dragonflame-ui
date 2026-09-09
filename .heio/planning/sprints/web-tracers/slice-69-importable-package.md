@@ -30,14 +30,14 @@ Renderer, signals, public-site rewrite, engine crates, CI.
 
 ## Oracle checklist
 
-- [ ] O1: package identity
+- [x] O1: package identity
   CHECK: node --test tests/git-package.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no empty Rust crates
+  EVIDENCE: 3 pass 0 fail
+- [x] O2: no empty Rust crates
   CHECK: node --test tests/crate-layout.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2 pass 0 fail
 
 ## Pool
 

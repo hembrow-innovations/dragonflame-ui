@@ -4,6 +4,6 @@ dragonflame-ui is a sibling of draconic. It will be a Flutter-shaped multiplatfo
 
 Web compiles to ordinary JavaScript, not WASM. Native is LLVM binaries with no WebView and no JavaScript engine.
 
-This repo is scaffolding plus docs and planning, not an implementation yet. Open OpenCode in this folder after the skill copy. A planning and wayfinder sitting is next.
+This repo is the dragonflame-ui library product. Folder, package, and repo match. Import `dragonflame-ui` from this checkout.
 
 Committed product truth will live under `docs/overview/`. Day-to-day planning lives under `.heio/planning/`.

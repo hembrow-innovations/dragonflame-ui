@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-88-green-package-import**: dragonflame-ui git package imports; no empty Rust crates.
 - **task-87-red-package-import**: red tests for dragonflame-ui import and crate layout.
 - **task-86-spec-git-package**: spec ladder for the dragonflame-ui git package.
 - **ticket-16-gpu-library** — wgpu when native is funded.

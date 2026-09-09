@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Red tests for this folder. They lock `git-package.identity:name`, `git-package.identity:library-product`, `git-package.identity:forbid-public-site-rewrite`, `git-package.layout:library-first`, and `git-package.layout:no-empty-crates`. Import and library-first are not true yet.
+Tests for this folder. They lock `git-package.identity:name`, `git-package.identity:library-product`, `git-package.identity:forbid-public-site-rewrite`, `git-package.layout:library-first`, and `git-package.layout:no-empty-crates`. Import and library-first hold.
 
 ## Tests
 
