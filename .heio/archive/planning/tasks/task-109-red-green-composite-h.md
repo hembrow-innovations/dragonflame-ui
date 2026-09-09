@@ -2,7 +2,7 @@
 id: "task-109-red-green-composite-h"
 title: "Red-green: composite h"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-108-spec-composite"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-107-composite-on-dom"
 tags: []
 created_at: "2026-09-10T22:30:00Z"
-updated_at: "2026-09-10T22:30:00Z"
+updated_at: "2026-09-09T22:36:35Z"
 ---
 
 # Red-green: composite h

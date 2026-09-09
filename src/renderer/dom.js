@@ -11,6 +11,10 @@ const hostTag = {
 };
 
 function mount(tree, parent) {
+	if (typeof tree.type === "function") {
+		mount(tree.type(tree.props ?? {}), parent);
+		return;
+	}
 	const tag = hostTag[tree.type];
 	if (!tag) throw new Error(tree.type);
 	const el = document.createElement(tag);

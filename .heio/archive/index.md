@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-109-red-green-composite-h**: h(function, props) mounts to host leaves; composite runs once on a text patch.
 - **task-108-spec-composite**: composite spec ladder; function type as h(), props.children, run-once, no Show, no For.
 - **task-105-red-green-no-sugar-fakes**: tests fail if JSX parser work, TypeScript emit, IR fork, or a bytecode VM appears.
 - **task-104-spec-absence**: absence spec ladder; no JSX here, no faked lowerer, hot reload not a v1 gate.

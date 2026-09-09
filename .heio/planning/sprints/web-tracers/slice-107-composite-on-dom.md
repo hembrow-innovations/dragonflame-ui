@@ -31,18 +31,18 @@ Show, keyed For, Widget subclassing, a public RenderObject type, native hosts, J
 
 ## Oracle checklist
 
-- [ ] O1: function type mounts to host leaves
+- [x] O1: function type mounts to host leaves
   CHECK: node --test tests/composite-h.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 - [ ] O2: props.children nest through the composite onto DOM
   CHECK: node --test tests/composite-children.test.mjs
   EXPECT: pass
   EVIDENCE: pending
-- [ ] O3: composite function did not re-run on a text patch
+- [x] O3: composite function did not re-run on a text patch
   CHECK: node --test tests/composite-run-once.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
