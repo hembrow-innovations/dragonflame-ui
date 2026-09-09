@@ -28,6 +28,7 @@ Do not start a `shaping` slice. Do not start a slice whose `blocked_by` ids are 
 ## Rules
 
 - One slice. Never touch other slice files except this one's `blocked_by` reads.
-- `/afk-task` is the only way a task gets implemented.
+- `/afk-task` is the only way a task gets implemented. It claims through `node .loop/claim-ready.mjs`.
+- Same checkout as `/afk-plan`. No git branch. No worktree. Do not run an `/afk-slice` loop beside an `/afk-task` loop.
 - Create a ticket if something belongs to the project, not this slice.
 - End with `VERDICT: TASK | TICKET | ESCALATE | VERIFY`.

@@ -4,10 +4,13 @@
 // Usage: node .loop/opencode-loop.mjs <loops> [prompt...]
 //        node .loop/opencode-loop.mjs 200
 //        node .loop/opencode-loop.mjs 5 "fix the failing tests"
+//        LOOP_COMMAND=afk-plan node .loop/opencode-loop.mjs 200
+//        LOOP_COMMAND=afk-task node .loop/opencode-loop.mjs 200
 // Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.6
 // SLEEP=<seconds> between loops. STALL_SEC=900 idle stdout/stderr → kill (0 disables).
 // STALL_ACTION=continue|abort (default continue). FAIL_ACTION=continue|abort (default continue).
 // LOG=0 skips .loop/logs/loop-<stamp>.log (default on).
+// Dual AFK loops share this checkout. No extra branch. No worktree.
 
 import { spawn } from "node:child_process";
 import {
@@ -22,8 +25,9 @@ import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
 import { readRoadmapStatus } from "./roadmap-status.mjs";
 
-const DEFAULT_COMMAND = "afk-roadmap";
-const DEFAULT_ARGS = ["continue"];
+const DEFAULT_COMMAND = process.env.LOOP_COMMAND || "afk-roadmap";
+const DEFAULT_ARGS = DEFAULT_COMMAND === "afk-roadmap" ? ["continue"] : [];
+const isRoadmapCampaign = DEFAULT_COMMAND === "afk-roadmap";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
@@ -201,14 +205,14 @@ emit(
 	`stall watchdog: ${stallSec > 0 ? `${stallSec}s idle → kill (${stallAction})` : "disabled"} (STALL_SEC / STALL_ACTION)`,
 );
 emit(
-	`prompt: ${useDefaultAudit ? `/afk-roadmap continue` : promptParts.join(" ")}`,
+	`prompt: ${useDefaultAudit ? `/${DEFAULT_COMMAND}${DEFAULT_ARGS.length ? ` ${DEFAULT_ARGS.join(" ")}` : ""}` : promptParts.join(" ")}`,
 );
 emit(`opencode ${argsPreview}`);
 
 let stalls = 0;
 let errors = 0;
 for (let i = 1; i <= loops; i++) {
-	if (useDefaultAudit) {
+	if (useDefaultAudit && isRoadmapCampaign) {
 		const { total, audited, remaining, next } = campaign();
 		emit(
 			`campaign: audited ${audited}/${total} remaining=${remaining} next=${next ?? "none"}`,
