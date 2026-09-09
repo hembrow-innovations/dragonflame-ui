@@ -1,5 +1,8 @@
 {
   "name": "dragonflame-ui",
   "type": "module",
-  "exports": "./src/index.js"
+  "exports": {
+    ".": "./src/index.js",
+    "./portable": "./src/portability/surface.js"
+  }
 }

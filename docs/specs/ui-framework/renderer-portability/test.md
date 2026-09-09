@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `renderer-portability.surface:thin` and `renderer-portability.wrong-target:hard-error`. Oracle commands:
+Tests for this folder. They lock `renderer-portability.surface:thin` and `renderer-portability.wrong-target:hard-error`. Oracle commands:
 
 - node --test tests/portable-import.test.mjs
 - node --test tests/portable-wrong-target.test.mjs
@@ -34,5 +34,4 @@ Tests for this folder. They will lock `renderer-portability.surface:thin` and `r
 ## Gaps
 
 - No test yet for `renderer-portability.web:js-only-dom`, `renderer-portability.host-io:forbid-browser`, or `renderer-portability.program:forbid-os`.
-- The two oracle tests are not in the repo yet. This folder is ladder only.
 - No test yet for a Metal import. Web path proves `document`.

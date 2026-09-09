@@ -2,7 +2,7 @@
 id: "task-103-red-green-portable"
 title: "Red-green: portable import"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-102-spec-port-web"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-75-portable-web-import"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:58:11Z"
 ---
 
 # Red-green: portable import
@@ -37,3 +37,7 @@ scope: library portability module, tests/portable-import.test.mjs, tests/portabl
 
 - [[slice-75-portable-web-import]]
 - [[task-102-spec-port-web]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/portable-import.test.mjs` and `node --test tests/portable-wrong-target.test.mjs` win. 2 pass. Done line holds.
