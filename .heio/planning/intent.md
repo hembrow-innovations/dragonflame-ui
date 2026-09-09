@@ -5,14 +5,14 @@ kind: intent
 status: active
 tags: []
 created_at: "2026-09-09T12:00:00Z"
-updated_at: "2026-09-09T12:00:00Z"
+updated_at: "2026-09-09T09:43:04Z"
 ---
 
 # Intent
 
 ## Why this project exists
 
-A Flutter-shaped multiplatform UI whose framework library is Draconic. One component model.
+A Flutter-shaped multiplatform UI whose framework library is Draconic. Working product name: Draconflame UI. One component model.
 
 - **Web**: JS backend, no WASM.
 - **Native**: LLVM binary, no WebView, no JS engine (Hermes, JSC, or V8).

@@ -1,6 +1,6 @@
 # dragons-egg
 
-dragons-egg is a sibling of draconic. It will be a Flutter-shaped multiplatform UI stack whose framework library is written in Draconic.
+Working product name: Draconflame UI. dragons-egg is a sibling of draconic. It will be a Flutter-shaped multiplatform UI stack whose framework library is written in Draconic.
 
 Web compiles to ordinary JavaScript, not WASM. Native is LLVM binaries with no WebView and no JavaScript engine.
 

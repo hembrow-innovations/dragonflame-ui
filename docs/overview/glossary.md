@@ -11,7 +11,13 @@ updated_at: "2026-09-09"
 
 # Glossary
 
-Proposed language for this UI-framework idea. These names come from the scribble. They are not locked ADRs. Vault layout is [[overview-vault]]. The idea is [[overview-ui-framework]]. The proposed stack is [[architecture-layer-cake]].
+Proposed language for this UI-framework idea. These names come from the scribble unless a sitting locked them. They are not locked ADRs. Vault layout is [[overview-vault]]. The idea is [[overview-ui-framework]]. The proposed stack is [[architecture-layer-cake]].
+
+## Product
+
+**Draconflame UI**:
+Working product name for this UI framework. The checkout folder remains dragons-egg. The git package name is draconflame-ui.
+_Avoid_: Flamework UI, treating the folder name as the product name
 
 ## Language
 
@@ -30,16 +36,16 @@ Proposed per-OS host for the window, GPU surface, vsync, input, IME, clipboard, 
 _Avoid_: Engine, Runtime, WebView shell
 
 **Runtime**:
-Language tracing GC, job queue, promises, and timers. On native, a frame callback is a job on that queue. Not graphics.
-_Avoid_: Engine, JS interpreter, VM, Hermes
+Language tracing GC, job queue, promises, and timers. On native, a frame callback is a job on that queue. Not graphics. No JS engine means no Hermes, JSC, or V8, not the absence of this Runtime.
+_Avoid_: Engine, JS interpreter, VM, Hermes, "no JavaScript at runtime" as a slogan that throws away GC
 
 **Renderer portability API**:
-Proposed thin Draconic surface between portable UI code and a host. Native path uses `extern "C"` and unboxed numbers and structs. Web path uses JS-only DOM or Canvas bindings. Wrong-target use hard-errors.
+Proposed thin Draconic surface between portable UI code and a host. Native path uses `extern "C"` and unboxed numbers and structs. Web path uses JS-only DOM bindings. Wrong-target use hard-errors.
 _Avoid_: platform channel, JSI, Host I/O as a browser
 
 **Host**:
-A compile target that mounts leaf primitives. Proposed hosts include web DOM, optional web canvas, native OEM views, and a native canvas engine path.
-_Avoid_: WebView as native, WASM as the web host
+A compile target that mounts leaf primitives. Web host is DOM only. Native default, if funded, is a canvas engine path. OEM views are an escape hatch.
+_Avoid_: WebView as native, WASM as the web host, web canvas, OEM widgets as the native default
 
 ### Authoring
 
@@ -56,7 +62,7 @@ Proposed ownership node for effects and nested reactive scopes. Unmount disposes
 _Avoid_: React Fiber, Flutter Element dirty flag
 
 **Hyperscript**:
-Proposed first authoring form: `h(type, props)` calls. There is no JSX in Draconic today. JSX later would be sugar for the same calls, and remains a human decision.
+First authoring form: `h(type, props)` calls. There is no JSX in Draconic today. JSX later would be sugar for the same calls, and remains a later human decision.
 _Avoid_: JSX as a present language feature
 
 ### Trees

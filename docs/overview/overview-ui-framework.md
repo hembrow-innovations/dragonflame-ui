@@ -13,11 +13,11 @@ updated_at: "2026-09-09"
 
 Cold-reader orientation. This is a proposed idea, not a locked product and not an ADR. Terms live in [[glossary]]. The proposed stack is [[architecture-layer-cake]]. Vault layout is [[overview-vault]].
 
-The working folder name is dragons-egg. The working product name is an open question.
+The working folder name is dragons-egg. The working product name is Draconflame UI.
 
 ## What this is
 
-Proposed shape: one app language, one component model, two compile targets.
+Proposed shape: a library product in this repo, not a language feature. One app language, one component model, two compile targets.
 
 - **Web**: Frontend to shared IR to the JS backend. The browser runs that JavaScript. Not WebAssembly. Not an extra VM.
 - **Native**: Frontend to the same IR to LLVM. A real binary, linked with the Runtime, a Rust engine, and a platform embedder. No Hermes, no JavaScriptCore, no V8, no WKWebView.
@@ -26,9 +26,9 @@ The Framework library (components, signals, layout policy, gestures, animation c
 
 Authoring is proposed as React-like to read: function components, props in, children in. Reactivity is proposed as Leptos and Solid-like Signal graphs: a component function runs once, creates signals, and returns a tree. Later writes flow through the graph. No virtual DOM. No Fiber. No hooks. No class components for UI.
 
-There is no JSX in Draconic today. Proposed first authoring is Hyperscript: `h(type, props)`. JSX later would be sugar for the same calls, erased before IR, and is a human decision. That choice is still an open product question below.
+There is no JSX in Draconic today. First authoring is Hyperscript: `h(type, props)`. JSX later would be sugar for the same calls, erased before IR, and remains a later human decision.
 
-Native Draconic still has a tracing GC for language values. That is not a JavaScript interpreter. What "no JS runtime on native" means, given that GC, is an open product question. Do not throw the GC away to satisfy a slogan.
+Native Draconic still has a tracing GC for language values. That is not a JavaScript interpreter. Product wording: no JS engine on native, meaning no Hermes, JavaScriptCore, V8, or WebView. Do not throw the GC away to satisfy a slogan. The embedder owns the window, vsync, and input. The engine owns the GPU surface. No Skia requirement. No Flutter embedder as a product dependency.
 
 ## What to copy and reject
 
@@ -84,25 +84,14 @@ Not a schedule. Not the next toolchain Loop atom. Proposed only, after a human p
 
 - **Phase 0, already true**: JS emit into a browser. No JSX. No WASM web target.
 - **Phase 1, after a human product decision**: git package for components and reactivity, hyperscript, DOM renderer, tests. JS backend plus browser APIs.
-- **Phase 2**: canvas-in-JS renderer if paint fidelity on web is needed.
-- **Phase 3, only if native UI is funded**: Rust engine, desktop embedder, FFI scene commands.
-- **Phase 4**: iOS and Android embedders, store packaging, accessibility, text, platform views.
-- **Phase 5, optional**: JSX sugar, hot reload via Embed or JS-debug, a general LLVM lowerer so more of the framework runs as one native program.
+- **Phase 2, only if native UI is funded**: Rust engine, desktop embedder, FFI scene commands.
+- **Phase 3**: iOS and Android embedders, thin Xcode and Gradle shells, iOS arm64 device plus simulator, Android arm64-v8a plus x86_64 emulator, store packaging, accessibility, text, platform views.
+- **Phase 4, optional**: JSX sugar, hot reload via Embed or JS-debug, a general LLVM lowerer so more of the framework runs as one native program.
 
-Layout algorithm (Yoga versus Taffy versus Draconic) is not chosen. Native default (OEM widgets, custom engine, or bindgen) is not chosen.
+Native layout is Taffy in the Rust engine. Web layout is CSS. Native default is a custom Rust engine, with OEM widgets as an escape hatch, only if native UI is funded.
 
 ## Open product questions
 
 Mark these undecided. Do not invent rules.
 
-- **Working name** for the framework.
-- **Language feature versus library product.** Vault purpose docs have no UI job.
-- **What “no JS runtime on native” means**, given ADR-0003 still requires GC for JS values.
-- **JSX, hyperscript, or function components with no markup syntax.**
-- **Web renderer**: DOM-first like todo, or custom canvas that still emits JavaScript.
-- **Native default**: OEM widgets, custom engine, or Draconic calling C through bindgen.
-- **Layout algorithm**: Yoga versus Taffy versus Draconic.
-- **iOS and Android packaging, app shells, and triples.** Not D04.
-- **Threading**: UI on the main isolate only, or shared memory later.
-- **Does the public site stay TanStack Start**, or would it ever be rewritten in this framework.
-- **Who owns windowing and GPU.** Host I/O currently says not a browser. Nothing says Skia, Metal, or a Flutter embedder.
+None. Settled answers live on [[rounds-01-chart-framework]].

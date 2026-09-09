@@ -2,11 +2,11 @@
 id: "ticket-02-working-name"
 title: "Working name for the framework"
 kind: ticket
-status: open
+status: closed
 ticket_type: planning
 tags: [wayfinder]
 created_at: "2026-09-09T12:00:00Z"
-updated_at: "2026-09-09T12:00:00Z"
+updated_at: "2026-09-09T09:43:04Z"
 references: ["rounds-01-chart-framework"]
 blocked_by: []
 ---
@@ -23,4 +23,4 @@ Wayfinder map decision for [[rounds-01-chart-framework]]. Not a slice yet.
 
 ## Notes
 
-The scribble leaves the working name undecided. Do not invent a product name on this ticket.
+Working product name is Draconflame UI. Checkout folder stays dragons-egg. Flamework UI was rejected after the Roblox Flamework collision. Public brand can still change later.

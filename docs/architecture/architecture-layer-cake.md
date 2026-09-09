@@ -35,38 +35,37 @@ This product is not the Draconic toolchain. Toolchain dual-worlds and backends a
 
 - **App**: a Draconic Program. Function components and signals. One component tree, not a web tree and a native tree.
 - **Framework library**: Draconic. Components, the signal graph, retained component identity, retained render objects, constraint layout, a gesture arena, animation tickers, a semantics tree.
-- **Renderer portability API**: thin Draconic surface. Native path calls the engine through `extern "C"` and unboxed numbers and structs. Web path talks to the DOM or Canvas two-D through JS-only bindings. Wrong-target use hard-errors.
-- **Engine**: Rust, native only. Raster, glyphs, images, compositing, vsync client, GPU surface. Not the language Runtime.
+- **Renderer portability API**: thin Draconic surface. Native path calls the engine through `extern "C"` and unboxed numbers and structs. Web path talks to the DOM through JS-only bindings. Wrong-target use hard-errors.
+- **Engine**: Rust, native only. Raster, glyphs, images, compositing, vsync client, GPU surface. wgpu when native is funded. Not Skia. Not the language Runtime.
 - **Runtime**: tracing GC, job queue, promises, timers. On native, a frame callback is a job on that queue.
 - **Embedder**: per platform. Window, GPU surface, vsync, input, IME, clipboard, accessibility. iOS, Android, desktop. No WebView. No JS engine.
 - **Toolchain**: already locked elsewhere. Frontend, one IR, then JS emit or LLVM.
 
 ### Web versus native hosts
 
-Shared code is composite components. Host leaves are a closed set. Proposed hosts, still undecided as a product default:
+Shared code is composite components. Host leaves are a closed set. Native default, if funded, is the engine path:
 
-- **Web DOM**: emitted JavaScript creates elements and patches text, attributes, and children.
-- **Web canvas, optional**: retained render objects paint through Canvas two-D or WebGL from JS. No CanvasKit. No engine-in-WASM.
-- **Native OEM views**: UIView, Android views, desktop counterparts. This adapter is native-only.
-- **Native canvas**: draw lists into the Rust engine. OEM controls are an escape hatch.
+- **Web DOM**: emitted JavaScript creates elements and patches text, attributes, and children. This is the only web host. No web canvas.
+- **Native canvas**: draw lists into the Rust engine. This is the native default if funded.
+- **Native OEM views**: UIView, Android views, desktop counterparts as an escape hatch. This adapter is native-only.
 
 Portable UI code is components, signals, layout, and gestures. A portable Program cannot import Metal or `document` directly. It imports the renderer portability API.
 
-Text measurement disagrees across DOM, UIKit, and canvas. The scribble asks for a per-host metrics seam. Do not pretend CSS on iOS.
+Text measurement disagrees across DOM, UIKit, and a native canvas engine. The scribble asks for a per-host metrics seam. Do not pretend CSS on iOS.
 
 ### Pipeline phases
 
 Proposed frame pipeline, copied as architecture not as a Dart type hierarchy:
 
 - **Build**: signal writes mark dependents. Structural change is local (`Show` and keyed `For` only in the sketch).
-- **Layout**: incoming constraints. Treat layout as an engine primitive with a frozen algorithm and tests, not as user CSS on native. Yoga versus Taffy versus layout in Draconic is an open product question.
+- **Layout**: incoming constraints. Treat layout as an engine primitive with a frozen algorithm and tests, not as user CSS on native. Native layout is Taffy. Web layout is CSS.
 - **Paint**: record draw lists or patch host leaves.
 - **Composite**: layer tree (offset, clip, transform, picture, platform-view). Engine composites. Framework does not call Metal.
 - **Raster**: GPU submit on native. Browser paint on web.
 
 One vsync from the embedder. On web, vsync is `requestAnimationFrame`. Signals replace the build dirtying mechanism only. They do not replace constraint layout, hit-test, layer compositing, gesture arena, or semantics.
 
-Proposed native threads, not locked:
+Native threads:
 
 - **UI thread**: Runtime job queue. Framework, signals, layout, paint-list recording.
 - **Raster thread**: engine. GPU submit.
@@ -87,7 +86,7 @@ True path in the sketch: framework source is Draconic. Native build is LLVM mach
 
 What this sketch optimises for: one authoring model, compile-time platform split, no JS engine on native, no WASM on web.
 
-What it sacrifices or leaves unresolved: pixel-identical web versus Impeller, a chosen layout algorithm, a chosen native default (OEM versus custom engine), and honesty of "no JS runtime" while GC still exists for language values.
+What it sacrifices: pixel-identical web versus native, because web is CSS on the DOM and native is Taffy in the engine. Native default is a custom engine with OEM as an escape hatch. Native wording is no JS engine, not no managed runtime; GC stays.
 
 Open product questions stay unanswered on [[overview-ui-framework]]. Do not invent winners here.
 
