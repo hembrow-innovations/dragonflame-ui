@@ -2,7 +2,7 @@
 id: "task-101-red-green-raf"
 title: "Red-green: rAF clock"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-100-spec-raf"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-74-raf-clock"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:44:45Z"
 ---
 
 # Red-green: rAF clock
@@ -37,3 +37,7 @@ scope: library clocks module, tests/raf-clock.test.mjs
 
 - [[slice-74-raf-clock]]
 - [[task-100-spec-raf]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/raf-clock.test.mjs` win. 2 pass. Done line holds.

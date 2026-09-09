@@ -2,13 +2,13 @@
 id: "slice-74-raf-clock"
 title: "rAF clock"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T06:40:00Z"
 ---
 
 # rAF clock
@@ -34,7 +34,7 @@ Engine-owned animation state. setState as ticker.
 - [ ] O1: rAF clock ticks
   CHECK: node --test tests/raf-clock.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/raf-clock.test.mjs: 2 pass
 
 ## Pool
 

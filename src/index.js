@@ -8,4 +8,5 @@ export { pressable } from "./leaves/pressable.js";
 export { Owner } from "./owner/owner.js";
 export { render } from "./renderer/dom.js";
 export { Signal } from "./signals/signal.js";
+export { Clock } from "./clocks/clock.js";
 export { StyleSheet } from "./style/stylesheet.js";

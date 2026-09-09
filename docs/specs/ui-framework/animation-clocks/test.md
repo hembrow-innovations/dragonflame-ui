@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `animation-clocks.framework:in-library`, `animation-clocks.vsync:web-raf`, and `animation-clocks.signals:not-tickers`. Oracle command:
+Tests for this folder. They lock `animation-clocks.framework:in-library`, `animation-clocks.vsync:web-raf`, and `animation-clocks.signals:not-tickers`. Oracle command:
 
 - node --test tests/raf-clock.test.mjs
 
@@ -33,5 +33,4 @@ Tests for this folder. They will lock `animation-clocks.framework:in-library`, `
 ## Gaps
 
 - No test yet for `animation-clocks.tickers:beside-pipeline`, `animation-clocks.engine:forbid-owned-state`, or `animation-clocks.tickers:forbid-setstate`.
-- The oracle test is not in the repo yet. This folder is ladder only.
 - No test yet for native embedder vsync.
