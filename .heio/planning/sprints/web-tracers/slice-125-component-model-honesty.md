@@ -2,15 +2,14 @@
 id: "slice-125-component-model-honesty"
 title: "Component model honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-107-composite-on-dom"
 tags: []
 created_at: "2026-09-10T09:40:00Z"
-updated_at: "2026-09-10T09:40:00Z"
+updated_at: "2026-09-10T23:58:00Z"
 ---
-
 # Component model honesty
 
 ## Why
@@ -30,19 +29,18 @@ Tests fail if this checkout adds class components for UI, hooks, Fiber as a comp
 A public Component class. Web tree and native tree factories. Show. For. Native hosts. Repeating run-once oracles. Repeating owner-dispose Fiber oracles. Repeating JSX parser oracles. Implementing a compiler.
 
 ## Oracle checklist
-
-- [ ] O1: no class components
+- [x] O1: no class components
   CHECK: node --test tests/no-class-components.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Fiber or virtual DOM as identity
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no Fiber or virtual DOM as identity
   CHECK: node --test tests/no-fiber-vdom.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: one component tree
+  EVIDENCE: 1 pass 0 fail
+- [x] O3: one component tree
   CHECK: node --test tests/no-forked-tree.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
