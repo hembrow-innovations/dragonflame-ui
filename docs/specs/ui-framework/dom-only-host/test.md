@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `dom-only-host.web:only-web-host`, `dom-only-host.wasm:no-wasm-web`, `dom-only-host.bindings:js-only`, and `dom-only-host.paint:browser-paint`. Oracle commands:
+Tests for this folder. They lock `dom-only-host.web:only-web-host`, `dom-only-host.wasm:no-wasm-web`, `dom-only-host.bindings:js-only`, and `dom-only-host.paint:browser-paint`. Oracle commands:
 
 - node --test tests/no-web-canvas.test.mjs
 - node --test tests/no-wasm-web.test.mjs
@@ -37,6 +37,5 @@ Tests for this folder. They will lock `dom-only-host.web:only-web-host`, `dom-on
 
 ## Gaps
 
-- The three oracle tests are not in the repo yet. This folder is ladder only.
 - No paint API test. Browser paint is absence of engine raster on web and folds into the canvas and WASM oracles.
 - Portable `document` import oracles stay on [[test-renderer-portability]]. Copied-emit oracles stay on [[test-js-backend]].

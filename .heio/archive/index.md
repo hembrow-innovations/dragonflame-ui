@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-123-red-green-dom-only-host**: DOM-only web host honesty tests; no canvas host, no WASM web UI, no DOM in Host I/O.
 - **task-122-spec-dom-only-host**: DOM-only web host spec ladder; only web host, JS-only bindings, no WASM web, paint on web.
 - **task-119-red-green-patch-children**: children signal write patches one host vnode under the same retained parent; component does not re-run.
 - **task-118-red-green-patch-style**: StyleSheet-shaped style signal write patches the same retained host node; component does not re-run.

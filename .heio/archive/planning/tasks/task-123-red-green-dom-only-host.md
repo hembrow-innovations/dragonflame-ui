@@ -2,7 +2,7 @@
 id: "task-123-red-green-dom-only-host"
 title: "Red-green: DOM-only web host"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-122-spec-dom-only-host"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-121-dom-only-web-host"
 tags: []
 created_at: "2026-09-10T09:25:00Z"
-updated_at: "2026-09-10T09:25:00Z"
+updated_at: "2026-09-09T23:37:39Z"
 ---
 
 # Red-green: DOM-only web host
