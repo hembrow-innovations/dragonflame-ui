@@ -2,7 +2,7 @@
 id: "task-92-spec-owner"
 title: "Spec owner dispose"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-91-red-green-signal-patch"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-71-unmount-disposes"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T19:53:35Z"
 ---
 
 # Spec owner dispose

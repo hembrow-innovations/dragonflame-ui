@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-92-spec-owner**: owner spec ladder; unmount disposes effects and nested owners.
 - **task-91-red-green-signal-patch**: ui.Signal write patches DOM text; component runs once.
 - **task-90-red-green-static-h**: static h() text on DOM.
 - **task-89-spec-counter**: counter spec ladder; run-once, ui.Signal, hyperscript, DOM only, JS backend.
