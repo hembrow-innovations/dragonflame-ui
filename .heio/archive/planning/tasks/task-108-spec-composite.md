@@ -2,14 +2,14 @@
 id: "task-108-spec-composite"
 title: "Spec composites"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-107-composite-on-dom"
 tags: []
 created_at: "2026-09-10T22:30:00Z"
-updated_at: "2026-09-10T22:30:00Z"
+updated_at: "2026-09-09T22:31:29Z"
 ---
 
 # Spec composites
