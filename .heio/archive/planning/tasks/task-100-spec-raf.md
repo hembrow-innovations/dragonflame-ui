@@ -2,7 +2,7 @@
 id: "task-100-spec-raf"
 title: "Spec rAF clocks"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-91-red-green-signal-patch"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-74-raf-clock"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:40:38Z"
 ---
 
 # Spec rAF clocks
