@@ -2,13 +2,13 @@
 id: "slice-72-leaf-kit-on-dom"
 title: "Leaf kit on DOM"
 kind: slice
-status: active
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-10T12:00:00Z"
+updated_at: "2026-09-10T12:45:00Z"
 ---
 
 # Leaf kit on DOM
