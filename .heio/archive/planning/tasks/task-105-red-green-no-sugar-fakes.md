@@ -2,7 +2,7 @@
 id: "task-105-red-green-no-sugar-fakes"
 title: "Red-green: no sugar fakes"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-104-spec-absence"
@@ -10,7 +10,7 @@ sprint: "sugar-later"
 slice: "slice-85-first-version-without-sugar"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T12:00:00Z"
 ---
 
 # Red-green: no sugar fakes

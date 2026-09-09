@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-105-red-green-no-sugar-fakes**: tests fail if JSX parser work, TypeScript emit, IR fork, or a bytecode VM appears.
 - **task-104-spec-absence**: absence spec ladder; no JSX here, no faked lowerer, hot reload not a v1 gate.
 - **task-103-red-green-portable**: portable import against the thin surface; importing document hard-errors.
 - **task-102-spec-port-web**: portability spec ladder; thin surface, JS-only DOM bindings, wrong-target hard-error.
