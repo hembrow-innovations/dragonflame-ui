@@ -2,7 +2,7 @@
 id: "task-104-spec-absence"
 title: "Spec first-version absence"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-88-green-package-import"
@@ -10,7 +10,7 @@ sprint: "sugar-later"
 slice: "slice-85-first-version-without-sugar"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T21:00:49Z"
 ---
 
 # Spec first-version absence
