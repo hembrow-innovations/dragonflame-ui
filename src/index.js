@@ -1,6 +1,8 @@
 export { h } from "./hyperscript/h.js";
 export { view } from "./leaves/view.js";
 export { text } from "./leaves/text.js";
+export { image } from "./leaves/image.js";
+export { scroll } from "./leaves/scroll.js";
 export { Owner } from "./owner/owner.js";
 export { render } from "./renderer/dom.js";
 export { Signal } from "./signals/signal.js";

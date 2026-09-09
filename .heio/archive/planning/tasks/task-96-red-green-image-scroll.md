@@ -2,7 +2,7 @@
 id: "task-96-red-green-image-scroll"
 title: "Red-green: image and scroll"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-95-red-green-view-text-style"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:16:49Z"
 ---
 
 # Red-green: image and scroll
@@ -37,3 +37,7 @@ scope: library host leaves, tests/leaf-image-scroll.test.mjs
 
 - [[slice-72-leaf-kit-on-dom]]
 - [[task-95-red-green-view-text-style]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/leaf-image-scroll.test.mjs` win. Gap: none.

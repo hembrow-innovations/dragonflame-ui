@@ -1,10 +1,12 @@
 import { Owner } from "../owner/owner.js";
 import { follow } from "../signals/signal.js";
 
-const hostTag = { view: "div", text: "span" };
+const hostTag = { view: "div", text: "span", image: "img", scroll: "div" };
 
 function mount(tree, parent) {
-	const el = document.createElement(hostTag[tree.type] ?? tree.type);
+	const tag = hostTag[tree.type];
+	if (!tag) throw new Error(tree.type);
+	const el = document.createElement(tag);
 	const props = tree.props ?? {};
 	if (props.style) Object.assign(el.style, props.style);
 	const value = props.text;

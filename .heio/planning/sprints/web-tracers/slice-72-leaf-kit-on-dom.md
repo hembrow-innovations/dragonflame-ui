@@ -35,10 +35,10 @@ Taffy on web, HTML as the leaf set, native glyphs.
   CHECK: node --test tests/leaf-view-text-style.test.mjs
   EXPECT: pass
   EVIDENCE: 1 pass 0 fail
-- [ ] O2: image and scroll
+- [x] O2: image and scroll
   CHECK: node --test tests/leaf-image-scroll.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2 pass 0 fail
 - [ ] O3: text input and pressable
   CHECK: node --test tests/leaf-input-pressable.test.mjs
   EXPECT: pass
