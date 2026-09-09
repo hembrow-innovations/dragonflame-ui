@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-97-red-green-input-pressable**: text input and pressable render on DOM; closed set complete.
 - **task-96-red-green-image-scroll**: image and scroll leaves render on DOM.
 - **task-95-red-green-view-text-style**: view and text on DOM with CSS and StyleSheet-shaped style.
 - **task-94-spec-leaf-kit**: leaf kit spec ladder; closed set, CSS on web, StyleSheet-shaped style, host config at leaves, text is a leaf.

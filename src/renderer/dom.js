@@ -1,7 +1,14 @@
 import { Owner } from "../owner/owner.js";
 import { follow } from "../signals/signal.js";
 
-const hostTag = { view: "div", text: "span", image: "img", scroll: "div" };
+const hostTag = {
+	view: "div",
+	text: "span",
+	image: "img",
+	scroll: "div",
+	"text-input": "input",
+	pressable: "button",
+};
 
 function mount(tree, parent) {
 	const tag = hostTag[tree.type];

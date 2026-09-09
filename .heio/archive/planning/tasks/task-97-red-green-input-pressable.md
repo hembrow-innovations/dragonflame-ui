@@ -2,7 +2,7 @@
 id: "task-97-red-green-input-pressable"
 title: "Red-green: input and pressable"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-96-red-green-image-scroll"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T12:30:00Z"
 ---
 
 # Red-green: input and pressable
@@ -37,3 +37,7 @@ scope: library host leaves, host config, tests/leaf-input-pressable.test.mjs
 
 - [[slice-72-leaf-kit-on-dom]]
 - [[task-96-red-green-image-scroll]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/leaf-input-pressable.test.mjs` win. Gap: none.
