@@ -33,7 +33,7 @@ Use the docs-skill default layout. Glossary is `docs/overview/glossary.md`. Lock
 
 ## Product
 
-This repo is the Draconic UI framework product (working folder name dragons-egg). The language toolchain lives in the sibling `/Users/jaredhembrow/workbench/draconic`. Do not implement the compiler here. Do not add Roadmap rows to the toolchain repo.
+This repo is the dragonflame-ui framework product. The language toolchain lives in the sibling `/Users/jaredhembrow/workbench/draconic`. Do not implement the compiler here. Do not add Roadmap rows to the toolchain repo.
 
 ## Planning
 

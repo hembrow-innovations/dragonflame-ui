@@ -23,4 +23,4 @@ Wayfinder map decision for [[rounds-01-chart-framework]]. Not a slice yet.
 
 ## Notes
 
-First layout is the Draconic library for draconflame-ui. No empty Rust crates. Cargo workspace for engine and embedders only when native UI is funded.
+First layout is the Draconic library for dragonflame-ui. No empty Rust crates. Cargo workspace for engine and embedders only when native UI is funded.

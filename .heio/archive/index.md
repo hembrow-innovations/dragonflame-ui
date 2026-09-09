@@ -3,9 +3,9 @@
 One-liners of what landed. Newest first.
 
 - **ticket-16-gpu-library** — wgpu when native is funded.
-- **ticket-15-crate-layout** — draconflame-ui library first; no empty Rust crates; workspace when native is funded.
+- **ticket-15-crate-layout** — dragonflame-ui library first; no empty Rust crates; workspace when native is funded.
 - **ticket-14-engine-home** — Rust engine lives in this repo; split later only if it hurts.
-- **ticket-13-package-name** — git package name is draconflame-ui; folder stays dragons-egg.
+- **ticket-13-package-name** — git package name is dragonflame-ui; folder and repo match.
 - **ticket-12-windowing-gpu** — embedder owns window; engine owns GPU; no Skia; no Flutter embedder.
 - **ticket-11-public-site** — public site stays TanStack Start; not a rewrite destination.
 - **ticket-10-threading** — framework on the Runtime job queue; engine raster and IO threads allowed; no shared signals.
@@ -16,5 +16,5 @@ One-liners of what landed. Newest first.
 - **ticket-05-jsx-vs-hyperscript** — hyperscript first; no JSX until a later human decision.
 - **ticket-04-no-js-runtime** — no JS engine on native; tracing GC stays.
 - **ticket-03-language-vs-library** — library product in this repo, not a language feature.
-- **ticket-02-working-name** — working product name is Draconflame UI; folder stays dragons-egg.
+- **ticket-02-working-name** — working product name, folder, package, and repo are dragonflame-ui.
 - **heio-planning-seed** — planning tree seeded from the UI-framework scribble; no completed work yet.

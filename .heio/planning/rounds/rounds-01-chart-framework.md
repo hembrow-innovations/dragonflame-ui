@@ -42,7 +42,7 @@ Counterpart is the user in chat. Notebook is this round.
 
 ### Answers
 
-1. **Working name for the framework** ([[ticket-02-working-name]]): Draconflame UI. Folder stays dragons-egg.
+1. **Working name for the framework** ([[ticket-02-working-name]]): dragonflame-ui. Folder, package, and repo match.
 2. **Language feature versus library product** ([[ticket-03-language-vs-library]]): library product in this repo, not a language feature.
 3. **No JS runtime on native** ([[ticket-04-no-js-runtime]]): no JS engine on native; tracing GC stays.
 4. **JSX versus hyperscript** ([[ticket-05-jsx-vs-hyperscript]]): hyperscript first. No JSX until a later human decision.
@@ -67,14 +67,14 @@ Later rounds append in this file as `## Round N` with the same questions/answers
 
 ### Answers
 
-1. **Git package name** ([[ticket-13-package-name]]): draconflame-ui. Folder stays dragons-egg.
+1. **Git package name** ([[ticket-13-package-name]]): dragonflame-ui. Folder and repo match.
 2. **Engine home** ([[ticket-14-engine-home]]): this repo. Split later only if it hurts.
-3. **Crate layout** ([[ticket-15-crate-layout]]): draconflame-ui library first. No empty Rust crates. Workspace when native is funded.
+3. **Crate layout** ([[ticket-15-crate-layout]]): dragonflame-ui library first. No empty Rust crates. Workspace when native is funded.
 4. **GPU library** ([[ticket-16-gpu-library]]): wgpu when native is funded.
 
 ## Confirm
 
-Counterpart confirmed 2026-09-09. Stop until a planning sitting publishes slices and tasks. Do not implement from this round.
+Counterpart confirmed 2026-09-09. Counterpart later renamed framework, folder, package, and repo to dragonflame-ui. Stop until a planning sitting publishes slices and tasks. Do not implement from this round.
 
 ## Objectives
 
@@ -82,7 +82,7 @@ Flesh the idea into a shared map so a later planning sitting can publish slices 
 
 ## Decisions so far
 
-- [[ticket-02-working-name|Working name for the framework]]. Working product name is Draconflame UI. Folder stays dragons-egg.
+- [[ticket-02-working-name|Working name for the framework]]. Working product name, folder, package, and repo are dragonflame-ui.
 - [[ticket-03-language-vs-library|Language feature versus library product]]. Library product in this repo, not a language feature and not toolchain Roadmap work.
 - [[ticket-04-no-js-runtime|No JS runtime on native]]. No Hermes, JSC, V8, or WebView. Tracing GC stays.
 - [[ticket-05-jsx-vs-hyperscript|JSX versus hyperscript]]. Hyperscript first. No JSX until a later human decision.
@@ -93,9 +93,9 @@ Flesh the idea into a shared map so a later planning sitting can publish slices 
 - [[ticket-10-threading|Threading]]. Framework on the Runtime job queue. Engine raster and IO threads allowed. No shared signals.
 - [[ticket-11-public-site|Public site]]. Stays TanStack Start. Not a rewrite destination.
 - [[ticket-12-windowing-gpu|Windowing and GPU]]. Embedder owns window. Engine owns GPU. No Skia. No Flutter embedder.
-- [[ticket-13-package-name|Git package name]]. draconflame-ui. Folder stays dragons-egg.
+- [[ticket-13-package-name|Git package name]]. dragonflame-ui. Folder and repo match.
 - [[ticket-14-engine-home|Engine home]]. This repo. Split later only if it hurts.
-- [[ticket-15-crate-layout|Crate layout]]. draconflame-ui library first. No empty Rust crates. Workspace when native is funded.
+- [[ticket-15-crate-layout|Crate layout]]. dragonflame-ui library first. No empty Rust crates. Workspace when native is funded.
 - [[ticket-16-gpu-library|GPU library]]. wgpu when native is funded.
 
 ## Not yet specified

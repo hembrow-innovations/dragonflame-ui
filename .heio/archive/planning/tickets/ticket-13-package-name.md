@@ -23,4 +23,4 @@ Wayfinder map decision for [[rounds-01-chart-framework]]. Not a slice yet.
 
 ## Notes
 
-Git package name is draconflame-ui. Checkout folder stays dragons-egg. Working product name stays Draconflame UI.
+Git package name is dragonflame-ui. Checkout folder and GitHub repo match. Working product name is dragonflame-ui.

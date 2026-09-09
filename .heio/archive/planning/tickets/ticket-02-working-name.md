@@ -23,4 +23,4 @@ Wayfinder map decision for [[rounds-01-chart-framework]]. Not a slice yet.
 
 ## Notes
 
-Working product name is Draconflame UI. Checkout folder stays dragons-egg. Flamework UI was rejected after the Roblox Flamework collision. Public brand can still change later.
+Working product name, checkout folder, git package, and GitHub repo are dragonflame-ui. Supersedes Draconflame UI and dragons-egg. Flamework UI was rejected after the Roblox Flamework collision.

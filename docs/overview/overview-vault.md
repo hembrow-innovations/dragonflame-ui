@@ -13,7 +13,7 @@ updated_at: "2026-09-09"
 
 `docs/` is the committed Obsidian vault for this product. Search it first. Ignore `docs/99_scribble/`. Day-to-day planning lives under `.heio/`, not in this vault.
 
-This product is not the Draconic toolchain. The working folder name is dragons-egg. The working product name is Draconflame UI; see [[overview-ui-framework]].
+This product is not the Draconic toolchain. The working product name, folder, git package, and repo are dragonflame-ui; see [[overview-ui-framework]].
 
 ## Layout
 

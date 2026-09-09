@@ -13,7 +13,7 @@ updated_at: "2026-09-09"
 
 Cold-reader orientation. This is a proposed idea, not a locked product and not an ADR. Terms live in [[glossary]]. The proposed stack is [[architecture-layer-cake]]. Vault layout is [[overview-vault]].
 
-The working folder name is dragons-egg. The working product name is Draconflame UI.
+The working product name, folder, git package, and repo are dragonflame-ui.
 
 ## What this is
 

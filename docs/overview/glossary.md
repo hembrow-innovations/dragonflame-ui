@@ -15,9 +15,9 @@ Proposed language for this UI-framework idea. These names come from the scribble
 
 ## Product
 
-**Draconflame UI**:
-Working product name for this UI framework. The checkout folder remains dragons-egg. The git package name is draconflame-ui.
-_Avoid_: Flamework UI, treating the folder name as the product name
+**dragonflame-ui**:
+Working product name, checkout folder, git package name, and GitHub repo for this UI framework.
+_Avoid_: Draconflame UI, dragons-egg, Flamework UI
 
 ## Language
 

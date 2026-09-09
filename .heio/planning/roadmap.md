@@ -14,7 +14,7 @@ Locations. Destinations, not a schedule. Bets from the scribble phasing. Nothing
 
 ## Locations
 
-- **Web component library**: this is working when the draconflame-ui git package of components, signals, hyperscript, a DOM renderer, and tests runs on the JS backend.
+- **Web component library**: this is working when the dragonflame-ui git package of components, signals, hyperscript, a DOM renderer, and tests runs on the JS backend.
   - bet: try proving the library on JS first; pivot if a later sitting decides this is not a library product, or if the JS-backend experiment cannot host the component model
 - **Native engine and desktop embedder**: this is working when a Rust engine, a desktop window with GPU and vsync, and FFI scene commands exist; only if native UI is funded.
   - bet: try the Rust engine and desktop embedder only if native UI is funded; pivot if LLVM honesty never arrives for native widgets

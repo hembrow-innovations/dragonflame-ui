@@ -23,4 +23,4 @@ Wayfinder map decision for [[rounds-01-chart-framework]]. Not a slice yet.
 
 ## Notes
 
-The public site stays TanStack Start. It is not a Draconflame UI prototype and not a rewrite destination on this map.
+The public site stays TanStack Start. It is not a dragonflame-ui prototype and not a rewrite destination on this map.
