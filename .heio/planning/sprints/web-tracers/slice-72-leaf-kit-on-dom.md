@@ -2,13 +2,13 @@
 id: "slice-72-leaf-kit-on-dom"
 title: "Leaf kit on DOM"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T12:00:00Z"
 ---
 
 # Leaf kit on DOM
@@ -31,10 +31,10 @@ Taffy on web, HTML as the leaf set, native glyphs.
 
 ## Oracle checklist
 
-- [ ] O1: view and text with style data on CSS
+- [x] O1: view and text with style data on CSS
   CHECK: node --test tests/leaf-view-text-style.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 - [ ] O2: image and scroll
   CHECK: node --test tests/leaf-image-scroll.test.mjs
   EXPECT: pass
