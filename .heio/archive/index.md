@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-117-spec-dom-patch**: DOM patch spec ladder; style signal write on the retained host node, one-child patch, no Show, no For, no public patch API.
 - **task-113-spec-js-backend**: JS backend honesty spec ladder; compile-time split, no eval, not RN-but-bytecode, Phase 0 assumed.
 - **task-110-red-green-composite-children**: props.children nest through a composite onto DOM.
 - **task-109-red-green-composite-h**: h(function, props) mounts to host leaves; composite runs once on a text patch.

@@ -2,14 +2,14 @@
 id: "task-117-spec-dom-patch"
 title: "Spec DOM patch"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-116-patch-attrs-children"
 tags: []
 created_at: "2026-09-10T09:15:00Z"
-updated_at: "2026-09-10T09:15:00Z"
+updated_at: "2026-09-10T12:30:00Z"
 ---
 
 # Spec DOM patch
