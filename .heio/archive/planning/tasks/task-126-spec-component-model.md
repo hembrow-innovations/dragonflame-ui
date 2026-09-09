@@ -2,16 +2,15 @@
 id: "task-126-spec-component-model"
 title: "Spec component model honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-125-component-model-honesty"
 tags: []
 created_at: "2026-09-10T09:40:00Z"
-updated_at: "2026-09-10T09:40:00Z"
+updated_at: "2026-09-10T23:51:05Z"
 ---
-
 # Spec component model honesty
 
 ## Blocked by
