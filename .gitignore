@@ -11,3 +11,4 @@ docs/99_scribble
 *.out.js.map
 *.out
 *.dSYM
+.opencode/package*
