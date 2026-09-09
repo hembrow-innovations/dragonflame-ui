@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-122-spec-dom-only-host**: DOM-only web host spec ladder; only web host, JS-only bindings, no WASM web, paint on web.
 - **task-119-red-green-patch-children**: children signal write patches one host vnode under the same retained parent; component does not re-run.
 - **task-118-red-green-patch-style**: StyleSheet-shaped style signal write patches the same retained host node; component does not re-run.
 - **task-117-spec-dom-patch**: DOM patch spec ladder; style signal write on the retained host node, one-child patch, no Show, no For, no public patch API.

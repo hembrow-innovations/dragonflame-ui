@@ -2,14 +2,14 @@
 id: "task-122-spec-dom-only-host"
 title: "Spec DOM-only web host"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-121-dom-only-web-host"
 tags: []
 created_at: "2026-09-10T09:25:00Z"
-updated_at: "2026-09-10T09:25:00Z"
+updated_at: "2026-09-09T23:31:19Z"
 ---
 
 # Spec DOM-only web host
