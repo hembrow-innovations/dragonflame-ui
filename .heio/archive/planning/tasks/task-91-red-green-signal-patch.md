@@ -2,7 +2,7 @@
 id: "task-91-red-green-signal-patch"
 title: "Red-green: signal patches DOM"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-90-red-green-static-h"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T19:42:50Z"
 ---
 
 # Red-green: signal patches DOM

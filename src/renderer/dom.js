@@ -1,6 +1,18 @@
+import { follow } from "../signals/signal.js";
+
 export function render(component, parent) {
 	const tree = component();
 	const el = document.createElement(tree.type);
-	el.textContent = tree.props.text;
+	const text = tree.props.text;
+	if (text != null && typeof text.get === "function") {
+		follow(
+			() => text.get(),
+			(value) => {
+				el.textContent = value;
+			},
+		);
+	} else {
+		el.textContent = text;
+	}
 	parent.appendChild(el);
 }

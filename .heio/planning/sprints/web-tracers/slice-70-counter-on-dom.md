@@ -35,14 +35,14 @@ Full leaf kit, Owner dispose, JSX, web canvas, WASM.
   CHECK: node --test tests/counter-static-h.test.mjs
   EXPECT: pass
   EVIDENCE: pass
-- [ ] O2: signal write patches the same DOM text
+- [x] O2: signal write patches the same DOM text
   CHECK: node --test tests/counter-signal-patch.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: component function did not re-run on the write
+  EVIDENCE: pass
+- [x] O3: component function did not re-run on the write
   CHECK: node --test tests/counter-run-once.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass
 
 ## Pool
 
