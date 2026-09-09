@@ -2,7 +2,7 @@
 id: "task-98-spec-testid"
 title: "Spec test IDs and a11y props"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-97-red-green-input-pressable"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-73-testid-pressable"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:26:20Z"
 ---
 
 # Spec test IDs and a11y props
