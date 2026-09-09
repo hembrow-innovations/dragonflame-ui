@@ -2,12 +2,12 @@
 id: "slice-69-importable-package"
 title: "Importable package"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by: []
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T00:00:00Z"
 ---
 
 # Importable package
