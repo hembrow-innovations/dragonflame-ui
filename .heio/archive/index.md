@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-102-spec-port-web**: portability spec ladder; thin surface, JS-only DOM bindings, wrong-target hard-error.
 - **task-101-red-green-raf**: rAF animation clock in the Framework library; ticks from requestAnimationFrame; signals are not the ticker.
 - **task-100-spec-raf**: rAF clocks spec ladder; framework clocks, web vsync is requestAnimationFrame, signals do not replace tickers.
 - **task-99-red-green-testid**: first-class test ID and a11y props; pressable found by test ID.

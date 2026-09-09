@@ -2,7 +2,7 @@
 id: "task-102-spec-port-web"
 title: "Spec portable web import"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-91-red-green-signal-patch"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-75-portable-web-import"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-09T20:51:21Z"
 ---
 
 # Spec portable web import
