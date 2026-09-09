@@ -2,7 +2,7 @@
 id: "task-110-red-green-composite-children"
 title: "Red-green: composite children"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-109-red-green-composite-h"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-107-composite-on-dom"
 tags: []
 created_at: "2026-09-10T22:30:00Z"
-updated_at: "2026-09-10T22:30:00Z"
+updated_at: "2026-09-09T22:41:48Z"
 ---
 
 # Red-green: composite children

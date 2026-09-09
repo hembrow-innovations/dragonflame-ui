@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-110-red-green-composite-children**: props.children nest through a composite onto DOM.
 - **task-109-red-green-composite-h**: h(function, props) mounts to host leaves; composite runs once on a text patch.
 - **task-108-spec-composite**: composite spec ladder; function type as h(), props.children, run-once, no Show, no For.
 - **task-105-red-green-no-sugar-fakes**: tests fail if JSX parser work, TypeScript emit, IR fork, or a bytecode VM appears.
