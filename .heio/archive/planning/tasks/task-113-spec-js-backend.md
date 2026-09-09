@@ -2,14 +2,14 @@
 id: "task-113-spec-js-backend"
 title: "Spec JS backend honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-112-js-backend-honesty"
 tags: []
 created_at: "2026-09-10T08:50:00Z"
-updated_at: "2026-09-10T08:50:00Z"
+updated_at: "2026-09-09T22:59:58Z"
 ---
 
 # Spec JS backend honesty
