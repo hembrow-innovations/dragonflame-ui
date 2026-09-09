@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-127-red-green-component-model**: honesty tests fail if class components, Fiber vdom, or a second authoring tree appear.
 - **task-126-spec-component-model**: component model honesty spec ladder; one tree, not class components.
 - **task-123-red-green-dom-only-host**: DOM-only web host honesty tests; no canvas host, no WASM web UI, no DOM in Host I/O.
 - **task-122-spec-dom-only-host**: DOM-only web host spec ladder; only web host, JS-only bindings, no WASM web, paint on web.

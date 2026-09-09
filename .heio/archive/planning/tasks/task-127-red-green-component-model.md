@@ -2,7 +2,7 @@
 id: "task-127-red-green-component-model"
 title: "Red-green: component model honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-126-spec-component-model"
@@ -10,9 +10,8 @@ sprint: "web-tracers"
 slice: "slice-125-component-model-honesty"
 tags: []
 created_at: "2026-09-10T09:40:00Z"
-updated_at: "2026-09-10T09:40:00Z"
+updated_at: "2026-09-09T23:56:07Z"
 ---
-
 # Red-green: component model honesty
 
 ## Blocked by
