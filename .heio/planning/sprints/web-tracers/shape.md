@@ -24,6 +24,7 @@ Location: [[location-17-web-component-library]]. Thin vertical demos on the JS b
 - [[slice-74-raf-clock]]: framework clocks on rAF. blocked_by: [[slice-70-counter-on-dom]]
 - [[slice-75-portable-web-import]]: portability hard-error. blocked_by: [[slice-70-counter-on-dom]]
 - [[slice-107-composite-on-dom]]: composite props and children on DOM. blocked_by: [[slice-72-leaf-kit-on-dom]]
+- [[slice-112-js-backend-honesty]]: JS backend honesty. blocked_by: [[slice-69-importable-package]]
 
 ## Slices out
 
