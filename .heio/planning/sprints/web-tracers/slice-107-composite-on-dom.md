@@ -2,13 +2,13 @@
 id: "slice-107-composite-on-dom"
 title: "Composite on DOM"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T22:30:00Z"
-updated_at: "2026-09-10T22:30:00Z"
+updated_at: "2026-09-10T23:45:00Z"
 ---
 
 # Composite on DOM
