@@ -19,7 +19,17 @@ function mount(tree, parent) {
 	if (!tag) throw new Error(tree.type);
 	const el = document.createElement(tag);
 	const props = tree.props ?? {};
-	if (props.style) Object.assign(el.style, props.style);
+	const style = props.style;
+	if (style != null && typeof style.get === "function") {
+		follow(
+			() => style.get(),
+			(next) => {
+				Object.assign(el.style, next);
+			},
+		);
+	} else if (style) {
+		Object.assign(el.style, style);
+	}
 	if (props.testID != null) el["data-testid"] = props.testID;
 	if (props.accessibilityLabel != null) el["aria-label"] = props.accessibilityLabel;
 	const value = props.text;

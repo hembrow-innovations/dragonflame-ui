@@ -2,7 +2,7 @@
 id: "task-118-red-green-patch-style"
 title: "Red-green: patch style"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-117-spec-dom-patch"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-116-patch-attrs-children"
 tags: []
 created_at: "2026-09-10T09:15:00Z"
-updated_at: "2026-09-10T09:15:00Z"
+updated_at: "2026-09-09T23:22:26Z"
 ---
 
 # Red-green: patch style
