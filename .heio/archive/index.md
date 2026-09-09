@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-90-red-green-static-h**: static h() text on DOM.
 - **task-89-spec-counter**: counter spec ladder; run-once, ui.Signal, hyperscript, DOM only, JS backend.
 - **task-88-green-package-import**: dragonflame-ui git package imports; no empty Rust crates.
 - **task-87-red-package-import**: red tests for dragonflame-ui import and crate layout.

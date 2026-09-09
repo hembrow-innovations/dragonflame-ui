@@ -2,13 +2,13 @@
 id: "slice-70-counter-on-dom"
 title: "Counter on DOM"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T05:45:00Z"
 ---
 
 # Counter on DOM
@@ -31,10 +31,10 @@ Full leaf kit, Owner dispose, JSX, web canvas, WASM.
 
 ## Oracle checklist
 
-- [ ] O1: static hyperscript text on DOM
+- [x] O1: static hyperscript text on DOM
   CHECK: node --test tests/counter-static-h.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass
 - [ ] O2: signal write patches the same DOM text
   CHECK: node --test tests/counter-signal-patch.test.mjs
   EXPECT: pass

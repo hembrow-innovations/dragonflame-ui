@@ -2,7 +2,7 @@
 id: "task-90-red-green-static-h"
 title: "Red-green: static h() on DOM"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-89-spec-counter"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T12:30:00Z"
 ---
 
 # Red-green: static h() on DOM
@@ -34,6 +34,10 @@ TDD: write failing `tests/counter-static-h.test.mjs`, run, see red, implement hy
 `node --test tests/counter-static-h.test.mjs` pass.
 
 scope: library hyperscript, DOM renderer, tests/counter-static-h.test.mjs
+
+## Gauntlet
+
+- **round 1**: `node --test tests/counter-static-h.test.mjs` win. Gap: none.
 
 ## Links
 
