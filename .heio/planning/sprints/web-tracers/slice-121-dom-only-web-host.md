@@ -2,13 +2,13 @@
 id: "slice-121-dom-only-web-host"
 title: "DOM-only web host"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-10T09:25:00Z"
-updated_at: "2026-09-10T09:25:00Z"
+updated_at: "2026-09-10T10:15:00Z"
 ---
 
 # DOM-only web host
