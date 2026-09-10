@@ -1,0 +1,67 @@
+---
+id: "rounds-172-gesture-apis-unnamed"
+title: "Gesture APIs unnamed"
+kind: round
+sitting_kind: planning
+status: published
+tags: ["afk-plan"]
+created_at: "2026-09-11T20:10:00Z"
+updated_at: "2026-09-11T20:10:00Z"
+---
+
+# Gesture APIs unnamed
+
+Counterpart is the product peer. Notebook is this round.
+
+Pick: [[location-18-native-engine-desktop]]. Next freeze candidate [[slice-78-press-wins-arena]]. Location destination and docs/ do not name recognizer APIs. Do not freeze. File [[ticket-171-gesture-apis-unnamed]].
+
+## Vault pack
+
+Query: freeze press-wins-arena; name first native gesture recognizer APIs
+Area: ui-framework
+
+Must read:
+
+- `.heio/planning/intent.md`
+- `.heio/planning/roadmap.md`
+- `.heio/planning/locations/location-18-native-engine-desktop.md`
+- `.heio/planning/locations/location-46-gesture-arena.md`
+- `.heio/planning/sprints/native-if-funded/shape.md`
+- `.heio/planning/sprints/native-if-funded/slice-78-press-wins-arena.md`
+- `docs/overview/overview-ui-framework.md`
+- `docs/architecture/architecture-layer-cake.md`
+- `docs/overview/glossary.md`
+
+Related:
+
+- `.heio/planning/locations/location-44-oem-escape-hatch.md`
+- `.heio/planning/sprints/native-if-funded/slice-79-oem-hatch-slot.md`
+- `.heio/planning/tickets/ticket-66-ffi-commands-unnamed.md`
+- `.heio/planning/rounds/rounds-160-fund-native.md`
+- `docs/specs/ui-framework/leaf-kit/purpose.md`
+
+Excluded: mobile, JSX, scribble, rewriting location destinations, inventing recognizer APIs.
+
+Next: HITL ticket. Do not freeze. Do not write `docs/specs/`.
+
+No packer script exists. Assembled by hand. Open product questions on the overview are empty. Gesture recognizer APIs stay unnamed on [[rounds-160-fund-native]].
+
+## Round 1
+
+### Questions
+
+1. **Recognizer APIs**: What is the first native gesture recognizer API set so [[slice-78-press-wins-arena]] can freeze.
+
+### Answers
+
+1. **Recognizer APIs**: Unnamed. Product peer must not invent them. File HITL [[ticket-171-gesture-apis-unnamed]]. Sprint already forbids freeze until named.
+
+## Confirm
+
+Not confirmed. No freeze.
+
+## Out of scope
+
+- OEM widget class lists
+- Mobile embedders
+- DOM bubbling as the native gesture model
