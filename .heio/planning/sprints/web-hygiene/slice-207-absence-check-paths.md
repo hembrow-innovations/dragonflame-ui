@@ -2,13 +2,13 @@
 id: "slice-207-absence-check-paths"
 title: "Absence CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-85-first-version-without-sugar"
 tags: []
 created_at: "2026-09-10T21:37:12Z"
-updated_at: "2026-09-10T21:37:12Z"
+updated_at: "2026-09-11T22:10:00Z"
 ---
 
 # Absence CHECK paths
@@ -31,18 +31,18 @@ New absence behaviour. Editing `docs/specs/`. Reopening `sugar-later`. Product c
 
 ## Oracle checklist
 
-- [ ] O1: no JSX from this repo
+- [x] O1: no JSX from this repo
   CHECK: node --test tests/absence/no-jsx-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no faked lowerer
+  EVIDENCE: node --test tests/absence/no-jsx-here.test.mjs; 1 pass 0 fail
+- [x] O2: no faked lowerer
   CHECK: node --test tests/absence/no-lowerer-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: hot reload not required to import
+  EVIDENCE: node --test tests/absence/no-lowerer-here.test.mjs; 1 pass 0 fail
+- [x] O3: hot reload not required to import
   CHECK: node --test tests/git-package/git-package.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/git-package/git-package.test.mjs; 3 pass 0 fail
 
 ## Pool
 
