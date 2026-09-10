@@ -2,13 +2,13 @@
 id: "slice-190-leaf-kit-check-paths"
 title: "Leaf kit CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T21:13:00Z"
-updated_at: "2026-09-10T21:13:00Z"
+updated_at: "2026-09-11T21:45:00Z"
 ---
 
 # Leaf kit CHECK paths
@@ -31,18 +31,18 @@ New leaf-kit behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Product 
 
 ## Oracle checklist
 
-- [ ] O1: view and text with style data on CSS
+- [x] O1: view and text with style data on CSS
   CHECK: node --test tests/leaf-kit/leaf-view-text-style.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: image and scroll
+  EVIDENCE: node --test tests/leaf-kit/leaf-view-text-style.test.mjs; 1 pass 0 fail
+- [x] O2: image and scroll
   CHECK: node --test tests/leaf-kit/leaf-image-scroll.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: text input and pressable
+  EVIDENCE: node --test tests/leaf-kit/leaf-image-scroll.test.mjs; 2 pass 0 fail
+- [x] O3: text input and pressable
   CHECK: node --test tests/leaf-kit/leaf-input-pressable.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/leaf-kit/leaf-input-pressable.test.mjs; 1 pass 0 fail
 
 ## Pool
 
