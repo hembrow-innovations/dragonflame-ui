@@ -2,13 +2,13 @@
 id: "slice-149-style-as-data-honesty"
 title: "Style as data honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T13:30:00Z"
-updated_at: "2026-09-10T13:30:00Z"
+updated_at: "2026-09-10T18:45:00Z"
 ---
 
 # Style as data honesty
@@ -31,14 +31,14 @@ A public css tagged template. A public parseCss. Repeating StyleSheet-shaped ora
 
 ## Oracle checklist
 
-- [ ] O1: no CSS language
+- [x] O1: no CSS language
   CHECK: node --test tests/no-css-language.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no CSS engine
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no CSS engine
   CHECK: node --test tests/no-css-engine.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
