@@ -2,14 +2,14 @@
 id: "task-150-spec-style-as-data"
 title: "Spec style as data honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-149-style-as-data-honesty"
 tags: []
 created_at: "2026-09-10T13:30:00Z"
-updated_at: "2026-09-10T13:30:00Z"
+updated_at: "2026-09-10T00:57:44Z"
 ---
 
 # Spec style as data honesty

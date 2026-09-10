@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-150-spec-style-as-data**: style as data honesty spec ladder; not a CSS language in the framework, and not a CSS engine product.
 - **task-147-red-green-host-leaves**: honesty tests fail if HTML leaves are added or every UIKit class is the leaf set.
 - **task-146-spec-host-leaves**: host leaves honesty spec ladder; not HTML, and not every UIKit class as the leaf set.
 - **task-143-red-green-web-layout**: honesty tests fail if Taffy is forced on web or DOM is treated as an Impeller or Skia clone.
