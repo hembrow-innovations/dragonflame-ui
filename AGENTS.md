@@ -53,6 +53,7 @@ Open product questions are non-empty until a wayfinder or planning sitting close
 - Markdown: never tables — use `- **{text}**: {text}`
 - Commits as work packages: `<type>(<scope>): <description>` — `feat` | `fix` | `test` | `refactor` | `chore` 
 - No `Co-Authored-By` lines
+- If there are move then 25 commits that can be pushed to remote, push them to remote.
 - No CI/CD or GitHub Actions
 - Do not invent work when the user did not name a task and planning has not published ready tasks
 - Extremely concise output
