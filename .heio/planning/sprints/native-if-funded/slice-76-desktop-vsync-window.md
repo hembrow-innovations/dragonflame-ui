@@ -8,7 +8,7 @@ blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T19:00:00Z"
 ---
 
 # Desktop vsync window
@@ -27,7 +27,7 @@ A desktop window opens with a GPU surface and one vsync from the embedder. wgpu.
 
 ## Non-goals
 
-Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmup. Naming a window crate in AFK.
+Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmup. First desktop OS is macOS. Window crate is winit, named on [[task-164-hitl-name-desktop-window]].
 
 ## Oracle checklist
 

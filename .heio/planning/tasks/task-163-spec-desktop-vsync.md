@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T19:00:00Z"
 ---
 
 # Spec desktop vsync window
@@ -27,7 +27,7 @@ Desktop vsync spec folder exists from wayfinder: embedder owns window and vsync,
 
 Write purpose, contract, and test.md from [[rounds-01-chart-framework]] answers 3, 6, 11, and 16, [[rounds-160-fund-native]], and locations 36, 37, 38, 39, 22, 60. Quote child destination sentences, not shorter parent bullets.
 
-Do not invent a window crate or first desktop OS. That is [[task-164-hitl-name-desktop-window]]. Do not invent Taffy rect FFI. Do not add Skia or a Flutter embedder. Stop rather than invent.
+Quote [[task-164-hitl-name-desktop-window]] Answers: first desktop OS is macOS; window crate is winit. Do not invent Taffy rect FFI. Do not add Skia or a Flutter embedder. Stop rather than invent.
 
 TDD: ladder only. No product code.
 
