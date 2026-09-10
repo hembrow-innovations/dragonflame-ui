@@ -2,13 +2,13 @@
 id: "slice-213-js-backend-check-paths"
 title: "JS backend CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-112-js-backend-honesty"
 tags: []
 created_at: "2026-09-10T21:48:35Z"
-updated_at: "2026-09-10T21:48:35Z"
+updated_at: "2026-09-10T21:56:00Z"
 ---
 
 # JS backend CHECK paths
@@ -31,18 +31,18 @@ New js-backend behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Produc
 
 ## Oracle checklist
 
-- [ ] O1: no eval host
+- [x] O1: no eval host
   CHECK: node --test tests/js-backend/no-eval-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no dead native stubs
+  EVIDENCE: node --test tests/js-backend/no-eval-here.test.mjs; 1 pass 0 fail
+- [x] O2: no dead native stubs
   CHECK: node --test tests/js-backend/no-native-stubs.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: emit stays in the sibling toolchain
+  EVIDENCE: node --test tests/js-backend/no-native-stubs.test.mjs; 1 pass 0 fail
+- [x] O3: emit stays in the sibling toolchain
   CHECK: node --test tests/js-backend/no-emit-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/js-backend/no-emit-here.test.mjs; 1 pass 0 fail
 
 ## Pool
 
