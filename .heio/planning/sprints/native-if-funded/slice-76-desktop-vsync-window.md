@@ -2,13 +2,13 @@
 id: "slice-76-desktop-vsync-window"
 title: "Desktop vsync window"
 kind: slice
-status: shaping
+status: frozen
 sprint: "native-if-funded"
 blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T12:00:00Z"
 ---
 
 # Desktop vsync window
@@ -23,16 +23,16 @@ A desktop window opens with a GPU surface and one vsync from the embedder. wgpu.
 
 ## Blocked by
 
-[[ticket-61-native-ui-unfunded]]: no freeze and no tasks until a sitting funds native UI. [[slice-69-importable-package]]: library-first, no empty crates.
+[[slice-69-importable-package]]: library-first, no empty crates. [[ticket-61-native-ui-unfunded]] promoted in [[rounds-160-fund-native]].
 
 ## Non-goals
 
-Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmup.
+Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmup. Naming a window crate in AFK.
 
 ## Oracle checklist
 
 - [ ] O1: vsync window
-  CHECK: command named in the desktop spec test.md after freeze
+  CHECK: command named in the desktop spec test.md
   EXPECT: pass
   EVIDENCE: pending
 - [ ] O2: no WebView and no JS engine
@@ -42,7 +42,14 @@ Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmu
 
 ## Pool
 
-None until freeze after [[ticket-61-native-ui-unfunded]] is promoted.
+Durable links to task ids. Never drop them.
+
+- [[task-161-spec-crate-workspace-funded]]
+- [[task-162-red-green-crate-workspace-funded]]
+- [[task-163-spec-desktop-vsync]]
+- [[task-164-hitl-name-desktop-window]]
+- [[task-165-red-green-no-js-engine]]
+- [[task-166-red-green-vsync-window]]
 
 ## See also
 
@@ -52,3 +59,5 @@ None until freeze after [[ticket-61-native-ui-unfunded]] is promoted.
 - [[location-39-desktop-embedder]]
 - [[location-22-crate-layout]]
 - [[location-60-animation-clocks]]
+- [[rounds-160-fund-native]]
+- [[ticket-61-native-ui-unfunded]]
