@@ -32,13 +32,13 @@ A public css tagged template. A public parseCss. Repeating StyleSheet-shaped ora
 ## Oracle checklist
 
 - [x] O1: no CSS language
-  CHECK: node --test tests/no-css-language.test.mjs
+  CHECK: node --test tests/style-as-data/no-css-language.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/style-as-data/no-css-language.test.mjs; 1 pass 0 fail
 - [x] O2: no CSS engine
-  CHECK: node --test tests/no-css-engine.test.mjs
+  CHECK: node --test tests/style-as-data/no-css-engine.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/style-as-data/no-css-engine.test.mjs; 1 pass 0 fail
 
 ## Pool
 
