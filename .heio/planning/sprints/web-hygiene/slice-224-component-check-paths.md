@@ -2,13 +2,13 @@
 id: "slice-224-component-check-paths"
 title: "Component model CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-125-component-model-honesty"
 tags: []
 created_at: "2026-09-10T22:07:00Z"
-updated_at: "2026-09-10T22:07:00Z"
+updated_at: "2026-09-10T22:11:48Z"
 ---
 
 # Component model CHECK paths
@@ -31,18 +31,18 @@ New component-model behaviour. Editing `docs/specs/`. Reopening `web-tracers`. P
 
 ## Oracle checklist
 
-- [ ] O1: no class components
+- [x] O1: no class components
   CHECK: node --test tests/component-model/no-class-components.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Fiber or virtual DOM as identity
+  EVIDENCE: node --test tests/component-model/no-class-components.test.mjs; 1 pass 0 fail
+- [x] O2: no Fiber or virtual DOM as identity
   CHECK: node --test tests/component-model/no-fiber-vdom.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: one component tree
+  EVIDENCE: node --test tests/component-model/no-fiber-vdom.test.mjs; 1 pass 0 fail
+- [x] O3: one component tree
   CHECK: node --test tests/component-model/no-forked-tree.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/component-model/no-forked-tree.test.mjs; 1 pass 0 fail
 
 ## Pool
 
