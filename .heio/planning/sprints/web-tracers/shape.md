@@ -35,6 +35,7 @@ Location: [[location-17-web-component-library]]. Thin vertical demos on the JS b
 - [[slice-145-host-leaves-honesty]]: host leaves honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
 - [[slice-149-style-as-data-honesty]]: style as data honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
 - [[slice-153-host-config-honesty]]: host config honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
+- [[slice-157-portability-metal-honesty]]: portability metal honesty. blocked_by: [[slice-75-portable-web-import]]
 
 ## Slices out
 
