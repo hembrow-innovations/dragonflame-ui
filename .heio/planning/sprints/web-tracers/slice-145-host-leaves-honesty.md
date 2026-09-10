@@ -2,13 +2,13 @@
 id: "slice-145-host-leaves-honesty"
 title: "Host leaves honesty"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T12:15:00Z"
-updated_at: "2026-09-10T12:15:00Z"
+updated_at: "2026-09-10T20:00:00Z"
 ---
 
 # Host leaves honesty
@@ -31,14 +31,14 @@ A public registerLeaf. String host tags. Repeating six-leaf oracles. Repeating c
 
 ## Oracle checklist
 
-- [ ] O1: no HTML leaves
+- [x] O1: no HTML leaves
   CHECK: node --test tests/no-html-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no UIKit as leaf set
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no UIKit as leaf set
   CHECK: node --test tests/no-uikit-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 

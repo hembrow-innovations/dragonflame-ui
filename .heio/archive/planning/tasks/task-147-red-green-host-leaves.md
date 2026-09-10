@@ -2,7 +2,7 @@
 id: "task-147-red-green-host-leaves"
 title: "Red-green: host leaves honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-146-spec-host-leaves"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-145-host-leaves-honesty"
 tags: []
 created_at: "2026-09-10T12:15:00Z"
-updated_at: "2026-09-10T12:15:00Z"
+updated_at: "2026-09-10T21:30:00Z"
 ---
 
 # Red-green: host leaves honesty
@@ -39,3 +39,7 @@ scope: tests/no-html-leaves.test.mjs, tests/no-uikit-leaves.test.mjs
 
 - [[slice-145-host-leaves-honesty]]
 - [[task-146-spec-host-leaves]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-html-leaves.test.mjs` and `node --test tests/no-uikit-leaves.test.mjs`. Win. 1 pass 0 fail each.
