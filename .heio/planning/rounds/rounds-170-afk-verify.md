@@ -6,7 +6,7 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-10T20:58:52Z"
+updated_at: "2026-09-10T21:02:04Z"
 ---
 
 # afk-verify
@@ -23,5 +23,6 @@ next: slice-112-js-backend-honesty
 - **slice-74-raf-clock**: GAP. O1 stale CHECK path. ticket-179-slice-74-stale-check-path
 - **slice-75-portable-web-import**: GAP. O1 O2 stale CHECK paths. ticket-180-slice-75-stale-check-paths
 - **slice-76-desktop-vsync-window**: HOLD. O1 O2 pass. no tickets
+- **slice-77-draw-a-rect**: HOLD. O1 O2 pass. no tickets
 - **slice-85-first-version-without-sugar**: GAP. O1 O2 O3 stale CHECK paths. ticket-181-slice-85-stale-check-paths
 - **slice-107-composite-on-dom**: GAP. O1 O2 O3 stale CHECK paths. ticket-182-slice-107-stale-check-paths
