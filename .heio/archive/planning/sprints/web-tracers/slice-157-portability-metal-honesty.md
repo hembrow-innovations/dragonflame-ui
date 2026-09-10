@@ -32,9 +32,9 @@ A public Metal. Repeating `document` import oracles. Repeating thin-surface orac
 ## Oracle checklist
 
 - [x] O1: no Metal import
-  CHECK: node --test tests/portable-metal.test.mjs
+  CHECK: node --test tests/portability-metal/portable-metal.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/portability-metal/portable-metal.test.mjs; 1 pass 0 fail
 
 ## Pool
 
