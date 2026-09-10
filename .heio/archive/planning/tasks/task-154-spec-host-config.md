@@ -2,14 +2,14 @@
 id: "task-154-spec-host-config"
 title: "Spec host config honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-10T14:20:00Z"
-updated_at: "2026-09-10T14:20:00Z"
+updated_at: "2026-09-10T01:12:49Z"
 ---
 
 # Spec host config honesty
