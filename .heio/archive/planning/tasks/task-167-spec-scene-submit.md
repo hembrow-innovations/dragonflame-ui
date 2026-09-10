@@ -2,7 +2,7 @@
 id: "task-167-spec-scene-submit"
 title: "Spec one scene submit"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-166-red-green-vsync-window"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T22:30:00Z"
 ---
 
 # Spec one scene submit

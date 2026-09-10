@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-167-spec-scene-submit**: scene submit spec ladder; one packed colored-rect scene, one `extern "C"` submit, Taffy in the engine, GPU submit not on the UI thread.
 - **task-166-red-green-vsync-window**: macOS winit window, engine wgpu surface, one embedder vsync; O1 `node --test tests/desktop-embedder/vsync-window.test.mjs` pass.
 - **task-165-red-green-no-js-engine**: desktop native honesty tests fail on a WebView shell or Hermes, JSC, or V8 as the app runtime; tracing GC stays.
 - **task-162-red-green-crate-workspace-funded**: crate-workspace tests pass if a Cargo workspace appears because native is funded; not-toolchain oracle kept.
