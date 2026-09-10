@@ -8,7 +8,7 @@ blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-10T22:30:00Z"
+updated_at: "2026-09-11T12:00:00Z"
 ---
 
 # Counter on DOM
@@ -32,17 +32,17 @@ Full leaf kit, Owner dispose, JSX, web canvas, WASM.
 ## Oracle checklist
 
 - [x] O1: static hyperscript text on DOM
-  CHECK: node --test tests/counter-static-h.test.mjs
+  CHECK: node --test tests/counter/counter-static-h.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/counter-static-h.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/counter/counter-static-h.test.mjs; 1 pass 0 fail
 - [x] O2: signal write patches the same DOM text
-  CHECK: node --test tests/counter-signal-patch.test.mjs
+  CHECK: node --test tests/counter/counter-signal-patch.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/counter-signal-patch.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/counter/counter-signal-patch.test.mjs; 1 pass 0 fail
 - [x] O3: component function did not re-run on the write
-  CHECK: node --test tests/counter-run-once.test.mjs
+  CHECK: node --test tests/counter/counter-run-once.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/counter-run-once.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/counter/counter-run-once.test.mjs; 1 pass 0 fail
 
 ## Pool
 
