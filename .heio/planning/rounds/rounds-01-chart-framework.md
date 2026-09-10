@@ -104,7 +104,7 @@ None.
 
 ## Out of scope
 
-- implementing inside `/Users/jaredhembrow/workbench/draconic` toolchain ROADMAP
+- implementing inside `~/workbench/draconic` toolchain ROADMAP
 - adding JSX to the draconic parser from this repo
 - WASM web UI
 - WebView native

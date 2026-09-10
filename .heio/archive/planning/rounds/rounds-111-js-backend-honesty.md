@@ -89,7 +89,7 @@ Callers keep the existing import. They do not call `eval` to load a screen. They
 
 #### Shape
 
-Public surface stays `h`, `render`, and the closed leaf kit. Honesty lives in tests that fail if this checkout embeds `eval` as a screen loader, ships dead native stubs in the web package, copies JS emit from the sibling toolchain, or introduces a JS plus shadow plus interpreter plus bridge architecture. Complexity hidden: how the sibling JS backend emits. Callers do not import a platform module. Invariants: web package is web-only while native is unfunded; emit stays in `/Users/jaredhembrow/workbench/draconic`; screens are modules, not eval strings.
+Public surface stays `h`, `render`, and the closed leaf kit. Honesty lives in tests that fail if this checkout embeds `eval` as a screen loader, ships dead native stubs in the web package, copies JS emit from the sibling toolchain, or introduces a JS plus shadow plus interpreter plus bridge architecture. Complexity hidden: how the sibling JS backend emits. Callers do not import a platform module. Invariants: web package is web-only while native is unfunded; emit stays in `~/workbench/draconic`; screens are modules, not eval strings.
 
 #### Red flags
 

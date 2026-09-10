@@ -42,7 +42,7 @@ A Program of function components and signals compiles to ordinary JavaScript for
 
 ## See also
 
-- **Sibling toolchain**: `/Users/jaredhembrow/workbench/draconic`
+- **Sibling toolchain**: `~/workbench/draconic`
 - **Committed vault**: `docs/overview/` in this repo, especially [[overview-ui-framework]]
 - **Scribble this intent is proposed from**: `docs/99_scribble/ideas-ui-framework.md` in this repo
 - **Open questions**: remain; this intent is proposed from a scribble. Chart them in [[rounds-01-chart-framework]]

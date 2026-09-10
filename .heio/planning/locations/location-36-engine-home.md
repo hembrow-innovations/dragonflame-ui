@@ -21,7 +21,7 @@ The Rust engine lives in this repo.
 - **Split later**: this is working when a split happens only if it hurts.
   - bet: try one repo until it hurts; pivot if a sibling engine repo is created first
 - **Not toolchain**: this is working when the engine is not filed as draconic toolchain ROADMAP work.
-  - bet: try this product repo; pivot if the engine is implemented inside `/Users/jaredhembrow/workbench/draconic`
+  - bet: try this product repo; pivot if the engine is implemented inside `~/workbench/draconic`
 
 ## See also
 

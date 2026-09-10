@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const skip = new Set([".git", "node_modules", "target"]);
-const toolchain = "/Users/jaredhembrow/workbench/draconic";
+const toolchain = "~/workbench/draconic";
 
 function walk(dir) {
 	const out = [];

@@ -1,6 +1,5 @@
 # Agents
 
-This checkout runs **OpenCode** only. Project skills live under `.opencode/skills/`. Do not run Hivemind, Pi, or heio-stack. If another file names those runtimes, this file wins.
 
 ## Skills
 
@@ -35,13 +34,17 @@ Use the docs-skill default layout. Glossary is `docs/overview/glossary.md`. Lock
 
 ## Product
 
-This repo is the dragonflame-ui framework product. The language toolchain lives in the sibling `/Users/jaredhembrow/workbench/draconic`. Do not implement the compiler here. Do not add Roadmap rows to the toolchain repo.
+This repo is the dragonflame-ui framework product. The language toolchain lives in the sibling `~/workbench/draconic`. Do not implement the compiler here. Do not add Roadmap rows to the toolchain repo.
 
 ## Planning
 
 Completeness and day-to-day planning live in `.heio/planning/` (intent, roadmap, locations, rounds, tickets). `docs/` is committed truth. Do not put tickets in docs.
 
 Open product questions are non-empty until a wayfinder or planning sitting closes them. Do not invent product rules. Load **principle-intent-ladder-stop**.
+
+## Draconic Language
+
+`draconic` is being developed in `~/workbench/draconic`, this should act as the truth behind `draconic` as a language.  If bugs are found submit a github issue to the github repo so that a fix can be planned and implemented. build it from there if needed.
 
 ## Rules
 
