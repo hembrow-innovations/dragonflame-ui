@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = ["crates/engine", "crates/embedder"]
+
+[workspace.package]
+edition = "2021"
+
+[workspace.dependencies]
+engine = { path = "crates/engine" }
+pollster = "0.4"
+wgpu = "24"
+winit = "0.30"

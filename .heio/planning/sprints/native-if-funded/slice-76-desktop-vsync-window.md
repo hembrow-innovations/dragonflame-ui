@@ -8,7 +8,7 @@ blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-10T20:19:15Z"
+updated_at: "2026-09-11T12:00:00Z"
 ---
 
 # Desktop vsync window
@@ -31,10 +31,10 @@ Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmu
 
 ## Oracle checklist
 
-- [ ] O1: vsync window
+- [x] O1: vsync window
   CHECK: command named in the desktop spec test.md
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/desktop-embedder/vsync-window.test.mjs 1 pass 0 fail
 - [x] O2: no WebView and no JS engine
   CHECK: node --test tests/desktop-embedder/no-webview-no-js-engine.test.mjs
   EXPECT: pass

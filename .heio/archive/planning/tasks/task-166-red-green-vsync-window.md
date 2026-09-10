@@ -2,7 +2,7 @@
 id: "task-166-red-green-vsync-window"
 title: "Red-green: vsync window"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-162-red-green-crate-workspace-funded"
@@ -41,3 +41,7 @@ scope: tests/ named by that spec, plus engine and embedder crates this task must
 
 - [[slice-76-desktop-vsync-window]]
 - [[task-164-hitl-name-desktop-window]]
+
+## Gauntlet
+
+- round 1: `node --test tests/desktop-embedder/vsync-window.test.mjs` win. Promises `desktop-embedder.window:embedder-owns`, `desktop-embedder.vsync:embedder-supplies`, `desktop-embedder.gpu:engine-owns`, `desktop-embedder.engine:this-repo`.
