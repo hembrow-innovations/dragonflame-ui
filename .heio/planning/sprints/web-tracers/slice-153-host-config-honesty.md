@@ -2,13 +2,13 @@
 id: "slice-153-host-config-honesty"
 title: "Host config honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T14:20:00Z"
-updated_at: "2026-09-10T14:20:00Z"
+updated_at: "2026-09-10T21:50:00Z"
 ---
 
 # Host config honesty
@@ -31,14 +31,14 @@ A public jsi. A public hermesRuntime. A public HostConfig. Repeating leaf-kit or
 
 ## Oracle checklist
 
-- [ ] O1: no JSI
+- [x] O1: no JSI
   CHECK: node --test tests/no-jsi.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Hermes host config
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no Hermes host config
   CHECK: node --test tests/no-hermes-host-config.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
