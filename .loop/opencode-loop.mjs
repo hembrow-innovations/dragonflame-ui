@@ -6,11 +6,12 @@
 //        node .loop/opencode-loop.mjs 5 "fix the failing tests"
 //        LOOP_COMMAND=afk-plan node .loop/opencode-loop.mjs 200
 //        LOOP_COMMAND=afk-task node .loop/opencode-loop.mjs 200
+//        LOOP_COMMAND=afk-verify node .loop/opencode-loop.mjs 200
 // Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.6
 // SLEEP=<seconds> between loops. STALL_SEC=900 idle stdout/stderr → kill (0 disables).
 // STALL_ACTION=continue|abort (default continue). FAIL_ACTION=continue|abort (default continue).
 // LOG=0 skips .loop/logs/loop-<stamp>.log (default on).
-// Dual AFK loops share this checkout. No extra branch. No worktree.
+// Plan, drain, and verify loops share this checkout. No extra branch. No worktree.
 
 import { spawn } from "node:child_process";
 import {
@@ -23,11 +24,13 @@ import {
 import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
+import { verifyProgress } from "./pick-verify.mjs";
 import { readRoadmapStatus } from "./roadmap-status.mjs";
 
 const DEFAULT_COMMAND = process.env.LOOP_COMMAND || "afk-roadmap";
 const DEFAULT_ARGS = DEFAULT_COMMAND === "afk-roadmap" ? ["continue"] : [];
 const isRoadmapCampaign = DEFAULT_COMMAND === "afk-roadmap";
+const isVerifyCampaign = DEFAULT_COMMAND === "afk-verify";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
@@ -221,6 +224,16 @@ for (let i = 1; i <= loops; i++) {
 			emit(
 				"campaign complete — every ROADMAP.md row is in the ledger. stopping.",
 			);
+			break;
+		}
+	}
+	if (useDefaultAudit && isVerifyCampaign) {
+		const { total, audited, remaining, next } = verifyProgress(process.cwd());
+		emit(
+			`campaign: audited ${audited}/${total} remaining=${remaining} next=${next ?? "none"}`,
+		);
+		if (remaining === 0) {
+			emit("campaign complete. every met slice is in the ledger. stopping.");
 			break;
 		}
 	}

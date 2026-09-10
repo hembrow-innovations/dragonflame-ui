@@ -15,7 +15,7 @@ Arguments: $ARGUMENTS
 
 Workflow (follow AGENTS.md and project conventions throughout):
 
-1. Claim first: `node .loop/claim-ready.mjs` with the argument id or with no id. Do not hand-edit `status: claimed`. If the helper exits 2, stop. Do not start another task. Same checkout as `/afk-plan`. No git branch. No worktree.
+1. Claim first: `node .loop/claim-ready.mjs` with the argument id or with no id. Do not hand-edit `status: claimed`. If the helper exits 2, stop. Do not start another task. Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree.
 2. Read the claimed task file. **Vault pack:** load skill **vault-pack** and run `pnpm vault:pack -- --unit <path-to-unit.md>`; **Read every Must-read path in full** (intent ladder, agent-gotchas, purpose + contracts for `area`). Skim Related only if needed. Do not freestyle-grep half the vault. Then any relevant slice under `.heio/planning/sprints/<sprint_name>/slice-<NN>-<slug>.md`. Broad code exploration → subagent summary only.
 3. Implement the unit 100% — TDD, no stubs, no skipped scope. Respect its scope (a task's "Scope (may touch)" list, or the ticket's `## Agent Brief`); do not make repo-wide changes. Behaviour work must **name contract promise ids** from the pack; never invent product rules. UI must use the ui packages: 
 	- React Native packages: `ui-components-native`/`ui-infra-native`, 

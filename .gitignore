@@ -1,6 +1,7 @@
 .heio/logs/
 .loop/logs/
 .loop/lanes.lock
+.loop/verify/
 .DS_Store
 .env
 .env.*

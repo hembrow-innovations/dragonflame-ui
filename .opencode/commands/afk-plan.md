@@ -11,4 +11,4 @@ Arguments: $ARGUMENTS
 - Empty: pick the next unplanned slice target.
 - A slice, location, or ticket id: that target, if it is allowed to freeze.
 
-This is not `/afk-task` and not `/afk-slice`. Do not implement product code. Do not create a git branch or worktree. Same checkout as the drain loop. One slice plus its tasks, then exit.
+This is not `/afk-task`, not `/afk-slice`, and not `/afk-verify`. Do not implement product code. Do not create a git branch or worktree. Same checkout as the drain and verify loops. One slice plus its tasks, then exit.

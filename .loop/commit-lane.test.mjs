@@ -50,6 +50,68 @@ test("drain lane rejects map files", () => {
 	assert.equal(laneAllows("drain", "docs/specs/ui/purpose.md", root), true);
 });
 
+test("audit lane allows verify tickets and round only", () => {
+	const root = repo();
+	assert.equal(
+		laneAllows("audit", ".heio/planning/tickets/ticket-170-gap.md", root),
+		true,
+	);
+	assert.equal(
+		laneAllows(
+			"audit",
+			".heio/planning/rounds/rounds-171-afk-verify.md",
+			root,
+		),
+		true,
+	);
+	assert.equal(
+		laneAllows(
+			"audit",
+			".heio/planning/rounds/rounds-160-fund-native.md",
+			root,
+		),
+		false,
+	);
+	assert.equal(
+		laneAllows("audit", ".heio/planning/sprints/web-tracers/slice-69.md", root),
+		false,
+	);
+	assert.equal(laneAllows("audit", "src/index.js", root), false);
+	assert.equal(
+		laneAllows("audit", "tests/counter/counter-static-h.test.mjs", root),
+		false,
+	);
+	assert.equal(laneAllows("audit", "docs/specs/ui/purpose.md", root), false);
+	assert.equal(
+		laneAllows("audit", ".heio/planning/tasks/task-86-spec.md", root),
+		false,
+	);
+});
+
+test("audit lane commits verify tickets not slices", async () => {
+	const root = repo();
+	const ticket = ".heio/planning/tickets/ticket-170-gap.md";
+	mkdirSync(join(root, ".heio/planning/tickets"), { recursive: true });
+	writeFileSync(join(root, ticket), "# ticket\n");
+	const out = await commitLane({
+		root,
+		lane: "audit",
+		message: "chore(verify): ticket-170",
+		paths: [ticket],
+	});
+	assert.match(out, /ticket-170|committed|files? changed/i);
+	await assert.rejects(
+		() =>
+			commitLane({
+				root,
+				lane: "audit",
+				message: "bad",
+				paths: [".heio/planning/sprints/web-tracers/slice-69.md"],
+			}),
+		/may not commit/,
+	);
+});
+
 test("plan lane commits only planning files", async () => {
 	const root = repo();
 	const slice = ".heio/planning/sprints/web-tracers/slice-69.md";

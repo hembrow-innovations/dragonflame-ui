@@ -14,6 +14,13 @@ const PLAN_ALLOW = [
 	".heio/archive/planning/rounds/",
 ];
 
+const AUDIT_ALLOW = [
+	".heio/planning/tickets/",
+	".heio/planning/rounds/",
+	".heio/archive/planning/tickets/",
+	".heio/archive/planning/rounds/",
+];
+
 const DRAIN_DENY = [
 	".heio/planning/intent.md",
 	".heio/planning/roadmap.md",
@@ -39,7 +46,7 @@ export function parseCommitArgs(argv) {
 			paths.push(...argv.slice(i + 1));
 			break;
 		}
-		if (!lane && (arg === "plan" || arg === "drain")) {
+		if (!lane && (arg === "plan" || arg === "drain" || arg === "audit")) {
 			lane = arg;
 			continue;
 		}
@@ -80,6 +87,13 @@ export function laneAllows(lane, rel, root) {
 		}
 		return true;
 	}
+	if (lane === "audit") {
+		if (!AUDIT_ALLOW.some((p) => n === p.slice(0, -1) || n.startsWith(p))) {
+			return false;
+		}
+		if (n.includes("/rounds/") && !n.includes("afk-verify")) return false;
+		return true;
+	}
 	return false;
 }
 
@@ -90,7 +104,7 @@ function git(root, args) {
 export async function commitLane({ root, lane, message, paths }) {
 	if (!lane || !message || paths.length === 0) {
 		throw new Error(
-			"Usage: node .loop/commit-lane.mjs <plan|drain> -m <msg> -- <paths>",
+			"Usage: node .loop/commit-lane.mjs <plan|drain|audit> -m <msg> -- <paths>",
 		);
 	}
 	const rels = paths.map((p) => {

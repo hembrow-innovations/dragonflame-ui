@@ -18,6 +18,7 @@ Load the matching skill before the work it covers.
 - **vault-pack**: small vault context pack before coding or planning
 - **tdd**: test-first work
 - **afk-plan**: one next slice plus its tasks from the map, then exit
+- **afk-verify**: re-run one met slice's oracles, file tickets for afk-plan, then exit
 - **to-slices**: publish slice notes from a settled grouping
 - **to-tasks**: publish the task pool from frozen slices
 - **to-tickets**: file inbound signals as tickets

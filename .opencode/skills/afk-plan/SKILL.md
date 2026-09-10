@@ -1,11 +1,11 @@
 ---
 name: afk-plan
-description: afk-plan publishes one next slice and its tasks from the roadmap, locations, or tickets, then exits. Use when /afk-plan, a planner loop beside afk-task or afk-slice, or dual AFK loops on one checkout.
+description: afk-plan publishes one next slice and its tasks from the roadmap, locations, or tickets, then exits. Use when /afk-plan, a planner loop beside afk-task, afk-slice, or afk-verify.
 ---
 
 # afk-plan
 
-One sitting. One next slice plus its tasks. Then exit. Drain is `/afk-task` or `/afk-slice` in another loop on this same checkout.
+One sitting. One next slice plus its tasks. Then exit. Drain is `/afk-task` or `/afk-slice` in another loop on this same checkout. Verify is `/afk-verify`. Open tickets from verify are legal pick targets.
 
 Load **management** before any write under `.heio/`. Load **design-tree**, **architect**, **to-slices**, **to-tasks**, **principle-intent-ladder-stop**, and **vault-pack**. Load **docs** before any write under `docs/`. Do not write `docs/specs/`; that is drain work.
 
