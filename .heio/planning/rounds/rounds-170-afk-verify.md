@@ -6,13 +6,13 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-10T21:02:04Z"
+updated_at: "2026-09-10T21:05:24Z"
 ---
 
 # afk-verify
 
 ## Cursor
-next: slice-112-js-backend-honesty
+next: slice-116-patch-attrs-children
 
 ## Ledger
 - **slice-69-importable-package**: HOLD. O1 O2 pass. no tickets
@@ -26,3 +26,4 @@ next: slice-112-js-backend-honesty
 - **slice-77-draw-a-rect**: HOLD. O1 O2 pass. no tickets
 - **slice-85-first-version-without-sugar**: GAP. O1 O2 O3 stale CHECK paths. ticket-181-slice-85-stale-check-paths
 - **slice-107-composite-on-dom**: GAP. O1 O2 O3 stale CHECK paths. ticket-182-slice-107-stale-check-paths
+- **slice-112-js-backend-honesty**: GAP. O1 O2 O3 stale CHECK paths. ticket-183-slice-112-stale-check-paths
