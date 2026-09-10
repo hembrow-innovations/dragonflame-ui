@@ -6,13 +6,13 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-10T21:17:30Z"
+updated_at: "2026-09-10T21:20:50.579Z"
 ---
 
 # afk-verify
 
 ## Cursor
-next: slice-129-signal-dirtying-honesty
+next: slice-133-crate-workspace-honesty
 
 ## Ledger
 - **slice-69-importable-package**: HOLD. O1 O2 pass. no tickets
@@ -30,3 +30,4 @@ next: slice-129-signal-dirtying-honesty
 - **slice-116-patch-attrs-children**: GAP. O1 O2 stale CHECK paths. ticket-187-slice-116-stale-check-paths
 - **slice-121-dom-only-web-host**: GAP. O1 O2 O3 stale CHECK paths. ticket-188-slice-121-stale-check-paths
 - **slice-125-component-model-honesty**: GAP. O1 O2 O3 stale CHECK paths. ticket-192-slice-125-stale-check-paths
+- **slice-129-signal-dirtying-honesty**: GAP. O1 O2 O3 stale CHECK paths. ticket-196-slice-129-stale-check-paths
