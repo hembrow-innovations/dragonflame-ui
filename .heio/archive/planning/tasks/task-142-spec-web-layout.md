@@ -2,14 +2,14 @@
 id: "task-142-spec-web-layout"
 title: "Spec web layout honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-141-web-layout-honesty"
 tags: []
 created_at: "2026-09-10T11:00:00Z"
-updated_at: "2026-09-10T11:00:00Z"
+updated_at: "2026-09-10T00:31:34Z"
 ---
 
 # Spec web layout honesty
