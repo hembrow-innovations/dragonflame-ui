@@ -6,13 +6,13 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-10T23:33:24Z"
+updated_at: "2026-09-11T09:20:00Z"
 ---
 
 # afk-verify
 
 ## Cursor
-next: slice-249-portability-metal-check-path
+next: none
 
 ## Ledger
 - **slice-69-importable-package**: HOLD. O1 O2 pass. no tickets
@@ -57,3 +57,4 @@ next: slice-249-portability-metal-check-path
 - **slice-239-host-leaves-check-paths**: HOLD. O1 O2 pass. no tickets
 - **slice-242-style-as-data-check-paths**: HOLD. O1 O2 pass. no tickets
 - **slice-246-host-config-check-paths**: HOLD. O1 O2 pass. no tickets
+- **slice-249-portability-metal-check-path**: HOLD. O1 pass. no tickets
