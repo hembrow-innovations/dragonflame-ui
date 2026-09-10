@@ -6,7 +6,7 @@ status: parked
 ticket_type: observation
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # Do not fake a general LLVM lowerer here
@@ -17,7 +17,7 @@ A general LLVM lowerer is a toolchain problem. This repo must not fake it, emit 
 
 ## Fit
 
-Never promotes into a lowerer task here. If the toolchain grows a lowerer, that sitting lives in the sibling draconic checkout.
+Stays parked. Never promotes into a lowerer task here. If the toolchain grows a lowerer, that sitting lives in the sibling draconic checkout. Opening would jump the pick queue.
 
 ## Notes
 

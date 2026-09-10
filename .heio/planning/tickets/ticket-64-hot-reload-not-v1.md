@@ -6,7 +6,7 @@ status: parked
 ticket_type: feature-request
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # Hot reload must not block a first version
@@ -17,7 +17,7 @@ Hot reload via Embed or JS-debug is later and must not block a first version. Em
 
 ## Fit
 
-Optional later slice after web-tracers. Not a gate on [[slice-69-importable-package]].
+Stays parked. v1 absence is already locked by [[slice-85-first-version-without-sugar]]. Embed and JS-debug stay undefined. Do not invent them in AFK. Opening would jump the pick queue.
 
 ## Notes
 

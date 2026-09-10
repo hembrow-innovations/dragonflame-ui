@@ -6,7 +6,7 @@ status: parked
 ticket_type: observation
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # First-version test cases are unnamed
@@ -17,7 +17,7 @@ updated_at: "2026-09-09T23:30:00Z"
 
 ## Fit
 
-Demo slices own their cases. Engineering runner is `node --test` plus js/mjs, named in each spec `test.md`. Do not promote a Taffy test list into web-tracers.
+Stays parked. Demo slices own their cases. Engineering runner is `node --test` plus js/mjs, named in each spec `test.md`. Do not invent a suite or browser API set in AFK. Opening would jump the pick queue.
 
 ## Notes
 

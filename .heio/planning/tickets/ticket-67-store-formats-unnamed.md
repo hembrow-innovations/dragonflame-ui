@@ -2,11 +2,14 @@
 id: "ticket-67-store-formats-unnamed"
 title: "Store names and formats are unnamed"
 kind: ticket
-status: parked
+status: open
 ticket_type: observation
+blocked_by:
+  - "slice-80-ios-counter"
+  - "slice-81-android-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # Store names and formats are unnamed
@@ -17,7 +20,7 @@ updated_at: "2026-09-09T23:30:00Z"
 
 ## Fit
 
-[[slice-82-store-binaries]] stays shaping. HITL names stores after shells, then AFK TDD. Do not invent store names in a spec.
+Open and blocked until [[slice-80-ios-counter]] and [[slice-81-android-counter]] are met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-82-store-binaries]] AFK. Oracles quote [[location-53-store-packaging]] only: a packaged binary exists after shells; updates are new binaries; the source does not name stores or formats. Do not invent App Store or Play names.
 
 ## Notes
 

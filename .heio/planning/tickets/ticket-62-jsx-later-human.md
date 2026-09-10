@@ -6,7 +6,7 @@ status: parked
 ticket_type: feature-request
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # JSX remains a later human decision
@@ -17,7 +17,7 @@ JSX is considered only after a human decision. If ever added, it is sugar for th
 
 ## Fit
 
-Not this sitting. [[slice-85-first-version-without-sugar]] locks absence now. Promote only after a human says yes. Never AFK parser work here.
+Stays parked. [[slice-85-first-version-without-sugar]] already locks absence. Promote only after a human says yes. Never AFK parser work here. Opening would jump the pick queue.
 
 ## Notes
 

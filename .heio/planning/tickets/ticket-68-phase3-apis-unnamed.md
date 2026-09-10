@@ -2,11 +2,13 @@
 id: "ticket-68-phase3-apis-unnamed"
 title: "Native a11y and text APIs are unnamed"
 kind: ticket
-status: parked
+status: open
 ticket_type: observation
+blocked_by:
+  - "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T18:00:00Z"
 ---
 
 # Native a11y and text APIs are unnamed
@@ -17,7 +19,7 @@ updated_at: "2026-09-09T23:30:00Z"
 
 ## Fit
 
-[[slice-83-talk-and-measure]] stays shaping. HITL may lock only wayfinder-true promises without inventing UIKit class lists.
+Open and blocked until [[slice-80-ios-counter]] is met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-83-talk-and-measure]] AFK. Oracles quote those locations only: semantics tree beside the render tree, embedder plumbing, per-host metrics seam, no CSS on iOS, font load not on the UI thread. Do not invent UIKit class lists.
 
 ## Notes
 
