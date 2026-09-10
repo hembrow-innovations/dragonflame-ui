@@ -2,13 +2,13 @@
 id: "slice-239-host-leaves-check-paths"
 title: "Host leaves CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-145-host-leaves-honesty"
 tags: []
 created_at: "2026-09-10T22:40:10Z"
-updated_at: "2026-09-10T22:40:10Z"
+updated_at: "2026-09-11T08:55:00Z"
 ---
 
 # Host leaves CHECK paths
@@ -31,14 +31,14 @@ New host-leaves behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Produ
 
 ## Oracle checklist
 
-- [ ] O1: no HTML leaves
+- [x] O1: no HTML leaves
   CHECK: node --test tests/host-leaves/no-html-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no UIKit as leaf set
+  EVIDENCE: node --test tests/host-leaves/no-html-leaves.test.mjs; 1 pass 0 fail
+- [x] O2: no UIKit as leaf set
   CHECK: node --test tests/host-leaves/no-uikit-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/host-leaves/no-uikit-leaves.test.mjs; 1 pass 0 fail
 
 ## Pool
 
