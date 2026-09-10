@@ -2,13 +2,13 @@
 id: "slice-194-testid-check-path"
 title: "Test ID CHECK path"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-73-testid-pressable"
 tags: []
 created_at: "2026-09-10T21:18:40Z"
-updated_at: "2026-09-10T21:18:40Z"
+updated_at: "2026-09-11T07:35:00Z"
 ---
 
 # Test ID CHECK path
@@ -31,10 +31,10 @@ New a11y or test ID behaviour. Editing `docs/specs/`. Reopening `web-tracers`. P
 
 ## Oracle checklist
 
-- [ ] O1: test ID and a11y props
+- [x] O1: test ID and a11y props
   CHECK: node --test tests/a11y-test-ids/testid-a11y.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/a11y-test-ids/testid-a11y.test.mjs; 2 pass 0 fail
 
 ## Pool
 
