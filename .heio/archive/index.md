@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-134-spec-crate-workspace**: crate workspace honesty spec ladder; workspace only when native is funded, not a toolchain workspace.
 - **task-114-red-green-js-backend-honesty**: honesty tests fail if eval screens, dead native stubs, or copied JS emit appear.
 - **task-127-red-green-component-model**: honesty tests fail if class components, Fiber vdom, or a second authoring tree appear.
 - **task-126-spec-component-model**: component model honesty spec ladder; one tree, not class components.
