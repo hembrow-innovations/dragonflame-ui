@@ -32,17 +32,17 @@ Naming the browser API set. Dual package entries. Empty native stubs. Inventing 
 ## Oracle checklist
 
 - [x] O1: no eval host
-  CHECK: node --test tests/no-eval-here.test.mjs
+  CHECK: node --test tests/js-backend/no-eval-here.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/js-backend/no-eval-here.test.mjs; 1 pass 0 fail
 - [x] O2: no dead native stubs
-  CHECK: node --test tests/no-native-stubs.test.mjs
+  CHECK: node --test tests/js-backend/no-native-stubs.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/js-backend/no-native-stubs.test.mjs; 1 pass 0 fail
 - [x] O3: emit stays in the sibling toolchain
-  CHECK: node --test tests/no-emit-here.test.mjs
+  CHECK: node --test tests/js-backend/no-emit-here.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/js-backend/no-emit-here.test.mjs; 1 pass 0 fail
 
 ## Pool
 

@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-214-align-slice-112-check-paths**: archived slice-112 CHECK and EVIDENCE name `tests/js-backend/no-eval-here.test.mjs`, `tests/js-backend/no-native-stubs.test.mjs`, and `tests/js-backend/no-emit-here.test.mjs`.
 - **task-211-align-slice-107-check-paths**: archived slice-107 CHECK and EVIDENCE name `tests/composite/composite-h.test.mjs`, `tests/composite/composite-children.test.mjs`, and `tests/composite/composite-run-once.test.mjs`.
 - **task-208-align-slice-85-check-paths**: archived slice-85 CHECK and EVIDENCE name `tests/absence/no-jsx-here.test.mjs`, `tests/absence/no-lowerer-here.test.mjs`, and `tests/git-package/git-package.test.mjs`.
 - **task-204-align-slice-75-check-paths**: archived slice-75 CHECK and EVIDENCE name `tests/renderer-portability/portable-import.test.mjs` and `tests/renderer-portability/portable-wrong-target.test.mjs`.
