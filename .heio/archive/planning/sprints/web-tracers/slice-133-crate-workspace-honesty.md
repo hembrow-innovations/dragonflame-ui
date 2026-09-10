@@ -31,14 +31,14 @@ A public workspace helper. A Cargo.toml `[workspace]`. Empty engine crates. Repe
 
 ## Oracle checklist
 
-- [x] O1: no Cargo workspace
-  CHECK: node --test tests/no-cargo-workspace.test.mjs
+- [x] O1: a Cargo workspace may exist because native is funded
+  CHECK: node --test tests/crate-workspace/funded-cargo-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/crate-workspace/funded-cargo-workspace.test.mjs; 1 pass 0 fail
 - [x] O2: not a toolchain workspace
-  CHECK: node --test tests/no-toolchain-workspace.test.mjs
+  CHECK: node --test tests/crate-workspace/no-toolchain-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/crate-workspace/no-toolchain-workspace.test.mjs; 1 pass 0 fail
 
 ## Pool
 
