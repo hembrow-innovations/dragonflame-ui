@@ -2,6 +2,21 @@
 
 One-liners of what landed. Newest first.
 
+- **web-tracers**: funded web tracer slices met; package, DOM tracers, and honesty oracles.
+- **sugar-later**: first version without sugar oracles met.
+- **rounds-156-portability-metal-honesty**: published sitting; portable Program cannot import Metal.
+- **rounds-152-host-config-honesty**: published sitting; do not steal JSI or Hermes.
+- **rounds-148-style-as-data-honesty**: published sitting; style is not a CSS language or CSS engine product.
+- **rounds-144-host-leaves-honesty**: published sitting; not HTML, and not every UIKit class as the leaf set.
+- **rounds-140-web-layout-honesty**: published sitting; not pixel-identical, copy DOM backend as idea not Impeller.
+- **rounds-136-render-object-honesty**: published sitting; immutable config without Flutter Widget as the retained node.
+- **rounds-132-crate-workspace-honesty**: published sitting; workspace only when native is funded.
+- **rounds-128-signal-dirtying-honesty**: published sitting; build dirtying only, no setState Element subtree.
+- **rounds-124-component-model-honesty**: published sitting; one tree, not class components.
+- **rounds-120-dom-only-web-host**: published sitting; DOM-only web host, no canvas, no WASM web UI.
+- **rounds-115-patch-attrs-children**: published sitting; style and children patch on the retained host node.
+- **rounds-111-js-backend-honesty**: published sitting; compile-time split, no eval, not RN-but-bytecode.
+- **rounds-106-composite-props-children**: published sitting; function type as h(), props.children, run-once.
 - **task-135-red-green-crate-workspace**: honesty tests fail if this checkout adds a Cargo workspace while native is unfunded, or treats a Cargo toolchain workspace as this UI product.
 - **task-159-red-green-portability-metal**: honesty tests fail if this checkout lets a portable Program import Metal.
 - **task-158-spec-portability-metal**: portability metal honesty spec ladder; a portable Program cannot import Metal.

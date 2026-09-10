@@ -2,13 +2,13 @@
 id: "slice-75-portable-web-import"
 title: "Portable web import"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T01:52:40Z"
 ---
 
 # Portable web import
@@ -31,14 +31,14 @@ Host I/O as a browser. Native `extern "C"` path. Second IR.
 
 ## Oracle checklist
 
-- [ ] O1: portable import
+- [x] O1: portable import
   CHECK: node --test tests/portable-import.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: document import hard-errors
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: document import hard-errors
   CHECK: node --test tests/portable-wrong-target.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 

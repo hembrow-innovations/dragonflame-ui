@@ -2,12 +2,12 @@
 id: "slice-69-importable-package"
 title: "Importable package"
 kind: slice
-status: active
+status: met
 sprint: "web-tracers"
 blocked_by: []
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-10T00:00:00Z"
+updated_at: "2026-09-09T23:59:27Z"
 ---
 
 # Importable package
@@ -33,11 +33,11 @@ Renderer, signals, public-site rewrite, engine crates, CI.
 - [x] O1: package identity
   CHECK: node --test tests/git-package.test.mjs
   EXPECT: pass
-  EVIDENCE: 3 pass 0 fail
+  EVIDENCE: node --test tests/git-package.test.mjs; 3 pass 0 fail
 - [x] O2: no empty Rust crates
   CHECK: node --test tests/crate-layout.test.mjs
   EXPECT: pass
-  EVIDENCE: 2 pass 0 fail
+  EVIDENCE: node --test tests/crate-layout.test.mjs; 2 pass 0 fail
 
 ## Pool
 

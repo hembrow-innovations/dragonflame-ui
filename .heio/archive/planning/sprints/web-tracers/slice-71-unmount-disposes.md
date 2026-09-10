@@ -2,13 +2,13 @@
 id: "slice-71-unmount-disposes"
 title: "Unmount disposes"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T18:50:00Z"
 ---
 
 # Unmount disposes
@@ -31,10 +31,10 @@ InheritedWidget, native persist as a second ownership model.
 
 ## Oracle checklist
 
-- [ ] O1: unmount disposes
+- [x] O1: unmount disposes
   CHECK: node --test tests/owner-dispose.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/owner-dispose.test.mjs; 1 pass 0 fail
 
 ## Pool
 

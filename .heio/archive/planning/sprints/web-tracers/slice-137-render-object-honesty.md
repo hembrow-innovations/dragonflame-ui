@@ -2,13 +2,13 @@
 id: "slice-137-render-object-honesty"
 title: "Render object honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-10T10:40:00Z"
-updated_at: "2026-09-10T10:40:00Z"
+updated_at: "2026-09-10T13:00:00Z"
 ---
 
 # Render object honesty
@@ -31,14 +31,14 @@ A public Widget. A public Element. A public RenderObject type. Layout, paint, or
 
 ## Oracle checklist
 
-- [ ] O1: no Widget as retained node
+- [x] O1: no Widget as retained node
   CHECK: node --test tests/no-widget-retain.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no collapsed Component and Render object naming
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no collapsed Component and Render object naming
   CHECK: node --test tests/no-collapsed-render-names.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 

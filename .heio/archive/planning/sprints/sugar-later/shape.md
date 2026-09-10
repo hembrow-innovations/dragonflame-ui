@@ -2,12 +2,11 @@
 id: "sugar-later"
 title: "Sugar later"
 kind: sprint
-status: active
+status: closed
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-10T06:29:52Z"
 ---
-
 # Sugar later
 
 ## Grouping

@@ -2,13 +2,13 @@
 id: "slice-129-signal-dirtying-honesty"
 title: "Signal dirtying honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-10T09:50:00Z"
-updated_at: "2026-09-10T09:50:00Z"
+updated_at: "2026-09-10T11:30:00Z"
 ---
 
 # Signal dirtying honesty
@@ -31,18 +31,18 @@ A public setState. A public useState. A public SharedSignal. Implementing Show o
 
 ## Oracle checklist
 
-- [ ] O1: no setState dirty model
+- [x] O1: no setState dirty model
   CHECK: node --test tests/no-setstate-dirty.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: signals do not replace the pipeline
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: signals do not replace the pipeline
   CHECK: node --test tests/no-signal-pipeline.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: no shared signal objects
+  EVIDENCE: 1 pass 0 fail
+- [x] O3: no shared signal objects
   CHECK: node --test tests/no-shared-signals.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
