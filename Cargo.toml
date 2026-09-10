@@ -8,5 +8,6 @@ edition = "2021"
 [workspace.dependencies]
 engine = { path = "crates/engine" }
 pollster = "0.4"
+taffy = "0.14"
 wgpu = "24"
 winit = "0.30"

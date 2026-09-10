@@ -2,7 +2,7 @@
 id: "task-168-red-green-taffy-rect"
 title: "Red-green: Taffy lays out a rect"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-167-spec-scene-submit"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T23:00:00Z"
 ---
 
 # Red-green: Taffy lays out a rect
@@ -39,3 +39,7 @@ scope: tests/ named by that spec, plus engine layout and scene submit this task 
 
 - [[slice-77-draw-a-rect]]
 - [[task-167-spec-scene-submit]]
+
+## Gauntlet
+
+- round 1: `node --test tests/ffi-scene-commands/taffy-rect.test.mjs` win. Promises `ffi-scene-commands.submit:one-packed-scene`, `ffi-scene-commands.layout:taffy`, `ffi-scene-commands.paint:draw-lists`.

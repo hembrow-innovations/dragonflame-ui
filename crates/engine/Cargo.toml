@@ -5,4 +5,5 @@ edition.workspace = true
 
 [dependencies]
 pollster = { workspace = true }
+taffy = { workspace = true }
 wgpu = { workspace = true }

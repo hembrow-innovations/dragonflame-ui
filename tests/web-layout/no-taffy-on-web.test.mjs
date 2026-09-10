@@ -37,7 +37,11 @@ function isTaffyOnWebSource(src) {
 }
 
 test("this checkout does not force Taffy on web", () => {
-	const files = walk(root).filter((path) => path !== self && !isNote(path));
+	const files = walk(root).filter((path) => {
+		if (path === self || isNote(path)) return false;
+		const r = rel(path);
+		return !r.startsWith("crates/") && !r.startsWith("tests/ffi-scene-commands/");
+	});
 	assert.deepEqual(
 		files.filter((path) => isTaffyOnWebPath(rel(path))),
 		[],

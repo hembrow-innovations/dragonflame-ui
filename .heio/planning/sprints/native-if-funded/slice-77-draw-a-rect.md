@@ -2,13 +2,13 @@
 id: "slice-77-draw-a-rect"
 title: "Draw a rect"
 kind: slice
-status: frozen
+status: active
 sprint: "native-if-funded"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T23:00:00Z"
 ---
 
 # Draw a rect
@@ -31,10 +31,10 @@ Second IR. UI bytecode. CSS as native layout. Begin/end command stream. Later sc
 
 ## Oracle checklist
 
-- [ ] O1: Taffy lays out a rect
+- [x] O1: Taffy lays out a rect
   CHECK: command named in the scene spec test.md
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: `node --test tests/ffi-scene-commands/taffy-rect.test.mjs` 1 pass 0 fail
 - [ ] O2: GPU submit is not on the UI thread
   CHECK: command named in that spec
   EXPECT: pass
