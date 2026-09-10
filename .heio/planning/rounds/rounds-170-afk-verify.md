@@ -6,13 +6,13 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-11T23:55:00Z"
+updated_at: "2026-09-12T00:10:00Z"
 ---
 
 # afk-verify
 
 ## Cursor
-next: slice-221-dom-only-host-check-paths
+next: slice-224-component-check-paths
 
 ## Ledger
 - **slice-69-importable-package**: HOLD. O1 O2 pass. no tickets
@@ -48,3 +48,4 @@ next: slice-221-dom-only-host-check-paths
 - **slice-210-composite-check-paths**: HOLD. O1 O2 O3 pass. no tickets
 - **slice-213-js-backend-check-paths**: HOLD. O1 O2 O3 pass. no tickets
 - **slice-217-dom-patch-check-paths**: HOLD. O1 O2 pass. no tickets
+- **slice-221-dom-only-host-check-paths**: HOLD. O1 O2 O3 pass. no tickets
