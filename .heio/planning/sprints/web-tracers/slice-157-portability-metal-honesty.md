@@ -2,13 +2,13 @@
 id: "slice-157-portability-metal-honesty"
 title: "Portability metal honesty"
 kind: slice
-status: active
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-75-portable-web-import"
 tags: []
 created_at: "2026-09-10T14:30:00Z"
-updated_at: "2026-09-10T01:53:43Z"
+updated_at: "2026-09-10T02:03:07Z"
 ---
 
 # Portability metal honesty
