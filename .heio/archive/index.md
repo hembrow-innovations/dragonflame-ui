@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-208-align-slice-85-check-paths**: archived slice-85 CHECK and EVIDENCE name `tests/absence/no-jsx-here.test.mjs`, `tests/absence/no-lowerer-here.test.mjs`, and `tests/git-package/git-package.test.mjs`.
 - **task-204-align-slice-75-check-paths**: archived slice-75 CHECK and EVIDENCE name `tests/renderer-portability/portable-import.test.mjs` and `tests/renderer-portability/portable-wrong-target.test.mjs`.
 - **task-200-align-slice-74-check-path**: archived slice-74 CHECK and EVIDENCE name `tests/animation-clocks/raf-clock.test.mjs`.
 - **task-195-align-slice-73-check-path**: archived slice-73 CHECK and EVIDENCE name `tests/a11y-test-ids/testid-a11y.test.mjs`.

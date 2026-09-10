@@ -30,17 +30,17 @@ Implementing JSX. Implementing a lowerer. Implementing hot reload.
 
 ## Oracle checklist
 - [x] O1: no JSX from this repo
-  CHECK: node --test tests/no-jsx-here.test.mjs
+  CHECK: node --test tests/absence/no-jsx-here.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/no-jsx-here.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/absence/no-jsx-here.test.mjs; 1 pass 0 fail
 - [x] O2: no faked lowerer
-  CHECK: node --test tests/no-lowerer-here.test.mjs
+  CHECK: node --test tests/absence/no-lowerer-here.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/no-lowerer-here.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/absence/no-lowerer-here.test.mjs; 1 pass 0 fail
 - [x] O3: hot reload not required to import
-  CHECK: node --test tests/git-package.test.mjs
+  CHECK: node --test tests/git-package/git-package.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/git-package.test.mjs; 3 pass 0 fail
+  EVIDENCE: node --test tests/git-package/git-package.test.mjs; 3 pass 0 fail
 
 ## Pool
 
