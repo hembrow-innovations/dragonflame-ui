@@ -2,13 +2,13 @@
 id: "slice-221-dom-only-host-check-paths"
 title: "DOM-only host CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-121-dom-only-web-host"
 tags: []
 created_at: "2026-09-10T22:01:56Z"
-updated_at: "2026-09-10T22:01:56Z"
+updated_at: "2026-09-10T22:07:24Z"
 ---
 
 # DOM-only host CHECK paths
@@ -31,18 +31,18 @@ New dom-only-host behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Pro
 
 ## Oracle checklist
 
-- [ ] O1: no web canvas host
+- [x] O1: no web canvas host
   CHECK: node --test tests/dom-only-host/no-web-canvas.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no WASM web UI
+  EVIDENCE: node --test tests/dom-only-host/no-web-canvas.test.mjs; 1 pass 0 fail
+- [x] O2: no WASM web UI
   CHECK: node --test tests/dom-only-host/no-wasm-web.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: no DOM in Host I/O
+  EVIDENCE: node --test tests/dom-only-host/no-wasm-web.test.mjs; 1 pass 0 fail
+- [x] O3: no DOM in Host I/O
   CHECK: node --test tests/dom-only-host/no-host-io-dom.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/dom-only-host/no-host-io-dom.test.mjs; 1 pass 0 fail
 
 ## Pool
 
