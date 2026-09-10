@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-234-align-slice-137-check-paths**: archived slice-137 CHECK and EVIDENCE name `tests/render-object/no-widget-retain.test.mjs` and `tests/render-object/no-collapsed-render-names.test.mjs`.
 - **task-231-align-slice-133-check-paths**: archived slice-133 CHECK and EVIDENCE name `tests/crate-workspace/funded-cargo-workspace.test.mjs` and `tests/crate-workspace/no-toolchain-workspace.test.mjs`.
 - **task-228-align-slice-129-check-paths**: archived slice-129 CHECK and EVIDENCE name `tests/signal-dirtying/no-setstate-dirty.test.mjs`, `tests/signal-dirtying/no-signal-pipeline.test.mjs`, and `tests/signal-dirtying/no-shared-signals.test.mjs`.
 - **task-225-align-slice-125-check-paths**: archived slice-125 CHECK and EVIDENCE name `tests/component-model/no-class-components.test.mjs`, `tests/component-model/no-fiber-vdom.test.mjs`, and `tests/component-model/no-forked-tree.test.mjs`.

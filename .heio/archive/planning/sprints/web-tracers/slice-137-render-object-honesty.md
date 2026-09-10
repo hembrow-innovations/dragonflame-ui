@@ -32,13 +32,13 @@ A public Widget. A public Element. A public RenderObject type. Layout, paint, or
 ## Oracle checklist
 
 - [x] O1: no Widget as retained node
-  CHECK: node --test tests/no-widget-retain.test.mjs
+  CHECK: node --test tests/render-object/no-widget-retain.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/render-object/no-widget-retain.test.mjs; 1 pass 0 fail
 - [x] O2: no collapsed Component and Render object naming
-  CHECK: node --test tests/no-collapsed-render-names.test.mjs
+  CHECK: node --test tests/render-object/no-collapsed-render-names.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/render-object/no-collapsed-render-names.test.mjs; 1 pass 0 fail
 
 ## Pool
 
