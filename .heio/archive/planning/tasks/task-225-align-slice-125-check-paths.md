@@ -2,14 +2,14 @@
 id: "task-225-align-slice-125-check-paths"
 title: "Align slice-125 CHECK paths"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-hygiene"
 slice: "slice-224-component-check-paths"
 tags: []
 created_at: "2026-09-10T22:07:00Z"
-updated_at: "2026-09-10T22:07:00Z"
+updated_at: "2026-09-10T22:11:00Z"
 ---
 
 # Align slice-125 CHECK paths

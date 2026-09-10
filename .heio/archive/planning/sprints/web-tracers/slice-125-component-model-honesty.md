@@ -30,17 +30,17 @@ A public Component class. Web tree and native tree factories. Show. For. Native 
 
 ## Oracle checklist
 - [x] O1: no class components
-  CHECK: node --test tests/no-class-components.test.mjs
+  CHECK: node --test tests/component-model/no-class-components.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/component-model/no-class-components.test.mjs; 1 pass 0 fail
 - [x] O2: no Fiber or virtual DOM as identity
-  CHECK: node --test tests/no-fiber-vdom.test.mjs
+  CHECK: node --test tests/component-model/no-fiber-vdom.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/component-model/no-fiber-vdom.test.mjs; 1 pass 0 fail
 - [x] O3: one component tree
-  CHECK: node --test tests/no-forked-tree.test.mjs
+  CHECK: node --test tests/component-model/no-forked-tree.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/component-model/no-forked-tree.test.mjs; 1 pass 0 fail
 
 ## Pool
 
