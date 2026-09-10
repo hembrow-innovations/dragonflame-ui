@@ -32,17 +32,17 @@ A public Host enum. A canvas switch. A paint API. Naming the browser API set. Re
 ## Oracle checklist
 
 - [x] O1: no web canvas host
-  CHECK: node --test tests/no-web-canvas.test.mjs
+  CHECK: node --test tests/dom-only-host/no-web-canvas.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/dom-only-host/no-web-canvas.test.mjs; 1 pass 0 fail
 - [x] O2: no WASM web UI
-  CHECK: node --test tests/no-wasm-web.test.mjs
+  CHECK: node --test tests/dom-only-host/no-wasm-web.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/dom-only-host/no-wasm-web.test.mjs; 1 pass 0 fail
 - [x] O3: no DOM in Host I/O
-  CHECK: node --test tests/no-host-io-dom.test.mjs
+  CHECK: node --test tests/dom-only-host/no-host-io-dom.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/dom-only-host/no-host-io-dom.test.mjs; 1 pass 0 fail
 
 ## Pool
 
