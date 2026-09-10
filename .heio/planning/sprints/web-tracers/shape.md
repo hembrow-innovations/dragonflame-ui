@@ -33,6 +33,7 @@ Location: [[location-17-web-component-library]]. Thin vertical demos on the JS b
 - [[slice-137-render-object-honesty]]: render object honesty. blocked_by: [[slice-70-counter-on-dom]]
 - [[slice-141-web-layout-honesty]]: web layout honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
 - [[slice-145-host-leaves-honesty]]: host leaves honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
+- [[slice-149-style-as-data-honesty]]: style as data honesty. blocked_by: [[slice-72-leaf-kit-on-dom]]
 
 ## Slices out
 
