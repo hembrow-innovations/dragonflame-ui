@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-138-spec-render-object**: render object honesty spec ladder; immutable config without Flutter Widget as the retained node, Component stays the function.
 - **task-131-red-green-signal-dirtying**: honesty tests fail if this checkout uses setState or a React state hook as the dirty model, uses signals as the pipeline, or shares a signal object across workers.
 - **task-130-spec-signal-dirtying**: signal dirtying honesty spec ladder; build dirtying only, no setState Element subtree, no shared signal objects.
 - **task-155-red-green-host-config**: honesty tests fail if this checkout steals JSI or Hermes as host config.
