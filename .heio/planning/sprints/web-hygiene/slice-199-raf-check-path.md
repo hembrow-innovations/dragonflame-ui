@@ -2,13 +2,13 @@
 id: "slice-199-raf-check-path"
 title: "rAF CHECK path"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-74-raf-clock"
 tags: []
 created_at: "2026-09-10T21:26:57Z"
-updated_at: "2026-09-10T21:26:57Z"
+updated_at: "2026-09-11T12:40:00Z"
 ---
 
 # rAF CHECK path
@@ -31,10 +31,10 @@ New animation-clock behaviour. Editing `docs/specs/`. Reopening `web-tracers`. P
 
 ## Oracle checklist
 
-- [ ] O1: rAF clock ticks
+- [x] O1: rAF clock ticks
   CHECK: node --test tests/animation-clocks/raf-clock.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/animation-clocks/raf-clock.test.mjs; 2 pass 0 fail
 
 ## Pool
 
