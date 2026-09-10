@@ -19,14 +19,19 @@ Done when one target slice is named, or the sitting is IDLE.
 
 Arguments may name a slice, location, or ticket. Otherwise pick in this order:
 
-1. An `open` ticket that does not fit an existing `frozen` or `active` slice
-2. The lowest-numbered `active` location that no slice `See also` links, whose sprint is allowed to freeze
-3. IDLE
+1. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
+2. An unblocked `open` ticket that does not fit an existing `frozen` or `active` slice
+3. The lowest-numbered `active` location that no slice `See also` links, whose sprint is allowed to freeze
+4. IDLE
+
+A ticket is unblocked when `blocked_by` is empty, or every listed id is `met` (slice) or `completed` (task). Look in live folders and `archive/`.
 
 Do not pick:
 
 - A `parked` ticket
-- A sprint whose shape says do not freeze (including `native-if-funded` while [[ticket-61-native-ui-unfunded]] is parked)
+- An `open` ticket with unmet `blocked_by`
+- An `open` ticket whose home sprint `shape.md` says do not freeze
+- A sprint whose shape says do not freeze
 - A location whose parent is unfunded
 - A second slice
 - Work that would rewrite a location destination
