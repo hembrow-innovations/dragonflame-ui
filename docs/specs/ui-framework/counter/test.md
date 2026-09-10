@@ -8,7 +8,7 @@ domain: ui-framework
 area: counter
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Counter tests
@@ -19,19 +19,19 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They will lock `counter.component:run-once`, `counter.signals:ui-signal`, and `counter.hyperscript:static-h`. Oracle commands:
 
-- node --test tests/counter-static-h.test.mjs
-- node --test tests/counter-signal-patch.test.mjs
-- node --test tests/counter-run-once.test.mjs
+- node --test tests/counter/counter-static-h.test.mjs
+- node --test tests/counter/counter-signal-patch.test.mjs
+- node --test tests/counter/counter-run-once.test.mjs
 
 ## Tests
 
-- **tests/counter-static-h.test.mjs**: `static hyperscript text on DOM`
+- **tests/counter/counter-static-h.test.mjs**: `static hyperscript text on DOM`
   - **How:** a function component returns `h(type, props)` and static text lands on the DOM
   - **Why:** promise `counter.hyperscript:static-h`
-- **tests/counter-signal-patch.test.mjs**: `signal write patches the same DOM text`
+- **tests/counter/counter-signal-patch.test.mjs**: `signal write patches the same DOM text`
   - **How:** a ui.Signal write patches the same DOM text. The render object is retained
   - **Why:** promise `counter.signals:ui-signal`
-- **tests/counter-run-once.test.mjs**: `component function did not re-run on the write`
+- **tests/counter/counter-run-once.test.mjs**: `component function did not re-run on the write`
   - **How:** after a signal write, the component function has not run again
   - **Why:** promise `counter.component:run-once`
 

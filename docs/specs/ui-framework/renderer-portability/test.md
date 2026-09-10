@@ -8,7 +8,7 @@ domain: ui-framework
 area: renderer-portability
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Renderer portability tests
@@ -19,15 +19,15 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `renderer-portability.surface:thin` and `renderer-portability.wrong-target:hard-error`. Oracle commands:
 
-- node --test tests/portable-import.test.mjs
-- node --test tests/portable-wrong-target.test.mjs
+- node --test tests/renderer-portability/portable-import.test.mjs
+- node --test tests/renderer-portability/portable-wrong-target.test.mjs
 
 ## Tests
 
-- **tests/portable-import.test.mjs**: `portable Program compiles against the portability API`
+- **tests/renderer-portability/portable-import.test.mjs**: `portable Program compiles against the portability API`
   - **How:** a portable Program imports the thin Draconic surface and compiles against the portability API
   - **Why:** promise `renderer-portability.surface:thin`
-- **tests/portable-wrong-target.test.mjs**: `importing document from portable code hard-errors`
+- **tests/renderer-portability/portable-wrong-target.test.mjs**: `importing document from portable code hard-errors`
   - **How:** importing `document` from portable code hard-errors. Wrong-target use is not a runtime no-op
   - **Why:** promise `renderer-portability.wrong-target:hard-error`
 

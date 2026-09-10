@@ -8,7 +8,7 @@ domain: ui-framework
 area: animation-clocks
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Animation clocks tests
@@ -19,14 +19,14 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `animation-clocks.framework:in-library`, `animation-clocks.vsync:web-raf`, and `animation-clocks.signals:not-tickers`. Oracle command:
 
-- node --test tests/raf-clock.test.mjs
+- node --test tests/animation-clocks/raf-clock.test.mjs
 
 ## Tests
 
-- **tests/raf-clock.test.mjs**: `rAF clock ticks`
+- **tests/animation-clocks/raf-clock.test.mjs**: `rAF clock ticks`
   - **How:** an animation clock in the Framework library ticks from requestAnimationFrame
   - **Why:** promises `animation-clocks.framework:in-library` and `animation-clocks.vsync:web-raf`
-- **tests/raf-clock.test.mjs**: `signals replace build dirtying only`
+- **tests/animation-clocks/raf-clock.test.mjs**: `signals replace build dirtying only`
   - **How:** a clock tick comes from requestAnimationFrame. Signals replace build dirtying only. They are not the ticker
   - **Why:** promise `animation-clocks.signals:not-tickers`
 

@@ -58,3 +58,4 @@ Open product questions are non-empty until a wayfinder or planning sitting close
 - Always keep the `target` directory below 10GB
 - File size target ≤1000 LOC, hard limit 1250 (prove fails over 1200)
 - Also create sub folders in packages so that its no one flat file list
+- tests/ uses named subfolders matching the spec area under docs/specs/; never a flat tests/ dump

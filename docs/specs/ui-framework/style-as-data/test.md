@@ -8,7 +8,7 @@ domain: ui-framework
 area: style-as-data
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Style as data tests
@@ -19,15 +19,15 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `style-as-data.style:forbid-css-language` and `style-as-data.style:forbid-css-engine`. Oracle commands:
 
-- node --test tests/no-css-language.test.mjs
-- node --test tests/no-css-engine.test.mjs
+- node --test tests/style-as-data/no-css-language.test.mjs
+- node --test tests/style-as-data/no-css-engine.test.mjs
 
 ## Tests
 
-- **tests/no-css-language.test.mjs**: `this checkout does not treat style as a CSS language in the framework`
+- **tests/style-as-data/no-css-language.test.mjs**: `this checkout does not treat style as a CSS language in the framework`
   - **How:** fails if this checkout treats style as a CSS language in the framework
   - **Why:** promise `style-as-data.style:forbid-css-language`
-- **tests/no-css-engine.test.mjs**: `this checkout does not map style objects through a CSS engine product`
+- **tests/style-as-data/no-css-engine.test.mjs**: `this checkout does not map style objects through a CSS engine product`
   - **How:** fails if this checkout maps style objects through a CSS engine product
   - **Why:** promise `style-as-data.style:forbid-css-engine`
 

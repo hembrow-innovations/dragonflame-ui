@@ -8,7 +8,7 @@ domain: ui-framework
 area: portability-metal
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Portability metal tests
@@ -19,11 +19,11 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `portability-metal.program:forbid-metal`. Oracle commands:
 
-- node --test tests/portable-metal.test.mjs
+- node --test tests/portability-metal/portable-metal.test.mjs
 
 ## Tests
 
-- **tests/portable-metal.test.mjs**: `this checkout does not let a portable Program import Metal`
+- **tests/portability-metal/portable-metal.test.mjs**: `this checkout does not let a portable Program import Metal`
   - **How:** fails if this checkout lets a portable Program import Metal
   - **Why:** promise `portability-metal.program:forbid-metal`
 

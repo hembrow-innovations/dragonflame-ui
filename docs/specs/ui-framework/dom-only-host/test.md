@@ -8,7 +8,7 @@ domain: ui-framework
 area: dom-only-host
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # DOM-only host tests
@@ -19,19 +19,19 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `dom-only-host.web:only-web-host`, `dom-only-host.wasm:no-wasm-web`, `dom-only-host.bindings:js-only`, and `dom-only-host.paint:browser-paint`. Oracle commands:
 
-- node --test tests/no-web-canvas.test.mjs
-- node --test tests/no-wasm-web.test.mjs
-- node --test tests/no-host-io-dom.test.mjs
+- node --test tests/dom-only-host/no-web-canvas.test.mjs
+- node --test tests/dom-only-host/no-wasm-web.test.mjs
+- node --test tests/dom-only-host/no-host-io-dom.test.mjs
 
 ## Tests
 
-- **tests/no-web-canvas.test.mjs**: `this checkout does not add a web canvas host`
+- **tests/dom-only-host/no-web-canvas.test.mjs**: `this checkout does not add a web canvas host`
   - **How:** fails if this checkout adds a web canvas host
   - **Why:** promises `dom-only-host.web:only-web-host` and `dom-only-host.paint:browser-paint`
-- **tests/no-wasm-web.test.mjs**: `this checkout does not add CanvasKit, Skwasm, or engine-in-WASM as web UI`
+- **tests/dom-only-host/no-wasm-web.test.mjs**: `this checkout does not add CanvasKit, Skwasm, or engine-in-WASM as web UI`
   - **How:** fails if this checkout adds CanvasKit, Skwasm, or engine-in-WASM as web UI
   - **Why:** promises `dom-only-host.wasm:no-wasm-web` and `dom-only-host.paint:browser-paint`
-- **tests/no-host-io-dom.test.mjs**: `this checkout does not put a DOM into Host I/O`
+- **tests/dom-only-host/no-host-io-dom.test.mjs**: `this checkout does not put a DOM into Host I/O`
   - **How:** fails if this checkout puts a DOM into Host I/O
   - **Why:** promise `dom-only-host.bindings:js-only`
 

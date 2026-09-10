@@ -8,7 +8,7 @@ domain: ui-framework
 area: host-config
 tags: [test]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Host config tests
@@ -19,15 +19,15 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They lock `host-config.steal:forbid-jsi` and `host-config.steal:forbid-hermes`. Oracle commands:
 
-- node --test tests/no-jsi.test.mjs
-- node --test tests/no-hermes-host-config.test.mjs
+- node --test tests/host-config/no-jsi.test.mjs
+- node --test tests/host-config/no-hermes-host-config.test.mjs
 
 ## Tests
 
-- **tests/no-jsi.test.mjs**: `this checkout does not steal JSI as host config`
+- **tests/host-config/no-jsi.test.mjs**: `this checkout does not steal JSI as host config`
   - **How:** fails if this checkout steals JSI as host config
   - **Why:** promise `host-config.steal:forbid-jsi`
-- **tests/no-hermes-host-config.test.mjs**: `this checkout does not steal Hermes as host config`
+- **tests/host-config/no-hermes-host-config.test.mjs**: `this checkout does not steal Hermes as host config`
   - **How:** fails if this checkout steals Hermes as host config
   - **Why:** promise `host-config.steal:forbid-hermes`
 
