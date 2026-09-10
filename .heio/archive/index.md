@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-204-align-slice-75-check-paths**: archived slice-75 CHECK and EVIDENCE name `tests/renderer-portability/portable-import.test.mjs` and `tests/renderer-portability/portable-wrong-target.test.mjs`.
 - **task-200-align-slice-74-check-path**: archived slice-74 CHECK and EVIDENCE name `tests/animation-clocks/raf-clock.test.mjs`.
 - **task-195-align-slice-73-check-path**: archived slice-73 CHECK and EVIDENCE name `tests/a11y-test-ids/testid-a11y.test.mjs`.
 - **task-191-align-slice-72-check-paths**: archived slice-72 CHECK and EVIDENCE name `tests/leaf-kit/` oracle paths.

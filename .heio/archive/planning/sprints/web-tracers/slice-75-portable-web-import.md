@@ -32,13 +32,13 @@ Host I/O as a browser. Native `extern "C"` path. Second IR.
 ## Oracle checklist
 
 - [x] O1: portable import
-  CHECK: node --test tests/portable-import.test.mjs
+  CHECK: node --test tests/renderer-portability/portable-import.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/renderer-portability/portable-import.test.mjs; 1 pass 0 fail
 - [x] O2: document import hard-errors
-  CHECK: node --test tests/portable-wrong-target.test.mjs
+  CHECK: node --test tests/renderer-portability/portable-wrong-target.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/renderer-portability/portable-wrong-target.test.mjs; 1 pass 0 fail
 
 ## Pool
 
