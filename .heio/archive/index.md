@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-191-align-slice-72-check-paths**: archived slice-72 CHECK and EVIDENCE name `tests/leaf-kit/` oracle paths.
 - **task-186-align-slice-71-check-path**: archived slice-71 CHECK and EVIDENCE name `tests/owner/owner-dispose.test.mjs`.
 - **task-176-align-slice-70-check-paths**: archived slice-70 CHECK and EVIDENCE name `tests/counter/` oracle paths.
 - **task-169-red-green-gpu-not-ui**: GPU submit of the draw list on the engine raster thread, not the UI thread; frame callback is a Runtime job; O2 `node --test tests/ffi-scene-commands/gpu-not-ui.test.mjs` pass.

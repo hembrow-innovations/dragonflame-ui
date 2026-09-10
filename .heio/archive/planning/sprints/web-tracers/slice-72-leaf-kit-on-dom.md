@@ -32,17 +32,17 @@ Taffy on web, HTML as the leaf set, native glyphs.
 ## Oracle checklist
 
 - [x] O1: view and text with style data on CSS
-  CHECK: node --test tests/leaf-view-text-style.test.mjs
+  CHECK: node --test tests/leaf-kit/leaf-view-text-style.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/leaf-kit/leaf-view-text-style.test.mjs; 1 pass 0 fail
 - [x] O2: image and scroll
-  CHECK: node --test tests/leaf-image-scroll.test.mjs
+  CHECK: node --test tests/leaf-kit/leaf-image-scroll.test.mjs
   EXPECT: pass
-  EVIDENCE: 2 pass 0 fail
+  EVIDENCE: node --test tests/leaf-kit/leaf-image-scroll.test.mjs; 2 pass 0 fail
 - [x] O3: text input and pressable
-  CHECK: node --test tests/leaf-input-pressable.test.mjs
+  CHECK: node --test tests/leaf-kit/leaf-input-pressable.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/leaf-kit/leaf-input-pressable.test.mjs; 1 pass 0 fail
 
 ## Pool
 
