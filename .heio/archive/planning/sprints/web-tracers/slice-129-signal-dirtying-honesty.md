@@ -32,17 +32,17 @@ A public setState. A public useState. A public SharedSignal. Implementing Show o
 ## Oracle checklist
 
 - [x] O1: no setState dirty model
-  CHECK: node --test tests/no-setstate-dirty.test.mjs
+  CHECK: node --test tests/signal-dirtying/no-setstate-dirty.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/signal-dirtying/no-setstate-dirty.test.mjs; 1 pass 0 fail
 - [x] O2: signals do not replace the pipeline
-  CHECK: node --test tests/no-signal-pipeline.test.mjs
+  CHECK: node --test tests/signal-dirtying/no-signal-pipeline.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/signal-dirtying/no-signal-pipeline.test.mjs; 1 pass 0 fail
 - [x] O3: no shared signal objects
-  CHECK: node --test tests/no-shared-signals.test.mjs
+  CHECK: node --test tests/signal-dirtying/no-shared-signals.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/signal-dirtying/no-shared-signals.test.mjs; 1 pass 0 fail
 
 ## Pool
 

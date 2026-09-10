@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-228-align-slice-129-check-paths**: archived slice-129 CHECK and EVIDENCE name `tests/signal-dirtying/no-setstate-dirty.test.mjs`, `tests/signal-dirtying/no-signal-pipeline.test.mjs`, and `tests/signal-dirtying/no-shared-signals.test.mjs`.
 - **task-225-align-slice-125-check-paths**: archived slice-125 CHECK and EVIDENCE name `tests/component-model/no-class-components.test.mjs`, `tests/component-model/no-fiber-vdom.test.mjs`, and `tests/component-model/no-forked-tree.test.mjs`.
 - **task-222-align-slice-121-check-paths**: archived slice-121 CHECK and EVIDENCE name `tests/dom-only-host/no-web-canvas.test.mjs`, `tests/dom-only-host/no-wasm-web.test.mjs`, and `tests/dom-only-host/no-host-io-dom.test.mjs`.
 - **task-218-align-slice-116-check-paths**: archived slice-116 CHECK and EVIDENCE name `tests/dom-patch/patch-style.test.mjs` and `tests/dom-patch/patch-children.test.mjs`.

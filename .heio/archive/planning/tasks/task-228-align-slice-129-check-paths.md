@@ -2,14 +2,14 @@
 id: "task-228-align-slice-129-check-paths"
 title: "Align slice-129 CHECK paths"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-hygiene"
 slice: "slice-227-signal-dirtying-check-paths"
 tags: []
 created_at: "2026-09-10T22:13:26Z"
-updated_at: "2026-09-10T22:13:26Z"
+updated_at: "2026-09-10T22:16:15Z"
 ---
 
 # Align slice-129 CHECK paths
