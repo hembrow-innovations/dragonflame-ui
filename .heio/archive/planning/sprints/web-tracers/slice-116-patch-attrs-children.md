@@ -32,13 +32,13 @@ Show, keyed For, child-list patch of a changing array, a public patch or reconci
 ## Oracle checklist
 
 - [x] O1: style signal write patches the same host node
-  CHECK: node --test tests/patch-style.test.mjs
+  CHECK: node --test tests/dom-patch/patch-style.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/dom-patch/patch-style.test.mjs; 1 pass 0 fail
 - [x] O2: children signal write patches one child under the same parent
-  CHECK: node --test tests/patch-children.test.mjs
+  CHECK: node --test tests/dom-patch/patch-children.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/dom-patch/patch-children.test.mjs; 1 pass 0 fail
 
 ## Pool
 
