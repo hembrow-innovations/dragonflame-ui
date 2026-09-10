@@ -2,6 +2,11 @@
 
 One-liners of what landed. Newest first.
 
+- **ticket-62-jsx-later-human**: closed; Phase 4 skipped for AFK; JSX absence stays locked.
+- **ticket-63-do-not-fake-llvm**: closed; Phase 4 skipped; no lowerer in this repo.
+- **ticket-64-hot-reload-not-v1**: closed; Phase 4 skipped; hot reload is not a v1 gate.
+- **ticket-65-first-tests-unnamed**: closed; demo slices own cases; no invented suite.
+- **task-164-hitl-name-desktop-window**: completed; first desktop OS is macOS; window crate is winit.
 - **web-tracers**: funded web tracer slices met; package, DOM tracers, and honesty oracles.
 - **sugar-later**: first version without sugar oracles met.
 - **rounds-156-portability-metal-honesty**: published sitting; portable Program cannot import Metal.

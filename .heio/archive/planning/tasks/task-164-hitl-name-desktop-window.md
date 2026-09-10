@@ -2,26 +2,30 @@
 id: "task-164-hitl-name-desktop-window"
 title: "HITL: name desktop window host"
 kind: task
-status: ready
+status: completed
 mode: hitl
-blocked_by:
-  - "task-163-spec-desktop-vsync"
+blocked_by: []
 sprint: "native-if-funded"
 slice: "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T19:00:00Z"
 ---
 
 # HITL: name desktop window host
 
 ## Blocked by
 
-[[task-163-spec-desktop-vsync]]: spec exists so the named host can lock into that ladder.
+None. Named before the spec ladder so drain can quote the names.
 
 ## Done
 
 Counterpart names the first desktop OS and the window crate. Drain may then open a window. AFK must not invent either name.
+
+## Answers
+
+- **First desktop OS**: macOS
+- **Window crate**: winit
 
 ## Context
 
