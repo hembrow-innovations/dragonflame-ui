@@ -32,9 +32,9 @@ Engine-owned animation state. setState as ticker.
 ## Oracle checklist
 
 - [x] O1: rAF clock ticks
-  CHECK: node --test tests/raf-clock.test.mjs
+  CHECK: node --test tests/animation-clocks/raf-clock.test.mjs
   EXPECT: pass
-  EVIDENCE: 2 pass 0 fail
+  EVIDENCE: node --test tests/animation-clocks/raf-clock.test.mjs; 2 pass 0 fail
 
 ## Pool
 
