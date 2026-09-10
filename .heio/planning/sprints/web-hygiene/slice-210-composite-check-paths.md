@@ -2,13 +2,13 @@
 id: "slice-210-composite-check-paths"
 title: "Composite CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-107-composite-on-dom"
 tags: []
 created_at: "2026-09-10T21:42:07Z"
-updated_at: "2026-09-10T21:42:07Z"
+updated_at: "2026-09-11T23:20:00Z"
 ---
 
 # Composite CHECK paths
@@ -31,18 +31,18 @@ New composite behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Product
 
 ## Oracle checklist
 
-- [ ] O1: function type mounts to host leaves
+- [x] O1: function type mounts to host leaves
   CHECK: node --test tests/composite/composite-h.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: props.children nest through the composite onto DOM
+  EVIDENCE: node --test tests/composite/composite-h.test.mjs; 1 pass 0 fail
+- [x] O2: props.children nest through the composite onto DOM
   CHECK: node --test tests/composite/composite-children.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: composite function did not re-run on a text patch
+  EVIDENCE: node --test tests/composite/composite-children.test.mjs; 1 pass 0 fail
+- [x] O3: composite function did not re-run on a text patch
   CHECK: node --test tests/composite/composite-run-once.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/composite/composite-run-once.test.mjs; 1 pass 0 fail
 
 ## Pool
 
