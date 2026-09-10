@@ -2,13 +2,13 @@
 id: "slice-233-render-object-check-paths"
 title: "Render object CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-137-render-object-honesty"
 tags: []
 created_at: "2026-09-10T22:25:24Z"
-updated_at: "2026-09-10T22:25:24Z"
+updated_at: "2026-09-10T22:30:38Z"
 ---
 
 # Render object CHECK paths
@@ -31,14 +31,14 @@ New render-object behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Pro
 
 ## Oracle checklist
 
-- [ ] O1: no Widget as retained node
+- [x] O1: no Widget as retained node
   CHECK: node --test tests/render-object/no-widget-retain.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no collapsed Component and Render object naming
+  EVIDENCE: node --test tests/render-object/no-widget-retain.test.mjs; 1 pass 0 fail
+- [x] O2: no collapsed Component and Render object naming
   CHECK: node --test tests/render-object/no-collapsed-render-names.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/render-object/no-collapsed-render-names.test.mjs; 1 pass 0 fail
 
 ## Pool
 
