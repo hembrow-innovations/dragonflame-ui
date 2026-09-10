@@ -8,7 +8,7 @@ blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-10T18:50:00Z"
+updated_at: "2026-09-11T21:30:00Z"
 ---
 
 # Unmount disposes
@@ -32,9 +32,9 @@ InheritedWidget, native persist as a second ownership model.
 ## Oracle checklist
 
 - [x] O1: unmount disposes
-  CHECK: node --test tests/owner-dispose.test.mjs
+  CHECK: node --test tests/owner/owner-dispose.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/owner-dispose.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/owner/owner-dispose.test.mjs; 1 pass 0 fail
 
 ## Pool
 

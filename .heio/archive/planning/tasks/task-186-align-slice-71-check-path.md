@@ -2,14 +2,14 @@
 id: "task-186-align-slice-71-check-path"
 title: "Align slice-71 CHECK path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-hygiene"
 slice: "slice-185-unmount-check-path"
 tags: []
 created_at: "2026-09-10T21:07:00Z"
-updated_at: "2026-09-10T21:07:00Z"
+updated_at: "2026-09-11T21:30:00Z"
 ---
 
 # Align slice-71 CHECK path

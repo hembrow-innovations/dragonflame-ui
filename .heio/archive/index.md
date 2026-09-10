@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-186-align-slice-71-check-path**: archived slice-71 CHECK and EVIDENCE name `tests/owner/owner-dispose.test.mjs`.
 - **task-176-align-slice-70-check-paths**: archived slice-70 CHECK and EVIDENCE name `tests/counter/` oracle paths.
 - **task-169-red-green-gpu-not-ui**: GPU submit of the draw list on the engine raster thread, not the UI thread; frame callback is a Runtime job; O2 `node --test tests/ffi-scene-commands/gpu-not-ui.test.mjs` pass.
 - **task-168-red-green-taffy-rect**: Taffy lays out a colored rect; one packed scene, one `extern "C"` submit, engine draw list; O1 `node --test tests/ffi-scene-commands/taffy-rect.test.mjs` pass.
