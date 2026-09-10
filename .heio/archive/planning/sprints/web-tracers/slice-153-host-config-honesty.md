@@ -32,13 +32,13 @@ A public jsi. A public hermesRuntime. A public HostConfig. Repeating leaf-kit or
 ## Oracle checklist
 
 - [x] O1: no JSI
-  CHECK: node --test tests/no-jsi.test.mjs
+  CHECK: node --test tests/host-config/no-jsi.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/host-config/no-jsi.test.mjs; 1 pass 0 fail
 - [x] O2: no Hermes host config
-  CHECK: node --test tests/no-hermes-host-config.test.mjs
+  CHECK: node --test tests/host-config/no-hermes-host-config.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/host-config/no-hermes-host-config.test.mjs; 1 pass 0 fail
 
 ## Pool
 

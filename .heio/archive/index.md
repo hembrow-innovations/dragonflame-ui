@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-247-align-slice-153-check-paths**: archived slice-153 CHECK and EVIDENCE name `tests/host-config/no-jsi.test.mjs` and `tests/host-config/no-hermes-host-config.test.mjs`.
 - **task-243-align-slice-149-check-paths**: archived slice-149 CHECK and EVIDENCE name `tests/style-as-data/no-css-language.test.mjs` and `tests/style-as-data/no-css-engine.test.mjs`.
 - **task-240-align-slice-145-check-paths**: archived slice-145 CHECK and EVIDENCE name `tests/host-leaves/no-html-leaves.test.mjs` and `tests/host-leaves/no-uikit-leaves.test.mjs`.
 - **task-237-align-slice-141-check-paths**: archived slice-141 CHECK and EVIDENCE name `tests/web-layout/no-taffy-on-web.test.mjs` and `tests/web-layout/no-impeller-dom.test.mjs`.
