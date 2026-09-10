@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-158-spec-portability-metal**: portability metal honesty spec ladder; a portable Program cannot import Metal.
 - **task-139-red-green-render-object**: honesty tests fail if this checkout treats Flutter Widget as the retained node, or names Widget or Element as the collapse of Component and Render object.
 - **task-138-spec-render-object**: render object honesty spec ladder; immutable config without Flutter Widget as the retained node, Component stays the function.
 - **task-131-red-green-signal-dirtying**: honesty tests fail if this checkout uses setState or a React state hook as the dirty model, uses signals as the pipeline, or shares a signal object across workers.

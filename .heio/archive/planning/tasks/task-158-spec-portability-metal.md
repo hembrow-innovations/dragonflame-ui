@@ -2,14 +2,14 @@
 id: "task-158-spec-portability-metal"
 title: "Spec portability metal honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-157-portability-metal-honesty"
 tags: []
 created_at: "2026-09-10T14:30:00Z"
-updated_at: "2026-09-10T14:30:00Z"
+updated_at: "2026-09-10T01:54:36Z"
 ---
 
 # Spec portability metal honesty
