@@ -2,13 +2,13 @@
 id: "slice-203-portable-check-paths"
 title: "Portable CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-75-portable-web-import"
 tags: []
 created_at: "2026-09-10T21:31:30Z"
-updated_at: "2026-09-10T21:31:30Z"
+updated_at: "2026-09-11T21:50:00Z"
 ---
 
 # Portable CHECK paths
@@ -31,14 +31,14 @@ New renderer-portability behaviour. Editing `docs/specs/`. Reopening `web-tracer
 
 ## Oracle checklist
 
-- [ ] O1: portable import
+- [x] O1: portable import
   CHECK: node --test tests/renderer-portability/portable-import.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: document import hard-errors
+  EVIDENCE: node --test tests/renderer-portability/portable-import.test.mjs; 1 pass 0 fail
+- [x] O2: document import hard-errors
   CHECK: node --test tests/renderer-portability/portable-wrong-target.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/renderer-portability/portable-wrong-target.test.mjs; 1 pass 0 fail
 
 ## Pool
 
