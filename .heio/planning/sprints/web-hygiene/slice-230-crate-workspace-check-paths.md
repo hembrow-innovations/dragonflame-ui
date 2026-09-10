@@ -2,13 +2,13 @@
 id: "slice-230-crate-workspace-check-paths"
 title: "Crate workspace CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-133-crate-workspace-honesty"
 tags: []
 created_at: "2026-09-10T22:18:12Z"
-updated_at: "2026-09-10T22:18:12Z"
+updated_at: "2026-09-10T22:25:38Z"
 ---
 
 # Crate workspace CHECK paths
@@ -31,14 +31,14 @@ New crate-workspace behaviour. Editing `docs/specs/`. Reopening `web-tracers`. P
 
 ## Oracle checklist
 
-- [ ] O1: a Cargo workspace may exist because native is funded
+- [x] O1: a Cargo workspace may exist because native is funded
   CHECK: node --test tests/crate-workspace/funded-cargo-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: not a toolchain workspace
+  EVIDENCE: node --test tests/crate-workspace/funded-cargo-workspace.test.mjs; 1 pass 0 fail
+- [x] O2: not a toolchain workspace
   CHECK: node --test tests/crate-workspace/no-toolchain-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/crate-workspace/no-toolchain-workspace.test.mjs; 1 pass 0 fail
 
 ## Pool
 
