@@ -2,13 +2,13 @@
 id: "slice-236-web-layout-check-paths"
 title: "Web layout CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-141-web-layout-honesty"
 tags: []
 created_at: "2026-09-10T22:31:36Z"
-updated_at: "2026-09-10T22:31:36Z"
+updated_at: "2026-09-11T08:45:00Z"
 ---
 
 # Web layout CHECK paths
@@ -31,14 +31,14 @@ New web-layout behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Produc
 
 ## Oracle checklist
 
-- [ ] O1: no Taffy on web
+- [x] O1: no Taffy on web
   CHECK: node --test tests/web-layout/no-taffy-on-web.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Impeller DOM
+  EVIDENCE: node --test tests/web-layout/no-taffy-on-web.test.mjs; 1 pass 0 fail
+- [x] O2: no Impeller DOM
   CHECK: node --test tests/web-layout/no-impeller-dom.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/web-layout/no-impeller-dom.test.mjs; 1 pass 0 fail
 
 ## Pool
 
