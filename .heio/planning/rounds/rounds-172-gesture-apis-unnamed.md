@@ -6,7 +6,7 @@ sitting_kind: planning
 status: published
 tags: ["afk-plan"]
 created_at: "2026-09-11T20:10:00Z"
-updated_at: "2026-09-11T20:10:00Z"
+updated_at: "2026-09-11T23:40:00Z"
 ---
 
 # Gesture APIs unnamed
@@ -65,3 +65,15 @@ Not confirmed. No freeze.
 - OEM widget class lists
 - Mobile embedders
 - DOM bubbling as the native gesture model
+
+## Round 2
+
+Pick: [[ticket-171-gesture-apis-unnamed]]. Unblocked open ticket. Does not fit a frozen or active slice.
+
+### Questions
+
+1. **Recognizer APIs**: Whether location destination and docs/ now name the first native gesture recognizer API set so [[slice-78-press-wins-arena]] can freeze.
+
+### Answers
+
+1. **Recognizer APIs**: Still unnamed. [[location-46-gesture-arena]] and docs/ lock competing recognizers, pressable as a leaf, embedder-owned input, and no DOM bubbling. They do not name recognizer methods. [[rounds-160-fund-native]] still lists gesture recognizer APIs as not yet specified. No gesture spec ladder. Do not invent. Keep [[ticket-171-gesture-apis-unnamed]] open. Do not freeze. Do not file a second ticket.
