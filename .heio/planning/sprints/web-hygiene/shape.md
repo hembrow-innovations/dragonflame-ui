@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-10T20:14:00Z"
-updated_at: "2026-09-10T22:31:36Z"
+updated_at: "2026-09-10T22:40:10Z"
 ---
 
 # Web hygiene
@@ -32,6 +32,7 @@ Location: [[location-29-tests]]. Tracker honesty after `web-tracers` closed. Fre
 - [[slice-230-crate-workspace-check-paths]]: slice-133 CHECK paths match the crate-workspace spec. blocked_by: [[slice-133-crate-workspace-honesty]]
 - [[slice-233-render-object-check-paths]]: slice-137 CHECK paths match the render-object spec. blocked_by: [[slice-137-render-object-honesty]]
 - [[slice-236-web-layout-check-paths]]: slice-141 CHECK paths match the web-layout spec. blocked_by: [[slice-141-web-layout-honesty]]
+- [[slice-239-host-leaves-check-paths]]: slice-145 CHECK paths match the host-leaves spec. blocked_by: [[slice-145-host-leaves-honesty]]
 
 ## Slices out
 

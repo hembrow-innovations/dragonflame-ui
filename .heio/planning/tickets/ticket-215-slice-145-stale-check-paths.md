@@ -2,11 +2,11 @@
 id: "ticket-215-slice-145-stale-check-paths"
 title: "Slice 145 oracle CHECK paths are stale"
 kind: ticket
-status: open
+status: promoted
 ticket_type: observation
 tags: [afk-verify]
 created_at: "2026-09-10T21:54:16.590Z"
-updated_at: "2026-09-10T21:54:16.590Z"
+updated_at: "2026-09-10T22:40:10Z"
 ---
 
 # Slice 145 oracle CHECK paths are stale
@@ -17,7 +17,7 @@ updated_at: "2026-09-10T21:54:16.590Z"
 
 ## Fit
 
-this project, later slice
+Promoted into [[slice-239-host-leaves-check-paths]]. Sprint `web-hygiene` is active. Drain claims [[task-240-align-slice-145-check-paths]].
 
 ## Notes
 
