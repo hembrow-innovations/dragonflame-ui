@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-161-spec-crate-workspace-funded**: crate workspace spec ladder; a Cargo workspace may exist because native is funded, not a toolchain workspace.
 - **ticket-62-jsx-later-human**: closed; Phase 4 skipped for AFK; JSX absence stays locked.
 - **ticket-63-do-not-fake-llvm**: closed; Phase 4 skipped; no lowerer in this repo.
 - **ticket-64-hot-reload-not-v1**: closed; Phase 4 skipped; hot reload is not a v1 gate.

@@ -2,14 +2,14 @@
 id: "task-161-spec-crate-workspace-funded"
 title: "Spec crate workspace funded"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "native-if-funded"
 slice: "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T21:00:00Z"
 ---
 
 # Spec crate workspace funded

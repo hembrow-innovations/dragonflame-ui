@@ -19,13 +19,13 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 Tests for this folder. They will lock `crate-workspace.layout:workspace-later` and `crate-workspace.identity:not-toolchain`. Oracle commands:
 
-- node --test tests/crate-workspace/no-cargo-workspace.test.mjs
+- node --test tests/crate-workspace/funded-cargo-workspace.test.mjs
 - node --test tests/crate-workspace/no-toolchain-workspace.test.mjs
 
 ## Tests
 
-- **tests/crate-workspace/no-cargo-workspace.test.mjs**: `this checkout does not add a Cargo workspace while native is unfunded`
-  - **How:** fails if this checkout adds a Cargo.toml `[workspace]` while native is unfunded
+- **tests/crate-workspace/funded-cargo-workspace.test.mjs**: `a Cargo workspace may exist because native is funded`
+  - **How:** fails if this checkout still forbids a Cargo.toml `[workspace]` while native is funded
   - **Why:** promise `crate-workspace.layout:workspace-later`
 - **tests/crate-workspace/no-toolchain-workspace.test.mjs**: `this checkout does not treat a Cargo toolchain workspace as this UI product`
   - **How:** fails if this checkout treats a Cargo toolchain workspace as this UI product
@@ -34,4 +34,4 @@ Tests for this folder. They will lock `crate-workspace.layout:workspace-later` a
 ## Gaps
 
 - Library-first and no-empty-crate oracles stay on [[test-git-package]].
-- Engine home stays unfrozen on [[location-36-engine-home]].
+- Engine home stays this repo. See [[location-36-engine-home]].

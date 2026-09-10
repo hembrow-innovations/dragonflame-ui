@@ -8,7 +8,7 @@ domain: ui-framework
 area: crate-workspace
 tags: [contract]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-11"
 ---
 
 # Crate workspace contract
@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
 
 ## Behaviour
 
-- `crate-workspace.layout:workspace-later`: A Cargo workspace exists only when native is funded. This checkout has no Cargo.toml `[workspace]` while native is unfunded.
-  test: this checkout does not add a Cargo workspace while native is unfunded
+- `crate-workspace.layout:workspace-later`: A Cargo workspace exists only when native is funded. A Cargo workspace may exist because native is funded.
+  test: a Cargo workspace may exist because native is funded
 - `crate-workspace.identity:not-toolchain`: This checkout is not a Cargo toolchain workspace. A Cargo toolchain workspace is not treated as this UI product.
   test: this checkout does not treat a Cargo toolchain workspace as this UI product
