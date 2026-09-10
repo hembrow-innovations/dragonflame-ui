@@ -2,13 +2,13 @@
 id: "slice-76-desktop-vsync-window"
 title: "Desktop vsync window"
 kind: slice
-status: frozen
+status: active
 sprint: "native-if-funded"
 blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T19:00:00Z"
+updated_at: "2026-09-10T20:19:15Z"
 ---
 
 # Desktop vsync window
@@ -35,10 +35,10 @@ Taffy rect, mobile, OEM default, glyphs complete. Empty engine crates as a warmu
   CHECK: command named in the desktop spec test.md
   EXPECT: pass
   EVIDENCE: pending
-- [ ] O2: no WebView and no JS engine
-  CHECK: command named in that spec
+- [x] O2: no WebView and no JS engine
+  CHECK: node --test tests/desktop-embedder/no-webview-no-js-engine.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2 pass 0 fail
 
 ## Pool
 

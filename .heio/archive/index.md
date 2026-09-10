@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-165-red-green-no-js-engine**: desktop native honesty tests fail on a WebView shell or Hermes, JSC, or V8 as the app runtime; tracing GC stays.
 - **task-162-red-green-crate-workspace-funded**: crate-workspace tests pass if a Cargo workspace appears because native is funded; not-toolchain oracle kept.
 - **task-163-spec-desktop-vsync**: desktop vsync spec ladder; embedder owns window and vsync, engine owns GPU, no WebView, no JS engine.
 - **task-161-spec-crate-workspace-funded**: crate workspace spec ladder; a Cargo workspace may exist because native is funded, not a toolchain workspace.
