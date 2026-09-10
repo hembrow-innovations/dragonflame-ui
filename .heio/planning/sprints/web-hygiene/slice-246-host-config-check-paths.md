@@ -2,13 +2,13 @@
 id: "slice-246-host-config-check-paths"
 title: "Host config CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-10T22:53:16Z"
-updated_at: "2026-09-10T22:53:16Z"
+updated_at: "2026-09-11T09:05:00Z"
 ---
 
 # Host config CHECK paths
@@ -31,14 +31,14 @@ New host-config behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Produ
 
 ## Oracle checklist
 
-- [ ] O1: no JSI
+- [x] O1: no JSI
   CHECK: node --test tests/host-config/no-jsi.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Hermes host config
+  EVIDENCE: node --test tests/host-config/no-jsi.test.mjs; 1 pass 0 fail
+- [x] O2: no Hermes host config
   CHECK: node --test tests/host-config/no-hermes-host-config.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/host-config/no-hermes-host-config.test.mjs; 1 pass 0 fail
 
 ## Pool
 
