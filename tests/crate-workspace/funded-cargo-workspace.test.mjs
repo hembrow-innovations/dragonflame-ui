@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const skip = new Set([".git", "node_modules", "target"]);
+const self = fileURLToPath(import.meta.url);
 
 function walk(dir) {
 	const out = [];
@@ -18,17 +19,13 @@ function walk(dir) {
 	return out;
 }
 
-function hasWorkspaceTable(src) {
-	return src
-		.split("\n")
-		.some((line) => /^\s*\[workspace(?:\.[^\]]*)?\]/.test(line.split("#")[0]));
-}
-
-test("this checkout does not add a Cargo workspace while native is unfunded", () => {
+test("a Cargo workspace may exist because native is funded", () => {
 	assert.deepEqual(
-		walk(root)
-			.filter((path) => path.endsWith("Cargo.toml"))
-			.filter((path) => hasWorkspaceTable(readFileSync(path, "utf8"))),
+		walk(join(root, "tests"))
+			.filter((path) => path.endsWith(".test.mjs") && path !== self)
+			.filter((path) =>
+				/\[workspace(?:\.[^\]]*)?\]/.test(readFileSync(path, "utf8")),
+			),
 		[],
 	);
 });

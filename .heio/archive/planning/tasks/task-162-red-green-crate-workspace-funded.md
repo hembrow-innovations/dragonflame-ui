@@ -2,7 +2,7 @@
 id: "task-162-red-green-crate-workspace-funded"
 title: "Red-green: crate workspace funded"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-161-spec-crate-workspace-funded"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T22:00:00Z"
 ---
 
 # Red-green: crate workspace funded
