@@ -2,7 +2,7 @@
 id: "task-131-red-green-signal-dirtying"
 title: "Red-green: signal dirtying honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-130-spec-signal-dirtying"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-129-signal-dirtying-honesty"
 tags: []
 created_at: "2026-09-10T09:50:00Z"
-updated_at: "2026-09-10T09:50:00Z"
+updated_at: "2026-09-10T01:27:21Z"
 ---
 
 # Red-green: signal dirtying honesty
@@ -39,3 +39,7 @@ scope: tests/no-setstate-dirty.test.mjs, tests/no-signal-pipeline.test.mjs, test
 
 - [[slice-129-signal-dirtying-honesty]]
 - [[task-130-spec-signal-dirtying]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-setstate-dirty.test.mjs` and `node --test tests/no-signal-pipeline.test.mjs` and `node --test tests/no-shared-signals.test.mjs`. Win. 1 pass 0 fail each.

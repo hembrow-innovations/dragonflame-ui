@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-131-red-green-signal-dirtying**: honesty tests fail if this checkout uses setState or a React state hook as the dirty model, uses signals as the pipeline, or shares a signal object across workers.
 - **task-130-spec-signal-dirtying**: signal dirtying honesty spec ladder; build dirtying only, no setState Element subtree, no shared signal objects.
 - **task-155-red-green-host-config**: honesty tests fail if this checkout steals JSI or Hermes as host config.
 - **task-154-spec-host-config**: host config honesty spec ladder; do not steal JSI, and do not steal Hermes.
