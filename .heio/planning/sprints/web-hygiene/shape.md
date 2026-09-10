@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-10T20:14:00Z"
-updated_at: "2026-09-10T21:37:12Z"
+updated_at: "2026-09-10T21:42:07Z"
 ---
 
 # Web hygiene
@@ -23,6 +23,7 @@ Location: [[location-29-tests]]. Tracker honesty after `web-tracers` closed. Fre
 - [[slice-199-raf-check-path]]: slice-74 CHECK path matches the animation-clocks spec. blocked_by: [[slice-74-raf-clock]]
 - [[slice-203-portable-check-paths]]: slice-75 CHECK paths match the renderer-portability spec. blocked_by: [[slice-75-portable-web-import]]
 - [[slice-207-absence-check-paths]]: slice-85 CHECK paths match the absence spec. blocked_by: [[slice-85-first-version-without-sugar]]
+- [[slice-210-composite-check-paths]]: slice-107 CHECK paths match the composite spec. blocked_by: [[slice-107-composite-on-dom]]
 
 ## Slices out
 
