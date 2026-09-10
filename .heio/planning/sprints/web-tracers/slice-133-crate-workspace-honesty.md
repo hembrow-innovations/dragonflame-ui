@@ -2,13 +2,13 @@
 id: "slice-133-crate-workspace-honesty"
 title: "Crate workspace honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-10T10:15:00Z"
-updated_at: "2026-09-10T10:15:00Z"
+updated_at: "2026-09-10T03:10:34Z"
 ---
 
 # Crate workspace honesty
@@ -31,14 +31,14 @@ A public workspace helper. A Cargo.toml `[workspace]`. Empty engine crates. Repe
 
 ## Oracle checklist
 
-- [ ] O1: no Cargo workspace
+- [x] O1: no Cargo workspace
   CHECK: node --test tests/no-cargo-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: not a toolchain workspace
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: not a toolchain workspace
   CHECK: node --test tests/no-toolchain-workspace.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
