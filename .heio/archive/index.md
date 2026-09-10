@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-240-align-slice-145-check-paths**: archived slice-145 CHECK and EVIDENCE name `tests/host-leaves/no-html-leaves.test.mjs` and `tests/host-leaves/no-uikit-leaves.test.mjs`.
 - **task-237-align-slice-141-check-paths**: archived slice-141 CHECK and EVIDENCE name `tests/web-layout/no-taffy-on-web.test.mjs` and `tests/web-layout/no-impeller-dom.test.mjs`.
 - **task-234-align-slice-137-check-paths**: archived slice-137 CHECK and EVIDENCE name `tests/render-object/no-widget-retain.test.mjs` and `tests/render-object/no-collapsed-render-names.test.mjs`.
 - **task-231-align-slice-133-check-paths**: archived slice-133 CHECK and EVIDENCE name `tests/crate-workspace/funded-cargo-workspace.test.mjs` and `tests/crate-workspace/no-toolchain-workspace.test.mjs`.

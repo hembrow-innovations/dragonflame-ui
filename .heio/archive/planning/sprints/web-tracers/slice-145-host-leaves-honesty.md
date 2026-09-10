@@ -32,13 +32,13 @@ A public registerLeaf. String host tags. Repeating six-leaf oracles. Repeating c
 ## Oracle checklist
 
 - [x] O1: no HTML leaves
-  CHECK: node --test tests/no-html-leaves.test.mjs
+  CHECK: node --test tests/host-leaves/no-html-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/host-leaves/no-html-leaves.test.mjs; 1 pass 0 fail
 - [x] O2: no UIKit as leaf set
-  CHECK: node --test tests/no-uikit-leaves.test.mjs
+  CHECK: node --test tests/host-leaves/no-uikit-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/host-leaves/no-uikit-leaves.test.mjs; 1 pass 0 fail
 
 ## Pool
 
