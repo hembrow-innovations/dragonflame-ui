@@ -2,13 +2,13 @@
 id: "slice-249-portability-metal-check-path"
 title: "Portability metal CHECK path"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-157-portability-metal-honesty"
 tags: []
 created_at: "2026-09-10T22:58:36Z"
-updated_at: "2026-09-10T22:58:36Z"
+updated_at: "2026-09-11T09:15:00Z"
 ---
 
 # Portability metal CHECK path
@@ -31,10 +31,10 @@ New portability-metal behaviour. Editing `docs/specs/`. Reopening `web-tracers`.
 
 ## Oracle checklist
 
-- [ ] O1: no Metal import
+- [x] O1: no Metal import
   CHECK: node --test tests/portability-metal/portable-metal.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/portability-metal/portable-metal.test.mjs; 1 pass 0 fail
 
 ## Pool
 
