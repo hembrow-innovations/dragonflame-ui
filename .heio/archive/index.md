@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-130-spec-signal-dirtying**: signal dirtying honesty spec ladder; build dirtying only, no setState Element subtree, no shared signal objects.
 - **task-155-red-green-host-config**: honesty tests fail if this checkout steals JSI or Hermes as host config.
 - **task-154-spec-host-config**: host config honesty spec ladder; do not steal JSI, and do not steal Hermes.
 - **task-151-red-green-style-as-data**: honesty tests fail if style is a CSS language in the framework or style objects map through a CSS engine product.

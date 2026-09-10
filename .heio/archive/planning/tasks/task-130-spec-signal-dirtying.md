@@ -2,14 +2,14 @@
 id: "task-130-spec-signal-dirtying"
 title: "Spec signal dirtying honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-129-signal-dirtying-honesty"
 tags: []
 created_at: "2026-09-10T09:50:00Z"
-updated_at: "2026-09-10T09:50:00Z"
+updated_at: "2026-09-10T01:26:30Z"
 ---
 
 # Spec signal dirtying honesty
