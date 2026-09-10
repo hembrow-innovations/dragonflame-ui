@@ -2,13 +2,13 @@
 id: "slice-141-web-layout-honesty"
 title: "Web layout honesty"
 kind: slice
-status: active
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T11:00:00Z"
-updated_at: "2026-09-10T18:30:00Z"
+updated_at: "2026-09-10T18:45:00Z"
 ---
 
 # Web layout honesty
