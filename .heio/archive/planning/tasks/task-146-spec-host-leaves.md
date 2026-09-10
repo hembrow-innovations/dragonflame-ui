@@ -2,14 +2,14 @@
 id: "task-146-spec-host-leaves"
 title: "Spec host leaves honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "web-tracers"
 slice: "slice-145-host-leaves-honesty"
 tags: []
 created_at: "2026-09-10T12:15:00Z"
-updated_at: "2026-09-10T12:15:00Z"
+updated_at: "2026-09-10T00:43:49Z"
 ---
 
 # Spec host leaves honesty
