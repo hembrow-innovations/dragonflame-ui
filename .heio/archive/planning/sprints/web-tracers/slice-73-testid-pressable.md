@@ -32,9 +32,9 @@ ARIA-only as the native model. Native semantics tree is [[slice-83-talk-and-meas
 ## Oracle checklist
 
 - [x] O1: test ID and a11y props
-  CHECK: node --test tests/testid-a11y.test.mjs
+  CHECK: node --test tests/a11y-test-ids/testid-a11y.test.mjs
   EXPECT: pass
-  EVIDENCE: 2 pass 0 fail
+  EVIDENCE: node --test tests/a11y-test-ids/testid-a11y.test.mjs; 2 pass 0 fail
 
 ## Pool
 
