@@ -6,13 +6,13 @@ sitting_kind: planning
 status: ready-to-resume
 tags: [afk-verify]
 created_at: "2026-09-10T20:03:47.313Z"
-updated_at: "2026-09-10T22:53:36.309Z"
+updated_at: "2026-09-10T22:55:49Z"
 ---
 
 # afk-verify
 
 ## Cursor
-next: slice-175-counter-check-paths
+next: slice-185-unmount-check-path
 
 ## Ledger
 - **slice-69-importable-package**: HOLD. O1 O2 pass. no tickets
@@ -38,3 +38,4 @@ next: slice-175-counter-check-paths
 - **slice-149-style-as-data-honesty**: GAP. O1 O2 stale CHECK paths. ticket-219-slice-149-stale-check-paths
 - **slice-153-host-config-honesty**: GAP. O1 O2 stale CHECK paths. ticket-244-slice-153-stale-check-paths
 - **slice-157-portability-metal-honesty**: GAP. O1 stale CHECK path. ticket-245-slice-157-stale-check-path
+- **slice-175-counter-check-paths**: HOLD. O1 O2 O3 pass. no tickets
