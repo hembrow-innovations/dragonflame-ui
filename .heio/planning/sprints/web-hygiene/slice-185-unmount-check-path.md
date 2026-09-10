@@ -2,13 +2,13 @@
 id: "slice-185-unmount-check-path"
 title: "Unmount CHECK path"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-71-unmount-disposes"
 tags: []
 created_at: "2026-09-10T21:07:00Z"
-updated_at: "2026-09-10T21:07:00Z"
+updated_at: "2026-09-11T21:35:00Z"
 ---
 
 # Unmount CHECK path
@@ -31,10 +31,10 @@ New owner behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Product cod
 
 ## Oracle checklist
 
-- [ ] O1: unmount disposes
+- [x] O1: unmount disposes
   CHECK: node --test tests/owner/owner-dispose.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/owner/owner-dispose.test.mjs; 1 pass 0 fail
 
 ## Pool
 
