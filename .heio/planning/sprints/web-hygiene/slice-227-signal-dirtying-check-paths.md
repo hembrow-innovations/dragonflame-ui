@@ -2,13 +2,13 @@
 id: "slice-227-signal-dirtying-check-paths"
 title: "Signal dirtying CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-129-signal-dirtying-honesty"
 tags: []
 created_at: "2026-09-10T22:13:26Z"
-updated_at: "2026-09-10T22:13:26Z"
+updated_at: "2026-09-10T22:18:59Z"
 ---
 
 # Signal dirtying CHECK paths
@@ -31,18 +31,18 @@ New signal-dirtying behaviour. Editing `docs/specs/`. Reopening `web-tracers`. P
 
 ## Oracle checklist
 
-- [ ] O1: no setState dirty model
+- [x] O1: no setState dirty model
   CHECK: node --test tests/signal-dirtying/no-setstate-dirty.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: signals do not replace the pipeline
+  EVIDENCE: node --test tests/signal-dirtying/no-setstate-dirty.test.mjs; 1 pass 0 fail
+- [x] O2: signals do not replace the pipeline
   CHECK: node --test tests/signal-dirtying/no-signal-pipeline.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: no shared signal objects
+  EVIDENCE: node --test tests/signal-dirtying/no-signal-pipeline.test.mjs; 1 pass 0 fail
+- [x] O3: no shared signal objects
   CHECK: node --test tests/signal-dirtying/no-shared-signals.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/signal-dirtying/no-shared-signals.test.mjs; 1 pass 0 fail
 
 ## Pool
 
