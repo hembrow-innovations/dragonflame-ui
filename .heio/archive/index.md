@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-169-red-green-gpu-not-ui**: GPU submit of the draw list on the engine raster thread, not the UI thread; frame callback is a Runtime job; O2 `node --test tests/ffi-scene-commands/gpu-not-ui.test.mjs` pass.
 - **task-168-red-green-taffy-rect**: Taffy lays out a colored rect; one packed scene, one `extern "C"` submit, engine draw list; O1 `node --test tests/ffi-scene-commands/taffy-rect.test.mjs` pass.
 - **task-167-spec-scene-submit**: scene submit spec ladder; one packed colored-rect scene, one `extern "C"` submit, Taffy in the engine, GPU submit not on the UI thread.
 - **task-166-red-green-vsync-window**: macOS winit window, engine wgpu surface, one embedder vsync; O1 `node --test tests/desktop-embedder/vsync-window.test.mjs` pass.

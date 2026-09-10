@@ -8,7 +8,7 @@ blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T23:00:00Z"
+updated_at: "2026-09-11T23:30:00Z"
 ---
 
 # Draw a rect
@@ -35,10 +35,10 @@ Second IR. UI bytecode. CSS as native layout. Begin/end command stream. Later sc
   CHECK: command named in the scene spec test.md
   EXPECT: pass
   EVIDENCE: `node --test tests/ffi-scene-commands/taffy-rect.test.mjs` 1 pass 0 fail
-- [ ] O2: GPU submit is not on the UI thread
+- [x] O2: GPU submit is not on the UI thread
   CHECK: command named in that spec
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: `node --test tests/ffi-scene-commands/gpu-not-ui.test.mjs` 1 pass 0 fail
 
 ## Pool
 

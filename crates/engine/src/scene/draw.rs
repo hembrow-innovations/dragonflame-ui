@@ -1,4 +1,5 @@
 use std::sync::Mutex;
+use std::thread::{self, ThreadId};
 
 use super::packed::Color;
 
@@ -12,8 +13,10 @@ pub struct DrawRect {
 }
 
 static DRAW_LIST: Mutex<Vec<DrawRect>> = Mutex::new(Vec::new());
+static RECORD_THREAD: Mutex<Option<ThreadId>> = Mutex::new(None);
 
 pub fn record(rect: DrawRect) {
+    *RECORD_THREAD.lock().expect("record thread") = Some(thread::current().id());
     let mut list = DRAW_LIST.lock().expect("draw list");
     list.clear();
     list.push(rect);
@@ -21,4 +24,11 @@ pub fn record(rect: DrawRect) {
 
 pub fn recorded_draw_list() -> Vec<DrawRect> {
     DRAW_LIST.lock().expect("draw list").clone()
+}
+
+pub fn last_record_thread() -> ThreadId {
+    RECORD_THREAD
+        .lock()
+        .expect("record thread")
+        .expect("recorded")
 }

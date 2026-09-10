@@ -2,5 +2,7 @@ mod gpu;
 mod layout;
 mod scene;
 
-pub use gpu::{present_one_vsync, GpuError};
-pub use scene::{recorded_draw_list, submit, Color, DrawRect, Rect, Scene};
+pub use gpu::{
+    gpu_submit_recorded, last_gpu_submit_thread, present_one_vsync, raster_thread_id, GpuError,
+};
+pub use scene::{last_record_thread, recorded_draw_list, submit, Color, DrawRect, Rect, Scene};

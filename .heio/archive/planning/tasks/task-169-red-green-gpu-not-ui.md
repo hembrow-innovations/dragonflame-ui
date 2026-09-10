@@ -2,7 +2,7 @@
 id: "task-169-red-green-gpu-not-ui"
 title: "Red-green: GPU submit not on UI thread"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-168-red-green-taffy-rect"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-11T12:00:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T23:30:00Z"
 ---
 
 # Red-green: GPU submit not on UI thread
@@ -39,3 +39,7 @@ scope: tests/ named by that spec, plus thread split this task must add
 
 - [[slice-77-draw-a-rect]]
 - [[task-168-red-green-taffy-rect]]
+
+## Gauntlet
+
+- round 1: `node --test tests/ffi-scene-commands/gpu-not-ui.test.mjs` win. Promises `ffi-scene-commands.raster:gpu-not-ui`, `ffi-scene-commands.threads:frame-is-job`.
