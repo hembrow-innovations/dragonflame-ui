@@ -2,13 +2,13 @@
 id: "slice-112-js-backend-honesty"
 title: "JS backend honesty"
 kind: slice
-status: frozen
+status: met
 sprint: "web-tracers"
 blocked_by:
   - "slice-69-importable-package"
 tags: []
 created_at: "2026-09-10T08:50:00Z"
-updated_at: "2026-09-10T08:50:00Z"
+updated_at: "2026-09-10T14:10:00Z"
 ---
 
 # JS backend honesty
@@ -31,18 +31,18 @@ Naming the browser API set. Dual package entries. Empty native stubs. Inventing 
 
 ## Oracle checklist
 
-- [ ] O1: no eval host
+- [x] O1: no eval host
   CHECK: node --test tests/no-eval-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no dead native stubs
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no dead native stubs
   CHECK: node --test tests/no-native-stubs.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O3: emit stays in the sibling toolchain
+  EVIDENCE: 1 pass 0 fail
+- [x] O3: emit stays in the sibling toolchain
   CHECK: node --test tests/no-emit-here.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
