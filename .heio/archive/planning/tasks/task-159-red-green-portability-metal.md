@@ -2,7 +2,7 @@
 id: "task-159-red-green-portability-metal"
 title: "Red-green: portability metal honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-158-spec-portability-metal"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-157-portability-metal-honesty"
 tags: []
 created_at: "2026-09-10T14:30:00Z"
-updated_at: "2026-09-10T14:30:00Z"
+updated_at: "2026-09-10T01:59:31Z"
 ---
 
 # Red-green: portability metal honesty
@@ -39,3 +39,7 @@ scope: tests/portable-metal.test.mjs
 
 - [[slice-157-portability-metal-honesty]]
 - [[task-158-spec-portability-metal]]
+
+## Gauntlet
+
+Round 1. `node --test tests/portable-metal.test.mjs`. Win. 1 pass 0 fail.

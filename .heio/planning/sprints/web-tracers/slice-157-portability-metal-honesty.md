@@ -2,13 +2,13 @@
 id: "slice-157-portability-metal-honesty"
 title: "Portability metal honesty"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-75-portable-web-import"
 tags: []
 created_at: "2026-09-10T14:30:00Z"
-updated_at: "2026-09-10T14:30:00Z"
+updated_at: "2026-09-10T01:53:43Z"
 ---
 
 # Portability metal honesty
@@ -31,10 +31,10 @@ A public Metal. Repeating `document` import oracles. Repeating thin-surface orac
 
 ## Oracle checklist
 
-- [ ] O1: no Metal import
+- [x] O1: no Metal import
   CHECK: node --test tests/portable-metal.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 
