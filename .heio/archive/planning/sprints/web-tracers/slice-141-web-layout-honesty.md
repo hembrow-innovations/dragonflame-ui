@@ -32,13 +32,13 @@ A public LayoutEngine. A pixel-match switch. Implementing Taffy. CSS as the nati
 ## Oracle checklist
 
 - [x] O1: no Taffy on web
-  CHECK: node --test tests/no-taffy-on-web.test.mjs
+  CHECK: node --test tests/web-layout/no-taffy-on-web.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/web-layout/no-taffy-on-web.test.mjs; 1 pass 0 fail
 - [x] O2: no Impeller DOM
-  CHECK: node --test tests/no-impeller-dom.test.mjs
+  CHECK: node --test tests/web-layout/no-impeller-dom.test.mjs
   EXPECT: pass
-  EVIDENCE: 1 pass 0 fail
+  EVIDENCE: node --test tests/web-layout/no-impeller-dom.test.mjs; 1 pass 0 fail
 
 ## Pool
 
