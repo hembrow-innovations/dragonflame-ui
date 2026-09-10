@@ -2,7 +2,7 @@
 id: "task-155-red-green-host-config"
 title: "Red-green: host config honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-154-spec-host-config"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-10T14:20:00Z"
-updated_at: "2026-09-10T14:20:00Z"
+updated_at: "2026-09-10T01:17:04Z"
 ---
 
 # Red-green: host config honesty
@@ -39,3 +39,7 @@ scope: tests/no-jsi.test.mjs, tests/no-hermes-host-config.test.mjs
 
 - [[slice-153-host-config-honesty]]
 - [[task-154-spec-host-config]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-jsi.test.mjs` and `node --test tests/no-hermes-host-config.test.mjs`. Win. 1 pass 0 fail each.
