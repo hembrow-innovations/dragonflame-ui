@@ -2,7 +2,7 @@
 id: "task-139-red-green-render-object"
 title: "Red-green: render object honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-138-spec-render-object"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-137-render-object-honesty"
 tags: []
 created_at: "2026-09-10T10:40:00Z"
-updated_at: "2026-09-10T10:40:00Z"
+updated_at: "2026-09-10T12:30:00Z"
 ---
 
 # Red-green: render object honesty
@@ -39,3 +39,7 @@ scope: tests/no-widget-retain.test.mjs, tests/no-collapsed-render-names.test.mjs
 
 - [[slice-137-render-object-honesty]]
 - [[task-138-spec-render-object]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-widget-retain.test.mjs` and `node --test tests/no-collapsed-render-names.test.mjs`. Win. 1 pass 0 fail each.
