@@ -2,11 +2,11 @@
 id: "ticket-187-slice-116-stale-check-paths"
 title: "Slice 116 oracle CHECK paths are stale"
 kind: ticket
-status: open
+status: promoted
 ticket_type: observation
 tags: [afk-verify]
 created_at: "2026-09-10T21:09:51Z"
-updated_at: "2026-09-10T21:09:51Z"
+updated_at: "2026-09-10T21:55:34Z"
 ---
 
 # Slice 116 oracle CHECK paths are stale
@@ -17,7 +17,7 @@ updated_at: "2026-09-10T21:09:51Z"
 
 ## Fit
 
-this project, later slice
+Promoted into [[slice-217-dom-patch-check-paths]]. Sprint `web-hygiene` is active. Drain claims [[task-218-align-slice-116-check-paths]].
 
 ## Notes
 
