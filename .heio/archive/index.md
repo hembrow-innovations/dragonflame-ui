@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-143-red-green-web-layout**: honesty tests fail if Taffy is forced on web or DOM is treated as an Impeller or Skia clone.
 - **task-142-spec-web-layout**: web layout honesty spec ladder; not pixel-identical, copy DOM backend as idea not Impeller.
 - **task-134-spec-crate-workspace**: crate workspace honesty spec ladder; workspace only when native is funded, not a toolchain workspace.
 - **task-114-red-green-js-backend-honesty**: honesty tests fail if eval screens, dead native stubs, or copied JS emit appear.

@@ -2,7 +2,7 @@
 id: "task-143-red-green-web-layout"
 title: "Red-green: web layout honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-142-spec-web-layout"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-141-web-layout-honesty"
 tags: []
 created_at: "2026-09-10T11:00:00Z"
-updated_at: "2026-09-10T11:00:00Z"
+updated_at: "2026-09-10T12:00:00Z"
 ---
 
 # Red-green: web layout honesty
@@ -39,3 +39,7 @@ scope: tests/no-taffy-on-web.test.mjs, tests/no-impeller-dom.test.mjs
 
 - [[slice-141-web-layout-honesty]]
 - [[task-142-spec-web-layout]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-taffy-on-web.test.mjs` and `node --test tests/no-impeller-dom.test.mjs`. Win. 1 pass 0 fail each.

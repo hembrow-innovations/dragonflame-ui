@@ -2,13 +2,13 @@
 id: "slice-141-web-layout-honesty"
 title: "Web layout honesty"
 kind: slice
-status: frozen
+status: active
 sprint: "web-tracers"
 blocked_by:
   - "slice-72-leaf-kit-on-dom"
 tags: []
 created_at: "2026-09-10T11:00:00Z"
-updated_at: "2026-09-10T11:00:00Z"
+updated_at: "2026-09-10T18:30:00Z"
 ---
 
 # Web layout honesty
@@ -31,14 +31,14 @@ A public LayoutEngine. A pixel-match switch. Implementing Taffy. CSS as the nati
 
 ## Oracle checklist
 
-- [ ] O1: no Taffy on web
+- [x] O1: no Taffy on web
   CHECK: node --test tests/no-taffy-on-web.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: no Impeller DOM
+  EVIDENCE: 1 pass 0 fail
+- [x] O2: no Impeller DOM
   CHECK: node --test tests/no-impeller-dom.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 1 pass 0 fail
 
 ## Pool
 

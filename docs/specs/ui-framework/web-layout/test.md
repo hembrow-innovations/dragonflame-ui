@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `web-layout.layout:not-pixel-identical` and `web-layout.dom:copy-idea-not-impeller`. Oracle commands:
+Tests for this folder. They lock `web-layout.layout:not-pixel-identical` and `web-layout.dom:copy-idea-not-impeller`. Oracle commands:
 
 - node --test tests/no-taffy-on-web.test.mjs
 - node --test tests/no-impeller-dom.test.mjs
