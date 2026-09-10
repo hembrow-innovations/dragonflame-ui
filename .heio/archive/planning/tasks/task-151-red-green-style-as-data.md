@@ -2,7 +2,7 @@
 id: "task-151-red-green-style-as-data"
 title: "Red-green: style as data honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-150-spec-style-as-data"
@@ -10,7 +10,7 @@ sprint: "web-tracers"
 slice: "slice-149-style-as-data-honesty"
 tags: []
 created_at: "2026-09-10T13:30:00Z"
-updated_at: "2026-09-10T13:30:00Z"
+updated_at: "2026-09-10T01:20:00Z"
 ---
 
 # Red-green: style as data honesty
@@ -39,3 +39,7 @@ scope: tests/no-css-language.test.mjs, tests/no-css-engine.test.mjs
 
 - [[slice-149-style-as-data-honesty]]
 - [[task-150-spec-style-as-data]]
+
+## Gauntlet
+
+Round 1. `node --test tests/no-css-language.test.mjs` and `node --test tests/no-css-engine.test.mjs`. Win. 1 pass 0 fail each.
