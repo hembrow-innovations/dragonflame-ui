@@ -2,13 +2,13 @@
 id: "slice-217-dom-patch-check-paths"
 title: "DOM patch CHECK paths"
 kind: slice
-status: frozen
+status: met
 sprint: "web-hygiene"
 blocked_by:
   - "slice-116-patch-attrs-children"
 tags: []
 created_at: "2026-09-10T21:55:34Z"
-updated_at: "2026-09-10T21:55:34Z"
+updated_at: "2026-09-10T22:01:10Z"
 ---
 
 # DOM patch CHECK paths
@@ -31,14 +31,14 @@ New dom-patch behaviour. Editing `docs/specs/`. Reopening `web-tracers`. Product
 
 ## Oracle checklist
 
-- [ ] O1: style signal write patches the same host node
+- [x] O1: style signal write patches the same host node
   CHECK: node --test tests/dom-patch/patch-style.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: children signal write patches one child under the same parent
+  EVIDENCE: node --test tests/dom-patch/patch-style.test.mjs; 1 pass 0 fail
+- [x] O2: children signal write patches one child under the same parent
   CHECK: node --test tests/dom-patch/patch-children.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/dom-patch/patch-children.test.mjs; 1 pass 0 fail
 
 ## Pool
 
