@@ -3,6 +3,9 @@ name = "embedder"
 version = "0.1.0"
 edition.workspace = true
 
+[lib]
+crate-type = ["rlib", "cdylib"]
+
 [dependencies]
 engine = { workspace = true }
 runtime = { workspace = true }

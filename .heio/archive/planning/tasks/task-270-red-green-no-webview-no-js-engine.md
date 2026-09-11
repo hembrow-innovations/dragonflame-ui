@@ -2,7 +2,7 @@
 id: "task-270-red-green-no-webview-no-js-engine"
 title: "Red-green: no WebView and no JS engine"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-269-spec-android-embedder"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-81-android-counter"
 tags: []
 created_at: "2026-09-11T08:52:52Z"
-updated_at: "2026-09-11T08:52:52Z"
+updated_at: "2026-09-11T09:10:11Z"
 ---
 
 # Red-green: no WebView and no JS engine
