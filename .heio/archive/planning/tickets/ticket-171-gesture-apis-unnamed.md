@@ -2,11 +2,11 @@
 id: "ticket-171-gesture-apis-unnamed"
 title: "Gesture recognizer APIs are unnamed"
 kind: ticket
-status: promoted
+status: closed
 ticket_type: observation
 tags: []
 created_at: "2026-09-11T20:10:00Z"
-updated_at: "2026-09-11T06:49:29Z"
+updated_at: "2026-09-11T09:55:42Z"
 ---
 
 # Gesture recognizer APIs are unnamed

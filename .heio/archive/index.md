@@ -2,6 +2,14 @@
 
 One-liners of what landed. Newest first.
 
+- **native-if-funded**: closed; desktop vsync, draw a rect, press, and OEM slices met.
+- **ticket-171-gesture-apis-unnamed**: closed; first-tracer gesture APIs named; slice-78 met.
+- **ticket-66-ffi-commands-unnamed**: closed; first-tracer packed scene submit; slice-77 met.
+- **ticket-61-native-ui-unfunded**: closed; native UI funded; slice-76 and slice-77 met.
+- **rounds-268-freeze-android-counter**: published sitting; freeze slice-81 Android counter.
+- **rounds-263-freeze-ios-counter**: published sitting; freeze slice-80 iOS counter.
+- **rounds-259-freeze-oem-hatch-slot**: published sitting; freeze slice-79 OEM hatch slot.
+- **rounds-253-freeze-press-wins-arena**: published sitting; freeze slice-78 press wins arena.
 - **task-271-red-green-arm64-v8a-in-scope**: archived red-green Android arm64-v8a in scope; `aarch64-linux-android` plus Gradle abiFilters arm64-v8a; emulator-only is not done; O3 `tests/android-embedder/arm64-v8a-in-scope.test.mjs` pass.
 - **task-270-red-green-no-webview-no-js-engine**: archived red-green Android host honesty; thin Gradle shell at `hosts/android/` links embedder android module; no WebView; no Hermes, JSC, or V8; tracing GC stays; O2 `tests/android-embedder/no-webview-no-js-engine.test.mjs` pass.
 - **task-269-spec-android-embedder**: archived Android embedder spec ladder; thin Gradle shell, no WebView, no JS engine, x86_64 emulator plus arm64-v8a, counter text through engine draw lists; O1 `tests/android-embedder/counter-on-emulator.test.mjs`, O2 `tests/android-embedder/no-webview-no-js-engine.test.mjs`, O3 `tests/android-embedder/arm64-v8a-in-scope.test.mjs` named.

@@ -2,11 +2,11 @@
 id: "ticket-61-native-ui-unfunded"
 title: "Native UI is unfunded"
 kind: ticket
-status: promoted
+status: closed
 ticket_type: observation
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T09:55:42Z"
 ---
 
 # Native UI is unfunded
