@@ -11,6 +11,6 @@ Use glossary terms: Program, Frontend, Linker, IR, JS backend, LLVM backend, Run
 
 **Incorrect:** calling the whole product "the compiler," IR "the AST," native types "primitives," or catchable exceptions "panics."
 
-**Correct:** Compiler is the Rust program that emits artifacts. Toolchain is Compiler + Runtime + Embed + CLI. Frontend is parse/bind/check/lower. Panic/abort is R04.02, not `try`/`catch`.
+**Correct:** Compiler is the Rust program that emits artifacts. Toolchain is Compiler + Runtime + Embed + CLI. Frontend is parse/bind/check/lower. Panic/abort is R04.02, not `try`/`catch`. A Program is `.drac` source, not the Compiler.
 
-**Notes.** Changing a term is **domain-modeling** plus **docs**, not a silent rename in a crate. Avoid list is in `CONTEXT.md`.
+**Notes.** Language terms: sibling `~/workbench/draconic/CONTEXT.md`. UI terms: `docs/overview/glossary.md`. Changing a language term is **domain-modeling** plus **docs** in the sibling vault, not a silent rename here.
