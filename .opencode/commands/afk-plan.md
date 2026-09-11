@@ -5,7 +5,7 @@ argument-hint: "[slice | location | ticket]"
 subtask: false
 ---
 
-Load **afk-plan**. Run one sitting, then exit.
+Load **afk-plan**. Run then exit.
 
 Arguments: $ARGUMENTS
 

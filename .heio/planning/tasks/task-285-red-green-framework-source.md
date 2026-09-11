@@ -2,7 +2,7 @@
 id: "task-285-red-green-framework-source"
 title: "Red-green: framework source is Draconic"
 kind: task
-status: ready
+status: claimed
 mode: afk
 blocked_by:
   - "task-284-spec-framework-source"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-283-draconic-framework-source"
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-11T21:34:15Z"
+updated_at: "2026-09-12T12:40:00Z"
 ---
 
 # Red-green: framework source is Draconic

@@ -2,12 +2,12 @@
 id: "slice-283-draconic-framework-source"
 title: "Draconic framework source"
 kind: slice
-status: frozen
+status: active
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-11T21:34:15Z"
+updated_at: "2026-09-12T08:20:00Z"
 ---
 
 # Draconic framework source
