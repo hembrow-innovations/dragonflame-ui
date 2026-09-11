@@ -2,14 +2,14 @@
 id: "task-284-spec-framework-source"
 title: "Spec framework source"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-283-draconic-framework-source"
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-11T21:34:15Z"
+updated_at: "2026-09-12T12:30:00Z"
 ---
 
 # Spec framework source
@@ -67,10 +67,10 @@ A spec folder locks two oracles: framework `.drac` sources exist for at least on
 - Promises must not copy JS emit or add JSX from this repo
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for framework-source
-- [ ] test.md names both oracle commands above
-- [ ] `js-backend.emit:no-emit-here` is kept, not repeated as a new oracle
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for framework-source
+- [x] test.md names both oracle commands above
+- [x] `js-backend.emit:no-emit-here` is kept, not repeated as a new oracle
+- [x] No product code
 
 **Out of scope:**
 - Implementing `.drac` sources
