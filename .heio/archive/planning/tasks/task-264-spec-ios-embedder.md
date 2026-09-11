@@ -2,14 +2,14 @@
 id: "task-264-spec-ios-embedder"
 title: "Spec iOS embedder"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-11T08:06:40Z"
-updated_at: "2026-09-11T08:06:40Z"
+updated_at: "2026-09-11T08:14:59Z"
 ---
 
 # Spec iOS embedder
