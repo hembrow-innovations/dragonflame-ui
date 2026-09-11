@@ -2,14 +2,14 @@
 id: "slice-84-platform-view-hatch"
 title: "Platform view hatch"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-79-oem-hatch-slot"
   - "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T22:12:57Z"
+updated_at: "2026-09-11T22:13:56Z"
 ---
 
 # Platform view hatch
@@ -35,11 +35,11 @@ Platform views as the native default. Async Bridge. Public `UiKitView` or `Andro
 - [x] O1: hatch not default
   CHECK: node --test tests/platform-views/hatch-not-default.test.mjs
   EXPECT: pass
-  EVIDENCE: pass
+  EVIDENCE: node --test tests/platform-views/hatch-not-default.test.mjs; 1 pass 0 fail (slice re-run)
 - [x] O2: slot occupied on iOS
   CHECK: node --test tests/platform-views/slot-occupied-on-ios.test.mjs
   EXPECT: pass
-  EVIDENCE: pass
+  EVIDENCE: node --test tests/platform-views/slot-occupied-on-ios.test.mjs; 1 pass 0 fail (slice re-run)
 
 ## Pool
 
