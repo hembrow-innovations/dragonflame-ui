@@ -1,34 +1,45 @@
 ---
 name: tdd
-description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+description: TDD for cargo and `.drac`. Use when writing crate `#[test]` or Draconic `describe`/`it`, or when another skill needs red-green.
 ---
 
 # Test-Driven Development
 
-TDD is the red → green loop. This skill is the reference that makes that loop produce tests worth keeping: what a good test is, where tests go, the anti-patterns, and the rules of the loop. Every section applies on every cycle — consult them before and during the loop, not after.
+TDD is the red → green loop for **Rust crates** and **Draconic Programs**. Red is `cargo test` or `draconic test` failing. Every section applies on every cycle.
 
-When exploring the codebase, read `CONTEXT.md` (if it exists) so test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
+Load **rust-development** when the seam is a crate. Load **draconic-language** when the seam is a `.drac` Program.
+
+Match test names to `docs/overview/glossary.md` and ADRs in the area.
+
+## Loop
+
+1. Name the seam (crate public fn, or `.drac` export). Done when that boundary is written down. AFK drain: the Agent Brief and named promise ids are the seams.
+2. Write one failing test at that seam. Done when `cargo test -p <crate>` or `draconic test <path>` is red on that case.
+3. Write only enough code to pass it. Done when that same command is green.
+4. Next slice. Refactor is review, not this loop.
+
+Crate units live in the same `.rs` file (`#[cfg(test)]`). `.drac` suites live under `tests/<spec-area>/`.
 
 ## What a good test is
 
-Tests verify behavior through public interfaces, not implementation details. Code can change entirely; tests shouldn't. A good test reads like a specification — "user can checkout with valid cart" tells you exactly what capability exists — and survives refactors because it doesn't care about internal structure.
+Tests verify behavior through public interfaces. A good test reads like a specification ("submit records a colored rect") and survives refactors because it does not care about internal structure.
 
-See [tests.md](tests.md) for examples and [mocking.md](mocking.md) for mocking guidelines.
+See [tests.md](tests.md) for examples and [mocking.md](mocking.md) for boundary doubles. When the seam is a crate, copy the Rust examples. When the seam is a Program, copy the Draconic examples.
 
-## Seams — where tests go
+## Seams
 
-A **seam** is the public boundary you test at: the interface where you observe behavior without reaching inside. Tests live at seams, never against internals.
+A **seam** is the public boundary you test at. Tests live at seams.
 
-**Test only at pre-agreed seams.** Before writing any test, write down the seams under test. AFK drain: the Agent Brief and named promise ids are the seams. Do not ask the user. A live user sitting may still confirm seams in chat.
+**Test only at pre-agreed seams.** Before writing any test, write down the seams under test. AFK drain: do not ask the user. A live user sitting may still confirm seams in chat.
 
 ## Anti-patterns
 
-- **Implementation-coupled** — mocks internal collaborators, tests private methods, or verifies through a side channel (querying the database instead of using the interface). The tell: the test breaks when you refactor but behavior hasn't changed.
-- **Tautological** — the assertion recomputes the expected value the way the code does (`expect(add(a, b)).toBe(a + b)`, a snapshot derived by hand the same way, a constant asserted equal to itself), so it passes by construction and can never disagree with the code. Expected values must come from an independent source of truth — a known-good literal, a worked example, the spec.
-- **Horizontal slicing** — writing all tests first, then all implementation. Bulk tests verify _imagined_ behavior: you test the _shape_ of things rather than user-facing behavior, the tests go insensitive to real changes, and you commit to test structure before understanding the implementation. Work in **vertical slices** instead — one test → one implementation → repeat, each test a **tracer bullet** that responds to what the last cycle taught you.
+- **Implementation-coupled**: doubles internal collaborators, tests private items, or verifies through a side channel. The tell: the test breaks when you refactor but behavior has not changed.
+- **Tautological**: the assertion recomputes the expected value the way the code does, so it passes by construction. Expected values come from a known-good literal, a worked example, or the spec.
+- **Horizontal slicing**: writing all tests first, then all implementation. Work in **vertical slices** instead: one test → one implementation → repeat, each test a **tracer bullet**.
 
 ## Rules of the loop
 
-- **Red before green.** Write the failing test first, then only enough code to pass it. Don't anticipate future tests or add speculative features.
+- **Red before green.** Write the failing test first, then only enough code to pass it.
 - **One slice at a time.** One seam, one test, one minimal implementation per cycle.
-- **Refactoring is not part of the loop.** It belongs to the review stage, not the red → green implementation cycle.
+- **Refactoring is not part of the loop.** It belongs to the review stage.

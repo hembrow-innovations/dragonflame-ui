@@ -1,77 +1,154 @@
 # Good and Bad Tests
 
-## Good Tests
+Characteristics of a good test:
 
-**Integration-style**: Test through real interfaces, not mocks of internal parts.
-
-```typescript
-// GOOD: Tests observable behavior
-test("user can checkout with valid cart", async () => {
-  const cart = createCart();
-  cart.add(product);
-  const result = await checkout(cart, paymentMethod);
-  expect(result.status).toBe("confirmed");
-});
-```
-
-Characteristics:
-
-- Tests behavior users/callers care about
-- Uses public API only
+- Tests behavior callers care about
+- Uses the public API only
 - Survives internal refactors
 - Describes WHAT, not HOW
 - One logical assertion per test
 
-## Bad Tests
+## Rust
 
-**Implementation-detail tests**: Coupled to internal structure.
+**Good:** observable behavior at the crate seam.
 
-```typescript
-// BAD: Tests implementation details
-test("checkout calls paymentService.process", async () => {
-  const mockPayment = jest.mock(paymentService);
-  await checkout(cart, payment);
-  expect(mockPayment.process).toHaveBeenCalledWith(cart.total);
+```rust
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn submit_records_a_colored_rect() {
+        submit(red_rect_scene());
+        let list = recorded_draw_list();
+        assert_eq!(list.len(), 1);
+        assert_eq!(list[0].color, Color { r: 1.0, g: 0.0, b: 0.0, a: 1.0 });
+    }
+}
+```
+
+**Bad:** coupled to internals.
+
+```rust
+#[test]
+fn submit_calls_queue_submit() {
+    let queue = mock_queue();
+    submit_with(red_rect_scene(), &queue);
+    assert_eq!(queue.submit_calls(), 1);
+}
+```
+
+**Bad:** bypasses the interface.
+
+```rust
+#[test]
+fn create_user_writes_a_row() {
+    create_user("Alice");
+    let row = db::query("SELECT name FROM users WHERE name = 'Alice'");
+    assert!(row.is_some());
+}
+```
+
+**Good:** verifies through the interface.
+
+```rust
+#[test]
+fn create_user_makes_user_retrievable() {
+    let user = create_user("Alice").expect("create");
+    let got = get_user(user.id).expect("get");
+    assert_eq!(got.name, "Alice");
+}
+```
+
+**Tautological:** expected value restates the implementation.
+
+```rust
+#[test]
+fn calculate_total_sums_line_items() {
+    let items = [Item { price: 10 }, Item { price: 5 }];
+    let expected: i32 = items.iter().map(|i| i.price).sum();
+    assert_eq!(calculate_total(&items), expected);
+}
+```
+
+**Good:** independent literal.
+
+```rust
+#[test]
+fn calculate_total_sums_line_items() {
+    assert_eq!(calculate_total(&[Item { price: 10 }, Item { price: 5 }]), 15);
+}
+```
+
+Red flags: mocking sibling modules, testing private fns, asserting call counts, names that describe HOW.
+
+## Draconic
+
+Host globals: `describe`, `it`, `expect`. Run with `draconic test <path>`.
+
+**Good:** observable behavior at the Program seam.
+
+```
+describe("submit", () => {
+  it("records a colored rect", () => {
+    submit(redRectScene());
+    const list = recordedDrawList();
+    expect(list.length).toBe(1);
+    expect(list[0].color.r).toBe(1);
+  });
 });
 ```
 
-Red flags:
+**Bad:** coupled to internals.
 
-- Mocking internal collaborators
-- Testing private methods
-- Asserting on call counts/order
-- Test breaks when refactoring without behavior change
-- Test name describes HOW not WHAT
-- Verifying through external means instead of interface
-
-```typescript
-// BAD: Bypasses interface to verify
-test("createUser saves to database", async () => {
-  await createUser({ name: "Alice" });
-  const row = await db.query("SELECT * FROM users WHERE name = ?", ["Alice"]);
-  expect(row).toBeDefined();
-});
-
-// GOOD: Verifies through interface
-test("createUser makes user retrievable", async () => {
-  const user = await createUser({ name: "Alice" });
-  const retrieved = await getUser(user.id);
-  expect(retrieved.name).toBe("Alice");
+```
+describe("submit", () => {
+  it("calls queue.submit", () => {
+    const queue = { submitCalls: 0, submit() { this.submitCalls = 1; } };
+    submitWith(redRectScene(), queue);
+    expect(queue.submitCalls).toBe(1);
+  });
 });
 ```
 
-**Tautological tests**: Expected value restates the implementation, so the test passes by construction.
+**Bad:** bypasses the interface.
 
-```typescript
-// BAD: Expected value is recomputed the way the code computes it
-test("calculateTotal sums line items", () => {
+```
+describe("createUser", () => {
+  it("saves to the database", () => {
+    createUser({ name: "Alice" });
+    const row = db.query("SELECT * FROM users WHERE name = ?", ["Alice"]);
+    expect(row).toBeTruthy();
+  });
+});
+```
+
+**Good:** verifies through the interface.
+
+```
+describe("createUser", () => {
+  it("makes the user retrievable", () => {
+    const user = createUser({ name: "Alice" });
+    const got = getUser(user.id);
+    expect(got.name).toBe("Alice");
+  });
+});
+```
+
+**Tautological:** expected value restates the implementation.
+
+```
+it("sums line items", () => {
   const items = [{ price: 10 }, { price: 5 }];
   const expected = items.reduce((sum, i) => sum + i.price, 0);
   expect(calculateTotal(items)).toBe(expected);
 });
+```
 
-// GOOD: Expected value is an independent, known literal
-test("calculateTotal sums line items", () => {
+**Good:** independent literal.
+
+```
+it("sums line items", () => {
   expect(calculateTotal([{ price: 10 }, { price: 5 }])).toBe(15);
 });
 ```

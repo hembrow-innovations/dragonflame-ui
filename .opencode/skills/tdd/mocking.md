@@ -2,58 +2,57 @@
 
 Mock at **system boundaries** only:
 
-- External APIs (payment, email, etc.)
-- Databases (sometimes - prefer test DB)
-- Time/randomness
+- External APIs (payment, email)
+- Databases (prefer a test DB when you control it)
+- Time and randomness
 - File system (sometimes)
 
-Don't mock:
+Double what you do not control. Use the real crate modules and `.drac` exports you own.
 
-- Your own classes/modules
-- Internal collaborators
-- Anything you control
+## Rust
 
-## Designing for Mockability
+Pass the boundary in as a trait. Do not construct the host client inside the fn under test.
 
-At system boundaries, design interfaces that are easy to mock:
+```rust
+trait PaymentClient {
+    fn charge(&self, total: i32) -> Charge;
+}
 
-**1. Use dependency injection**
+fn process_payment(order: &Order, payment: &dyn PaymentClient) -> Charge {
+    payment.charge(order.total)
+}
+```
 
-Pass external dependencies in rather than creating them internally:
+Prefer one method per external operation, not a generic `call(&str)` that the test must branch on.
 
-```typescript
-// Easy to mock
+```rust
+trait ShopApi {
+    fn get_user(&self, id: UserId) -> User;
+    fn get_orders(&self, user_id: UserId) -> Vec<Order>;
+    fn create_order(&self, data: NewOrder) -> Order;
+}
+```
+
+Each test double returns one shape. No match-on-path inside the double.
+
+## Draconic
+
+Pass the host client in. Host APIs stay free globals at the edge; the fn under test still takes the collaborator.
+
+```
 function processPayment(order, paymentClient) {
   return paymentClient.charge(order.total);
 }
-
-// Hard to mock
-function processPayment(order) {
-  const client = new StripeClient(process.env.STRIPE_KEY);
-  return client.charge(order.total);
-}
 ```
 
-**2. Prefer SDK-style interfaces over generic fetchers**
+Prefer one function per external operation:
 
-Create specific functions for each external operation instead of one generic function with conditional logic:
-
-```typescript
-// GOOD: Each function is independently mockable
+```
 const api = {
-  getUser: (id) => fetch(`/users/${id}`),
-  getOrders: (userId) => fetch(`/users/${userId}/orders`),
-  createOrder: (data) => fetch('/orders', { method: 'POST', body: data }),
-};
-
-// BAD: Mocking requires conditional logic inside the mock
-const api = {
-  fetch: (endpoint, options) => fetch(endpoint, options),
+  getUser: (id) => fetchUser(id),
+  getOrders: (userId) => fetchOrders(userId),
+  createOrder: (data) => postOrder(data),
 };
 ```
 
-The SDK approach means:
-- Each mock returns one specific shape
-- No conditional logic in test setup
-- Easier to see which endpoints a test exercises
-- Type safety per endpoint
+A single `fetch(endpoint, options)` double needs conditionals. Split operations so each double returns one shape.
