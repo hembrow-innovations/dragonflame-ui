@@ -8,7 +8,9 @@ Load **afk-verify**. Run one sitting, then exit.
 
 Arguments: $ARGUMENTS
 
-- Empty or `continue`: next unaudited `met` slice.
+Do not run scripts under `.loop/`. Glob and read the notes.
+
+- Empty or `continue`: lowest-numbered `met` slice not in the afk-verify ledger.
 - A slice or task id: that slice, if it is `met`.
 - `status`: progress only. No tests. No tickets.
 

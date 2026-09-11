@@ -10,12 +10,14 @@ acceptance/oracles).
 
 Arguments: $ARGUMENTS
 
-- If a task path/name is given, pass that id to claim-ready.
-- Otherwise pass no id. claim-ready picks the lowest unblocked `ready` + `mode: afk` task.
+Do not run scripts under `.loop/`. Glob and read the notes.
+
+- If a task path/name is given, glob that file under `.heio/planning/tasks/`.
+- Otherwise glob `.heio/planning/tasks/task-*.md` and pick the lowest-numbered unblocked `ready` + `mode: afk` task.
 
 Workflow (follow AGENTS.md and project conventions throughout):
 
-1. Claim first: `node .loop/claim-ready.mjs` with the argument id or with no id. Do not hand-edit `status: claimed`. If the helper exits 2, stop. Do not start another task. Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree.
+1. Claim first. Glob the task file. Confirm `kind: task`, `status: ready`, `mode: afk`, and every `blocked_by` id is `completed` (check `.heio/archive/planning/tasks/` too). Set `status: claimed` and stamp `updated_at`. Re-read. If it is not claimable, stop. Do not start another task. Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree.
 2. Read the claimed task file. **Vault pack:** load skill **vault-pack** and run `pnpm vault:pack -- --unit <path-to-unit.md>`; **Read every Must-read path in full** (intent ladder, agent-gotchas, purpose + contracts for `area`). Skim Related only if needed. Do not freestyle-grep half the vault. Then any relevant slice under `.heio/planning/sprints/<sprint_name>/slice-<NN>-<slug>.md`. Broad code exploration → subagent summary only.
 3. Implement the unit 100% — TDD, no stubs, no skipped scope. Respect its scope (a task's "Scope (may touch)" list, or the ticket's `## Agent Brief`); do not make repo-wide changes. Behaviour work must **name contract promise ids** from the pack; never invent product rules. UI must use the ui packages: 
 	- React Native packages: `ui-components-native`/`ui-infra-native`, 
@@ -23,7 +25,7 @@ Workflow (follow AGENTS.md and project conventions throughout):
 	- design tokens.
 4. Verify: run the checks the task lists (jest/vitest/playwright-cli/typecheck/biome as applicable) until green. 
 5. Spawn ONE subagent to adversarially review your diff for defects and convention violations; require it to check **diff vs named promise ids** (and purpose out-of-scope) when behaviour changed; fix what it confirms.
-6. Update docs: tick the matching checkboxes; add change to changelog. Then close by kind (use **obsidian-axi** `mv` so links survive). Set the task `status: completed`, move it to `.heio/archive/planning/tasks/`, then commit with `node .loop/commit-lane.mjs drain -m "<type>(<scope>): <description>" -- <paths>` (old task path, archive path, parent slice if you edited it, and this unit's scope only).
+6. Update docs: tick the matching checkboxes; add change to changelog. Then close by kind (use **obsidian-axi** `mv` so links survive). Set the task `status: completed`, move it to `.heio/archive/planning/tasks/`, then `git add -- <paths>` and `git commit -m "<type>(<scope>): <description>" -- <paths>` (old task path, archive path, parent slice if you edited it, and this unit's scope only). Do not commit `intent.md`, `roadmap.md`, locations, or `shape.md`.
 7. If the only block is a missing product decision, pick the smallest reversible default from the location destination plus `docs/`, write it into the spec or round as needed, and continue. Unclaim only for a broken precondition that code cannot fix. Do not wait for a human.
 
 Rules: never touch other ticket/task files except this unit's own (and, for a task, its source slice/ticket); never run vault-wide or store-wide fixes. Any issues arise, create a ticket for reviewing.

@@ -9,7 +9,7 @@ One sitting. One `met` slice. Re-run oracles, run an example, critic-confirm, fi
 
 Load **management** before any write under `.heio/`. Load **to-tickets** before filing. Load **docs** only for ADRs the slice See also names. Do not load **afk-plan**, **tdd**, or **gauntlet-loop**.
 
-Same checkout. No git branch. No worktree. Read `.opencode/skills/afk-plan/references/lanes.md` before allocating ids or committing.
+Same checkout. No git branch. No worktree. Read `.opencode/skills/afk-plan/references/lanes.md` before allocating ids or committing. Do not run scripts under `.loop/`.
 
 This is not `/verify-ticket` and not `/afk-roadmap`.
 
@@ -19,14 +19,16 @@ Verify writes: new `open` tickets, the afk-verify round ledger. Verify never wri
 
 Done when one `met` slice is named, or the sitting is IDLE.
 
+Glob `.heio/planning/sprints/**/slice-*.md` and `.heio/archive/planning/sprints/**/slice-*.md`. Glob rounds `*afk-verify*` under planning and archive. Read frontmatter and the ledger. Do not run `.loop` scripts.
+
 Arguments:
 
-- Empty or `continue`: `node .loop/pick-verify.mjs`. Lowest-numbered `met` slice not in the ledger.
+- Empty or `continue`: lowest-numbered `status: met` slice whose id is not a ledger line (`- **slice-...**:`).
 - A slice id: that slice if `status: met`. Re-audit is allowed.
-- A task id: read the task, take its `slice:` field, then pick that slice if `met`.
-- `status`: `node .loop/pick-verify.mjs status`. No tests. No tickets. `VERDICT: IDLE`.
+- A task id: glob the task, take its `slice:` field, then pick that slice if `met`.
+- `status`: count `met` slices vs ledger lines. No tests. No tickets. `VERDICT: IDLE`.
 
-If the helper exits 2, end with `VERDICT: IDLE`. Do not pick `frozen`, `active`, `shaping`, or `abandoned`. Do not claim a task.
+If none is due, end with `VERDICT: IDLE`. Do not pick `frozen`, `active`, `shaping`, or `abandoned`. Do not claim a task.
 
 ## 2. Ground
 
@@ -95,7 +97,7 @@ Search `.heio/planning/tickets/` and `.heio/archive/planning/tickets/` for the s
 
 One ticket per independent problem. Two failing asserts in the same CHECK are one ticket.
 
-Copy **management** `templates/ticket.md`. Re-run `node .opencode/skills/management/scripts/planning-next-id.mjs` under the lane lock immediately before each write. Never eyeball ids.
+Copy **management** `templates/ticket.md`. Re-run `node .opencode/skills/management/scripts/planning-next-id.mjs` immediately before each write. Never eyeball ids.
 
 - `status: open` so `/afk-plan` can pick it
 - `ticket_type: bug` for false greens and missing tests
@@ -124,7 +126,7 @@ next: slice-69-importable-package
 
 Update `next` to the following unaudited id. Re-audit overwrites that id's ledger line.
 
-Commit with `node .loop/commit-lane.mjs audit -m "chore(verify): <slice id>" -- <paths>`. Paths stay under tickets and the afk-verify round.
+`git add -- <paths>` then `git commit -m "chore(verify): <slice id>" -- <paths>`. Paths stay under tickets and the afk-verify round.
 
 Chat report, short prose:
 

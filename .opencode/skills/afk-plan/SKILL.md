@@ -9,7 +9,7 @@ One sitting. One next slice plus its tasks. Then exit. Drain is `/afk-task` or `
 
 Load **management** before any write under `.heio/`. Load **design-tree**, **architect**, **to-slices**, **to-tasks**, **principle-intent-ladder-stop**, and **vault-pack**. Load **docs** before any write under `docs/`. Do not write `docs/specs/`; that is drain work.
 
-Same checkout. No git branch. No worktree. Coordination is write lanes and `.loop` lock helpers. Read [references/lanes.md](references/lanes.md) before claiming, allocating ids, or committing.
+Same checkout. No git branch. No worktree. Coordination is write lanes. Read [references/lanes.md](references/lanes.md) before claiming, allocating ids, or committing. Do not run scripts under `.loop/`.
 
 Counterpart is the **product** peer. Notebook is a round file. Auto-confirm in this sitting. Cite the location destination plus `docs/`. If they are silent, pick the smallest reversible default, write it in the round, write `Confirmed.`, and freeze. Every published task is `mode: afk`. Do not file HITL. Do not park. Do not wait. Do not ask the user.
 
@@ -17,13 +17,13 @@ Counterpart is the **product** peer. Notebook is a round file. Auto-confirm in t
 
 Done when one target slice is named, or the sitting is IDLE.
 
-Run `node .loop/pick-plan.mjs` before writing anything. Exit 2 is IDLE: `VERDICT: IDLE`. Do not copy a round template. Do not append a round. Do not commit.
+Glob and read the notes before writing anything. Do not run `.loop` scripts.
 
-A printed ticket or slice path is the pick. Arguments may still name a slice, location, or ticket. Otherwise, when the helper prints nothing because this is a manual sitting, pick in this order:
+Arguments may name a slice, location, or ticket. Otherwise pick in this order:
 
-1. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
-2. An unblocked `open` ticket that does not fit an existing `frozen` or `active` slice, and that no afk-plan sitting has already refused unless the ticket is newer than that sitting
-3. The lowest-numbered `active` location that no slice `See also` links, whose sprint is allowed to freeze
+1. Glob `.heio/planning/tasks/task-*.md`. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
+2. Glob `.heio/planning/tickets/ticket-*.md`. Lowest-numbered unblocked `open` ticket that does not fit an existing `frozen` or `active` slice, and that no `afk-plan` round already mentions `[[id]]` unless the ticket `updated_at` is newer than that round
+3. Glob `.heio/planning/sprints/**/slice-*.md`. Lowest-numbered `shaping` slice whose `blocked_by` ids are `met` or `abandoned`
 4. IDLE
 
 A ticket is unblocked when `blocked_by` is empty, or every listed id is `met` (slice) or `completed` (task). Look in live folders and `archive/`.
@@ -40,7 +40,7 @@ Do not pick:
 
 When `docs/` is silent, still freeze. The default is the product answer for this sitting.
 
-IDLE means the helper exited 2. Drain may own ready AFK tasks. End with `VERDICT: IDLE`.
+IDLE means no pick. Drain may own ready AFK tasks. End with `VERDICT: IDLE`. Do not copy a round template. Do not append a round. Do not commit.
 
 ## 2. Ground
 
@@ -68,7 +68,7 @@ All tasks `mode: afk`. Prefactoring is its own first task and blocks the rest. I
 
 Done when exactly one slice is `frozen` with oracles, its task files exist, and `shape.md` lists the slice.
 
-Load **to-slices** then **to-tasks**. Run `node .opencode/skills/management/scripts/planning-next-id.mjs` under the lane lock immediately before each new file. Never eyeball ids.
+Load **to-slices** then **to-tasks**. Run `node .opencode/skills/management/scripts/planning-next-id.mjs` immediately before each new file. Never eyeball ids.
 
 - Slice status `frozen` only when Done and `EXPECT:` exist. Otherwise leave `shaping` and do not publish tasks
 - Tasks `ready`, `mode: afk`, `blocked_by` wired, durable `[[id]]` links on the slice Pool
@@ -76,7 +76,7 @@ Load **to-slices** then **to-tasks**. Run `node .opencode/skills/management/scri
 - Do not implement product code
 - Do not start another slice
 
-Commit with `node .loop/commit-lane.mjs plan -m "chore(plan): <slice id>" -- <paths>`.
+`git add -- <paths>` then `git commit -m "chore(plan): <slice id>" -- <paths>`. Paths stay under `.heio/planning/sprints/`, `tasks/`, `tickets/`, `rounds/`, and archive tickets or rounds.
 
 ## Loop
 

@@ -9,8 +9,10 @@ Load **management** for paths, status, and frontmatter. A slice lives at `.heio/
 
 Arguments: $ARGUMENTS
 
-- If a slice path, id, or slug is given, use it.
-- Otherwise run `node .loop/pick-slice.mjs`. Exit 2 is IDLE.
+Do not run scripts under `.loop/`. Glob and read the notes.
+
+- If a slice path, id, or slug is given, glob that file.
+- Otherwise glob `.heio/planning/sprints/**/slice-*.md`. Pick the lowest-numbered `frozen` or `active` slice whose `blocked_by` is `met` or `abandoned` and whose Pool has at least one unblocked `ready` + `mode: afk` task. If none, IDLE.
 
 Do not start a `shaping` slice. Do not start a slice whose `blocked_by` ids are not `met` or `abandoned`.
 
@@ -23,12 +25,12 @@ Do not start a `shaping` slice. Do not start a slice whose `blocked_by` ids are 
 5. After each subagent, re-read the task file. If it is not `completed` in `.heio/archive/planning/tasks/`, stop that line. Do not mark the slice `met`.
 6. When every linked task id is `completed`, run the slice oracles (`CHECK` / `EXPECT`). Record `EVIDENCE:` on the slice. If an oracle fails, stop. Do not invent a pass.
 7. If every oracle holds, set the slice `status: met`. If leftover oracles cannot hold, `ABANDON:` with a named home (ticket id or drop from sprint) and set `abandoned`.
-8. Commit with `node .loop/commit-lane.mjs drain -m "chore(slice): <slice id>" -- <slice path>`. Then exit. Do not start another slice.
+8. `git add -- <slice path>` then `git commit -m "chore(slice): <slice id>" -- <slice path>`. Then exit. Do not start another slice.
 
 ## Rules
 
 - One slice. Never touch other slice files except this one's `blocked_by` reads.
-- `/afk-task` is the only way a task gets implemented. It claims through `node .loop/claim-ready.mjs`.
+- `/afk-task` is the only way a task gets implemented. It claims by editing that task file.
 - Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree. Do not run an `/afk-slice` loop beside an `/afk-task` loop.
 - Create a ticket if something belongs to the project, not this slice.
 - End with `VERDICT: TASK | TICKET | ESCALATE | VERIFY`.
