@@ -3,7 +3,14 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../..");
-const run = spawnSync("cargo", ["build", "-p", "embedder", "--lib"], {
+const platform = process.env.PLATFORM_NAME ?? "iphoneos";
+const arch = (process.env.ARCHS ?? "arm64").trim().split(/\s+/)[0];
+const targets = {
+	iphoneos: { arm64: "aarch64-apple-ios" },
+	iphonesimulator: { arm64: "aarch64-apple-ios-sim" },
+};
+const target = targets[platform]?.[arch] ?? "aarch64-apple-ios";
+const run = spawnSync("cargo", ["build", "-p", "embedder", "--lib", "--target", target], {
 	cwd: root,
 	stdio: "inherit",
 });
