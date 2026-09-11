@@ -1,6 +1,7 @@
 ---
 name: gauntlet-loop
 description: Bounded builder/critic loop until the bar wins or a plateau is ticketed. Use when implementing a named task, fixing a failing CHECK, or when the brief says gauntlet / loop-until-win / do not get stuck.
+disable-model-invocation: true
 ---
 
 # Gauntlet Loop
