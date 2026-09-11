@@ -43,7 +43,7 @@ Open product questions may be closed by an AFK planning sitting with the smalles
 
 ## Draconic Language
 
-`draconic` is being developed in `~/workbench/draconic`, this should act as the truth behind `draconic` as a language.  If bugs are found submit a github issue to the github repo so that a fix can be planned and implemented. build it from there if needed.
+`draconic` is being developed in `~/workbench/draconic`, this should not act as the truth behind `draconic` as a language, currently the cli is installed and should be the truth - `draconic help`.  If bugs are found submit a github issue to the github repo so that a fix can be planned and implemented. build it from there if needed.
 
 ## Rules
 
@@ -55,8 +55,6 @@ Open product questions may be closed by an AFK planning sitting with the smalles
 - No em dashes (`—`)
 - Prefer matching this repo's existing patterns over inventing new ones.
 - After any work or change do housekeeping on `.heio/` and commit in work packages.
-- 
-
 
 ### Implementation
 - Always write `draconic` for implementation over any other language.
