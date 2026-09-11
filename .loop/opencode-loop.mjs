@@ -5,8 +5,10 @@
 //        node .loop/opencode-loop.mjs 200
 //        node .loop/opencode-loop.mjs 5 "fix the failing tests"
 //        LOOP_COMMAND=afk-plan node .loop/opencode-loop.mjs 200
+//        LOOP_COMMAND=afk-slice node .loop/opencode-loop.mjs 200
 //        LOOP_COMMAND=afk-task node .loop/opencode-loop.mjs 200
 //        LOOP_COMMAND=afk-verify node .loop/opencode-loop.mjs 200
+//        LOOP_COMMAND=afk-cycle node .loop/opencode-loop.mjs 200
 // Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.6
 // SLEEP=<seconds> between loops. STALL_SEC=900 idle stdout/stderr → kill (0 disables).
 // STALL_ACTION=continue|abort (default continue). FAIL_ACTION=continue|abort (default continue).
@@ -24,7 +26,9 @@ import {
 import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
+import { pickCycle } from "./pick-cycle.mjs";
 import { planProgress } from "./pick-plan.mjs";
+import { pickSlice } from "./pick-slice.mjs";
 import { verifyProgress } from "./pick-verify.mjs";
 import { readRoadmapStatus } from "./roadmap-status.mjs";
 
@@ -33,6 +37,8 @@ const DEFAULT_ARGS = DEFAULT_COMMAND === "afk-roadmap" ? ["continue"] : [];
 const isRoadmapCampaign = DEFAULT_COMMAND === "afk-roadmap";
 const isVerifyCampaign = DEFAULT_COMMAND === "afk-verify";
 const isPlanCampaign = DEFAULT_COMMAND === "afk-plan";
+const isSliceCampaign = DEFAULT_COMMAND === "afk-slice";
+const isCycleCampaign = DEFAULT_COMMAND === "afk-cycle";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
@@ -116,10 +122,11 @@ function campaign() {
 	};
 }
 
-function opencodeArgs() {
+function opencodeArgs(command = DEFAULT_COMMAND) {
 	const flags = ["run", "--auto", "--format", "json"];
 	if (useDefaultAudit) {
-		flags.push("--command", DEFAULT_COMMAND, ...DEFAULT_ARGS);
+		const args = command === "afk-roadmap" ? ["continue"] : [];
+		flags.push("--command", command, ...args);
 	} else {
 		flags.push(...promptParts);
 	}
@@ -127,11 +134,11 @@ function opencodeArgs() {
 	return flags;
 }
 
-function run(i) {
-	const args = opencodeArgs();
+function run(i, command = DEFAULT_COMMAND) {
+	const args = opencodeArgs(command);
 	const harness = createHarness();
 	return new Promise((resolve) => {
-		emit(`\n===== loop ${i}/${loops} =====`);
+		emit(`\n===== loop ${i}/${loops} ${command} =====`);
 		const child = spawn("opencode", args, {
 			stdio: ["ignore", "pipe", "pipe"],
 			detached: true,
@@ -210,7 +217,7 @@ emit(
 	`stall watchdog: ${stallSec > 0 ? `${stallSec}s idle → kill (${stallAction})` : "disabled"} (STALL_SEC / STALL_ACTION)`,
 );
 emit(
-	`prompt: ${useDefaultAudit ? `/${DEFAULT_COMMAND}${DEFAULT_ARGS.length ? ` ${DEFAULT_ARGS.join(" ")}` : ""}` : promptParts.join(" ")}`,
+	`prompt: ${useDefaultAudit ? (isCycleCampaign ? "cycle /afk-plan|/afk-slice|/afk-verify" : `/${DEFAULT_COMMAND}${DEFAULT_ARGS.length ? ` ${DEFAULT_ARGS.join(" ")}` : ""}`) : promptParts.join(" ")}`,
 );
 emit(`opencode ${argsPreview}`);
 
@@ -249,7 +256,29 @@ for (let i = 1; i <= loops; i++) {
 			break;
 		}
 	}
-	const { code, reason } = await run(i);
+	if (useDefaultAudit && isSliceCampaign) {
+		const slice = pickSlice(process.cwd());
+		emit(
+			`campaign: remaining=${slice.ok ? 1 : 0} next=${slice.ok ? slice.id : "none"} reason=${slice.ok ? "drain" : slice.error}`,
+		);
+		if (!slice.ok) {
+			emit("campaign idle. none drainable. stopping.");
+			break;
+		}
+	}
+	let sitting = DEFAULT_COMMAND;
+	if (useDefaultAudit && isCycleCampaign) {
+		const next = pickCycle(process.cwd());
+		emit(
+			`campaign: sitting=${next.command ?? "idle"} next=${next.next ?? "none"} reason=${next.reason}`,
+		);
+		if (!next.command) {
+			emit("campaign idle. no plan, drain, or verify sitting. stopping.");
+			break;
+		}
+		sitting = next.command;
+	}
+	const { code, reason } = await run(i, sitting);
 	if (reason === "stall") {
 		stalls++;
 		emit(`loop ${i} stalled (total stalls: ${stalls})`, process.stderr);

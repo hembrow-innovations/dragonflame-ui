@@ -69,7 +69,7 @@ Create a folder when the first file needs it.
 
 A slice is `met` when every linked task id is `completed` and the oracles hold. Links are never dropped.
 
-Task `mode` is `afk` or `hitl`. It is not status.
+Task `mode` is `afk` or `hitl`. It is not status. AFK sittings publish `mode: afk` only.
 
 ## Frontmatter
 
@@ -86,8 +86,8 @@ Work hangs off sprint grouping → slice → task files.
 - **shape.md** lists which slices are in this grouping.
 - A slice is one file next to `shape.md`. Name `blocked_by` when it waits on another slice. Unblocked slices may run in parallel.
 - Oracles live on the slice file (`CHECK` / `EXPECT` / `EVIDENCE` / `ABANDON`).
-- A planning sitting freezes the in-slices and publishes their task files in one pass. Each task is `ready` with `mode: afk` or `mode: hitl` and `blocked_by`.
-- The slice keeps durable `[[id]]` links to those ids. Drain claims unblocked AFK tasks (`status: ready`). HITL waits.
+- A planning sitting freezes the in-slices and publishes their task files in one pass. Each task is `ready` with `mode: afk` and `blocked_by`.
+- The slice keeps durable `[[id]]` links to those ids. Drain claims unblocked AFK tasks (`status: ready`).
 - Inbound product work is a ticket. Triage it into a slice and tasks (and link it), park it, or escalate it to the map.
 - Completed work moves to archive. Completed task files move to `.heio/archive/planning/tasks/`. Closed sprints, done locations, published rounds, and closed or dropped tickets move under the matching archive path. Add a one-liner to `archive/index.md`. Use **obsidian-axi** `mv` so links survive.
 

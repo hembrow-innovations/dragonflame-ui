@@ -23,20 +23,20 @@ Each task is one sitting, vertical, sized for a fresh context window.
 
 - Prefactoring is its own first task and blocks the rest
 - Prefer many thin tasks over few thick ones
-- `mode: afk` when an agent can take it. `mode: hitl` when a human decision is required. Prefer AFK
+- `mode: afk`. Do not publish `mode: hitl`.
 - Wide refactors sequence as expand, then migrate, then contract. Wire `blocked_by` in that order
 
 ### 3. Show, then publish
 
 Present a numbered list. For each task: title, slice, `mode`, `blocked_by`, and what it delivers.
 
-If the user is present, ask about granularity, blockers, merge or split, HITL vs AFK. If they already confirmed, publish.
+AFK sittings publish without asking. If a live user sitting already confirmed, publish.
 
 Copy `templates/task.md` from **management**. **management** owns `<NN>`, placement, and frontmatter.
 
 - Path: `.heio/planning/tasks/task-<NN>-<slug>.md`
 - Status: `ready` when every `blocked_by` id is `completed` or none. `draft` only while still forming. Do not use `hold`
-- `mode: afk` or `mode: hitl`
+- `mode: afk`
 - `blocked_by` lists task ids. Publish blockers first so wikilinks are real
 - `sprint` and `slice` match the parent slice
 - Append durable `[[task-<NN>-<slug>]]` links on the slice Pool. Never drop them

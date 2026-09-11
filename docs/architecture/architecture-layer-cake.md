@@ -88,10 +88,10 @@ What this sketch optimises for: one authoring model, compile-time platform split
 
 What it sacrifices: pixel-identical web versus native, because web is CSS on the DOM and native is Taffy in the engine. Native default is a custom engine with OEM as an escape hatch. Native wording is no JS engine, not no managed runtime; GC stays.
 
-Open product questions stay unanswered on [[overview-ui-framework]]. Do not invent winners here.
+Open product questions on [[overview-ui-framework]] are none. Settled answers live on [[rounds-01-chart-framework]].
 
 ## Consequences
 
-Until a human sitting files decisions, this note may describe a sibling-library draft. It must not be read as an ADR. It must not add JSX, fork IR, emit TypeScript, target WASM for web, put a DOM into Host I/O, or treat a Cargo toolchain workspace as this UI product.
+This note may describe a sibling-library draft. It must not be read as an ADR. It must not add JSX, fork IR, emit TypeScript, target WASM for web, put a DOM into Host I/O, or treat a Cargo toolchain workspace as this UI product.
 
 Proposed phasing (not a schedule) lives on [[overview-ui-framework]].

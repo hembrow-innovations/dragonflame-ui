@@ -18,6 +18,7 @@ Load the matching skill before the work it covers.
 - **tdd**: test-first work
 - **afk-plan**: one next slice plus its tasks from the map, then exit
 - **afk-verify**: re-run one met slice's oracles, file tickets for afk-plan, then exit
+- **afk-cycle**: `LOOP_COMMAND=afk-cycle node .loop/opencode-loop.mjs 200` runs plan, slice, and verify until idle
 - **to-slices**: publish slice notes from a settled grouping
 - **to-tasks**: publish the task pool from frozen slices
 - **to-tickets**: file inbound signals as tickets
@@ -40,7 +41,7 @@ This repo is the dragonflame-ui framework product. The language toolchain lives 
 
 Completeness and day-to-day planning live in `.heio/planning/` (intent, roadmap, locations, rounds, tickets). `docs/` is committed truth. Do not put tickets in docs.
 
-Open product questions are non-empty until a wayfinder or planning sitting closes them. Do not invent product rules. Load **principle-intent-ladder-stop**.
+Open product questions may be closed by an AFK planning sitting with the smallest reversible default from the location destination plus `docs/`. Do not contradict a locked promise. Load **principle-intent-ladder-stop**.
 
 ## Draconic Language
 
@@ -55,7 +56,7 @@ Open product questions are non-empty until a wayfinder or planning sitting close
 - No `Co-Authored-By` lines
 - If there are move then 25 commits that can be pushed to remote, push them to remote.
 - No CI/CD or GitHub Actions
-- Do not invent work when the user did not name a task and planning has not published ready tasks
+- Do not invent work when the user did not name a task and planning has not published ready tasks, except the afk-cycle campaign
 - Extremely concise output
 - No em dashes (`—`)
 - Prefer matching this repo's existing patterns over inventing new ones.

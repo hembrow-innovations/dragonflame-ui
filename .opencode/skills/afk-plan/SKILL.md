@@ -11,7 +11,7 @@ Load **management** before any write under `.heio/`. Load **design-tree**, **arc
 
 Same checkout. No git branch. No worktree. Coordination is write lanes and `.loop` lock helpers. Read [references/lanes.md](references/lanes.md) before claiming, allocating ids, or committing.
 
-Counterpart is the **product** peer. Notebook is a round file. Auto-confirm only when the location destination and `docs/` answer the frontier. If they do not, file a HITL ticket at `parked` and exit. Do not invent product rules. Do not re-open that sitting on the next loop.
+Counterpart is the **product** peer. Notebook is a round file. Auto-confirm in this sitting. Cite the location destination plus `docs/`. If they are silent, pick the smallest reversible default, write it in the round, write `Confirmed.`, and freeze. Every published task is `mode: afk`. Do not file HITL. Do not park. Do not wait. Do not ask the user.
 
 ## 1. Pick
 
@@ -19,7 +19,7 @@ Done when one target slice is named, or the sitting is IDLE.
 
 Run `node .loop/pick-plan.mjs` before writing anything. Exit 2 is IDLE: `VERDICT: IDLE`. Do not copy a round template. Do not append a round. Do not commit.
 
-A printed ticket path is the pick. Arguments may still name a slice, location, or ticket. Otherwise, when the helper prints nothing because this is a manual sitting, pick in this order:
+A printed ticket or slice path is the pick. Arguments may still name a slice, location, or ticket. Otherwise, when the helper prints nothing because this is a manual sitting, pick in this order:
 
 1. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
 2. An unblocked `open` ticket that does not fit an existing `frozen` or `active` slice, and that no afk-plan sitting has already refused unless the ticket is newer than that sitting
@@ -38,15 +38,15 @@ Do not pick:
 - A second slice
 - Work that would rewrite a location destination
 
-When grounding cannot freeze without inventing product rules, file or keep one HITL ticket at `parked` and IDLE. A human names the missing rule, sets the ticket `open`, then this helper may pick it again.
+When `docs/` is silent, still freeze. The default is the product answer for this sitting.
 
-IDLE means drain owns ready AFK tasks, or the frontier is waiting on a human. Do not invent work. End with `VERDICT: IDLE`.
+IDLE means the helper exited 2. Drain may own ready AFK tasks. End with `VERDICT: IDLE`.
 
 ## 2. Ground
 
 Done when intent, roadmap, the target location, the sprint `shape.md`, linked tickets, and the vault pack for that area have been read in full.
 
-Run **vault-pack**. Read every Must-read path. Empty ladder or a non-empty Open product questions section that this grain needs: file a HITL ticket at `parked` (`mode` does not apply on tickets; the task would be `mode: hitl` later). Do not freeze. Do not append another round on the next loop. `VERDICT: TICKET`.
+Run **vault-pack**. Read every Must-read path. Empty ladder: freeze anyway. The first task writes purpose, contract, and test only, using the location destination plus `docs/` or the smallest reversible default. A non-empty Open product questions section: answer it in the round with that default, then freeze.
 
 ## 3. Sketch
 
@@ -62,9 +62,7 @@ Reject shallow modules, leakage, temporal decomposition, and pass-through method
 
 Done when the round has one synthesis, Confirm says `Confirmed.`, and every task-sized cut is listed: title, `blocked_by`, AFK or HITL, what it delivers.
 
-Prefer AFK. Prefactoring is its own first task and blocks the rest. If no spec ladder exists for the behaviour, the first task writes purpose, contract, and test only.
-
-Open questions the product peer cannot answer stay a HITL ticket. Do not freeze those.
+All tasks `mode: afk`. Prefactoring is its own first task and blocks the rest. If no spec ladder exists for the behaviour, the first task writes purpose, contract, and test only.
 
 ## 5. Publish
 
@@ -73,7 +71,7 @@ Done when exactly one slice is `frozen` with oracles, its task files exist, and 
 Load **to-slices** then **to-tasks**. Run `node .opencode/skills/management/scripts/planning-next-id.mjs` under the lane lock immediately before each new file. Never eyeball ids.
 
 - Slice status `frozen` only when Done and `EXPECT:` exist. Otherwise leave `shaping` and do not publish tasks
-- Tasks `ready`, `mode: afk` or `mode: hitl`, `blocked_by` wired, durable `[[id]]` links on the slice Pool
+- Tasks `ready`, `mode: afk`, `blocked_by` wired, durable `[[id]]` links on the slice Pool
 - Promote the source ticket if this sitting was a ticket
 - Do not implement product code
 - Do not start another slice

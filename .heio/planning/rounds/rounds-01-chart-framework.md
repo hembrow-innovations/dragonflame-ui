@@ -3,7 +3,7 @@ id: "rounds-01-chart-framework"
 title: "Chart the UI framework"
 kind: round
 sitting_kind: wayfinder
-status: awaiting-confirm
+status: published
 tags: [wayfinder]
 created_at: "2026-09-09T12:00:00Z"
 updated_at: "2026-09-09T12:30:00Z"

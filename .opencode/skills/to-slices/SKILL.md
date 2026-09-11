@@ -28,7 +28,7 @@ Each slice is a thin vertical cut, usable or learnable on its own. Not a layer.
 
 Present a numbered list. For each slice: title, sprint, `blocked_by`, Done, and whether oracles can be written now.
 
-If the user is present, ask about granularity, merge or split, and blockers. If they already confirmed, publish.
+AFK sittings publish without asking. If a live user sitting already confirmed, publish.
 
 Copy `templates/slice.md` from **management**. **management** owns `<NN>`, placement, and frontmatter.
 

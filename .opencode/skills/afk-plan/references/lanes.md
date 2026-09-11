@@ -17,7 +17,7 @@ Three AFK loops share this checkout. Planner is `/afk-plan`. Drain is `/afk-task
 
 - **Claim**: drain must run `node .loop/claim-ready.mjs <task-id>` before editing code. Lowest unblocked `ready` + `mode: afk` wins when the id is omitted. Exit 2 means not claimable
 - **Pick**: verify must run `node .loop/pick-verify.mjs` before auditing. Lowest `met` slice not in the ledger wins when the id is omitted. Exit 2 means IDLE. Do not claim a task
-- **Pick**: planner must run `node .loop/pick-plan.mjs` before writing a round. Lowest pickable `open` ticket wins when the id is omitted. Exit 2 means IDLE. Do not append a round. The plan loop stops when remaining is 0
+- **Pick**: planner must run `node .loop/pick-plan.mjs` before writing a round. Lowest pickable `open` ticket wins, else the lowest `shaping` slice whose `blocked_by` is `met`. Exit 2 means IDLE. Do not append a round. The dedicated plan loop stops when remaining is 0. `afk-cycle` does not stop when drain owns ready tasks.
 - **Ids**: run `planning-next-id.mjs` only inside `withLaneLock` or immediately after a claim/commit helper that already holds it
 - **Commit**: `node .loop/commit-lane.mjs <plan|drain|audit> -m "<type>(<scope>): <description>" -- <paths>`
 
@@ -25,12 +25,12 @@ Plan commit paths stay under `.heio/planning/sprints/`, `tasks/`, `tickets/`, `r
 
 If git index.lock appears, retry the helper. Do not create a branch to dodge it.
 
-## Three terminals
+## One terminal
 
 ```
-LOOP_COMMAND=afk-plan node .loop/opencode-loop.mjs 200
-LOOP_COMMAND=afk-task node .loop/opencode-loop.mjs 200
-LOOP_COMMAND=afk-verify node .loop/opencode-loop.mjs 200
+LOOP_COMMAND=afk-cycle node .loop/opencode-loop.mjs 200
 ```
 
-Pick one drain command. Do not run `/afk-slice` and `/afk-task` loops together. Verify may run beside plan and one drain.
+`pick-cycle.mjs` chooses `/afk-slice`, then `/afk-plan`, then `/afk-verify`. Idle means no drainable slice, no pickable ticket or shaping slice, and no unaudited `met` slice.
+
+Split terminals still work. Pick one drain command. Do not run `/afk-slice` and `/afk-task` loops together.

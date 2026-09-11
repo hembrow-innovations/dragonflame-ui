@@ -30,6 +30,6 @@ Wikilink the contracts, test.md notes, and binding ADRs. Do not paste promises h
 
 ## Open product questions
 
-Unresolved product direction. `(none)` means an agent may proceed. A live question means stop.
+Unresolved product direction. `(none)` means an agent may proceed. A live question is answered in an AFK sitting by the smallest reversible default, then becomes `(none)`.
 
 Purpose does not hold how, file trees, framework choice, or React Query. That is data-flows or architecture. Behaviour lives in `contract.md`. Coverage lives in `test.md`.

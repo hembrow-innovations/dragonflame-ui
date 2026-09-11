@@ -39,7 +39,7 @@ Run **vault-pack** for the slice area if See also names a spec. Read Must-read p
 - Each linked task Done line
 - Spec `test.md` commands when a spec folder is named
 
-Empty ladder that this grain needs: file a HITL ticket and exit. `VERDICT: TICKET`. Do not invent product rules.
+Empty ladder that this grain needs: file an `open` ticket and exit. `VERDICT: TICKET`. `/afk-plan` will freeze it. Do not wait for a human.
 
 ## 3. Re-run
 

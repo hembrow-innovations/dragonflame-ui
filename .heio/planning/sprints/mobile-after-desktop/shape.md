@@ -2,17 +2,17 @@
 id: "mobile-after-desktop"
 title: "Mobile after desktop"
 kind: sprint
-status: shaping
+status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-09T23:30:00Z"
+updated_at: "2026-09-11T12:00:00Z"
 ---
 
 # Mobile after desktop
 
 ## Grouping
 
-Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty. Same counter, new hosts. Do not freeze. Do not publish tasks.
+Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty. Same counter, new hosts. Freeze when desktop honesty holds. [[slice-76-desktop-vsync-window]] is met.
 
 ## Slices in
 

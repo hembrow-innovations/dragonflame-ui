@@ -244,6 +244,37 @@ test("picks a ticket blocked by a met slice", () => {
 	assert.equal(result.id, "ticket-67-store-formats-unnamed");
 });
 
+test("picks a shaping slice when no ticket is pickable and blockers are met", () => {
+	const root = seed({
+		slices: [
+			{ id: "slice-77-draw-a-rect", status: "met" },
+			{ id: "slice-79-oem-hatch-slot", status: "shaping" },
+		],
+	});
+	writeFileSync(
+		join(root, ".heio/planning/sprints/web-hygiene/slice-79-oem-hatch-slot.md"),
+		`---
+id: "slice-79-oem-hatch-slot"
+title: "s"
+kind: slice
+status: shaping
+sprint: "native-if-funded"
+blocked_by:
+  - "slice-77-draw-a-rect"
+tags: []
+created_at: "2026-09-11T06:00:00Z"
+updated_at: "2026-09-11T06:00:00Z"
+---
+
+# s
+`,
+	);
+	const result = pickPlan(root);
+	assert.equal(result.ok, true);
+	assert.equal(result.kind, "slice");
+	assert.equal(result.id, "slice-79-oem-hatch-slot");
+});
+
 test("planProgress is empty when idle and names the next ticket when pickable", () => {
 	const idle = seed({
 		tickets: [{ id: "ticket-171-gesture-apis-unnamed", status: "parked" }],

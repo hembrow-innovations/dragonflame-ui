@@ -2,6 +2,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { parseFrontmatter } from "./frontmatter.mjs";
+import { pickShaping } from "./pick-slice.mjs";
 
 export function parsePlanArgs(argv) {
 	let root = process.cwd();
@@ -149,11 +150,14 @@ export function pickPlan(root, id) {
 		.sort((a, b) => ticketNumber(a.name) - ticketNumber(b.name));
 	const pick = id ? live.find((ticket) => matchId(ticket, id)) : open[0];
 	if (!pick) {
-		return {
-			ok: false,
-			code: 2,
-			error: id ? `not found: ${id}` : "none freezeable",
-		};
+		if (id) {
+			return {
+				ok: false,
+				code: 2,
+				error: `not found: ${id}`,
+			};
+		}
+		return pickShaping(root);
 	}
 	if (!isPickableTicket(pick, root, completed)) {
 		return {

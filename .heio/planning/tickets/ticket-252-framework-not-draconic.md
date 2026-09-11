@@ -2,12 +2,12 @@
 id: "ticket-252-framework-not-draconic"
 title: "Framework source is not Draconic"
 kind: ticket
-status: open
+status: parked
 ticket_type: observation
 blocked_by: []
 tags: []
 created_at: "2026-09-11T06:43:12Z"
-updated_at: "2026-09-11T06:43:12Z"
+updated_at: "2026-09-11T12:00:00Z"
 ---
 
 # Framework source is not Draconic
@@ -22,4 +22,4 @@ Unknown until triage. Likely this project, later slice under [[location-17-web-c
 
 ## Notes
 
-Facts only. [[contract-js-backend]] locks `js-backend.emit:no-emit-here`: this repo does not copy JS emit from the sibling toolchain. Drain does not claim this ticket. Do not implement the compiler here.
+Facts only. [[contract-js-backend]] locks `js-backend.emit:no-emit-here`: this repo does not copy JS emit from the sibling toolchain. Drain does not claim this ticket. Do not implement the compiler here. Parked for AFK cycle: [[location-30-js-backend]] already says prove the library on JS first.

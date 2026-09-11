@@ -46,7 +46,7 @@ Use the packer you find. Do not invent a new packer script.
    - Must-read is purpose, the matching contracts, and any intent or gotchas guide that exists.
    - Related is other area notes and nearby ADRs. Cap it. Do not dump the vault.
 4. Read every Must-read path in full. Related is optional skim.
-5. Behaviour work. Name contract promise ids from those contracts. Load **spec** if you will edit promises. Empty ladder means stop. Open a ticket or assert. Never invent product rules. `principle-intent-ladder-stop` owns that stop (if it is installed).
+5. Behaviour work. Name contract promise ids from those contracts. Load **spec** if you will edit promises. Empty ladder: AFK asserts a promise from location plus `docs/` or the smallest reversible default. Do not contradict a locked promise. `principle-intent-ladder-stop` owns that rule (if it is installed).
 6. Done when the pack is printed and every Must-read file is actually Read. Not when a CLI merely ran.
 
 ## Always-on notes

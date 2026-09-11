@@ -9,7 +9,7 @@ Load **management** before any write under `.heio/`.
 - **Planner** owns the tree, the rounds, and **to-slices** / **to-tasks** when the frontier is empty.
 - **Product** answers every round, committed `docs/`, and the current tree. `location-<NN>-<slug>.md` is the product owner.
 
-Planner writes the round, then waits for product to answer in that file.
+Planner answers as product in the same sitting. Do not wait for another writer. Do not wait for the user.
 
 ## Notebook
 

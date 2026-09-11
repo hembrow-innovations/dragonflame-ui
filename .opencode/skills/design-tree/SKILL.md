@@ -16,7 +16,7 @@ Load **management** before any write under `.heio/`. Load **docs** before any wr
 
 Name the **counterpart**. The **notebook** follows. Say both in one line before the first round.
 
-- **user** in this chat. Default.
+- **user** in this chat. Default only when this is not an AFK sitting.
 - **user** in a file. Copy the management round template to `.heio/planning/rounds/rounds-<NN>-<slug>.md`. `sitting_kind: planning`. Status `awaiting-answers`. Keep the template headings. Append later rounds in that file. Never rewrite an earlier round.
 - **product** peer. Read [references/counterpart-product.md](references/counterpart-product.md) before round one.
 - **panel**. Read [references/counterpart-panel.md](references/counterpart-panel.md) before round one.
@@ -40,7 +40,7 @@ Use a subagent to research the web to find real world examples of solutions to t
 > <Real world example of how this problem was solved and why (1-2 sentence explanation). omit if none found>
 ```
 
-Wait for the counterpart. Record the answers in the notebook. Append the next frontier.
+When counterpart is product, answer in the same sitting. Do not wait. Record the answers in the notebook. Append the next frontier.
 
 Done when every open decision has a recorded answer, no lookup is in flight, and the counterpart has confirmed a shared understanding.
 
@@ -52,11 +52,11 @@ Stop. Summarize:
 - Every in-slice Done + `EXPECT:`
 - The tracer-bullet list: title, slice, `blocked_by`, AFK or HITL, what it delivers
 
-Ask granularity, blockers, merge or split, HITL vs AFK. Prefer AFK. Each task is one sitting, vertical, sized for a fresh context window. Prefactoring is its own first task and blocks the rest.
+Prefer AFK. Each task is one sitting, vertical, sized for a fresh context window. Prefactoring is its own first task and blocks the rest.
 
-Wait. Iterate the list until the user confirms the understanding and the breakdown.
+When counterpart is product, skip Wait. Write `Confirmed.` in the round. Do not ask the user.
 
-Done when the user confirms both, or auto skipped confirm.
+Done when Confirm says `Confirmed.`, or auto skipped confirm.
 
 ## Publish
 
