@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **rounds-279-freeze-platform-view-hatch**: published sitting; freeze slice-84 platform view hatch.
 - **task-278-red-green-per-host-metrics**: archived red-green per-host metrics seam; measureText disagrees across DOM, UIKit, and the engine; CSS is not iOS layout; loadFont on the IO thread; O2 `tests/talk-and-measure/per-host-metrics.test.mjs` pass.
 - **task-277-red-green-semantics-dump**: archived red-green semantics tree dump; SemanticsNode toStringDeep beside the render tree; reuse testID and accessibilityLabel; signals do not replace it; not ARIA-only DOM; O1 `tests/talk-and-measure/semantics-dump.test.mjs` pass.
 - **task-276-spec-talk-and-measure**: archived talk-and-measure spec ladder; SemanticsNode dump toStringDeep, reuse testID and accessibilityLabel, measureText, loadFont on the IO thread; O1 `tests/talk-and-measure/semantics-dump.test.mjs`, O2 `tests/talk-and-measure/per-host-metrics.test.mjs` named.
