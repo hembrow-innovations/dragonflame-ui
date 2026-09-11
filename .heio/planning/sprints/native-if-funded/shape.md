@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T12:00:00Z"
+updated_at: "2026-09-11T07:41:56Z"
 ---
 
 # Native if funded
@@ -19,7 +19,7 @@ Location: [[location-18-native-engine-desktop]]. Phase 2 demos. Native UI funded
 - [[slice-76-desktop-vsync-window]]: desktop window and vsync. blocked_by: [[slice-69-importable-package]]
 - [[slice-77-draw-a-rect]]: Taffy plus one scene submit plus a rect. blocked_by: [[slice-76-desktop-vsync-window]]
 - [[slice-78-press-wins-arena]]: gesture arena. blocked_by: [[slice-77-draw-a-rect]]
-- [[slice-79-oem-hatch-slot]]: OEM slot, canvas stays default. blocked_by: [[slice-77-draw-a-rect]]. shaping
+- [[slice-79-oem-hatch-slot]]: OEM slot, canvas stays default. blocked_by: [[slice-77-draw-a-rect]]. frozen
 
 ## Slices out
 
