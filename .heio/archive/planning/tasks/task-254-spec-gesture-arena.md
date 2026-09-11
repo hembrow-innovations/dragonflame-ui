@@ -2,14 +2,14 @@
 id: "task-254-spec-gesture-arena"
 title: "Spec gesture arena"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "native-if-funded"
 slice: "slice-78-press-wins-arena"
 tags: []
 created_at: "2026-09-11T06:49:29Z"
-updated_at: "2026-09-11T06:49:29Z"
+updated_at: "2026-09-11T07:21:14Z"
 ---
 
 # Spec gesture arena
