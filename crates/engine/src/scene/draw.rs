@@ -1,6 +1,7 @@
 use std::sync::Mutex;
 use std::thread::{self, ThreadId};
 
+use super::host::record_default;
 use super::packed::Color;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -17,6 +18,7 @@ static RECORD_THREAD: Mutex<Option<ThreadId>> = Mutex::new(None);
 
 pub fn record(rect: DrawRect) {
     *RECORD_THREAD.lock().expect("record thread") = Some(thread::current().id());
+    record_default();
     let mut list = DRAW_LIST.lock().expect("draw list");
     list.clear();
     list.push(rect);

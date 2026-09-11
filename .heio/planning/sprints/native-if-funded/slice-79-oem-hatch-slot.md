@@ -2,13 +2,13 @@
 id: "slice-79-oem-hatch-slot"
 title: "OEM hatch slot"
 kind: slice
-status: frozen
+status: active
 sprint: "native-if-funded"
 blocked_by:
   - "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T07:41:56Z"
+updated_at: "2026-09-11T07:55:45Z"
 ---
 
 # OEM hatch slot
@@ -31,10 +31,10 @@ OEM as the native default. Web host as OEM. OEM widget class lists. Public `Andr
 
 ## Oracle checklist
 
-- [ ] O1: canvas remains default
+- [x] O1: canvas remains default
   CHECK: node --test tests/oem-hatch/canvas-default.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/oem-hatch/canvas-default.test.mjs; 1 pass 0 fail
 - [ ] O2: platform-view slot exists
   CHECK: node --test tests/oem-hatch/platform-view-slot.test.mjs
   EXPECT: pass

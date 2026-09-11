@@ -2,7 +2,7 @@
 id: "task-261-red-green-canvas-default"
 title: "Red-green: canvas remains default"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-260-spec-oem-hatch"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-79-oem-hatch-slot"
 tags: []
 created_at: "2026-09-11T07:41:56Z"
-updated_at: "2026-09-11T07:41:56Z"
+updated_at: "2026-09-11T07:55:45Z"
 ---
 
 # Red-green: canvas remains default
