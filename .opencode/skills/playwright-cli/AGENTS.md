@@ -31,7 +31,7 @@ If there is no web target, stop.
 ```
 What failed or what are you adding?
   No web origin / native device only     → Maestro, not this CLI
-  Unit or component change               → Jest / RNTL (react-testing)
+  Unit or component change               → Jest / RNTL
   Committed Playwright *.spec.ts         → project script / npx playwright test
   Interactive click-through of Expo web  → this CLI
   Selector miss on RN-web                → snapshot ref, then getByTestId
@@ -93,7 +93,6 @@ CLI snapshots land under `.playwright-cli/`. Agent screenshots and PDFs go in a 
 
 ## Sibling skills
 
-- `react-testing` owns Jest and RNTL when a unit test is the right layer.
 - `maestro` owns iOS and Android device E2E.
 - `tdd` owns what a good test is.
 - A project `playwright-cli` skill owns origin, seed, and scratch when installed.

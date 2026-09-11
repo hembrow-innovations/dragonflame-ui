@@ -2,7 +2,7 @@
 /**
  * Fail if the maestro router drifts from rules/.
  *
- *   node skills/ui/maestro/scripts/validate.mjs
+ *   node .opencode/skills/maestro/scripts/validate.mjs
  */
 
 import { readFileSync, readdirSync } from "node:fs";

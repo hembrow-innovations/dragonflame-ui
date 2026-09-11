@@ -12,4 +12,4 @@ tags: [layer, e2e]
 
 **Correct:** Interactive exploration with this CLI. Regression on the committed suite when it exists. If there is no suite, do not invent one. Device journeys stay on Maestro.
 
-Notes: Fixture imports are `react-testing` `e2e-playwright-fixtures`.
+Notes: Fixture imports are `e2e-playwright-fixtures`.

@@ -26,7 +26,7 @@ If none exist, propose `.maestro/` and wait before creating files.
 
 **Careful:** Expo Go needs `openLink`, not a custom `appId` launch. `hideKeyboard` sends Android back. Debug builds hang `inputText`. Device loopback is not the host. iOS nested views need `accessible` flipped.
 
-**Do not introduce:** Detox, Appium, Cypress, or freestyle `adb` or `expo` boot as the primary path. Do not commit process screenshots. Unit tests stay on Jest and RNTL (`react-testing`).
+**Do not introduce:** Detox, Appium, Cypress, or freestyle `adb` or `expo` boot as the primary path. Do not commit process screenshots. Unit tests stay on Jest and RNTL.
 
 A project-local **maestro** skill owns `appId`, seed users, and oneshot scripts when present.
 
@@ -56,7 +56,7 @@ Writing or debugging Maestro YAML. Device, emulator, or sim verification. "Run o
 
 **run-:** `run-prefer-project-script` just or npm e2e · `run-canonical-cli` maestro test · `run-single-flow-first` one YAML · `run-studio-optional` authoring only
 
-**pitfall-:** `pitfall-no-detox-appium` no second stack · `pitfall-no-freestyle-boot` no ad-hoc adb or expo
+**pitfall-:** `pitfall-no-detox-appium` no second stack · `pitfall-cypress-detox` no Cypress or Detox · `pitfall-no-freestyle-boot` no ad-hoc adb or expo
 
 **sel-:** `sel-testid-over-text` id from testID · `sel-add-testid-in-app` fix the app · `sel-index-for-collisions` duplicate copy · `sel-regex-dynamic-copy` greetings · `sel-point-last-resort` coordinates last · `sel-nested-ios-accessible` RN iOS nesting
 
@@ -68,7 +68,7 @@ Writing or debugging Maestro YAML. Device, emulator, or sim verification. "Run o
 
 **flow-:** `flow-one-behavior` one journey · `flow-runflow-setup` shared login · `flow-appid-from-existing` never invent · `flow-tags-platform` android and ios tags
 
-**artifact, debug, flake:** `artifact-gitignored` tmp only · `debug-reproduce-minimize` smallest red · `flake-harden-not-sleep` selectors and sync
+**artifact, debug, flake:** `artifact-gitignored` tmp only · `debug-reproduce-minimize` smallest red · `flake-harden-not-sleep` selectors and sync · `flake-quarantine-with-issue` skip with expiry · `flake-no-timeout-inflate` no longer waits
 
 **env-:** `env-device-not-host` 10.0.2.2 or LAN
 
@@ -76,7 +76,7 @@ Writing or debugging Maestro YAML. Device, emulator, or sim verification. "Run o
 
 **plat-:** `plat-ios-when-named` not default · `plat-dual-both-installed` both apps first
 
-**layer-:** `layer-unit-not-maestro` Jest and RNTL · `layer-journeys-only` not variants
+**layer-:** `layer-unit-not-maestro` Jest and RNTL · `layer-choose-runner` thinnest runner · `layer-journeys-only` not variants
 
 ## How to use
 

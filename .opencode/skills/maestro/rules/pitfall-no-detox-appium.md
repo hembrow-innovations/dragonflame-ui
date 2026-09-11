@@ -13,4 +13,4 @@ This pack's mobile E2E is Maestro. Detox and Appium need app instrumentation or 
 
 **Correct:** Install Maestro CLI if missing. Write YAML next to the existing flows. Web or desktop E2E stays on Playwright when the repo has it.
 
-Notes: Cypress is the same "do not introduce" for web. See `react-testing` `pitfall-cypress-detox`.
+Notes: Cypress is the same "do not introduce" for web. See `pitfall-cypress-detox`.

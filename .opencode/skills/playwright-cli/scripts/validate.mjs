@@ -2,7 +2,7 @@
 /**
  * Fail if the playwright-cli router drifts from rules/.
  *
- *   node skills/ui/playwright-cli/scripts/validate.mjs
+ *   node .opencode/skills/playwright-cli/scripts/validate.mjs
  */
 
 import { readFileSync, readdirSync } from "node:fs";
@@ -29,6 +29,7 @@ const PREFIXES = [
   "inspect",
   "example",
   "layer",
+  "e2e",
 ];
 const ID_RE = new RegExp(`^(?:${PREFIXES.join("|")})-[a-z0-9-]+$`);
 

@@ -26,7 +26,7 @@ If there is no web target, stop. Do not invent a Playwright suite.
 
 **Careful:** Refs expire after navigation. Pressable often has no button role. `Platform.OS` is `web`. Expo Go native is not this CLI.
 
-**Do not introduce:** Detox, Appium, Cypress, a committed Playwright suite the repo does not have, or Playwright against iOS or Android. Unit tests stay on Jest and RNTL (`react-testing`). Device E2E stays on Maestro.
+**Do not introduce:** Detox, Appium, Cypress, a committed Playwright suite the repo does not have, or Playwright against iOS or Android. Unit tests stay on Jest and RNTL. Device E2E stays on Maestro.
 
 A project-local **playwright-cli** skill owns origin, seed login, and scratch paths when present.
 
@@ -76,7 +76,7 @@ Click through Expo web. Fill a form. Capture a screenshot for a human. Inspect c
 
 **example-:** `example-form` · `example-debug`
 
-**layer-:** `layer-unit-not-cli` Jest RNTL · `layer-not-committed-suite` not playwright test
+**layer-:** `layer-unit-not-cli` Jest RNTL · `layer-choose-runner` thinnest runner · `layer-not-committed-suite` not playwright test · `e2e-playwright-fixtures` project wrapper
 
 ## How to use
 

@@ -21,4 +21,4 @@ native.exit: 0
 
 Or split: `E03.05` js child, `E03.06` native child — complete only the claimed child.
 
-**Notes.** Native-only / JS-only features must diagnostic on the other backend (`err-hard-error`). CLI changes also need `cargo build -p draconic-cli`. Load **draconic-loop**. See `test-conformance`.
+**Notes.** Native-only / JS-only features must diagnostic on the other backend (`err-hard-error`). CLI changes also need `cargo build -p draconic-cli`. See `test-conformance`.

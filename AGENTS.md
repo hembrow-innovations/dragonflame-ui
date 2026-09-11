@@ -24,7 +24,6 @@ Load the matching skill before the work it covers.
 - **triage**: ticket status enums
 - **rust-development**: Cargo crates when this product needs Rust
 - **draconic-language**: When writing code.
-- **frontend-development**: TypeScript UI when this product needs it
 - **create-skill**: writing and editing skills
 - **how**: walkthroughs of how a subsystem works
 - **why**: design rationale and evidence for why it is that way

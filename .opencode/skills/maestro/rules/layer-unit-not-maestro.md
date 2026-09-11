@@ -13,4 +13,4 @@ Jest and RNTL cover components, hooks, and native presentation. Maestro covers d
 
 **Correct:** Unit via the package's test script (`pnpm --filter mobile test`, `just test-mobile`, or whatever exists). Device journeys via the Maestro path.
 
-Notes: Runner choice is `react-testing` `layer-choose-runner`.
+Notes: Runner choice is `layer-choose-runner`.

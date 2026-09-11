@@ -64,7 +64,6 @@ Do not fold these. Load the matching skill and stop:
 
 - **spec** purpose, contract, test folders
 - **tdd** red-green
-- **draconic-loop** one Roadmap atom
 - **gauntlet-loop** implement-then-critic
 - **diagnose** hard bugs outside this pack's `diag-loop`
 

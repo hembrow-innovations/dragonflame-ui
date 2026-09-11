@@ -1,6 +1,6 @@
 # Progressive-disclosure skills
 
-How to structure large knowledge packs as agent skills without bloating context. Patterned on `vercel-react-best-practices`.
+How to structure large knowledge packs as agent skills without bloating context. Patterned on `maestro`.
 
 ## Objective
 
@@ -18,7 +18,7 @@ Rule of thumb: load cost ≈ `SKILL.md` size, not total skill directory size.
 ## Directory layout
 
 ```
-ai/skills/<category>/<skill-name>/
+.opencode/skills/<skill-name>/
   SKILL.md              # router + stack adaptations + index (required)
   AGENTS.md             # optional: full upstream / long-form reference
   rules/                # atomic, one-topic files
@@ -122,13 +122,13 @@ Keep each rule scannable (~20–80 lines). Prefer one clear before/after over es
 ## Skills vs prompts
 
 - **Skill**: reusable knowledge pack or multi-step workflow the agent loads mid-task via Skill tool.
-- **Prompt** (`ai/prompts/<category>/<name>.md`, dest `.opencode/commands/<name>.md`): user-invoked single-shot entry (`/name`). Thin wrappers may load a skill then run; pure one-liners live only as prompts (no skill folder).
+- **Prompt** (`.opencode/commands/<name>.md`): user-invoked single-shot entry (`/name`). Thin wrappers may load a skill then run; pure one-liners live only as commands (no skill folder).
 
 Do not keep a skill whose entire body is a one-shot instruction with no reusable knowledge. Move it to prompts.
 
 ## Checklist for a progressive pack
 
-- [ ] Folder under `ai/skills/<category>/<name>/`
+- [ ] Folder under `.opencode/skills/<name>/`
 - [ ] Frontmatter `name` + trigger-heavy `description`
 - [ ] `SKILL.md` ≤ ~150 lines; no full essay
 - [ ] `rules/` atomic, prefixed, consistent frontmatter

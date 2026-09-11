@@ -12,4 +12,4 @@ This CLI is a live browser. It is the wrong tool for a hook, a formatter, or a s
 
 **Correct:** Use the repo's unit runner. Native presentation is Jest plus RNTL. Web units are Vitest or Jest plus Testing Library.
 
-Notes: Runner choice is `react-testing` `layer-choose-runner`.
+Notes: Runner choice is `layer-choose-runner`.

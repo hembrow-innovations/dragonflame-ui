@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 One audit, two lenses: **code judo** on implementation quality, and **deepening** on module shape. Aim for a simpler implementation behind a smaller interface — testable and AI-navigable.
 
-**Self-contained.** Do not load other skills. Do not invoke thermo-review, improve-codebase-architecture, codebase-design, grilling, domain-modeling, management, or docs. Read only this folder plus the target repo.
+**Self-contained.** Do not load other skills. Read only this folder plus the target repo.
 
 ## Posture (always)
 

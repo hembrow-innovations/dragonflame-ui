@@ -67,13 +67,12 @@ Default artifact dir is `~/.maestro/tests`. Honor `testOutputDir` or `--test-out
 ## Maintain this pack
 
 ```bash
-node skills/ui/maestro/scripts/validate.mjs
+node .opencode/skills/maestro/scripts/validate.mjs
 ```
 
 The script fails if `SKILL.md` grows past 150 lines, if the index cites a missing rule, or if a rule file is not in the index.
 
 ## Sibling skills
 
-- `react-testing` owns Jest and RNTL when E2E is the wrong layer
 - `tdd` owns what a good test is
 - project `maestro` owns appId, seed, and oneshot when installed

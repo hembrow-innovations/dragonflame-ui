@@ -13,4 +13,4 @@ A flake is a bad id, colliding text, a covered control, a debug binary, or lefto
 
 **Correct:** Give the control a `testID`. Wait with `assertVisible`. Dismiss the keyboard with Enter. Use a release build. Clear state at launch.
 
-Notes: Quarantine only if the repo has an issue-plus-expiry path. See `react-testing` `flake-quarantine-with-issue`.
+Notes: Quarantine only if the repo has an issue-plus-expiry path. See `flake-quarantine-with-issue`.

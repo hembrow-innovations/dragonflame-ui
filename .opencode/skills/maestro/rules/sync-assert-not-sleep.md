@@ -20,4 +20,4 @@ tags: [sync, wait]
 
 **Correct:** Assert the thing the user would see. Reserve `extendedWaitUntil` for a named slow step (payment, generate). Use `waitForAnimationToEnd` only when a visible control is still moving.
 
-Notes: Inflating timeouts is `react-testing` `flake-no-timeout-inflate`.
+Notes: Inflating timeouts is `flake-no-timeout-inflate`.

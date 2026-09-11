@@ -11,7 +11,7 @@ This pack folds and replaces:
 
 Testing, review, and language Loop stay in sibling skills. Load them; do not copy their bodies here:
 
-- `spec`, `tdd`, `draconic-loop`, `gauntlet-loop`
+- `spec`, `tdd`, `gauntlet-loop`
 
 Locked decisions that constrain Rust live in `docs/adr/`:
 
