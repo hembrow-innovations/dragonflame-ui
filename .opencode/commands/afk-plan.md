@@ -19,12 +19,19 @@ Same checkout as `/afk-task` and `/afk-verify`. No git branch. No worktree.
 Do not file HITL. Do not park. Do not wait. Do not ask the user. Auto-confirm.
 One slice plus its tasks, then exit.
 
-- If a path, id, or slug is given, glob that file. Use it only if it is allowed to freeze. If it is `shaping`, plan that slice out completely. If it is forbidden, ESCALATE or IDLE. Do not silently pick a different target.
+- If a path, id, or slug is given, glob that file. Use it only if it is allowed to freeze. If it is `shaping`, plan that slice out completely. If it is a location, plan one slice from that location's next unnamed grain. If it is forbidden, ESCALATE or IDLE. Do not silently pick a different target.
 - Otherwise pick in this order. Stop at the first hit.
   1. Glob `.heio/planning/tasks/task-*.md`. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
   2. Glob `.heio/planning/tickets/ticket-*.md`. Lowest-numbered unblocked `open` ticket that does not fit an existing `frozen` or `active` slice, and that no `afk-plan` round already mentions `[[id]]` unless the ticket `updated_at` is newer than that round.
   3. Glob `.heio/planning/sprints/**/slice-*.md`. Lowest-numbered `shaping` slice whose `blocked_by` ids are `met` or `abandoned`.
-  4. IDLE.
+  4. Map. Read `.heio/planning/roadmap.md`, then `.heio/planning/locations/location-*.md`. Scan live and archive slice `See also` for `[[location-...]]` links.
+     Walk the live sprint's parent location first, then remaining roadmap parents in document order. Skip unfunded parents and destinations that wait on a human decision.
+     First hit:
+     a. Lowest-numbered nested location file under that parent that no live or archive slice `See also` links.
+     b. Else the first Nested locations bullet under a linked location whose destination sentence is not already a slice Done or oracle.
+     Plan exactly one slice for that grain. Cite the location destination. Do not mint a new location file.
+     Put the slice in the live sprint that names that parent and may freeze. If that sprint is closed or missing, copy `templates/sprint-shape.md` into a new `active` sprint folder named from the parent location slug, then freeze this one slice into it. Do not reopen an archived sprint folder. Do not open a new sprint to bypass a live shape that says do not freeze.
+  5. IDLE. The map has no remaining funded unnamed grain.
 
 A ticket is unblocked when `blocked_by` is empty, or every listed id is `met` (slice) or `completed` (task). Look in live folders and `archive/`.
 
@@ -34,6 +41,8 @@ Do not pick:
 - An `open` ticket whose home sprint `shape.md` says do not freeze
 - A sprint whose shape says do not freeze
 - A location whose parent is unfunded
+- A destination that waits on a human decision
+- A nested bet already named by a slice Done or oracle
 - A second slice
 - Work that would rewrite a location destination
 
@@ -76,7 +85,7 @@ EVIDENCE: <one line>
 |---|---|
 | Published one frozen slice and its ready AFK tasks | `TASK` |
 | Sitting started from a ticket and that ticket was promoted into the published slice | `TICKET` |
-| Pick found nothing, or drain already owns ready AFK tasks | `IDLE` |
+| Drain owns ready AFK tasks, or the map has no remaining funded unnamed grain | `IDLE` |
 | Sitting would rewrite a location destination | `ESCALATE` |
 | Never from this command | `VERIFY` |
 

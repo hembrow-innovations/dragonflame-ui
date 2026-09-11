@@ -6,7 +6,7 @@ agent: build
 Load nothing extra. Do not run scripts under `.loop/`. Glob the notes and pick one sitting.
 
 1. Drainable `frozen` or `active` slice with an unblocked ready AFK task: run `/afk-slice` then exit.
-2. Else no ready AFK tasks, and a pickable open ticket or shaping slice: run `/afk-plan` then exit.
+2. Else no ready AFK tasks, and a pickable open ticket, shaping slice, or unplanned funded location grain: run `/afk-plan` then exit.
 3. Else a `met` slice missing from the afk-verify ledger: run `/afk-verify` then exit.
 4. Else end with `VERDICT: IDLE`. Do not invent work.
 
