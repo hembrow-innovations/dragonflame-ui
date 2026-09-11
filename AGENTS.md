@@ -11,6 +11,7 @@ Load the matching skill before the work it covers.
 - **design-tree**: counterpart and notebook are branches
 - **principle-intent-ladder-stop**: stop when purpose or contracts are missing
 - **codebase-design**: module seams and interfaces
+- **arena**: N parallel attempts, pick a base, graft the rest
 - **diagnose**: hard bugs and performance regressions
 - **gauntlet-loop**: bounded implement-then-critic until the bar wins
 - **spec**: purpose, contract, and test folders
