@@ -2,13 +2,13 @@
 id: "slice-79-oem-hatch-slot"
 title: "OEM hatch slot"
 kind: slice
-status: active
+status: met
 sprint: "native-if-funded"
 blocked_by:
   - "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T08:01:42Z"
+updated_at: "2026-09-11T08:10:00Z"
 ---
 
 # OEM hatch slot
@@ -34,11 +34,11 @@ OEM as the native default. Web host as OEM. OEM widget class lists. Public `Andr
 - [x] O1: canvas remains default
   CHECK: node --test tests/oem-hatch/canvas-default.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/oem-hatch/canvas-default.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/oem-hatch/canvas-default.test.mjs; 1 pass 0 fail (slice re-run)
 - [x] O2: platform-view slot exists
   CHECK: node --test tests/oem-hatch/platform-view-slot.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/oem-hatch/platform-view-slot.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/oem-hatch/platform-view-slot.test.mjs; 1 pass 0 fail (slice re-run)
 
 ## Pool
 
