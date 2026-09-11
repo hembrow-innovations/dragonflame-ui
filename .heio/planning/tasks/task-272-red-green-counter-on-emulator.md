@@ -2,7 +2,7 @@
 id: "task-272-red-green-counter-on-emulator"
 title: "Red-green: counter on Android emulator"
 kind: task
-status: claimed
+status: ready
 mode: afk
 blocked_by:
   - "task-270-red-green-no-webview-no-js-engine"
