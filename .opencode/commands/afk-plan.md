@@ -8,6 +8,7 @@ subtask: false
 You are an autonomous agent planning exactly ONE slice, then exiting.
 Load **management** for paths, status, and frontmatter.
 Load **docs** before any write under `docs/`.
+Load **triage** for working with tickets.
 Load **design-tree**, **architect**, **to-slices**, **to-tasks**, **principle-intent-ladder-stop**, **vault-pack**, **afk-plan**.
 
 Arguments: $ARGUMENTS
