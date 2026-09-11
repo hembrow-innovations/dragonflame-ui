@@ -6,7 +6,7 @@ status: open
 ticket_type: observation
 tags: []
 created_at: "2026-09-11T20:10:00Z"
-updated_at: "2026-09-11T04:57:40Z"
+updated_at: "2026-09-11T05:09:55Z"
 ---
 
 # Gesture recognizer APIs are unnamed
