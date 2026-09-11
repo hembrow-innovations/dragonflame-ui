@@ -2,7 +2,7 @@
 id: "task-276-spec-talk-and-measure"
 title: "Spec talk and measure"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-267-red-green-counter-on-simulator"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-83-talk-and-measure"
 tags: []
 created_at: "2026-09-11T10:08:39Z"
-updated_at: "2026-09-11T10:08:39Z"
+updated_at: "2026-09-11T20:59:13Z"
 ---
 
 # Spec talk and measure
@@ -69,10 +69,10 @@ A spec folder locks two oracles: a semantics tree dump beside the render tree, a
 - Promises must not name UIKit class lists or a second native prop set
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for talk-and-measure
-- [ ] test.md names both oracle commands above
-- [ ] First-tracer names match [[rounds-258-name-phase3-apis]]
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for talk-and-measure
+- [x] test.md names both oracle commands above
+- [x] First-tracer names match [[rounds-258-name-phase3-apis]]
+- [x] No product code
 
 **Out of scope:**
 - Implementing the dump or metrics seam
