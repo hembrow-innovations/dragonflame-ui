@@ -177,6 +177,12 @@ unsafe extern "C" fn on_vsync(_this: Id, _cmd: Sel, _link: Id) {
     let width = (bounds.size.width * scale) as u32;
     let height = (bounds.size.height * scale) as u32;
     engine::Adapter::native().hold(7);
+    let layer = engine::recorded_layer_tree()
+        .into_iter()
+        .next()
+        .expect("layer");
+    println!("layer-kind {}", layer.kind());
+    println!("slot-id {}", layer.slot_id());
     engine::submit(engine::Scene {
         max_width: 80.0,
         max_height: 40.0,

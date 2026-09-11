@@ -2,7 +2,7 @@
 id: "task-282-red-green-slot-occupied-on-ios"
 title: "Red-green: slot occupied on iOS"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-281-red-green-hatch-not-default"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-84-platform-view-hatch"
 tags: []
 created_at: "2026-09-11T21:22:00Z"
-updated_at: "2026-09-11T21:22:00Z"
+updated_at: "2026-09-11T22:12:57Z"
 ---
 
 # Red-green: slot occupied on iOS

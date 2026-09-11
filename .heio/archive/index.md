@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-282-red-green-slot-occupied-on-ios**: archived red-green slot occupied on iOS; iOS embedder occupies the existing hatch slot by slot id; no async Bridge; O2 `tests/platform-views/slot-occupied-on-ios.test.mjs` pass.
 - **task-281-red-green-hatch-not-default**: archived red-green hatch not default; occupying the hatch on iOS does not make OEM the default host; canvas remains default; O1 `tests/platform-views/hatch-not-default.test.mjs` pass.
 - **task-280-spec-platform-views**: archived platform-views spec ladder; iOS occupy of the existing hatch slot, occupying the hatch does not make OEM the default host, no async Bridge; O1 `tests/platform-views/hatch-not-default.test.mjs`, O2 `tests/platform-views/slot-occupied-on-ios.test.mjs` named.
 - **rounds-279-freeze-platform-view-hatch**: published sitting; freeze slice-84 platform view hatch.
