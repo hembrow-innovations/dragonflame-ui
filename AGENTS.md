@@ -24,10 +24,11 @@ Load the matching skill before the work it covers.
 - **to-tickets**: file inbound signals as tickets
 - **triage**: ticket status enums
 - **rust-development**: Cargo crates when this product needs Rust
+- **draconic-language**: When writing code.
 - **frontend-development**: TypeScript UI when this product needs it
 - **create-skill**: writing and editing skills
 
-`draconic-language`, `draconic-loop`, and `roadmap-audit` are present because they were copied with the rest of the skill set. This repo is **not** the Draconic toolchain. Do not treat those skills as the Loop for this product.
+This repo is **not** the Draconic toolchain. Do not treat those skills as the Loop for this product.
 
 ## Domain docs
 
@@ -50,6 +51,7 @@ Open product questions may be closed by an AFK planning sitting with the smalles
 ## Rules
 
 - TDD, DRY, YAGNI; prefer one-liner solutions when clear
+- Always write `draconic` for implementation over any other.
 - for scripting only use js/mjs not bash or sh
 - Markdown: never tables — use `- **{text}**: {text}`
 - Commits as work packages: `<type>(<scope>): <description>` — `feat` | `fix` | `test` | `refactor` | `chore` 
