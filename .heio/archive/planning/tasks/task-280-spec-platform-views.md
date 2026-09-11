@@ -2,14 +2,14 @@
 id: "task-280-spec-platform-views"
 title: "Spec platform views"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-84-platform-view-hatch"
 tags: []
 created_at: "2026-09-11T21:22:00Z"
-updated_at: "2026-09-11T21:22:00Z"
+updated_at: "2026-09-11T21:59:11Z"
 ---
 
 # Spec platform views
@@ -66,10 +66,10 @@ A spec folder locks two oracles: occupying the hatch does not make OEM the defau
 - Promises must not name `UiKitView` or `AndroidView`
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for platform-views
-- [ ] test.md names both oracle commands above
-- [ ] Public OS view types stay unnamed
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for platform-views
+- [x] test.md names both oracle commands above
+- [x] Public OS view types stay unnamed
+- [x] No product code
 
 **Out of scope:**
 - Implementing occupy
