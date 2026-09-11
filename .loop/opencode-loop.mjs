@@ -1,50 +1,20 @@
 #!/usr/bin/env node
-// Run OpenCode N times, streaming JSON live. Default sitting is /afk-roadmap.
-// Terminal renders events like a harness (markdown, tools). Logs stay NDJSON.
-// Usage: node .loop/opencode-loop.mjs <loops> [prompt...]
-//        node .loop/opencode-loop.mjs 200
+// Run the same OpenCode prompt N times, streaming events live.
+// Terminal renders JSON events through .loop/harness (markdown, tools).
+// Usage: node .loop/opencode-loop.mjs <loops> <prompt...>
 //        node .loop/opencode-loop.mjs 5 "fix the failing tests"
-//        LOOP_COMMAND=afk-plan node .loop/opencode-loop.mjs 200
-//        LOOP_COMMAND=afk-slice node .loop/opencode-loop.mjs 200
-//        LOOP_COMMAND=afk-task node .loop/opencode-loop.mjs 200
-//        LOOP_COMMAND=afk-verify node .loop/opencode-loop.mjs 200
-//        LOOP_COMMAND=afk-cycle node .loop/opencode-loop.mjs 200
-// Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.6
-// SLEEP=<seconds> between loops. STALL_SEC=900 idle stdout/stderr → kill (0 disables).
-// STALL_ACTION=continue|abort (default continue). FAIL_ACTION=continue|abort (default continue).
-// LOG=0 skips .loop/logs/loop-<stamp>.log (default on).
-// Plan, drain, and verify loops share this checkout. No extra branch. No worktree.
+// Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.5
+// Optional sleep between loops (seconds): SLEEP=60 node .loop/opencode-loop.mjs 5 "prompt"
 
 import { spawn } from "node:child_process";
-import {
-	createWriteStream,
-	existsSync,
-	mkdirSync,
-	readdirSync,
-	readFileSync,
-} from "node:fs";
-import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
-import { pickCycle } from "./pick-cycle.mjs";
-import { planProgress } from "./pick-plan.mjs";
-import { pickSlice } from "./pick-slice.mjs";
-import { verifyProgress } from "./pick-verify.mjs";
-import { readRoadmapStatus } from "./roadmap-status.mjs";
-
-const DEFAULT_COMMAND = process.env.LOOP_COMMAND || "afk-roadmap";
-const DEFAULT_ARGS = DEFAULT_COMMAND === "afk-roadmap" ? ["continue"] : [];
-const isRoadmapCampaign = DEFAULT_COMMAND === "afk-roadmap";
-const isVerifyCampaign = DEFAULT_COMMAND === "afk-verify";
-const isPlanCampaign = DEFAULT_COMMAND === "afk-plan";
-const isSliceCampaign = DEFAULT_COMMAND === "afk-slice";
-const isCycleCampaign = DEFAULT_COMMAND === "afk-cycle";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
-if (!Number.isInteger(loops) || loops < 1) {
+if (!Number.isInteger(loops) || loops < 1 || rest.length === 0) {
 	console.error(
-		"Usage: node .loop/opencode-loop.mjs <loops> [prompt...] [-- <opencode flags>]",
+		"Usage: node .loop/opencode-loop.mjs <loops> <prompt...> [-- <opencode flags>]",
 	);
 	process.exit(1);
 }
@@ -52,256 +22,49 @@ if (!Number.isInteger(loops) || loops < 1) {
 const dash = rest.indexOf("--");
 const promptParts = dash === -1 ? rest : rest.slice(0, dash);
 const extraFlags = dash === -1 ? [] : rest.slice(dash + 1);
-const useDefaultAudit = promptParts.length === 0;
 
-const sleepMs = (Number.parseFloat(process.env.SLEEP) || 0) * 1000;
-const stallSec = stallSeconds();
-const stallMs = stallSec * 1000;
-const stallAction = (process.env.STALL_ACTION || "continue").toLowerCase();
-const failAction = (process.env.FAIL_ACTION || "continue").toLowerCase();
-const logStream = openLog();
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const flags = [
+	// auto-approve permissions that are not explicitly denied
+	"--auto",
+	// stream events live as JSON instead of formatted text
+	"--format",
+	"json",
+];
 
-function stallSeconds() {
-	const raw = process.env.STALL_SEC;
-	if (raw === undefined || raw === "") return 900;
-	const n = Number.parseFloat(raw);
-	return Number.isFinite(n) && n >= 0 ? n : 900;
-}
-
-function stamp() {
-	const d = new Date();
-	const p = (n) => String(n).padStart(2, "0");
-	return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
-}
-
-function openLog() {
-	if (process.env.LOG === "0") return null;
-	const dir = join(process.cwd(), ".loop", "logs");
-	mkdirSync(dir, { recursive: true });
-	const path = join(dir, `loop-${stamp()}.log`);
-	const stream = createWriteStream(path, { flags: "a" });
-	console.log(`log: ${path} (LOG=0 to disable)`);
-	return stream;
-}
-
-function emit(line, to = process.stdout) {
-	to.write(`${line}\n`);
-	logStream?.write(`${line}\n`);
-}
-
-function ledgerIds() {
-	const ids = new Set();
-	const dirs = [
-		join(process.cwd(), ".heio/planning/rounds"),
-		join(process.cwd(), ".heio/archive/planning/rounds"),
-	];
-	for (const dir of dirs) {
-		if (!existsSync(dir)) continue;
-		for (const name of readdirSync(dir)) {
-			if (!name.includes("roadmap-audit")) continue;
-			const text = readFileSync(join(dir, name), "utf8");
-			for (const m of text.matchAll(/^- \*\*([A-Za-z][A-Za-z0-9.]*)\*\*:/gm)) {
-				ids.add(m[1]);
-			}
-		}
-	}
-	return ids;
-}
-
-function campaign() {
-	const { items } = readRoadmapStatus();
-	const done = ledgerIds();
-	const remaining = items.filter((item) => !done.has(item.id));
-	return {
-		total: items.length,
-		audited: [...done].filter((id) => items.some((item) => item.id === id))
-			.length,
-		remaining: remaining.length,
-		next: remaining[0]?.id ?? null,
-	};
-}
-
-function opencodeArgs(command = DEFAULT_COMMAND) {
-	const flags = ["run", "--auto", "--format", "json"];
-	if (useDefaultAudit) {
-		const args = command === "afk-roadmap" ? ["continue"] : [];
-		flags.push("--command", command, ...args);
-	} else {
-		flags.push(...promptParts);
-	}
-	flags.push(...extraFlags);
-	return flags;
-}
-
-function run(i, command = DEFAULT_COMMAND) {
-	const args = opencodeArgs(command);
-	const harness = createHarness();
-	return new Promise((resolve) => {
-		emit(`\n===== loop ${i}/${loops} ${command} =====`);
-		const child = spawn("opencode", args, {
-			stdio: ["ignore", "pipe", "pipe"],
-			detached: true,
-		});
-		let lastActivity = Date.now();
-		let stalled = false;
-		let settled = false;
-		const finish = (code, reason) => {
-			if (settled) return;
-			settled = true;
-			if (watchdog) clearInterval(watchdog);
-			resolve({ code: code ?? 0, reason });
-		};
-		const touch = () => {
-			lastActivity = Date.now();
-		};
-		const killGroup = (sig) => {
-			try {
-				if (child.pid) process.kill(-child.pid, sig);
-			} catch {
-				try {
-					child.kill(sig);
-				} catch {
-					/* already dead */
-				}
-			}
-		};
-
+const run = (i) =>
+	new Promise((resolve) => {
+		process.stdout.write(`\n===== loop ${i}/${loops} =====\n`);
+		const harness = createHarness();
+		const child = spawn(
+			"opencode",
+			["run", ...flags, ...promptParts, ...extraFlags],
+			{
+				stdio: ["inherit", "pipe", "inherit"],
+			},
+		);
 		createInterface({ input: child.stdout }).on("line", (line) => {
-			touch();
 			if (!line.trim()) return;
-			logStream?.write(`${line}\n`);
 			try {
 				const view = harness.format(JSON.parse(line));
 				if (view) process.stdout.write(`${view}\n`);
 			} catch {
-				process.stdout.write(`${line}\n`);
+				console.log(line);
 			}
 		});
-		createInterface({ input: child.stderr }).on("line", (line) => {
-			touch();
-			emit(line, process.stderr);
-		});
-
-		const watchdog =
-			stallMs > 0
-				? setInterval(
-						() => {
-							const idle = Date.now() - lastActivity;
-							if (idle < stallMs) return;
-							stalled = true;
-							emit(
-								`[stall] loop ${i}: no output for ${Math.round(idle / 1000)}s (limit ${stallSec}s) — killing pid ${child.pid}`,
-								process.stderr,
-							);
-							killGroup("SIGTERM");
-							setTimeout(() => killGroup("SIGKILL"), 5000).unref?.();
-						},
-						Math.min(5000, Math.max(1000, stallMs / 4)),
-					)
-				: null;
-
-		child.on("close", (code) => {
-			finish(code ?? 0, stalled ? "stall" : code === 0 ? "ok" : "error");
-		});
-		child.on("error", (err) => {
-			emit(`[error] loop ${i}: ${err.message}`, process.stderr);
-			finish(1, "error");
-		});
+		child.on("close", (code) => resolve(code ?? 0));
 	});
-}
 
-const argsPreview = opencodeArgs().join(" ");
-emit(`sleep between loops: ${sleepMs / 1000}s (SLEEP=<seconds>)`);
-emit(
-	`stall watchdog: ${stallSec > 0 ? `${stallSec}s idle → kill (${stallAction})` : "disabled"} (STALL_SEC / STALL_ACTION)`,
+const sleepMs = (Number.parseFloat(process.env.SLEEP) || 0) * 1000;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+console.log(
+	`sleep between loops: ${sleepMs / 1000}s (set with SLEEP=<seconds>)`,
 );
-emit(
-	`prompt: ${useDefaultAudit ? (isCycleCampaign ? "cycle /afk-plan|/afk-slice|/afk-verify" : `/${DEFAULT_COMMAND}${DEFAULT_ARGS.length ? ` ${DEFAULT_ARGS.join(" ")}` : ""}`) : promptParts.join(" ")}`,
-);
-emit(`opencode ${argsPreview}`);
 
-let stalls = 0;
-let errors = 0;
 for (let i = 1; i <= loops; i++) {
-	if (useDefaultAudit && isRoadmapCampaign) {
-		const { total, audited, remaining, next } = campaign();
-		emit(
-			`campaign: audited ${audited}/${total} remaining=${remaining} next=${next ?? "none"}`,
-		);
-		if (remaining === 0) {
-			emit(
-				"campaign complete — every ROADMAP.md row is in the ledger. stopping.",
-			);
-			break;
-		}
-	}
-	if (useDefaultAudit && isVerifyCampaign) {
-		const { total, audited, remaining, next } = verifyProgress(process.cwd());
-		emit(
-			`campaign: audited ${audited}/${total} remaining=${remaining} next=${next ?? "none"}`,
-		);
-		if (remaining === 0) {
-			emit("campaign complete. every met slice is in the ledger. stopping.");
-			break;
-		}
-	}
-	if (useDefaultAudit && isPlanCampaign) {
-		const { remaining, next, reason } = planProgress(process.cwd());
-		emit(
-			`campaign: remaining=${remaining} next=${next ?? "none"} reason=${reason}`,
-		);
-		if (remaining === 0) {
-			emit("campaign idle. no freezeable slice. stopping.");
-			break;
-		}
-	}
-	if (useDefaultAudit && isSliceCampaign) {
-		const slice = pickSlice(process.cwd());
-		emit(
-			`campaign: remaining=${slice.ok ? 1 : 0} next=${slice.ok ? slice.id : "none"} reason=${slice.ok ? "drain" : slice.error}`,
-		);
-		if (!slice.ok) {
-			emit("campaign idle. none drainable. stopping.");
-			break;
-		}
-	}
-	let sitting = DEFAULT_COMMAND;
-	if (useDefaultAudit && isCycleCampaign) {
-		const next = pickCycle(process.cwd());
-		emit(
-			`campaign: sitting=${next.command ?? "idle"} next=${next.next ?? "none"} reason=${next.reason}`,
-		);
-		if (!next.command) {
-			emit("campaign idle. no plan, drain, or verify sitting. stopping.");
-			break;
-		}
-		sitting = next.command;
-	}
-	const { code, reason } = await run(i, sitting);
-	if (reason === "stall") {
-		stalls++;
-		emit(`loop ${i} stalled (total stalls: ${stalls})`, process.stderr);
-		if (stallAction === "abort") {
-			emit("STALL_ACTION=abort — stopping.", process.stderr);
-			process.exit(1);
-		}
-	} else if (code !== 0) {
-		errors++;
-		emit(`loop ${i} exited with code ${code}`, process.stderr);
-		if (failAction === "abort") {
-			emit("FAIL_ACTION=abort — stopping.", process.stderr);
-			process.exit(code);
-		}
-	}
+	const code = await run(i);
+	if (code !== 0) console.error(`loop ${i} exited with code ${code}`);
 	if (sleepMs && i < loops) {
-		emit(`sleeping ${sleepMs / 1000}s...`);
+		console.log(`sleeping ${sleepMs / 1000}s...`);
 		await sleep(sleepMs);
 	}
 }
-
-emit(
-	`\n===== done: ${loops} loops, ${stalls} stall(s), ${errors} error(s) =====`,
-);
-logStream?.end();
-if (stalls > 0 || errors > 0) process.exit(1);
