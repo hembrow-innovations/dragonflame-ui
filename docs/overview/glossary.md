@@ -84,8 +84,24 @@ First-tracer competitor against tap.
 _Avoid_: `UIPanGestureRecognizer`, scroll as this recognizer this tracer
 
 **Semantics tree**:
-Proposed accessibility tree beside the render tree.
-_Avoid_: ARIA-only DOM as the native a11y model
+Accessibility tree beside the render tree. First tracer dumps `SemanticsNode` with `toStringDeep`. Embedder owns plumbing.
+_Avoid_: ARIA-only DOM as the native a11y model, `UIAccessibility` as the product API
+
+**SemanticsNode**:
+Framework node in the semantics tree. Reuses `testID` and `accessibilityLabel`.
+_Avoid_: a second native a11y prop set, RN `AccessibilityInfo`
+
+**measureText**:
+Per-host text metrics seam. Sizes may disagree across DOM, UIKit, and the engine.
+_Avoid_: CSS as iOS layout, `Paragraph.layout`, `TextPainter`
+
+**loadFont**:
+Font load on the IO thread.
+_Avoid_: font load on the UI thread
+
+**Store packaging**:
+Packaged binary hanging off thin Xcode and Gradle shells. Updates are new binaries, not Expo-style OTA of a JS bundle.
+_Avoid_: naming App Store, Play, IPA, AAB, or APK as product names this tracer
 
 ### Worlds
 

@@ -8,7 +8,7 @@ blocked_by:
   - "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T18:00:00Z"
+updated_at: "2026-09-11T07:00:00Z"
 ---
 
 # Native a11y and text APIs are unnamed
@@ -19,8 +19,8 @@ updated_at: "2026-09-11T18:00:00Z"
 
 ## Fit
 
-Open and blocked until [[slice-80-ios-counter]] is met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-83-talk-and-measure]] AFK. Oracles quote those locations only: semantics tree beside the render tree, embedder plumbing, per-host metrics seam, no CSS on iOS, font load not on the UI thread. Do not invent UIKit class lists.
+Named on [[rounds-258-name-phase3-apis]] and [[glossary]]. Keep open until [[slice-80-ios-counter]] is met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-83-talk-and-measure]]. Quote the named first-tracer set. Do not invent UIKit class lists.
 
 ## Notes
 
-Web a11y and test ID props belong to [[slice-73-testid-pressable]], not here.
+First tracer: `SemanticsNode`, dump `toStringDeep`, reuse `testID` and `accessibilityLabel`, `measureText`, `loadFont` on the IO thread. Web a11y and test ID props belong to [[slice-73-testid-pressable]], not a second native prop set. Drain does not claim this ticket.

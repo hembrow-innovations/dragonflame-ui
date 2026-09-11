@@ -2,6 +2,8 @@
 
 One-liners of what landed. Newest first.
 
+- **rounds-258-name-phase3-apis**: published sitting; first-tracer SemanticsNode, toStringDeep, measureText, loadFont named; freeze left to afk-plan.
+- **rounds-257-settle-store-formats**: published sitting; stores and formats stay unnamed; packaged binary after shells, not OTA JS.
 - **rounds-251-name-gesture-apis**: published sitting; first-tracer gesture APIs named; freeze left to afk-plan.
 - **web-hygiene**: closed; CHECK path alignment slices met.
 - **ticket-245-slice-157-stale-check-path**: closed; slice-157 CHECK path aligned.

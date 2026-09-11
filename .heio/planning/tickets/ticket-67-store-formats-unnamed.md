@@ -9,7 +9,7 @@ blocked_by:
   - "slice-81-android-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T18:00:00Z"
+updated_at: "2026-09-11T07:00:00Z"
 ---
 
 # Store names and formats are unnamed
@@ -20,8 +20,8 @@ updated_at: "2026-09-11T18:00:00Z"
 
 ## Fit
 
-Open and blocked until [[slice-80-ios-counter]] and [[slice-81-android-counter]] are met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-82-store-binaries]] AFK. Oracles quote [[location-53-store-packaging]] only: a packaged binary exists after shells; updates are new binaries; the source does not name stores or formats. Do not invent App Store or Play names.
+Settled on [[rounds-257-settle-store-formats]] and [[glossary]]. Stores and formats stay unnamed so [[location-53-store-packaging]] is not rewritten. Keep open until [[slice-80-ios-counter]] and [[slice-81-android-counter]] are met, and sprint `mobile-after-desktop` may freeze. Then /afk-plan freezes [[slice-82-store-binaries]]. Quote: packaged binary after shells; updates are new binaries; not Expo-style OTA of a JS bundle.
 
 ## Notes
 
-Promise only what the wayfinder locked: a packaged binary, not a JS OTA bundle.
+Do not invent App Store, Play, IPA, AAB, or APK names. Drain does not claim this ticket.
