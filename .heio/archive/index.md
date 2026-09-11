@@ -2,6 +2,49 @@
 
 One-liners of what landed. Newest first.
 
+- **web-hygiene**: closed; CHECK path alignment slices met.
+- **ticket-245-slice-157-stale-check-path**: closed; slice-157 CHECK path aligned.
+- **ticket-244-slice-153-stale-check-paths**: closed; slice-153 CHECK paths aligned.
+- **ticket-219-slice-149-stale-check-paths**: closed; slice-149 CHECK paths aligned.
+- **ticket-215-slice-145-stale-check-paths**: closed; slice-145 CHECK paths aligned.
+- **ticket-205-slice-141-stale-check-paths**: closed; slice-141 CHECK paths aligned.
+- **ticket-201-slice-137-stale-check-paths**: closed; slice-137 CHECK paths aligned.
+- **ticket-197-slice-133-stale-check-path**: closed; slice-133 CHECK path aligned.
+- **ticket-196-slice-129-stale-check-paths**: closed; slice-129 CHECK paths aligned.
+- **ticket-192-slice-125-stale-check-paths**: closed; slice-125 CHECK paths aligned.
+- **ticket-188-slice-121-stale-check-paths**: closed; slice-121 CHECK paths aligned.
+- **ticket-187-slice-116-stale-check-paths**: closed; slice-116 CHECK paths aligned.
+- **ticket-183-slice-112-stale-check-paths**: closed; slice-112 CHECK paths aligned.
+- **ticket-182-slice-107-stale-check-paths**: closed; slice-107 CHECK paths aligned.
+- **ticket-181-slice-85-stale-check-paths**: closed; slice-85 CHECK paths aligned.
+- **ticket-180-slice-75-stale-check-paths**: closed; slice-75 CHECK paths aligned.
+- **ticket-179-slice-74-stale-check-path**: closed; slice-74 CHECK path aligned.
+- **ticket-178-slice-73-stale-check-path**: closed; slice-73 CHECK path aligned.
+- **ticket-177-slice-72-stale-check-paths**: closed; slice-72 CHECK paths aligned.
+- **ticket-175-slice-71-stale-check-path**: closed; slice-71 CHECK path aligned.
+- **ticket-173-slice-70-stale-check-paths**: closed; slice-70 CHECK paths aligned.
+- **rounds-248-slice-157-stale-check-path**: published sitting; freeze slice-157 CHECK path.
+- **rounds-245-slice-153-stale-check-paths**: published sitting; freeze slice-153 CHECK paths.
+- **rounds-241-slice-149-stale-check-paths**: published sitting; freeze slice-149 CHECK paths.
+- **rounds-238-slice-145-stale-check-paths**: published sitting; freeze slice-145 CHECK paths.
+- **rounds-235-slice-141-stale-check-paths**: published sitting; freeze slice-141 CHECK paths.
+- **rounds-232-slice-137-stale-check-paths**: published sitting; freeze slice-137 CHECK paths.
+- **rounds-229-slice-133-stale-check-paths**: published sitting; freeze slice-133 CHECK paths.
+- **rounds-226-slice-129-stale-check-paths**: published sitting; freeze slice-129 CHECK paths.
+- **rounds-223-slice-125-stale-check-paths**: published sitting; freeze slice-125 CHECK paths.
+- **rounds-220-slice-121-stale-check-paths**: published sitting; freeze slice-121 CHECK paths.
+- **rounds-216-slice-116-stale-check-paths**: published sitting; freeze slice-116 CHECK paths.
+- **rounds-212-slice-112-stale-check-paths**: published sitting; freeze slice-112 CHECK paths.
+- **rounds-209-slice-107-stale-check-paths**: published sitting; freeze slice-107 CHECK paths.
+- **rounds-206-slice-85-stale-check-paths**: published sitting; freeze slice-85 CHECK paths.
+- **rounds-202-slice-75-stale-check-paths**: published sitting; freeze slice-75 CHECK paths.
+- **rounds-198-slice-74-stale-check-path**: published sitting; freeze slice-74 CHECK path.
+- **rounds-193-slice-73-stale-check-path**: published sitting; freeze slice-73 CHECK path.
+- **rounds-189-slice-72-stale-check-paths**: published sitting; freeze slice-72 CHECK paths.
+- **rounds-184-slice-71-stale-check-path**: published sitting; freeze slice-71 CHECK path.
+- **rounds-174-slice-70-stale-check-paths**: published sitting; freeze slice-70 CHECK paths.
+- **rounds-172-gesture-apis-unnamed**: published sitting; filed ticket-171.
+- **rounds-160-fund-native**: published sitting; native UI funded.
 - **task-250-align-slice-157-check-path**: archived slice-157 CHECK and EVIDENCE name `tests/portability-metal/portable-metal.test.mjs`.
 - **task-247-align-slice-153-check-paths**: archived slice-153 CHECK and EVIDENCE name `tests/host-config/no-jsi.test.mjs` and `tests/host-config/no-hermes-host-config.test.mjs`.
 - **task-243-align-slice-149-check-paths**: archived slice-149 CHECK and EVIDENCE name `tests/style-as-data/no-css-language.test.mjs` and `tests/style-as-data/no-css-engine.test.mjs`.

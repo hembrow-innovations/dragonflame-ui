@@ -2,13 +2,12 @@
 id: "ticket-197-slice-133-stale-check-path"
 title: "Slice 133 oracle O2 CHECK path is stale"
 kind: ticket
-status: promoted
+status: closed
 ticket_type: observation
-tags: [afk-verify]
+tags: [ afk-verify ]
 created_at: "2026-09-10T21:25:53.867Z"
-updated_at: "2026-09-10T22:18:12Z"
+updated_at: "2026-09-11T06:33:17Z"
 ---
-
 # Slice 133 oracle O2 CHECK path is stale
 
 ## Signal

@@ -2,12 +2,11 @@
 id: "web-hygiene"
 title: "Web hygiene"
 kind: sprint
-status: active
+status: closed
 tags: []
 created_at: "2026-09-10T20:14:00Z"
-updated_at: "2026-09-10T22:58:36Z"
+updated_at: "2026-09-11T06:33:17Z"
 ---
-
 # Web hygiene
 
 ## Grouping
