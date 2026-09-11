@@ -6,7 +6,7 @@ sitting_kind: planning
 status: published
 tags: ["afk-plan"]
 created_at: "2026-09-11T20:10:00Z"
-updated_at: "2026-09-11T21:00:00Z"
+updated_at: "2026-09-11T04:29:00Z"
 ---
 
 # Gesture APIs unnamed
@@ -439,6 +439,18 @@ Pick: [[ticket-171-gesture-apis-unnamed]]. Unblocked open ticket. Does not fit a
 1. **Recognizer APIs**: Still unnamed. Overview Open product questions is empty. [[location-46-gesture-arena]] and docs/ still lock competing recognizers, pressable as a leaf, embedder-owned input, and no DOM bubbling. They do not name recognizer methods. [[rounds-160-fund-native]] still lists gesture recognizer APIs as not yet specified. No gesture spec ladder. Product peer must not invent them. Keep [[ticket-171-gesture-apis-unnamed]] open. Do not freeze. Do not file a second ticket.
 
 ## Round 33
+
+Pick: [[ticket-171-gesture-apis-unnamed]]. Unblocked open ticket. Does not fit a frozen or active slice.
+
+### Questions
+
+1. **Recognizer APIs**: Whether location destination and docs/ now name the first native gesture recognizer API set so [[slice-78-press-wins-arena]] can freeze.
+
+### Answers
+
+1. **Recognizer APIs**: Still unnamed. Overview Open product questions is empty. [[location-46-gesture-arena]] and docs/ still lock competing recognizers, pressable as a leaf, embedder-owned input, and no DOM bubbling. They do not name recognizer methods. [[rounds-160-fund-native]] still lists gesture recognizer APIs as not yet specified. No gesture spec ladder. Product peer must not invent them. Keep [[ticket-171-gesture-apis-unnamed]] open. Do not freeze. Do not file a second ticket.
+
+## Round 34
 
 Pick: [[ticket-171-gesture-apis-unnamed]]. Unblocked open ticket. Does not fit a frozen or active slice.
 
