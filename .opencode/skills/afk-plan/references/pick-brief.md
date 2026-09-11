@@ -15,6 +15,8 @@ GRAIN: <nested bullet name or none>
 EVIDENCE: <one line>
 ```
 
+For GRAIN, EVIDENCE is the nested bullet's `this is working when` sentence, copied verbatim. A slice Wait or Non-goals line is not EVIDENCE.
+
 If the parent named a path, id, or slug, resolve only that file. Use it only if it may freeze. If it is `shaping`, `PICK: SHAPING`. If it is a location, pick that location's next unnamed grain. If it is forbidden, `PICK: FORBIDDEN`. Do not silently pick a different target.
 
 Otherwise stop at the first hit:
@@ -25,7 +27,7 @@ Otherwise stop at the first hit:
    First hit:
    a. Lowest-numbered nested location file under that parent that no live or archive slice `See also` links.
    b. Else the first Nested locations bullet under a linked location whose destination sentence is not already a slice Done or oracle.
-   Plan exactly one grain. Cite the location destination. Do not mint a new location file. Put the slice in the live sprint that names that parent and may freeze. `PICK: GRAIN`.
+   Plan exactly one grain. Do not mint a new location file. Put the slice in the live sprint that names that parent and may freeze. `PICK: GRAIN`.
 4. `PICK: IDLE`.
 
 A ticket is unblocked when `blocked_by` is empty, or every listed id is `met` (slice) or `completed` (task). Look in live folders and `archive/`.

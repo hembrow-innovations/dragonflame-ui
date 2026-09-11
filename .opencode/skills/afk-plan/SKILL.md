@@ -22,7 +22,7 @@ If arguments name a path, id, or slug, Read that file. bash `ls` the parent fold
 
 Otherwise spawn one `explore` subagent. `command` is `afk-plan`. Inline [references/pick-brief.md](references/pick-brief.md). Parent does not walk locations, tickets, or slices.
 
-Trust the pick line. Re-read only the named target plus its sprint `shape.md`.
+Trust PICK, ID, SPRINT, LOCATION, and GRAIN. Re-read only the named target plus its sprint `shape.md`. The grain is that nested `this is working when` sentence, not an EVIDENCE paraphrase.
 
 Pick subagent missing or empty: parent follows `references/pick-brief.md` once, then stops scanning.
 
