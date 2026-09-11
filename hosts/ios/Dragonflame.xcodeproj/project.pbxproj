@@ -1,0 +1,224 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A01DF0000000000000000004 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A01DF0000000000000000003 /* main.m */; };
+		A01DF0000000000000000013 /* libembedder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A01DF0000000000000000012 /* libembedder.a */; };
+		A01DF0000000000000000015 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01DF0000000000000000014 /* UIKit.framework */; };
+		A01DF0000000000000000017 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01DF0000000000000000016 /* QuartzCore.framework */; };
+		A01DF0000000000000000019 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A01DF0000000000000000018 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A01DF0000000000000000003 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A01DF0000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01DF0000000000000000006 /* Dragonflame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dragonflame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01DF0000000000000000012 /* libembedder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = ../../target/debug/libembedder.a; sourceTree = "<group>"; };
+		A01DF0000000000000000014 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A01DF0000000000000000016 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A01DF0000000000000000018 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A01DF000000000000000000A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01DF0000000000000000013 /* libembedder.a in Frameworks */,
+				A01DF0000000000000000015 /* UIKit.framework in Frameworks */,
+				A01DF0000000000000000017 /* QuartzCore.framework in Frameworks */,
+				A01DF0000000000000000019 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A01DF0000000000000000007 = {
+			isa = PBXGroup;
+			children = (
+				A01DF0000000000000000008 /* app */,
+				A01DF0000000000000000012 /* libembedder.a */,
+				A01DF0000000000000000014 /* UIKit.framework */,
+				A01DF0000000000000000016 /* QuartzCore.framework */,
+				A01DF0000000000000000018 /* Foundation.framework */,
+				A01DF0000000000000000006 /* Dragonflame.app */,
+			);
+			sourceTree = "<group>";
+		};
+		A01DF0000000000000000008 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				A01DF0000000000000000003 /* main.m */,
+				A01DF0000000000000000005 /* Info.plist */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A01DF0000000000000000002 /* Dragonflame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01DF000000000000000000D /* Build configuration list for PBXNativeTarget "Dragonflame" */;
+			buildPhases = (
+				A01DF000000000000000000B /* Build embedder */,
+				A01DF0000000000000000009 /* Sources */,
+				A01DF000000000000000000A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dragonflame;
+			productName = Dragonflame;
+			productReference = A01DF0000000000000000006 /* Dragonflame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A01DF0000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A01DF000000000000000000C /* Build configuration list for PBXProject "Dragonflame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A01DF0000000000000000007;
+			productRefGroup = A01DF0000000000000000007;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A01DF0000000000000000002 /* Dragonflame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A01DF000000000000000000B /* Build embedder */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build embedder";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "node \"${SRCROOT}/scripts/build-embedder.mjs\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A01DF0000000000000000009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01DF0000000000000000004 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A01DF000000000000000000E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A01DF000000000000000000F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A01DF0000000000000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				INFOPLIST_FILE = app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../target/debug";
+				OTHER_LDFLAGS = (
+					"-lembedder",
+					"-lobjc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ui.dragonflame.host;
+				PRODUCT_NAME = Dragonflame;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A01DF0000000000000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				INFOPLIST_FILE = app/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../target/debug";
+				OTHER_LDFLAGS = (
+					"-lembedder",
+					"-lobjc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ui.dragonflame.host;
+				PRODUCT_NAME = Dragonflame;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A01DF000000000000000000C /* Build configuration list for PBXProject "Dragonflame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01DF000000000000000000E /* Debug */,
+				A01DF000000000000000000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A01DF000000000000000000D /* Build configuration list for PBXNativeTarget "Dragonflame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01DF0000000000000000010 /* Debug */,
+				A01DF0000000000000000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A01DF0000000000000000001 /* Project object */;
+}

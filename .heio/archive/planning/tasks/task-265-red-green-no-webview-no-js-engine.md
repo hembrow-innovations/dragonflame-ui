@@ -2,7 +2,7 @@
 id: "task-265-red-green-no-webview-no-js-engine"
 title: "Red-green: no WebView and no JS engine"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-264-spec-ios-embedder"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-11T08:06:40Z"
-updated_at: "2026-09-11T08:06:40Z"
+updated_at: "2026-09-11T08:26:24Z"
 ---
 
 # Red-green: no WebView and no JS engine
@@ -42,4 +42,4 @@ scope: tests/ named by that spec, plus hosts/ios/ and crates/embedder/ ios host 
 
 ## Gauntlet
 
-- round 1: `node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs` win. Promise iOS native is not a WebView and has no JS engine.
+- round 1: `node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs` win. Promises `ios-embedder.host:forbid-webview` and `ios-embedder.host:forbid-js-engine`.
