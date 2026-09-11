@@ -47,21 +47,28 @@ Open product questions may be closed by an AFK planning sitting with the smalles
 
 ## Rules
 
-- TDD, DRY, YAGNI; prefer one-liner solutions when clear
-- Always write `draconic` for implementation over any other.
-- for scripting only use js/mjs not bash or sh
-- Markdown: never tables — use `- **{text}**: {text}`
-- Commits as work packages: `<type>(<scope>): <description>` — `feat` | `fix` | `test` | `refactor` | `chore` 
-- No `Co-Authored-By` lines
-- If there are move then 25 commits that can be pushed to remote, push them to remote.
+### General
 - No CI/CD or GitHub Actions
+- Markdown: never tables — use `- **{text}**: {text}`
 - Do not invent work when the user did not name a task and planning has not published ready tasks, except the afk-cycle campaign
 - Extremely concise output
 - No em dashes (`—`)
 - Prefer matching this repo's existing patterns over inventing new ones.
-- Do not commit secrets or credentials.
+- After any work or change do housekeeping on `.heio/` and commit in work packages.
+- 
+
+
+### Implementation
+- Always write `draconic` for implementation over any other language.
+- TDD, DRY, YAGNI; prefer one-liner solutions when clear
+- for scripting only use js/mjs not bash or sh
 - Always keep the rust's `target/` directory below 10GB
 - File size target ≤1000 LOC, hard limit 1250 (prove fails over 1200)
 - Also create sub folders in packages so that its no one flat file list
 - tests/ uses named subfolders matching the spec area under docs/specs/; never a flat tests/ dump
-- AFter each slice, task or ticket work/change do housekeeping on `.heio/` and commit
+
+### Git
+- Commits as work packages: `<type>(<scope>): <description>` — `feat` | `fix` | `test` | `refactor` | `chore` 
+- No `Co-Authored-By` lines
+- If there are move then 25 commits that can be pushed to remote, push them to remote.
+- Do not commit secrets or credentials.
