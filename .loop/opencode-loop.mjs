@@ -24,6 +24,7 @@ import {
 import { join } from "node:path";
 import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
+import { planProgress } from "./pick-plan.mjs";
 import { verifyProgress } from "./pick-verify.mjs";
 import { readRoadmapStatus } from "./roadmap-status.mjs";
 
@@ -31,6 +32,7 @@ const DEFAULT_COMMAND = process.env.LOOP_COMMAND || "afk-roadmap";
 const DEFAULT_ARGS = DEFAULT_COMMAND === "afk-roadmap" ? ["continue"] : [];
 const isRoadmapCampaign = DEFAULT_COMMAND === "afk-roadmap";
 const isVerifyCampaign = DEFAULT_COMMAND === "afk-verify";
+const isPlanCampaign = DEFAULT_COMMAND === "afk-plan";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
@@ -234,6 +236,16 @@ for (let i = 1; i <= loops; i++) {
 		);
 		if (remaining === 0) {
 			emit("campaign complete. every met slice is in the ledger. stopping.");
+			break;
+		}
+	}
+	if (useDefaultAudit && isPlanCampaign) {
+		const { remaining, next, reason } = planProgress(process.cwd());
+		emit(
+			`campaign: remaining=${remaining} next=${next ?? "none"} reason=${reason}`,
+		);
+		if (remaining === 0) {
+			emit("campaign idle. no freezeable slice. stopping.");
 			break;
 		}
 	}

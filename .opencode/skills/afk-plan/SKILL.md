@@ -11,16 +11,18 @@ Load **management** before any write under `.heio/`. Load **design-tree**, **arc
 
 Same checkout. No git branch. No worktree. Coordination is write lanes and `.loop` lock helpers. Read [references/lanes.md](references/lanes.md) before claiming, allocating ids, or committing.
 
-Counterpart is the **product** peer. Notebook is a round file. Auto-confirm only when the location destination and `docs/` answer the frontier. If they do not, file a HITL ticket and exit. Do not invent product rules.
+Counterpart is the **product** peer. Notebook is a round file. Auto-confirm only when the location destination and `docs/` answer the frontier. If they do not, file a HITL ticket at `parked` and exit. Do not invent product rules. Do not re-open that sitting on the next loop.
 
 ## 1. Pick
 
 Done when one target slice is named, or the sitting is IDLE.
 
-Arguments may name a slice, location, or ticket. Otherwise pick in this order:
+Run `node .loop/pick-plan.mjs` before writing anything. Exit 2 is IDLE: `VERDICT: IDLE`. Do not copy a round template. Do not append a round. Do not commit.
+
+A printed ticket path is the pick. Arguments may still name a slice, location, or ticket. Otherwise, when the helper prints nothing because this is a manual sitting, pick in this order:
 
 1. If any unblocked `ready` + `mode: afk` task exists, IDLE. Drain owns those.
-2. An unblocked `open` ticket that does not fit an existing `frozen` or `active` slice
+2. An unblocked `open` ticket that does not fit an existing `frozen` or `active` slice, and that no afk-plan sitting has already refused unless the ticket is newer than that sitting
 3. The lowest-numbered `active` location that no slice `See also` links, whose sprint is allowed to freeze
 4. IDLE
 
@@ -36,13 +38,15 @@ Do not pick:
 - A second slice
 - Work that would rewrite a location destination
 
-IDLE means ready AFK tasks may already exist for drain. Do not invent work. End with `VERDICT: IDLE`.
+When grounding cannot freeze without inventing product rules, file or keep one HITL ticket at `parked` and IDLE. A human names the missing rule, sets the ticket `open`, then this helper may pick it again.
+
+IDLE means drain owns ready AFK tasks, or the frontier is waiting on a human. Do not invent work. End with `VERDICT: IDLE`.
 
 ## 2. Ground
 
 Done when intent, roadmap, the target location, the sprint `shape.md`, linked tickets, and the vault pack for that area have been read in full.
 
-Run **vault-pack**. Read every Must-read path. Empty ladder or a non-empty Open product questions section that this grain needs: file a HITL ticket (`mode` does not apply on tickets; the task would be `mode: hitl` later). Do not freeze. `VERDICT: TICKET`.
+Run **vault-pack**. Read every Must-read path. Empty ladder or a non-empty Open product questions section that this grain needs: file a HITL ticket at `parked` (`mode` does not apply on tickets; the task would be `mode: hitl` later). Do not freeze. Do not append another round on the next loop. `VERDICT: TICKET`.
 
 ## 3. Sketch
 
