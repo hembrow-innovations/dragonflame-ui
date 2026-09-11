@@ -2,7 +2,7 @@
 id: "task-267-red-green-counter-on-simulator"
 title: "Red-green: counter on iOS simulator"
 kind: task
-status: ready
+status: claimed
 mode: afk
 blocked_by:
   - "task-265-red-green-no-webview-no-js-engine"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-11T08:06:40Z"
-updated_at: "2026-09-11T08:06:40Z"
+updated_at: "2026-09-11T08:36:09Z"
 ---
 
 # Red-green: counter on iOS simulator

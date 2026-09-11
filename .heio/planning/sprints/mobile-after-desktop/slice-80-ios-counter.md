@@ -2,14 +2,14 @@
 id: "slice-80-ios-counter"
 title: "iOS counter"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T08:06:40Z"
+updated_at: "2026-09-11T22:00:00Z"
 ---
 
 # iOS counter
