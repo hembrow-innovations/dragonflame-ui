@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **rounds-251-name-gesture-apis**: published sitting; first-tracer gesture APIs named; freeze left to afk-plan.
 - **web-hygiene**: closed; CHECK path alignment slices met.
 - **ticket-245-slice-157-stale-check-path**: closed; slice-157 CHECK path aligned.
 - **ticket-244-slice-153-stale-check-paths**: closed; slice-153 CHECK paths aligned.

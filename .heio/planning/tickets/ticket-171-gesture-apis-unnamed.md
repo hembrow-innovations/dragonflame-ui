@@ -6,7 +6,7 @@ status: open
 ticket_type: observation
 tags: []
 created_at: "2026-09-11T20:10:00Z"
-updated_at: "2026-09-11T06:10:00Z"
+updated_at: "2026-09-11T06:55:00Z"
 ---
 
 # Gesture recognizer APIs are unnamed
@@ -17,8 +17,8 @@ updated_at: "2026-09-11T06:10:00Z"
 
 ## Fit
 
-Open. A human sitting names the first recognizer APIs, then /afk-plan freezes [[slice-78-press-wins-arena]]. Quote [[location-46-gesture-arena]] only: two recognizers compete, pressable can win, signals do not replace hit-test, embedder owns input, framework arena decides the winner. Do not invent UIKit class lists or recognizer method names.
+Named on [[rounds-251-name-gesture-apis]] and [[glossary]]. Keep open so /afk-plan freezes [[slice-78-press-wins-arena]]. Quote the named first-tracer set. Do not invent further recognizer methods or UIKit class lists.
 
 ## Notes
 
-Drain does not claim this ticket. [[slice-79-oem-hatch-slot]] stays shaping. Do not invent OEM widget class lists here.
+First tracer: `h(pressable, { onPress })`. Types `TapGestureRecognizer` and `HorizontalDragGestureRecognizer`. Join when `onPress` is set. Arena `add`, `close`, `sweep`. Recognizer `addPointer`, `acceptGesture`, `rejectGesture`, `resolve`. Embedder pointer down, move, up. Drain does not claim this ticket. [[slice-79-oem-hatch-slot]] stays shaping. Do not invent OEM widget class lists here.

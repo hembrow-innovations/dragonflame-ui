@@ -6,7 +6,7 @@ domain: ui-framework
 area: overview
 tags: [overview]
 created_at: "2026-09-09"
-updated_at: "2026-09-09"
+updated_at: "2026-09-11"
 ---
 
 # Glossary
@@ -72,8 +72,16 @@ A retained layout, paint, and hit-test node. Components write properties onto it
 _Avoid_: virtual DOM node, Flutter Widget as the retained node
 
 **Gesture arena**:
-Proposed model of competing recognizers for pointer input. Not DOM `stopPropagation` as the native model.
-_Avoid_: DOM event bubbling as the native gesture model
+Competing pointer recognizers. First tracer is `GestureArena` with `add`, `close`, and `sweep`. Embedder owns input. Framework decides the winner.
+_Avoid_: DOM event bubbling as the native gesture model, UIKit `require(toFail:)`
+
+**TapGestureRecognizer**:
+First-tracer tap recognizer. Pressable joins when `onPress` is set.
+_Avoid_: `onTap` as the app callback, a required `GestureDetector` widget
+
+**HorizontalDragGestureRecognizer**:
+First-tracer competitor against tap.
+_Avoid_: `UIPanGestureRecognizer`, scroll as this recognizer this tracer
 
 **Semantics tree**:
 Proposed accessibility tree beside the render tree.
