@@ -16,7 +16,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 
 ## Slices in
 
-- [[slice-80-ios-counter]]: counter on iOS sim. blocked_by: [[slice-76-desktop-vsync-window]] and [[slice-70-counter-on-dom]]. active
+- [[slice-80-ios-counter]]: counter on iOS sim. blocked_by: [[slice-76-desktop-vsync-window]] and [[slice-70-counter-on-dom]]. met
 - [[slice-81-android-counter]]: counter on Android emulator. blocked_by: [[slice-76-desktop-vsync-window]] and [[slice-70-counter-on-dom]]. active
 - [[slice-82-store-binaries]]: packaged binary, not OTA JS. blocked_by: [[slice-80-ios-counter]] and [[slice-81-android-counter]]. frozen
 - [[slice-83-talk-and-measure]]: semantics tree plus text metrics. blocked_by: [[slice-80-ios-counter]]. frozen
