@@ -2,13 +2,13 @@
 id: "slice-78-press-wins-arena"
 title: "Press wins the arena"
 kind: slice
-status: active
+status: met
 sprint: "native-if-funded"
 blocked_by:
   - "slice-77-draw-a-rect"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T08:10:00Z"
+updated_at: "2026-09-11T08:20:00Z"
 ---
 
 # Press wins the arena
@@ -34,12 +34,12 @@ DOM bubbling as the native gesture model. Every UIKit class as a recognizer. `on
 - [x] O1: press wins the arena
   CHECK: node --test tests/gesture-arena/press-wins.test.mjs
   EXPECT: pass
-  EVIDENCE: pass
+  EVIDENCE: node --test tests/gesture-arena/press-wins.test.mjs; 1 pass 0 fail
 
 - [x] O2: embedder packets, not DOM stopPropagation
   CHECK: node --test tests/gesture-arena/embedder-packets.test.mjs
   EXPECT: pass
-  EVIDENCE: pass
+  EVIDENCE: node --test tests/gesture-arena/embedder-packets.test.mjs; 1 pass 0 fail
 
 ## Pool
 
