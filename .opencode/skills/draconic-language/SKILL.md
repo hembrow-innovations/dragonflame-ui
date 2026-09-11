@@ -1,11 +1,11 @@
 ---
 name: draconic-language
-description: Draconic Programs and toolchain. Use when writing .drac source, type annotations, Dual worlds, native types, ESM modules, host I/O, or compiling with draconic. Use when implementing Frontend, IR, backends, Runtime, Checker, Conformance, CLI, or language semantics.
+description: Draconic Programs. Use when writing or editing .drac source, type annotations, Dual worlds, native types, ESM modules, host I/O, or proving with the draconic CLI.
 ---
 
 # Draconic language
 
-Write Programs in `.drac`. Toolchain work is a second branch. Detail lives in `rules/<id>.md`.
+Write Programs in `.drac`. Detail lives in `rules/<id>.md`. Prove with PATH `draconic` (the installed stable CLI). Sibling `~/workbench/draconic` is language docs and in-development compiler source, not the prove tool.
 
 ## Write a Program
 
@@ -17,78 +17,51 @@ Write Programs in `.drac`. Toolchain work is a second branch. Detail lives in `r
    Done when there is no silent `number` to `i32` and no `i32 as i64`.
 4. Libraries use ESM `export` / `import`. Host APIs are free globals, not imports.
    Done when package imports use Go-like paths and host calls are bare names.
-5. Prove with the sibling CLI (`~/workbench/draconic`): `draconic check FILE` then `draconic build --target js FILE -o OUT`. This product's default target is js.
+5. Prove with PATH `draconic`: `which draconic`, then `draconic check FILE`, then `draconic build --target js FILE -o OUT`. This product's default target is js.
    Done when check is clean and the intended target emits.
 
-If a construct cannot compile, file a GitHub issue on the draconic repo and stop. Do not implement the Compiler here.
+If `draconic` is missing from PATH, stop. Do not `cargo run` the sibling checkout. If a construct cannot compile, file a GitHub issue on the draconic repo and stop. Do not implement the Compiler here.
 
 Trees in this product are `h(type, props)`. JSX is not a language feature.
-
-## Toolchain branch
-
-1. Frontend first. Callers compile through `compile_path` / `check_path` / `compile_source`.
-2. Language terms from sibling `~/workbench/draconic/CONTEXT.md`. UI terms from `docs/overview/glossary.md`.
-3. Locked language decisions in sibling `docs/adr/`. Do not add Roadmap rows there from this repo.
-4. Nested crate modules. File target ≤1000 LOC; hard 1250 for new files.
 
 ## Stack
 
 - **Language.** Full ECMAScript superset. TypeScript-inspired Checker, not tsc. Dual worlds at `as`.
-- **Host.** Rust Compiler permanently. `draconic` CLI in the sibling checkout.
-- **Frontend.** Parse or link, then check, then lower to one IR.
-- **Backends.** JS emit and LLVM emit both consume that IR.
-- **Runtime.** Tracing GC for JS values. Native types stay unboxed.
+- **Prove.** Installed `draconic` on PATH. Default emit is js.
+- **Docs.** Sibling `~/workbench/draconic` (`CONTEXT.md`, `website/learn.md`, `docs/specs/draconic/language/`, `examples/**/*.drac`). Read-only from this product.
 
 ### Prefer
 
-- **write-*** `.drac`, portable JS values, Checker annotations, sibling prove
+- **write-*** `.drac`, portable JS values, Checker annotations, PATH prove
 - **dual-*** `as` boundary, unboxed native, host globals
-- **tool-**, **size-**, **arch-** only when changing crates
-- **pipe-*** Frontend entries, Script vs Module, linker
-- **diag-*** hard-error, stable codes, real spans
-- **ir-***, **js-***, **llvm-*** shared IR, N04 polyfill, adapter dispatch
-- **test-*** Conformance fixtures, workspace oracle
 
 ### Apply carefully
 
 - **write-native** pointers (`*T`, `&x`) are native-only
 - **write-host** listen/server is native first; JS hard-errors until a bridge exists
-- **rt-eval-budgets** Embed is a subset; grow it with fixtures
-- **pipe-check-target** `check` is target-neutral; emit still rejects
-- **lsp-analysis-only** hover and goto, not a new language server
-- **diagnose** for hard bugs. Build a tight red loop first
+- **cli-*** `check` is target-neutral; `build --target js` can still hard-error
 
 ### Do not introduce
 
 - JSX, or adding JSX to the draconic parser from this repo
 - Implementing the Compiler in this checkout
-- Self-hosting the Compiler in Draconic
-- tsc compatibility, TypeScript emit, or npm-registry packages
-- A second IR or a typed-AST fork per backend
-- Silent Dual-world assignability or `i32 as i64`
+- `cargo run` or `cargo build -p draconic-cli` from `~/workbench/draconic`
 - Host APIs as ESM imports
 - Free `console` without binding `globalThis.console`
-- Deno deny-by-default permissions
-- Silent subsetting or invented Roadmap work when the board has no `todo`
+- Silent Dual-world assignability or `i32 as i64`
 
 ## When to apply
 
-Writing or editing `.drac`; Dual worlds, native types, Checker, modules, host I/O; sibling `draconic` CLI; changing a crate on the compile path.
+Writing or editing `.drac`; Dual worlds, native types, Checker, modules, host I/O; proving with PATH `draconic`.
 
-Load and stop: **tdd**, **gauntlet-loop**, **diagnose**, **docs** / **domain-modeling**, **codebase-design**. **draconic-loop** is toolchain-repo only.
+Load **tdd**, **gauntlet-loop**, or **diagnose** for workflow. **docs** / **domain-modeling** for the UI glossary. Language docs stay in the sibling checkout.
 
 ## Rule categories by priority
 
 - **1 CRITICAL** Write (`write-`)
 - **2 CRITICAL** Dual worlds (`dual-`)
-- **3 CRITICAL** Tooling + layout (`tool-`, `size-`, `arch-`) when changing crates
-- **4 CRITICAL** Frontend (`pipe-`)
-- **5 CRITICAL** Hard-error (`diag-`, `js-n04-polyfill`, `llvm-no-hello-stub`)
-- **6 HIGH** IR + backends (`ir-`, `js-`, `llvm-`)
-- **7 HIGH** Runtime (`rt-`)
-- **8 HIGH** Conformance (`test-`)
-- **9 MEDIUM** CLI, host, packages (`cli-`, `host-`, `pkg-`)
-- **10 MEDIUM** Product + vocab (`prod-`, `vocab-`, `lsp-`)
+- **3 MEDIUM** CLI prove (`cli-`)
+- **4 MEDIUM** Host, packages, product (`host-`, `pkg-`, `prod-`, `vocab-`)
 
 ## Quick reference
 
@@ -99,36 +72,21 @@ Load and stop: **tdd**, **gauntlet-loop**, **diagnose**, **docs** / **domain-mod
 - `write-native` - unboxed integers/floats/bool/structs; pointers native-only
 - `write-modules` - ESM `import`/`export`; git module paths
 - `write-host` - free globals; `console` from `globalThis`
-- `write-prove` - sibling `check` then `build --target js|native`
+- `write-prove` - PATH `check` then `build --target js|native`
 - `write-here` - this product: no JSX, no Compiler, file bugs upstream
 
 ### 2. Dual worlds (CRITICAL)
 
 - `dual-as-boundary` `dual-no-silent-widen` `dual-native-unboxed` `dual-host-globals`
 
-### 3. Tooling + layout (CRITICAL)
-
-- `tool-cargo-rust` `size-file-budget` `size-target-dir` `arch-crate-seams` `arch-deep-modules`
-
-### 4. Frontend (CRITICAL)
-
-- `pipe-compile-path` `pipe-script-module` `pipe-linker-not-parser` `pipe-embed-source` `pipe-check-target`
-
-### 5. Hard-error (CRITICAL)
-
-- `diag-hard-error` `diag-codes` `diag-spans` `js-n04-polyfill` `llvm-no-hello-stub`
-
-### 6-8. IR, Runtime, Conformance (HIGH)
-
-- `ir-shared` `ir-after-link` `ir-as-erased` `llvm-adapter-dispatch` `js-emit-javascript` `js-polyfill-runtime`
-- `rt-catchable-vs-abort` `rt-eval-budgets` `rt-gc-js-values`
-- `test-conformance-fixtures` `test-native-observations` `test-meta-sidecar` `test-workspace-oracle` `test-test262-staged`
-
-### 9-10. CLI, host, product (MEDIUM)
+### 3. CLI prove (MEDIUM)
 
 - `cli-run-default-js` `cli-build-requires-target` `cli-scratch-out-name`
+
+### 4. Host, packages, product (MEDIUM)
+
 - `host-permissive-default` `host-sockets-first` `pkg-git-modules`
-- `prod-not-tsc` `prod-full-ecma` `prod-rust-host` `vocab-context` `lsp-analysis-only`
+- `prod-not-tsc` `vocab-context`
 
 ## How to use
 
@@ -139,8 +97,8 @@ rules/dual-as-boundary.md
 rules/write-prove.md
 ```
 
-Writing a Program: read `write-*` plus the `dual-*` rules you need. Changing the Compiler: pick toolchain rule ids. `Read` only those `rules/<id>.md` files. Do not bulk-read `rules/` or load all of `AGENTS.md` unless asked or stuck.
+Read `write-*` plus the `dual-*` rules you need. `Read` only those `rules/<id>.md` files. Do not bulk-read `rules/` or load all of `AGENTS.md` unless asked or stuck.
 
 Each rule: why → incorrect → correct → notes.
 
-Language truth: sibling `~/workbench/draconic` (`CONTEXT.md`, `website/learn.md`, `docs/specs/draconic/language/`). Copy-ready Programs: `~/workbench/draconic/examples/**/*.drac`.
+Language docs: sibling `~/workbench/draconic`. Copy-ready Programs: `~/workbench/draconic/examples/**/*.drac`.

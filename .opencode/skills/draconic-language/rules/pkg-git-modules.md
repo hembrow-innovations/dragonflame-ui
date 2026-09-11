@@ -19,4 +19,4 @@ draconic mod tidy
 draconic build --target js --offline app.drac
 ```
 
-**Notes.** ADR-0009. `draconic.toml` may map path → git URL. Versions are semver git tags. Resolve *to* ESM files inside packages; do not replace ESM syntax. See `pipe-linker-not-parser`.
+**Notes.** `draconic.toml` may map path → git URL. Versions are semver git tags. Resolve to ESM files inside packages; do not replace ESM syntax. See `write-modules`.

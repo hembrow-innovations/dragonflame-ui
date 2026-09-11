@@ -31,4 +31,4 @@ import { greet, VERSION } from "github.com/draconic-lang/pkg-lib";
 import { h } from "./hyperscript.drac";
 ```
 
-**Notes.** Named, default, and namespace imports, including cyclic live bindings, are the shipped module meaning. Packages are git-backed; imports use a Go-like module path. Manifest `draconic.toml`, lockfile `draconic.lock`. Resolve lands on ESM files inside the package. See `pkg-git-modules`, `pipe-script-module`. Sibling samples: `examples/pkg-lib/index.drac`, `examples/pkg-consumer/main.drac`.
+**Notes.** Named, default, and namespace imports, including cyclic live bindings, are the shipped module meaning. Packages are git-backed; imports use a Go-like module path. Manifest `draconic.toml`, lockfile `draconic.lock`. Resolve lands on ESM files inside the package. See `pkg-git-modules`. Sibling samples: `~/workbench/draconic/examples/pkg-lib/index.drac`, `~/workbench/draconic/examples/pkg-consumer/main.drac`.

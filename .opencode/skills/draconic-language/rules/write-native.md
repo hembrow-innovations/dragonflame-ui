@@ -30,4 +30,4 @@ let n: number = 1;
 let x: i32 = n as i32;
 ```
 
-**Notes.** Numeric literals may contextually type as native scalars. Distinct native widths are not interchangeable; hop through `number` (`(a as number) as i64`). N04 polyfills portable scalars/structs/arrays on js as ordinary JS values. See `dual-as-boundary`, `dual-no-silent-widen`, `dual-native-unboxed`. Sibling samples: `examples/types/types.drac`, `examples/types/types-native.drac`.
+**Notes.** Numeric literals may contextually type as native scalars. Distinct native widths are not interchangeable; hop through `number` (`(a as number) as i64`). On js, portable native scalars/structs/arrays emit as ordinary JS values. See `dual-as-boundary`, `dual-no-silent-widen`, `dual-native-unboxed`. Sibling samples: `~/workbench/draconic/examples/types/types.drac`, `~/workbench/draconic/examples/types/types-native.drac`.

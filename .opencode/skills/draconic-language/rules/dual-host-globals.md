@@ -7,7 +7,7 @@ tags: [dual, host, globals]
 
 ## Host APIs are free globals
 
-Host APIs are free identifiers on the global object, registered in the Checker (`host_api.rs`). They are not ESM imports.
+Host APIs are free identifiers on the global object. They are not ESM imports.
 
 **Incorrect:**
 
@@ -21,4 +21,4 @@ import { tcpListen } from "draconic:host";
 tcpListen(8080);
 ```
 
-**Notes.** Unavailable on a target → E0400 `HOST_API_UNSUPPORTED`. JS target gets Node bridges prepended when IR references those names. See `host-sockets-first` and `js-polyfill-runtime`.
+**Notes.** Unavailable on a target is a hard-error. Listen and server paths are native first. See `write-host` and `host-sockets-first`.

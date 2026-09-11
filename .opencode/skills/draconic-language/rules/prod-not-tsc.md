@@ -11,6 +11,6 @@ The Checker looks like TypeScript. It does not compile existing TypeScript proje
 
 **Incorrect:** emitting `.ts`, implementing `strictNullChecks` as a CLI flag, or claiming drop-in TS migration.
 
-**Correct:** Draconic type rules in `draconic-check`. JS backend emits JavaScript. Native types are first-class, not type-erasure leftovers.
+**Correct:** write `.drac` with Checker annotations. Native types are first-class, not type-erasure leftovers.
 
-**Notes.** ADR-0005. See `js-emit-javascript` and `dual-as-boundary`.
+**Notes.** See `write-types` and `dual-as-boundary`.

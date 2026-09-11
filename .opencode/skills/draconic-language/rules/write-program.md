@@ -18,4 +18,4 @@ let console = globalThis.console;
 console.log("hello from Draconic");
 ```
 
-**Notes.** Free `console` is unresolved; bind `globalThis.console` (same for `document`, `localStorage`). `try`/`catch`/`throw` are catchable JS-value exceptions, not process abort. Shebang `#!/usr/bin/env draconic` is `run`. Script vs Module is parse-driven: `import`/`export` makes a Module. Sibling examples: `examples/fizzbuzz/main.drac`, `examples/todo/src/todo.drac`. See `write-types`, `write-modules`, `write-here`.
+**Notes.** Free `console` is unresolved; bind `globalThis.console` (same for `document`, `localStorage`). `try`/`catch`/`throw` are catchable JS-value exceptions, not process abort. Shebang `#!/usr/bin/env draconic` is `run`. Script vs Module is parse-driven: `import`/`export` makes a Module. Sibling examples: `~/workbench/draconic/examples/fizzbuzz/main.drac`, `~/workbench/draconic/examples/todo/src/todo.drac`. See `write-types`, `write-modules`, `write-here`.

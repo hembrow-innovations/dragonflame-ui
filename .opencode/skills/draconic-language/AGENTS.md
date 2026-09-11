@@ -11,11 +11,11 @@ This pack's write branch is how an agent authors `.drac`. Workflow stays in sibl
 - `tdd` red-green
 - `gauntlet-loop` implement-and-verify
 - `diagnose` hard bugs
-- `docs` / `domain-modeling` glossary and ADRs
-- `codebase-design` depth and seams
-- `draconic-loop` one Roadmap atom (toolchain repo only)
+- `docs` / `domain-modeling` UI glossary and ADRs
 
-Language truth is the sibling checkout `~/workbench/draconic`, not this folder:
+Prove with PATH `draconic` (the installed stable CLI). Never `cargo run` `~/workbench/draconic`.
+
+Language docs are the sibling checkout `~/workbench/draconic`, not this folder:
 
 - Glossary: `CONTEXT.md`
 - Learn: `website/learn.md`, `website/from-javascript.md`, `website/from-systems.md`
@@ -28,10 +28,5 @@ This product (dragonflame-ui):
 
 - UI glossary: `docs/overview/glossary.md`
 - Trees: `h(type, props)`. JSX is not a language feature.
-- Default emit: sibling `draconic build --target js`
+- Default emit: `draconic build --target js`
 - Compiler bugs: GitHub issue on the draconic repo, then stop
-
-## Toolchain branch
-
-Completeness: sibling `ROADMAP.md` plus the Conformance suite.
-Frontend entry: sibling `crates/draconic-frontend/src/lib.rs`.

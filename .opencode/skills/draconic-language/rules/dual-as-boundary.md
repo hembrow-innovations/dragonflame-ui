@@ -23,4 +23,4 @@ let n: number = 1;
 let x: i32 = n as i32;
 ```
 
-**Notes.** Allowed: JS `number` ↔ unboxed native numeric (not `bool`). Rejected with `cannot convert type … across dual-worlds boundary`: `string as i32`, `i32 as string`. Numeric literals may contextually type as native scalars. Fixtures: `tests/conformance/fixtures/types/dual/`. See `dual-no-silent-widen` and `ir-as-erased`.
+**Notes.** Allowed: JS `number` ↔ unboxed native numeric (not `bool`). Rejected with `cannot convert type … across dual-worlds boundary`: `string as i32`, `i32 as string`. Numeric literals may contextually type as native scalars. See `dual-no-silent-widen`.

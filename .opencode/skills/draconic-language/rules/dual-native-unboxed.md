@@ -9,8 +9,8 @@ tags: [dual, native, gc]
 
 Native types (`i8`–`i64`, `u8`–`u64`, `f32`/`f64`, `bool`, structs, `*T`) live outside the GC heap. JS values (objects, arrays, strings, closures) are heap-managed.
 
-**Incorrect:** `draconic_rt_alloc_*` for an `i32`, or treating native `bool` as a JS Boolean object.
+**Incorrect:** treating native `bool` as a JS Boolean object, or using an `i32` as if it were a heap object.
 
-**Correct:** LLVM lowers native scalars to LLVM integers/floats/pointers. On js, N04 polyfills them as ordinary JS numbers/objects/arrays. Pointers stay native-only.
+**Correct:** native scalars stay unboxed. On js they still type as native and emit as ordinary JS numbers, objects, or arrays. Pointers stay native-only.
 
-**Notes.** ADR-0003. Ownership-only and arena-only models were rejected. See `js-n04-polyfill` and `rt-gc-js-values`.
+**Notes.** See `write-native` and `dual-as-boundary`.

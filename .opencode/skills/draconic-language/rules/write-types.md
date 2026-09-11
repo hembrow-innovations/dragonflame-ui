@@ -28,4 +28,4 @@ function remainingCount(): number {
 }
 ```
 
-**Notes.** JS types include `number`, `string`, `boolean`, `bigint`, `any`, object shapes, and `function`. Native `bool` is not JS `boolean`. Fresh object literals may not carry excess properties onto an annotated shape. Unknown properties on an annotated shape error; untyped objects stay dynamic. Call-site checking applies only to annotated required parameters. See `prod-not-tsc`, `write-native`, `dual-as-boundary`. Sibling sample: `examples/types/types.drac`.
+**Notes.** JS types include `number`, `string`, `boolean`, `bigint`, `any`, object shapes, and `function`. Native `bool` is not JS `boolean`. Fresh object literals may not carry excess properties onto an annotated shape. Unknown properties on an annotated shape error; untyped objects stay dynamic. Call-site checking applies only to annotated required parameters. See `prod-not-tsc`, `write-native`, `dual-as-boundary`. Sibling sample: `~/workbench/draconic/examples/types/types.drac`.
