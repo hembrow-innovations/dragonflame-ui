@@ -2,14 +2,14 @@
 id: "task-269-spec-android-embedder"
 title: "Spec Android embedder"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-81-android-counter"
 tags: []
 created_at: "2026-09-11T08:52:52Z"
-updated_at: "2026-09-11T08:52:52Z"
+updated_at: "2026-09-11T09:20:00Z"
 ---
 
 # Spec Android embedder

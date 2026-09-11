@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-269-spec-android-embedder**: archived Android embedder spec ladder; thin Gradle shell, no WebView, no JS engine, x86_64 emulator plus arm64-v8a, counter text through engine draw lists; O1 `tests/android-embedder/counter-on-emulator.test.mjs`, O2 `tests/android-embedder/no-webview-no-js-engine.test.mjs`, O3 `tests/android-embedder/arm64-v8a-in-scope.test.mjs` named.
 - **task-266-red-green-arm64-device-in-scope**: archived red-green iOS arm64 device in scope; `aarch64-apple-ios` plus Xcode arm64 ARCHS; simulator-only is not done; O3 `tests/ios-embedder/arm64-device-in-scope.test.mjs` pass.
 - **task-265-red-green-no-webview-no-js-engine**: archived red-green iOS host honesty; thin Xcode shell at `hosts/ios/` links embedder ios module; no WKWebView, Cordova, Capacitor, or Expo; no Hermes, JSC, or V8; tracing GC stays; O2 `tests/ios-embedder/no-webview-no-js-engine.test.mjs` pass.
 - **task-264-spec-ios-embedder**: archived iOS embedder spec ladder; thin Xcode shell, no WKWebView, no JS engine, simulator plus arm64 device, counter text through engine draw lists; O1 `tests/ios-embedder/counter-on-simulator.test.mjs`, O2 `tests/ios-embedder/no-webview-no-js-engine.test.mjs`, O3 `tests/ios-embedder/arm64-device-in-scope.test.mjs` named.
