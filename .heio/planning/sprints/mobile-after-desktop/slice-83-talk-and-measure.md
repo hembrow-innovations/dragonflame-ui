@@ -2,13 +2,13 @@
 id: "slice-83-talk-and-measure"
 title: "Talk and measure"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T21:16:03Z"
+updated_at: "2026-09-11T21:17:08Z"
 ---
 
 # Talk and measure
@@ -34,11 +34,11 @@ ARIA-only DOM as the native a11y model. Pretending CSS on iOS. Inventing UIKit c
 - [x] O1: semantics tree dump
   CHECK: node --test tests/talk-and-measure/semantics-dump.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/talk-and-measure/semantics-dump.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/talk-and-measure/semantics-dump.test.mjs; 1 pass 0 fail (slice re-run)
 - [x] O2: per-host metrics seam
   CHECK: node --test tests/talk-and-measure/per-host-metrics.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/talk-and-measure/per-host-metrics.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/talk-and-measure/per-host-metrics.test.mjs; 1 pass 0 fail (slice re-run)
 
 ## Pool
 
