@@ -2,14 +2,14 @@
 id: "task-260-spec-oem-hatch"
 title: "Spec OEM hatch"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "native-if-funded"
 slice: "slice-79-oem-hatch-slot"
 tags: []
 created_at: "2026-09-11T07:41:56Z"
-updated_at: "2026-09-11T07:41:56Z"
+updated_at: "2026-09-11T07:50:00Z"
 ---
 
 # Spec OEM hatch
