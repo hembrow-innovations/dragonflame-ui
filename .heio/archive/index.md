@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-281-red-green-hatch-not-default**: archived red-green hatch not default; occupying the hatch on iOS does not make OEM the default host; canvas remains default; O1 `tests/platform-views/hatch-not-default.test.mjs` pass.
 - **task-280-spec-platform-views**: archived platform-views spec ladder; iOS occupy of the existing hatch slot, occupying the hatch does not make OEM the default host, no async Bridge; O1 `tests/platform-views/hatch-not-default.test.mjs`, O2 `tests/platform-views/slot-occupied-on-ios.test.mjs` named.
 - **rounds-279-freeze-platform-view-hatch**: published sitting; freeze slice-84 platform view hatch.
 - **task-278-red-green-per-host-metrics**: archived red-green per-host metrics seam; measureText disagrees across DOM, UIKit, and the engine; CSS is not iOS layout; loadFont on the IO thread; O2 `tests/talk-and-measure/per-host-metrics.test.mjs` pass.

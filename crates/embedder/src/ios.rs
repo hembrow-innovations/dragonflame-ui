@@ -176,6 +176,7 @@ unsafe extern "C" fn on_vsync(_this: Id, _cmd: Sel, _link: Id) {
     let bounds = msg_rect(view.as_ptr(), b"bounds\0");
     let width = (bounds.size.width * scale) as u32;
     let height = (bounds.size.height * scale) as u32;
+    engine::Adapter::native().hold(7);
     engine::submit(engine::Scene {
         max_width: 80.0,
         max_height: 40.0,
