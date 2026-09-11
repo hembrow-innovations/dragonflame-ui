@@ -25,7 +25,6 @@ Load the matching skill before the work it covers.
 - **frontend-development**: TypeScript UI when this product needs it
 - **create-skill**: writing and editing skills
 
-This repo is **not** the Draconic toolchain. Do not treat those skills as the Loop for this product.
 
 ## Domain docs
 
