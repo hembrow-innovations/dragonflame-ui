@@ -2,7 +2,7 @@
 id: "task-256-red-green-embedder-packets"
 title: "Red-green: embedder pointer packets"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-255-red-green-press-wins"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-78-press-wins-arena"
 tags: []
 created_at: "2026-09-11T06:49:29Z"
-updated_at: "2026-09-11T06:49:29Z"
+updated_at: "2026-09-11T08:10:00Z"
 ---
 
 # Red-green: embedder pointer packets

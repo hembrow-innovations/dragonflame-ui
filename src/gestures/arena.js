@@ -70,6 +70,11 @@ export function GestureArena() {
 			flush(pointer);
 			enroll(pointer, member);
 		},
+		addPointer(packet) {
+			const e = byPointer.get(packet.pointer);
+			if (!e) return;
+			for (const m of e.members.slice()) m.member.addPointer(packet);
+		},
 		close(pointer) {
 			flush(pointer);
 			entry(pointer).closed = true;

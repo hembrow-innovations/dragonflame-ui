@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-256-red-green-embedder-packets**: archived red-green embedder pointer packets; arena fans out down, move, and up through `addPointer`; no public `PointerRouter`; not DOM `stopPropagation`; O2 `tests/gesture-arena/embedder-packets.test.mjs` pass.
 - **task-255-red-green-press-wins**: archived red-green press wins the arena; tap versus horizontal drag, onPress joins and fires; O1 `tests/gesture-arena/press-wins.test.mjs` pass.
 - **task-254-spec-gesture-arena**: archived gesture arena spec ladder; tap versus horizontal drag, onPress joins, embedder packets; O1 `tests/gesture-arena/press-wins.test.mjs` and O2 `tests/gesture-arena/embedder-packets.test.mjs` named.
 - **rounds-258-name-phase3-apis**: published sitting; first-tracer SemanticsNode, toStringDeep, measureText, loadFont named; freeze left to afk-plan.
