@@ -2,7 +2,7 @@
 id: "task-262-red-green-platform-view-slot"
 title: "Red-green: platform-view slot"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-261-red-green-canvas-default"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-79-oem-hatch-slot"
 tags: []
 created_at: "2026-09-11T07:41:56Z"
-updated_at: "2026-09-11T07:41:56Z"
+updated_at: "2026-09-11T08:01:42Z"
 ---
 
 # Red-green: platform-view slot
