@@ -16,9 +16,6 @@ Load the matching skill before the work it covers.
 - **spec**: purpose, contract, and test folders
 - **vault-pack**: small vault context pack before coding or planning
 - **tdd**: test-first work
-- **afk-plan**: one next slice plus its tasks from the map, then exit
-- **afk-verify**: re-run one met slice's oracles, file tickets for afk-plan, then exit
-- **afk-cycle**: `LOOP_COMMAND=afk-cycle node .loop/opencode-loop.mjs 200` runs plan, slice, and verify until idle
 - **to-slices**: publish slice notes from a settled grouping
 - **to-tasks**: publish the task pool from frozen slices
 - **to-tickets**: file inbound signals as tickets
