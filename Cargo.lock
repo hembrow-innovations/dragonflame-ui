@@ -353,6 +353,7 @@ name = "embedder"
 version = "0.1.0"
 dependencies = [
  "engine",
+ "raw-window-handle",
  "runtime",
  "winit",
 ]

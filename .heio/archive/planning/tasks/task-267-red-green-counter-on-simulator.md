@@ -2,7 +2,7 @@
 id: "task-267-red-green-counter-on-simulator"
 title: "Red-green: counter on iOS simulator"
 kind: task
-status: claimed
+status: completed
 mode: afk
 blocked_by:
   - "task-265-red-green-no-webview-no-js-engine"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-11T08:06:40Z"
-updated_at: "2026-09-11T08:36:09Z"
+updated_at: "2026-09-11T12:30:00Z"
 ---
 
 # Red-green: counter on iOS simulator
@@ -44,4 +44,4 @@ scope: tests/ named by that spec, plus hosts/ios/ and crates/embedder/ counter-o
 
 ## Gauntlet
 
-- round 1: `node --test tests/ios-embedder/counter-on-simulator.test.mjs` win. Promise the counter runs on iOS simulator on the engine canvas path.
+- round 1: `node --test tests/ios-embedder/counter-on-simulator.test.mjs` win. Promises `ios-embedder.window:embedder-owns`, `ios-embedder.vsync:embedder-supplies`, `ios-embedder.gpu:engine-owns`, `ios-embedder.counter:draw-lists`, and `ios-embedder.triples:simulator`.

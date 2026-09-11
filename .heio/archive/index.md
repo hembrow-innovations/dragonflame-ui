@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-267-red-green-counter-on-simulator**: archived red-green iOS counter on simulator; thin Xcode shell at `hosts/ios/` shows counter text through engine draw lists; UIView is not the default leaf; O1 `tests/ios-embedder/counter-on-simulator.test.mjs` pass.
 - **native-if-funded**: closed; desktop vsync, draw a rect, press, and OEM slices met.
 - **ticket-171-gesture-apis-unnamed**: closed; first-tracer gesture APIs named; slice-78 met.
 - **ticket-66-ffi-commands-unnamed**: closed; first-tracer packed scene submit; slice-77 met.

@@ -9,6 +9,7 @@ edition = "2021"
 engine = { path = "crates/engine" }
 runtime = { path = "crates/runtime" }
 pollster = "0.4"
+raw-window-handle = "0.6"
 taffy = "0.14"
 wgpu = "24"
 winit = "0.30"

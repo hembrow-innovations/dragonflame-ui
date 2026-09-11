@@ -176,6 +176,13 @@
 				OTHER_LDFLAGS = (
 					"-lembedder",
 					"-lobjc",
+					"-lc++",
+					"-framework",
+					Metal,
+					"-framework",
+					Security,
+					"-framework",
+					CoreGraphics,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ui.dragonflame.host;
 				PRODUCT_NAME = Dragonflame;
@@ -199,6 +206,13 @@
 				OTHER_LDFLAGS = (
 					"-lembedder",
 					"-lobjc",
+					"-lc++",
+					"-framework",
+					Metal,
+					"-framework",
+					Security,
+					"-framework",
+					CoreGraphics,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ui.dragonflame.host;
 				PRODUCT_NAME = Dragonflame;

@@ -1,8 +1,37 @@
 use std::ffi::{c_char, c_int, c_void};
-use std::ptr;
+use std::io::Write;
+use std::ptr::{self, NonNull};
+use std::sync::atomic::{AtomicBool, AtomicPtr, Ordering};
+
+use raw_window_handle::{
+    DisplayHandle, HandleError, HasDisplayHandle, HasWindowHandle, RawDisplayHandle,
+    RawWindowHandle, UiKitDisplayHandle, UiKitWindowHandle, WindowHandle,
+};
 
 type Id = *mut c_void;
 type Sel = *const c_void;
+
+static SURFACE: AtomicPtr<c_void> = AtomicPtr::new(ptr::null_mut());
+static DONE: AtomicBool = AtomicBool::new(false);
+
+struct IosGpuSurface {
+    view: NonNull<c_void>,
+}
+
+unsafe impl Send for IosGpuSurface {}
+unsafe impl Sync for IosGpuSurface {}
+
+impl HasWindowHandle for IosGpuSurface {
+    fn window_handle(&self) -> Result<WindowHandle<'_>, HandleError> {
+        Ok(unsafe { WindowHandle::borrow_raw(RawWindowHandle::UiKit(UiKitWindowHandle::new(self.view))) })
+    }
+}
+
+impl HasDisplayHandle for IosGpuSurface {
+    fn display_handle(&self) -> Result<DisplayHandle<'_>, HandleError> {
+        Ok(unsafe { DisplayHandle::borrow_raw(RawDisplayHandle::UiKit(UiKitDisplayHandle::new())) })
+    }
+}
 
 #[link(name = "objc")]
 extern "C" {
@@ -41,18 +70,21 @@ unsafe fn class(name: &'static [u8]) -> Id {
 }
 
 #[repr(C)]
+#[derive(Clone, Copy)]
 struct CGPoint {
     x: f64,
     y: f64,
 }
 
 #[repr(C)]
+#[derive(Clone, Copy)]
 struct CGSize {
     width: f64,
     height: f64,
 }
 
 #[repr(C)]
+#[derive(Clone, Copy)]
 struct CGRect {
     origin: CGPoint,
     size: CGSize,
@@ -87,6 +119,11 @@ unsafe fn msg_frame(obj: Id, name: &'static [u8], frame: CGRect) -> Id {
     send(obj, sel(name), frame)
 }
 
+unsafe fn msg_f64(obj: Id, name: &'static [u8]) -> f64 {
+    let send: unsafe extern "C" fn(Id, Sel) -> f64 = std::mem::transmute(objc_msgSend as *const ());
+    send(obj, sel(name))
+}
+
 unsafe fn nsstring(text: &'static [u8]) -> Id {
     msg1(
         class(b"NSString\0"),
@@ -102,7 +139,16 @@ unsafe extern "C" fn did_finish_launching(this: Id, _cmd: Sel, _app: Id, _opts: 
         b"initWithFrame:\0",
         bounds,
     );
+    let vc = msg0(msg0(class(b"UIViewController\0"), b"alloc\0"), b"init\0");
+    let view = msg_frame(
+        msg0(class(b"UIView\0"), b"alloc\0"),
+        b"initWithFrame:\0",
+        bounds,
+    );
+    msg1(vc, b"setView:\0", view);
+    msg1(window, b"setRootViewController:\0", vc);
     msg0(window, b"makeKeyAndVisible\0");
+    SURFACE.store(view, Ordering::SeqCst);
     let link = msg2(
         class(b"CADisplayLink\0"),
         b"displayLinkWithTarget:selector:\0",
@@ -119,7 +165,46 @@ unsafe extern "C" fn did_finish_launching(this: Id, _cmd: Sel, _app: Id, _opts: 
     1
 }
 
-unsafe extern "C" fn on_vsync(_this: Id, _cmd: Sel, _link: Id) {}
+unsafe extern "C" fn on_vsync(_this: Id, _cmd: Sel, _link: Id) {
+    if DONE.swap(true, Ordering::SeqCst) {
+        return;
+    }
+    let Some(view) = NonNull::new(SURFACE.load(Ordering::SeqCst)) else {
+        std::process::exit(1);
+    };
+    let scale = msg_f64(msg0(class(b"UIScreen\0"), b"mainScreen\0"), b"scale\0");
+    let bounds = msg_rect(view.as_ptr(), b"bounds\0");
+    let width = (bounds.size.width * scale) as u32;
+    let height = (bounds.size.height * scale) as u32;
+    engine::submit(engine::Scene {
+        max_width: 80.0,
+        max_height: 40.0,
+        rect: engine::Rect {
+            width: 100.0,
+            height: 50.0,
+            color: engine::Color {
+                r: 1.0,
+                g: 0.0,
+                b: 0.0,
+                a: 1.0,
+            },
+        },
+    });
+    println!("counter-text 0");
+    println!("draw-list {}", engine::recorded_draw_list().len());
+    println!("default-host {}", engine::recorded_host());
+    let _ = std::io::stdout().flush();
+    let surface = IosGpuSurface { view };
+    match engine::present_one_vsync(&surface, width, height) {
+        Ok(()) => {
+            println!("gpu-surface");
+            println!("vsync");
+            let _ = std::io::stdout().flush();
+            std::process::exit(0);
+        }
+        Err(_) => std::process::exit(1),
+    }
+}
 
 unsafe fn register_delegate() -> Id {
     let cls = objc_allocateClassPair(
