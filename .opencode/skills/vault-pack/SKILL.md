@@ -1,6 +1,6 @@
 ---
 name: vault-pack
-description: Assemble a small vault context pack before coding or planning. Purpose, contracts, ADRs, and the unit file. Use when starting a ready task, AFK step 0, behaviour work, or when the agent needs the right docs without grepping half the vault. Not embeddings. Path pack from area plus token rank when a packer exists.
+description: Assemble a small vault context pack before coding or planning. Purpose, contracts, ADRs, and the unit file. Use when starting a ready task, AFK step 0, behaviour work, or when the agent needs the right docs without grepping half the vault. Not embeddings. Path pack from area plus token rank. Spawn explore when no packer exists.
 ---
 
 # Vault pack
@@ -11,7 +11,7 @@ Load **management** before writing tracker notes. Load **docs** for committed tr
 
 ## Discover first
 
-1. Search for a project packer. Look in package scripts, justfile, Makefile, and `scripts/` for names like `vault:pack`, `vault-pack`, or `docs:pack`. This project's packer is `pnpm vault:pack`.
+1. Search for a project packer. Look in package scripts, justfile, Makefile, and `scripts/` for names like `vault:pack`, `vault-pack`, or `docs:pack`. Use a packer only when that name exists. This repo has no packer until one is added.
 2. Planning docs live under `.heio/planning`. Follow **management**:
 	- **intent**: `.heio/planning/intent.md`
 	- **roadmap**: `.heio/planning/roadmap.md`
@@ -39,8 +39,8 @@ Use the packer you find. Do not invent a new packer script.
 1. Resolve inputs from the unit file or the user message.
    - `area` from frontmatter. Required for a tight pack. If missing, infer from paths in the brief.
    - Optional query. Title plus Agent Brief excerpt.
-2. If a packer exists, run it. Pass `--unit` with the unit path you resolved. Or pass `--area` and `--query`. Add `--json` if you need machine output. Read `--help` for that script's flags. This project's command is `pnpm vault:pack`.
-3. If no packer exists, assemble the pack by hand. Do not write a script.
+2. If a packer exists, run it. Pass `--unit` with the unit path you resolved. Or pass `--area` and `--query`. Add `--json` if you need machine output. Read `--help` for that script's flags.
+3. If no packer exists, spawn one `explore` subagent to assemble the pack. Inline the unit path, area, and query. It returns the Output shape block only. Do not write a packer script. If spawn is missing, assemble that block in the parent.
    - Read the unit via **management**.
    - Search **docs** under `docs/` for that area's purpose, contracts, ADRs, and guides. Load **spec** for the ladder.
    - Must-read is purpose, the matching contracts, and any intent or gotchas guide that exists.

@@ -14,6 +14,7 @@ Load the matching skill before the work it covers.
 - **diagnose**: hard bugs and performance regressions
 - **gauntlet-loop**: bounded implement-then-critic until the bar wins
 - **spec**: purpose, contract, and test folders
+- **afk-plan**: one frozen slice and its AFK tasks from the map
 - **vault-pack**: small vault context pack before coding or planning
 - **tdd**: test-first work
 - **to-slices**: publish slice notes from a settled grouping

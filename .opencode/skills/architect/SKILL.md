@@ -76,6 +76,10 @@ When you scrap:
 3. Subtract before adding, per the **subtract-before-you-add** principle skill. The new sketch should be smaller than the old one before it grows.
 4. Return to Phase B and re-run arena.
 
+## AFK sketch
+
+When `/afk-plan` asks for a sketch: Ground from the vault pack. Spawn two candidate subagents. Synthesize. Stop. Do not Implement. Do not Scrap. Do not run `/arena`. Do not load **how** or **why**. Read `references/rationale-template.md` and `references/design-red-flags.md` only. `/afk-plan` owns the sitting and does not load this skill.
+
 ## Outputs
 
 The caller's usage is written first and the type sketch derived from it. One file with new types and signatures for small changes; module map plus type definitions for larger work. The rationale ships alongside, shaped per `references/rationale-template.md`, including the usage sketch and the synthesis decision.

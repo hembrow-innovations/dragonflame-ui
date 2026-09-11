@@ -10,15 +10,15 @@ acceptance/oracles).
 
 Arguments: $ARGUMENTS
 
-Do not run scripts under `.loop/`. Glob and read the notes.
+Do not run scripts under `.loop/`. `.heio/` is hidden. Glob skips it. Read a known path, Grep, or bash `ls`.
 
-- If a task path/name is given, glob that file under `.heio/planning/tasks/`.
-- Otherwise glob `.heio/planning/tasks/task-*.md` and pick the lowest-numbered unblocked `ready` + `mode: afk` task.
+- If a task path/name is given, Read that file under `.heio/planning/tasks/`.
+- Otherwise spawn one `explore` subagent to name the lowest-numbered unblocked `ready` + `mode: afk` task. If none, stop. Parent does not read every task body to decide.
 
 Workflow (follow AGENTS.md and project conventions throughout):
 
-1. Claim first. Glob the task file. Confirm `kind: task`, `status: ready`, `mode: afk`, and every `blocked_by` id is `completed` (check `.heio/archive/planning/tasks/` too). Set `status: claimed` and stamp `updated_at`. Re-read. If it is not claimable, stop. Do not start another task. Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree.
-2. Read the claimed task file. **Vault pack:** load skill **vault-pack** and run `pnpm vault:pack -- --unit <path-to-unit.md>`; **Read every Must-read path in full** (intent ladder, agent-gotchas, purpose + contracts for `area`). Skim Related only if needed. Do not freestyle-grep half the vault. Then any relevant slice under `.heio/planning/sprints/<sprint_name>/slice-<NN>-<slug>.md`. Broad code exploration → subagent summary only.
+1. Claim first. Read the task file. Confirm `kind: task`, `status: ready`, `mode: afk`, and every `blocked_by` id is `completed` (check `.heio/archive/planning/tasks/` too). Set `status: claimed` and stamp `updated_at`. Re-read. If it is not claimable, stop. Do not start another task. Same checkout as `/afk-plan` and `/afk-verify`. No git branch. No worktree. Read `.opencode/skills/afk-plan/references/lanes.md` before allocating ids or committing.
+2. Read the claimed task file. Load **vault-pack**. Spawn one `explore` subagent to assemble the pack for that unit (see **vault-pack**). **Read every Must-read path in full**. Skim Related only if needed. Do not freestyle-grep half the vault. Then any relevant slice under `.heio/planning/sprints/<sprint_name>/slice-<NN>-<slug>.md`. Broad code exploration → subagent summary only.
 3. Implement the unit 100% — TDD, no stubs, no skipped scope. Respect its scope (a task's "Scope (may touch)" list, or the ticket's `## Agent Brief`); do not make repo-wide changes. Behaviour work must **name contract promise ids** from the pack; never invent product rules. UI must use the ui packages: 
 	- React Native packages: `ui-components-native`/`ui-infra-native`, 
 	- Web packages: `ui-components-web`/`ui-infra-web`, 

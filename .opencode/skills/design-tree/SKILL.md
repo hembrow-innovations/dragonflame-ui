@@ -22,6 +22,8 @@ Name the **counterpart**. The **notebook** follows. Say both in one line before 
 - **panel**. Read [references/counterpart-panel.md](references/counterpart-panel.md) before round one.
 - The tree will not fit in one sitting. Read [references/wayfinder.md](references/wayfinder.md) and follow that file instead of steps 2–3.
 
+AFK sittings use `/afk-plan`. That sitting reads [references/counterpart-product.md](references/counterpart-product.md) only. Do not load this skill from `/afk-plan`.
+
 Done when counterpart and notebook are named, or when wayfinder has taken over.
 
 ## 2. Frontier

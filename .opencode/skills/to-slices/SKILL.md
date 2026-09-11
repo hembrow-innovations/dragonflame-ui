@@ -33,7 +33,7 @@ AFK sittings publish without asking. If a live user sitting already confirmed, p
 Copy `templates/slice.md` from **management**. **management** owns `<NN>`, placement, and frontmatter.
 
 - Path: `.heio/planning/sprints/<sprint_name>/slice-<NN>-<slug>.md`
-- Status: `frozen` when Done and `EXPECT:` exist. Otherwise leave `shaping` and do not publish tasks for it
+- Status: `frozen` when Done and `EXPECT:` exist. AFK-plan writes those from the location destination plus `docs/` or the smallest reversible default, then freezes. A live user sitting may leave `shaping` when oracles are still missing; AFK-plan does not.
 - `blocked_by` lists other slice ids. Publish blockers first so wikilinks are real
 - Write oracles on the file in the same pass
 - Link the slice from `shape.md` Slices in

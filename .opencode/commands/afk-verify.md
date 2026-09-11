@@ -4,18 +4,17 @@ agent: build
 argument-hint: "[slice | task | continue | status]"
 ---
 
-Load **afk-verify**. Run one sitting, then exit.
+Run one sitting, then exit.
 
 Arguments: $ARGUMENTS
 
-Do not run scripts under `.loop/`. Glob and read the notes.
+Do not run scripts under `.loop/`. `.heio/` is hidden. Glob skips it. Read a known path, Grep, or bash `ls`.
 
 - Empty or `continue`: lowest-numbered `met` slice not in the afk-verify ledger.
 - A slice or task id: that slice, if it is `met`.
 - `status`: progress only. No tests. No tickets.
 
 Do not implement product code. Do not claim a ready task. Do not create a git branch or worktree. Same checkout as the plan and drain loops. One met slice, then exit.
-
 
 One sitting. One `met` slice. Re-run oracles, run an example, critic-confirm, file tickets. Then exit. Planner is `/afk-plan`. Drain is `/afk-task` or `/afk-slice`. This sitting does not implement.
 
@@ -31,13 +30,13 @@ Verify writes: new `open` tickets, the afk-verify round ledger. Verify never wri
 
 Done when one `met` slice is named, or the sitting is IDLE.
 
-Glob `.heio/planning/sprints/**/slice-*.md` and `.heio/archive/planning/sprints/**/slice-*.md`. Glob rounds `*afk-verify*` under planning and archive. Read frontmatter and the ledger. Do not run `.loop` scripts.
+List slices with bash `ls` under `.heio/planning/sprints/` and `.heio/archive/planning/sprints/`. Find rounds tagged `afk-verify` with Grep. Read frontmatter and the ledger. Do not run `.loop` scripts. Spawn one `explore` subagent to name the due `met` slice when arguments are empty. Parent does not scan every slice body.
 
 Arguments:
 
 - Empty or `continue`: lowest-numbered `status: met` slice whose id is not a ledger line (`- **slice-...**:`).
 - A slice id: that slice if `status: met`. Re-audit is allowed.
-- A task id: glob the task, take its `slice:` field, then pick that slice if `met`.
+- A task id: Read the task, take its `slice:` field, then pick that slice if `met`.
 - `status`: count `met` slices vs ledger lines. No tests. No tickets. `VERDICT: IDLE`.
 
 If none is due, end with `VERDICT: IDLE`. Do not pick `frozen`, `active`, `shaping`, or `abandoned`. Do not claim a task.

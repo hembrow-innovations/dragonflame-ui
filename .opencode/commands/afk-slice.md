@@ -9,10 +9,10 @@ Load **management** for paths, status, and frontmatter. A slice lives at `.heio/
 
 Arguments: $ARGUMENTS
 
-Do not run scripts under `.loop/`. Glob and read the notes.
+Do not run scripts under `.loop/`. `.heio/` is hidden. Glob skips it. Read a known path, Grep, or bash `ls`.
 
-- If a slice path, id, or slug is given, glob that file.
-- Otherwise glob `.heio/planning/sprints/**/slice-*.md`. Pick the lowest-numbered `frozen` or `active` slice whose `blocked_by` is `met` or `abandoned` and whose Pool has at least one unblocked `ready` + `mode: afk` task. If none, IDLE.
+- If a slice path, id, or slug is given, Read that file.
+- Otherwise spawn one `explore` subagent to name the lowest-numbered `frozen` or `active` slice whose `blocked_by` is `met` or `abandoned` and whose Pool has at least one unblocked `ready` + `mode: afk` task. If none, IDLE. Parent does not read every slice body to decide.
 
 Do not start a `shaping` slice. Do not start a slice whose `blocked_by` ids are not `met` or `abandoned`.
 

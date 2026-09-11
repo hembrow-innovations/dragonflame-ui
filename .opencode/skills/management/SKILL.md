@@ -13,6 +13,10 @@ There is no GitHub Issues. There is no plan file. `docs/` is the committed sourc
 
 Search `.heio/` first, including `archive/`. Copy the matching template. Place it per the tree.
 
+## Finding notes
+
+`.heio/` is a hidden directory. Glob skips it. Read a known path, Grep, or bash `ls` a known folder. Glob returning nothing under `.heio/` means the skip, not an empty tree.
+
 ## Working tree
 
 ```text
