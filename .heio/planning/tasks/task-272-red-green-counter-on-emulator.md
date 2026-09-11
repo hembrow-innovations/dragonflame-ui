@@ -2,7 +2,7 @@
 id: "task-272-red-green-counter-on-emulator"
 title: "Red-green: counter on Android emulator"
 kind: task
-status: ready
+status: claimed
 mode: afk
 blocked_by:
   - "task-270-red-green-no-webview-no-js-engine"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-81-android-counter"
 tags: []
 created_at: "2026-09-11T08:52:52Z"
-updated_at: "2026-09-11T08:52:52Z"
+updated_at: "2026-09-11T09:20:10Z"
 ---
 
 # Red-green: counter on Android emulator
