@@ -2,7 +2,7 @@
 id: "task-278-red-green-per-host-metrics"
 title: "Red-green: per-host metrics seam"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-276-spec-talk-and-measure"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-83-talk-and-measure"
 tags: []
 created_at: "2026-09-11T10:08:39Z"
-updated_at: "2026-09-11T10:08:39Z"
+updated_at: "2026-09-11T21:16:03Z"
 ---
 
 # Red-green: per-host metrics seam
@@ -44,7 +44,7 @@ scope: tests/ named by that spec, plus the measureText and loadFont seam this ta
 
 ## Gauntlet
 
-- round 1: `node --test tests/talk-and-measure/per-host-metrics.test.mjs` win. Promise `measureText` is per-host and `loadFont` is not on the UI thread.
+- round 1: `node --test tests/talk-and-measure/per-host-metrics.test.mjs` win. Promises `talk-and-measure.metrics:measure-text` and `talk-and-measure.fonts:load-on-io`.
 
 ## Agent Brief
 
@@ -67,9 +67,9 @@ O2 passes: `measureText` may disagree across DOM, UIKit, and the engine. CSS is 
 - `loadFont` on the IO thread
 
 **Acceptance criteria:**
-- [ ] `node --test tests/talk-and-measure/per-host-metrics.test.mjs` passes
-- [ ] CSS is not treated as iOS layout
-- [ ] Promise ids from the spec still hold
+- [x] `node --test tests/talk-and-measure/per-host-metrics.test.mjs` passes
+- [x] CSS is not treated as iOS layout
+- [x] Promise ids from the spec still hold
 
 **Out of scope:**
 - O1 semantics dump

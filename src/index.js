@@ -13,3 +13,5 @@ export { StyleSheet } from "./style/stylesheet.js";
 export { GestureArena } from "./gestures/arena.js";
 export { TapGestureRecognizer, HorizontalDragGestureRecognizer } from "./gestures/recognizers.js";
 export { SemanticsNode } from "./semantics/node.js";
+export { measureText } from "./text/measure-text.js";
+export { loadFont } from "./text/load-font.js";
