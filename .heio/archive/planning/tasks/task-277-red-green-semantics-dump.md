@@ -2,7 +2,7 @@
 id: "task-277-red-green-semantics-dump"
 title: "Red-green: semantics tree dump"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-276-spec-talk-and-measure"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-83-talk-and-measure"
 tags: []
 created_at: "2026-09-11T10:08:39Z"
-updated_at: "2026-09-11T10:08:39Z"
+updated_at: "2026-09-11T21:08:57Z"
 ---
 
 # Red-green: semantics tree dump
@@ -44,7 +44,7 @@ scope: tests/ named by that spec, plus the semantics tree this task must add
 
 ## Gauntlet
 
-- round 1: `node --test tests/talk-and-measure/semantics-dump.test.mjs` win. Promise a `SemanticsNode` tree dumps with `toStringDeep` beside the render tree.
+- round 1: `node --test tests/talk-and-measure/semantics-dump.test.mjs` win. Promises `talk-and-measure.tree:semantics-node`, `talk-and-measure.props:reuse`, `talk-and-measure.tree:signals-do-not-replace`, and `talk-and-measure.tree:forbid-aria-only`.
 
 ## Agent Brief
 
@@ -67,9 +67,9 @@ O1 passes: a `SemanticsNode` tree sits beside the render tree and dumps with `to
 - Reuse of `testID` and `accessibilityLabel`
 
 **Acceptance criteria:**
-- [ ] `node --test tests/talk-and-measure/semantics-dump.test.mjs` passes
-- [ ] No second native a11y prop set
-- [ ] Promise ids from the spec still hold
+- [x] `node --test tests/talk-and-measure/semantics-dump.test.mjs` passes
+- [x] No second native a11y prop set
+- [x] Promise ids from the spec still hold
 
 **Out of scope:**
 - O2 measureText and loadFont

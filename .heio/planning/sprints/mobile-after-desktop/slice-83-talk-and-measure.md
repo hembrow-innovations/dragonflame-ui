@@ -8,7 +8,7 @@ blocked_by:
   - "slice-80-ios-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T10:08:39Z"
+updated_at: "2026-09-11T21:08:57Z"
 ---
 
 # Talk and measure
@@ -31,10 +31,10 @@ ARIA-only DOM as the native a11y model. Pretending CSS on iOS. Inventing UIKit c
 
 ## Oracle checklist
 
-- [ ] O1: semantics tree dump
+- [x] O1: semantics tree dump
   CHECK: node --test tests/talk-and-measure/semantics-dump.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/talk-and-measure/semantics-dump.test.mjs; 1 pass 0 fail
 - [ ] O2: per-host metrics seam
   CHECK: node --test tests/talk-and-measure/per-host-metrics.test.mjs
   EXPECT: pass

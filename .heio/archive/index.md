@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-277-red-green-semantics-dump**: archived red-green semantics tree dump; SemanticsNode toStringDeep beside the render tree; reuse testID and accessibilityLabel; signals do not replace it; not ARIA-only DOM; O1 `tests/talk-and-measure/semantics-dump.test.mjs` pass.
 - **task-276-spec-talk-and-measure**: archived talk-and-measure spec ladder; SemanticsNode dump toStringDeep, reuse testID and accessibilityLabel, measureText, loadFont on the IO thread; O1 `tests/talk-and-measure/semantics-dump.test.mjs`, O2 `tests/talk-and-measure/per-host-metrics.test.mjs` named.
 - **task-267-red-green-counter-on-simulator**: archived red-green iOS counter on simulator; thin Xcode shell at `hosts/ios/` shows counter text through engine draw lists; UIView is not the default leaf; O1 `tests/ios-embedder/counter-on-simulator.test.mjs` pass.
 - **native-if-funded**: closed; desktop vsync, draw a rect, press, and OEM slices met.

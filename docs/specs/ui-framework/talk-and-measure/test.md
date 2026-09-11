@@ -34,7 +34,7 @@ Tests for this folder. They will lock `talk-and-measure.tree:semantics-node`, `t
 ## Gaps
 
 - No test yet for `talk-and-measure.embedder:owns-plumbing`, `talk-and-measure.surface:forbid-unnamed`, or `talk-and-measure.engine:forbid-skia-text`.
-- The oracle tests are not in the repo yet. This folder is ladder only.
+- O2 `tests/talk-and-measure/per-host-metrics.test.mjs` is not in the repo yet.
 - Web a11y and test ID oracles stay on [[test-a11y-test-ids]].
 - iOS host honesty oracles stay on [[test-ios-embedder]].
 - Six-leaf oracles stay on [[test-leaf-kit]].
