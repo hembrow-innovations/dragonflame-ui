@@ -1,6 +1,7 @@
 ---
 name: afk-plan
 description: AFK-plan one frozen slice and its AFK tasks from a ticket, shaping slice, or unnamed location grain. Use when running /afk-plan, an AFK planning sitting, or freezing one slice without implementing.
+disable-model-invocation: true
 ---
 
 # AFK-plan

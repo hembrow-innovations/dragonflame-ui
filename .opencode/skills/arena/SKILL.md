@@ -1,6 +1,7 @@
 ---
 name: arena
 description: "Arena: N parallel attempts, pick a base, graft the losers. Use for /arena or when another skill needs a synthesized candidate package."
+disable-model-invocation: true
 ---
 
 # Arena
