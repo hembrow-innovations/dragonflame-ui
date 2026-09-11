@@ -9,6 +9,9 @@ android {
         applicationId = "ui.dragonflame.host"
         minSdk = 24
         targetSdk = 35
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
     }
     sourceSets.getByName("main") {
         jniLibs.srcDir("src/main/jniLibs")

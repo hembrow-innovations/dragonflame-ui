@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-271-red-green-arm64-v8a-in-scope**: archived red-green Android arm64-v8a in scope; `aarch64-linux-android` plus Gradle abiFilters arm64-v8a; emulator-only is not done; O3 `tests/android-embedder/arm64-v8a-in-scope.test.mjs` pass.
 - **task-270-red-green-no-webview-no-js-engine**: archived red-green Android host honesty; thin Gradle shell at `hosts/android/` links embedder android module; no WebView; no Hermes, JSC, or V8; tracing GC stays; O2 `tests/android-embedder/no-webview-no-js-engine.test.mjs` pass.
 - **task-269-spec-android-embedder**: archived Android embedder spec ladder; thin Gradle shell, no WebView, no JS engine, x86_64 emulator plus arm64-v8a, counter text through engine draw lists; O1 `tests/android-embedder/counter-on-emulator.test.mjs`, O2 `tests/android-embedder/no-webview-no-js-engine.test.mjs`, O3 `tests/android-embedder/arm64-v8a-in-scope.test.mjs` named.
 - **task-266-red-green-arm64-device-in-scope**: archived red-green iOS arm64 device in scope; `aarch64-apple-ios` plus Xcode arm64 ARCHS; simulator-only is not done; O3 `tests/ios-embedder/arm64-device-in-scope.test.mjs` pass.
