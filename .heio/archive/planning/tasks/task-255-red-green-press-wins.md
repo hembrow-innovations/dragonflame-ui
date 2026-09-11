@@ -2,7 +2,7 @@
 id: "task-255-red-green-press-wins"
 title: "Red-green: press wins the arena"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-254-spec-gesture-arena"
@@ -10,7 +10,7 @@ sprint: "native-if-funded"
 slice: "slice-78-press-wins-arena"
 tags: []
 created_at: "2026-09-11T06:49:29Z"
-updated_at: "2026-09-11T06:49:29Z"
+updated_at: "2026-09-11T07:31:24Z"
 ---
 
 # Red-green: press wins the arena
@@ -42,4 +42,4 @@ scope: tests/ named by that spec, plus src/gestures/ and pressable join this tas
 
 ## Gauntlet
 
-- round 1: `node --test tests/gesture-arena/press-wins.test.mjs` win. Promises named in the gesture arena contract for tap versus horizontal drag and `onPress` join.
+- round 1: `node --test tests/gesture-arena/press-wins.test.mjs` win. Promises `gesture-arena.compete:tap-vs-drag` and `gesture-arena.pressable:onpress-joins`.
