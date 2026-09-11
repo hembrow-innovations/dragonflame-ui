@@ -2,14 +2,14 @@
 id: "slice-80-ios-counter"
 title: "iOS counter"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T12:30:00Z"
+updated_at: "2026-09-11T20:50:53Z"
 ---
 
 # iOS counter
@@ -35,15 +35,15 @@ Starting mobile while desktop is still a WebView. Simulator-only as done. Androi
 - [x] O1: counter on iOS simulator
   CHECK: node --test tests/ios-embedder/counter-on-simulator.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/ios-embedder/counter-on-simulator.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/ios-embedder/counter-on-simulator.test.mjs; 1 pass 0 fail (slice re-run)
 - [x] O2: no WebView and no JS engine
   CHECK: node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs; 2 pass 0 fail
+  EVIDENCE: node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs; 2 pass 0 fail (slice re-run)
 - [x] O3: arm64 device in scope
   CHECK: node --test tests/ios-embedder/arm64-device-in-scope.test.mjs
   EXPECT: pass
-  EVIDENCE: node --test tests/ios-embedder/arm64-device-in-scope.test.mjs; 1 pass 0 fail
+  EVIDENCE: node --test tests/ios-embedder/arm64-device-in-scope.test.mjs; 1 pass 0 fail (slice re-run)
 
 ## Pool
 
