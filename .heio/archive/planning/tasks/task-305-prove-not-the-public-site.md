@@ -2,14 +2,14 @@
 id: "task-305-prove-not-the-public-site"
 title: "Prove not the public site"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-304-not-the-public-site"
 tags: []
 created_at: "2026-09-12T12:10:00Z"
-updated_at: "2026-09-12T12:10:00Z"
+updated_at: "2026-09-12T13:20:00Z"
 ---
 
 # Prove not the public site
@@ -68,10 +68,15 @@ The oracle command passes. One site-boundary prove: this checkout is the library
 - No public fence helper, PublicSite type, or Start export
 
 **Acceptance criteria:**
-- [ ] The oracle command passes
-- [ ] The named test owns library-vs-site, no in-tree public-site app, and renderer non-ownership
-- [ ] No public fence helper
-- [ ] Name, library-product, library-first, and no-empty-crate tests still pass
+- [x] The oracle command passes
+- [x] The named test owns library-vs-site, no in-tree public-site app, and renderer non-ownership
+- [x] No public fence helper
+- [x] Name, library-product, library-first, and no-empty-crate tests still pass
+
+## Gauntlet
+
+- **round 1**: CHECK `node --test --test-name-pattern "public site stays TanStack Start and is not a rewrite destination" tests/git-package/git-package.test.mjs` lose. Renderer assert ran after `sites` was already empty.
+- **round 2**: same CHECK win. One policy evaluates library export, no in-tree site app, and renderer non-ownership before assert. No public fence helper. Name, library-product, library-first, and no-empty-crate tests pass.
 
 **Out of scope:**
 - Editing [[contract-git-package]]
