@@ -2,7 +2,7 @@
 id: "task-274-red-green-packaged-binary"
 title: "Red-green: packaged binary exists"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-273-spec-store-packaging"
@@ -12,7 +12,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-82-store-binaries"
 tags: []
 created_at: "2026-09-11T10:05:49Z"
-updated_at: "2026-09-11T10:05:49Z"
+updated_at: "2026-09-12T04:07:33Z"
 ---
 
 # Red-green: packaged binary exists
@@ -45,7 +45,7 @@ scope: tests/ named by that spec, plus hosts/ios/ and hosts/android/ packaging p
 
 ## Gauntlet
 
-- round 1: `node --test tests/store-packaging/packaged-binary.test.mjs` win. Promise a packaged binary hangs off the thin shells.
+- round 1: `node --test tests/store-packaging/packaged-binary.test.mjs` win. Promise `store-packaging.artifact:packaged-binary`.
 
 ## Agent Brief
 
@@ -67,9 +67,9 @@ O1 passes: a packaged binary artifact hangs off those shells. Source text does n
 - Packaging hanging off the existing thin shells, not a Flutter embedder and not a new empty crate
 
 **Acceptance criteria:**
-- [ ] `node --test tests/store-packaging/packaged-binary.test.mjs` passes
-- [ ] Stores and formats stay unnamed
-- [ ] Promise ids from the spec still hold
+- [x] `node --test tests/store-packaging/packaged-binary.test.mjs` passes
+- [x] Stores and formats stay unnamed
+- [x] Promise ids from the spec still hold
 
 **Out of scope:**
 - O2 not-OTA proof
