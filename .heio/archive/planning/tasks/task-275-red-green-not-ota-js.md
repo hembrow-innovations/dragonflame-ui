@@ -2,7 +2,7 @@
 id: "task-275-red-green-not-ota-js"
 title: "Red-green: not OTA JS"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-273-spec-store-packaging"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-82-store-binaries"
 tags: []
 created_at: "2026-09-11T10:05:49Z"
-updated_at: "2026-09-11T10:05:49Z"
+updated_at: "2026-09-12T04:13:36Z"
 ---
 
 # Red-green: not OTA JS
@@ -45,7 +45,7 @@ scope: tests/ named by that spec, plus the packaging path this task must keep of
 
 ## Gauntlet
 
-- round 1: `node --test tests/store-packaging/not-ota-js.test.mjs` win. Promise native updates are new binaries, not Expo-style OTA of a JS bundle.
+- round 1: `node --test tests/store-packaging/not-ota-js.test.mjs` win. Promise `store-packaging.updates:new-binaries`.
 
 ## Agent Brief
 
@@ -67,9 +67,9 @@ O2 passes: this tracer's native update path is new binaries, not an OTA JS bundl
 - Native packaging update path hanging off the thin shells
 
 **Acceptance criteria:**
-- [ ] `node --test tests/store-packaging/not-ota-js.test.mjs` passes
-- [ ] Does not re-own [[purpose-absence]] hot-reload OTA
-- [ ] Promise ids from the spec still hold
+- [x] `node --test tests/store-packaging/not-ota-js.test.mjs` passes
+- [x] Does not re-own [[purpose-absence]] hot-reload OTA
+- [x] Promise ids from the spec still hold
 
 **Out of scope:**
 - O1 packaged-binary proof
