@@ -2,12 +2,12 @@
 id: "slice-307-layout-tests-later"
 title: "Layout tests later"
 kind: slice
-status: active
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T13:00:00Z"
-updated_at: "2026-09-12T17:45:00Z"
+updated_at: "2026-09-12T18:00:00Z"
 ---
 
 # Layout tests later
