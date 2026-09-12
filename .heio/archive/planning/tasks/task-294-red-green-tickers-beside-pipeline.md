@@ -2,7 +2,7 @@
 id: "task-294-red-green-tickers-beside-pipeline"
 title: "Red-green tickers beside pipeline"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-293-spec-tickers-beside-pipeline"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-292-tickers-beside-pipeline"
 tags: []
 created_at: "2026-09-12T09:20:00Z"
-updated_at: "2026-09-12T09:20:00Z"
+updated_at: "2026-09-12T05:28:19Z"
 ---
 
 # Red-green tickers beside pipeline
@@ -65,10 +65,15 @@ The two oracle commands pass. Callers still import `Clock`. Tickers are not pipe
 - No public Ticker, SchedulerBinding, or AnimationController
 
 **Acceptance criteria:**
-- [ ] `node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs` passes
-- [ ] `node --test tests/animation-clocks/no-engine-animation-state.test.mjs` passes
-- [ ] No public Ticker, SchedulerBinding, or AnimationController
-- [ ] rAF clock tests still pass
+- [x] `node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs` passes
+- [x] `node --test tests/animation-clocks/no-engine-animation-state.test.mjs` passes
+- [x] No public Ticker, SchedulerBinding, or AnimationController
+- [x] rAF clock tests still pass
+
+## Gauntlet
+
+- **round 1**: `node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs` and `node --test tests/animation-clocks/no-engine-animation-state.test.mjs`; lose; arena typeof after tick did not prove a tick is not a gesture pass
+- **round 2**: same commands plus `node --test tests/animation-clocks/raf-clock.test.mjs`; win; O1 1 pass 0 fail, O2 2 pass 0 fail, rAF 2 pass 0 fail
 
 **Out of scope:**
 - Native embedder vsync driving Clock

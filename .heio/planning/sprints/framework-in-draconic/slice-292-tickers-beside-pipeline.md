@@ -2,13 +2,13 @@
 id: "slice-292-tickers-beside-pipeline"
 title: "Tickers beside pipeline"
 kind: slice
-status: frozen
+status: active
 sprint: "framework-in-draconic"
 blocked_by:
   - "slice-74-raf-clock"
 tags: []
 created_at: "2026-09-12T09:20:00Z"
-updated_at: "2026-09-12T09:20:00Z"
+updated_at: "2026-09-12T05:28:19Z"
 ---
 
 # Tickers beside pipeline
@@ -31,14 +31,14 @@ Native embedder vsync driving `Clock`. Repeating rAF oracles. Repeating signals-
 
 ## Oracle checklist
 
-- [ ] O1: tickers beside pipeline
+- [x] O1: tickers beside pipeline
   CHECK: node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: engine does not own animation state
+  EVIDENCE: node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs; 1 pass 0 fail
+- [x] O2: engine does not own animation state
   CHECK: node --test tests/animation-clocks/no-engine-animation-state.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/animation-clocks/no-engine-animation-state.test.mjs; 2 pass 0 fail
 
 ## Pool
 
