@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-289-red-green-typed-leaf-ffi**: archived red-green typed AOT leaf FFI; native leaves are compile-time typed `repr(C)` structs behind the leaf adapter, not JS host objects or string tags; O1 `tests/aot-host-descriptors/typed-leaf-ffi.test.mjs` pass.
 - **task-288-spec-aot-host-descriptors**: archived aot-host-descriptors spec ladder; typed AOT leaf FFI, sync layout and measure on the Runtime job queue; O1 `tests/aot-host-descriptors/typed-leaf-ffi.test.mjs`, O2 `tests/aot-host-descriptors/sync-ui-layout.test.mjs` named.
 - **task-275-red-green-not-ota-js**: archived red-green native updates are new binaries not Expo-style OTA of a JS bundle; update path hangs off thin shells; O2 `tests/store-packaging/not-ota-js.test.mjs` pass.
 - **task-274-red-green-packaged-binary**: archived red-green packaged binary hanging off thin Xcode and Gradle shells; native host binary not a JS bundle; stores and formats unnamed; O1 `tests/store-packaging/packaged-binary.test.mjs` pass.

@@ -2,14 +2,14 @@
 id: "slice-287-aot-host-descriptors"
 title: "AOT host descriptors"
 kind: slice
-status: frozen
+status: active
 sprint: "framework-in-draconic"
 blocked_by:
   - "slice-77-draw-a-rect"
   - "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-12T08:30:00Z"
-updated_at: "2026-09-12T08:30:00Z"
+updated_at: "2026-09-12T16:50:00Z"
 ---
 
 # AOT host descriptors
@@ -32,10 +32,10 @@ A public HostConfig. A public ShadowTree. A public measure. Repeating no-JSI or 
 
 ## Oracle checklist
 
-- [ ] O1: typed leaf FFI
+- [x] O1: typed leaf FFI
   CHECK: node --test tests/aot-host-descriptors/typed-leaf-ffi.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/aot-host-descriptors/typed-leaf-ffi.test.mjs; 1 pass 0 fail
 - [ ] O2: sync UI layout
   CHECK: node --test tests/aot-host-descriptors/sync-ui-layout.test.mjs
   EXPECT: pass

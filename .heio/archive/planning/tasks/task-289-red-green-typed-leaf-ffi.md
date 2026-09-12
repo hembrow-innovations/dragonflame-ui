@@ -2,7 +2,7 @@
 id: "task-289-red-green-typed-leaf-ffi"
 title: "Red-green typed leaf FFI"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-288-spec-aot-host-descriptors"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-287-aot-host-descriptors"
 tags: []
 created_at: "2026-09-12T08:30:00Z"
-updated_at: "2026-09-12T08:30:00Z"
+updated_at: "2026-09-12T16:50:00Z"
 ---
 
 # Red-green typed leaf FFI
@@ -65,10 +65,10 @@ Native submits one packed scene of a colored rect. Host config honesty forbids J
 - Closed leaf kit stays the caller surface
 
 **Acceptance criteria:**
-- [ ] O1 command passes
-- [ ] No public HostConfig
-- [ ] No second extern C for descriptors
-- [ ] `host-config.steal:forbid-jsi` still holds
+- [x] O1 command passes
+- [x] No public HostConfig
+- [x] No second extern C for descriptors
+- [x] `host-config.steal:forbid-jsi` still holds
 
 **Out of scope:**
 - Sync UI layout oracle (next task)
