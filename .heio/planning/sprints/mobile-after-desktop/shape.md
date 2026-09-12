@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T23:43:50Z"
+updated_at: "2026-09-12T04:10:34Z"
 ---
 
 # Mobile after desktop
@@ -22,6 +22,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 - [[slice-83-talk-and-measure]]: semantics tree plus text metrics. blocked_by: [[slice-80-ios-counter]]. frozen
 - [[slice-84-platform-view-hatch]]: mobile view in the hatch slot. blocked_by: [[slice-79-oem-hatch-slot]] and [[slice-80-ios-counter]]. frozen
 - [[slice-300-desktop-first]]: mobile follows desktop honesty. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
+- [[slice-320-funding]]: mobile is pursued only if native UI is funded. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 
 ## Slices out
 
