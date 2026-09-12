@@ -8,7 +8,7 @@ blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T08:43:09Z"
-updated_at: "2026-09-12T08:43:09Z"
+updated_at: "2026-09-12T08:45:03Z"
 ---
 
 # Single UI thread
