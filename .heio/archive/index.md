@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-346-green-wrong-target**: archived green wrong-target; private renderer gate hard-errors `document`; no public `compile`, `document`, or Metal; O1 `tests/renderer-portability/portable-wrong-target.test.mjs` pass.
 - **task-345-red-wrong-target**: archived red wrong-target; importing document from portable code hard-errors without a product `compile` import; O1 `tests/renderer-portability/portable-wrong-target.test.mjs` red.
 - **task-342-red-green-web-path**: archived red-green web path; private mapping uses JS-only DOM bindings; no public DOM types on `dragonflame-ui/portable`; O1 `tests/renderer-portability/web-path.test.mjs` pass.
 - **task-341-spec-web-path**: archived renderer-portability web-path promise; the web path uses JS-only DOM bindings; O1 `tests/renderer-portability/web-path.test.mjs` named.

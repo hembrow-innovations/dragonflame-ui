@@ -2,7 +2,7 @@
 id: "task-346-green-wrong-target"
 title: "Green Wrong-target hard-error"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-345-red-wrong-target"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-344-wrong-target-hard-error"
 tags: []
 created_at: "2026-09-12T06:01:23Z"
-updated_at: "2026-09-12T06:01:23Z"
+updated_at: "2026-09-12T08:56:38Z"
 ---
 
 # Green Wrong-target hard-error
@@ -66,10 +66,14 @@ The oracle command passes. Named test: importing document from portable code har
 - No public `document` or Metal
 
 **Acceptance criteria:**
-- [ ] `node --test tests/renderer-portability/portable-wrong-target.test.mjs` passes
-- [ ] The named test owns the wrong-target prove, not the thin-surface oracle
-- [ ] No public `compile` helper
-- [ ] `tests/renderer-portability/portable-import.test.mjs` still passes
+- [x] `node --test tests/renderer-portability/portable-wrong-target.test.mjs` passes
+- [x] The named test owns the wrong-target prove, not the thin-surface oracle
+- [x] No public `compile` helper
+- [x] `tests/renderer-portability/portable-import.test.mjs` still passes
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/portable-wrong-target.test.mjs`; win; 1 pass 0 fail. Thin-surface tests still pass. No public `compile`, `document`, or Metal.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-import.test.mjs`
