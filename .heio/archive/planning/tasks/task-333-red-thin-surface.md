@@ -2,14 +2,14 @@
 id: "task-333-red-thin-surface"
 title: "Red Thin surface"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-332-thin-surface"
 tags: []
 created_at: "2026-09-12T05:19:12Z"
-updated_at: "2026-09-12T05:19:12Z"
+updated_at: "2026-09-12T07:44:24Z"
 ---
 
 # Red Thin surface
@@ -69,10 +69,10 @@ The named test is red. It imports `h` and `text` from `dragonflame-ui/portable` 
 - No Host I/O as a browser
 
 **Acceptance criteria:**
-- [ ] `tests/renderer-portability/portable-import.test.mjs` fails on the current barrel
-- [ ] The named test does not import `compile` from `dragonflame-ui/portable`
-- [ ] No product code
-- [ ] `tests/renderer-portability/portable-wrong-target.test.mjs` is not rewritten
+- [x] `tests/renderer-portability/portable-import.test.mjs` fails on the current barrel
+- [x] The named test does not import `compile` from `dragonflame-ui/portable`
+- [x] No product code
+- [x] `tests/renderer-portability/portable-wrong-target.test.mjs` is not rewritten
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-wrong-target.test.mjs`
