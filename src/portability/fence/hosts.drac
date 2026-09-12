@@ -1,0 +1,5 @@
+function reject(host) {
+	throw host;
+}
+reject("Metal");
+reject("document");

@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-350-green-portable-program**: archived green portable program; private host-module fence rejects Metal and `document`; no public `compile`, Metal, or `document`; O1 `tests/renderer-portability/portable-program.test.mjs` pass.
 - **task-349-red-portable-program**: archived red portable program; a portable Program cannot import Metal or `document` directly without a product `compile` import; O1 `tests/renderer-portability/portable-program.test.mjs` red.
 - **task-346-green-wrong-target**: archived green wrong-target; private renderer gate hard-errors `document`; no public `compile`, `document`, or Metal; O1 `tests/renderer-portability/portable-wrong-target.test.mjs` pass.
 - **task-345-red-wrong-target**: archived red wrong-target; importing document from portable code hard-errors without a product `compile` import; O1 `tests/renderer-portability/portable-wrong-target.test.mjs` red.

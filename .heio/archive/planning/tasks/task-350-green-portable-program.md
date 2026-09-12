@@ -2,7 +2,7 @@
 id: "task-350-green-portable-program"
 title: "Green Portable Program"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-349-red-portable-program"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-348-portable-program"
 tags: []
 created_at: "2026-09-12T06:16:32Z"
-updated_at: "2026-09-12T06:16:32Z"
+updated_at: "2026-09-12T09:16:40Z"
 ---
 
 # Green Portable Program
@@ -66,11 +66,15 @@ The oracle command passes. Named prove: a portable Program cannot import Metal o
 - No public Metal or `document` host module
 
 **Acceptance criteria:**
-- [ ] `node --test tests/renderer-portability/portable-program.test.mjs` passes
-- [ ] The named test owns the closed-graph prove, not the thin-surface, wrong-target, or Metal-barrel oracles
-- [ ] No public `compile` helper
-- [ ] `tests/renderer-portability/portable-import.test.mjs` still passes
-- [ ] `tests/renderer-portability/portable-wrong-target.test.mjs` still passes
+- [x] `node --test tests/renderer-portability/portable-program.test.mjs` passes
+- [x] The named test owns the closed-graph prove, not the thin-surface, wrong-target, or Metal-barrel oracles
+- [x] No public `compile` helper
+- [x] `tests/renderer-portability/portable-import.test.mjs` still passes
+- [x] `tests/renderer-portability/portable-wrong-target.test.mjs` still passes
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/portable-program.test.mjs`; win; 1 pass 0 fail. Thin-surface and wrong-target tests still pass. No public `compile`, `document`, or Metal. Private fence under `src/portability/fence/` throws for Metal and document host modules.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-import.test.mjs`
