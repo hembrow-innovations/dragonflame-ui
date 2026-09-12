@@ -7,6 +7,10 @@
 .env.*
 !.env.example
 /target
+hosts/android/.gradle/
+hosts/android/**/build/
+hosts/android/local.properties
+hosts/android/app/src/main/jniLibs/
 node_modules/
 .opencode/node_modules/
 docs/99_scribble

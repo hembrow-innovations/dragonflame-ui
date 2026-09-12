@@ -9,7 +9,7 @@ blocked_by:
   - "slice-70-counter-on-dom"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T09:55:42Z"
+updated_at: "2026-09-12T03:51:13Z"
 ---
 
 # Android counter
@@ -32,10 +32,10 @@ Starting mobile while desktop is still a WebView. Emulator-only as done. iOS. St
 
 ## Oracle checklist
 
-- [ ] O1: counter on Android emulator
+- [x] O1: counter on Android emulator
   CHECK: node --test tests/android-embedder/counter-on-emulator.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/android-embedder/counter-on-emulator.test.mjs; 1 pass 0 fail
 - [x] O2: no WebView and no JS engine
   CHECK: node --test tests/android-embedder/no-webview-no-js-engine.test.mjs
   EXPECT: pass

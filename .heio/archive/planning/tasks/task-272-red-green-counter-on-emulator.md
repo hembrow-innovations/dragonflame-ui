@@ -2,7 +2,7 @@
 id: "task-272-red-green-counter-on-emulator"
 title: "Red-green: counter on Android emulator"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-270-red-green-no-webview-no-js-engine"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-81-android-counter"
 tags: []
 created_at: "2026-09-11T08:52:52Z"
-updated_at: "2026-09-11T09:20:10Z"
+updated_at: "2026-09-12T03:51:13Z"
 ---
 
 # Red-green: counter on Android emulator
@@ -44,4 +44,4 @@ scope: tests/ named by that spec, plus hosts/android/ and crates/embedder/ count
 
 ## Gauntlet
 
-- round 1: `node --test tests/android-embedder/counter-on-emulator.test.mjs` win. Promise the counter runs on Android emulator on the engine canvas path.
+- round 1: `node --test tests/android-embedder/counter-on-emulator.test.mjs` win. Promises `android-embedder.window:embedder-owns`, `android-embedder.vsync:embedder-supplies`, `android-embedder.gpu:engine-owns`, `android-embedder.counter:draw-lists`, and `android-embedder.triples:emulator`.

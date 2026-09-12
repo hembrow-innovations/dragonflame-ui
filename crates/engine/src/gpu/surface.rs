@@ -24,7 +24,20 @@ pub fn present_one_vsync(
     width: u32,
     height: u32,
 ) -> Result<(), GpuError> {
-    let instance = wgpu::Instance::default();
+    let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor {
+        backends: if cfg!(target_os = "android") {
+            wgpu::Backends::VULKAN
+        } else {
+            wgpu::Backends::all()
+        },
+        flags: if cfg!(target_os = "android") {
+            wgpu::InstanceFlags::ALLOW_UNDERLYING_NONCOMPLIANT_ADAPTER
+                | wgpu::InstanceFlags::DISCARD_HAL_LABELS
+        } else {
+            wgpu::InstanceFlags::default()
+        },
+        ..Default::default()
+    });
     let surface = instance
         .create_surface(window)
         .map_err(|_| GpuError::Surface)?;

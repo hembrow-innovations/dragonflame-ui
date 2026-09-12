@@ -9,7 +9,12 @@ crate-type = ["rlib", "cdylib", "staticlib"]
 [dependencies]
 engine = { workspace = true }
 runtime = { workspace = true }
+
+[target.'cfg(not(any(target_os = "ios", target_os = "android")))'.dependencies]
 winit = { workspace = true }
 
 [target.'cfg(target_os = "ios")'.dependencies]
+raw-window-handle = { workspace = true }
+
+[target.'cfg(target_os = "android")'.dependencies]
 raw-window-handle = { workspace = true }
