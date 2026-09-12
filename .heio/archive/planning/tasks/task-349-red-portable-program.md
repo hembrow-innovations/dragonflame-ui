@@ -2,14 +2,14 @@
 id: "task-349-red-portable-program"
 title: "Red Portable Program"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-348-portable-program"
 tags: []
 created_at: "2026-09-12T06:16:32Z"
-updated_at: "2026-09-12T06:16:32Z"
+updated_at: "2026-09-12T09:13:11Z"
 ---
 
 # Red Portable Program
@@ -71,10 +71,14 @@ The named test is red. A portable Program cannot import Metal or `document` dire
 - No public Metal or `document` host module
 
 **Acceptance criteria:**
-- [ ] `tests/renderer-portability/portable-program.test.mjs` fails without a product `compile` import
-- [ ] The named test does not import `compile` from `dragonflame-ui/portable`
-- [ ] No product code
-- [ ] Sibling CHECKs are not rewritten
+- [x] `tests/renderer-portability/portable-program.test.mjs` fails without a product `compile` import
+- [x] The named test does not import `compile` from `dragonflame-ui/portable`
+- [x] No product code
+- [x] Sibling CHECKs are not rewritten
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/portable-program.test.mjs`; win; named test red (empty private host-module fence); no product `compile` import.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-import.test.mjs`
