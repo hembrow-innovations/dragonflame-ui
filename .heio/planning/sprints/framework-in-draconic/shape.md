@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T13:00:00Z"
+updated_at: "2026-09-12T14:00:00Z"
 ---
 
 # Framework in Draconic
@@ -22,6 +22,7 @@ Location: [[location-17-web-component-library]]. Intent says the Framework libra
 - [[slice-296-one-vsync]]: clocks share one embedder vsync. blocked_by: [[slice-292-tickers-beside-pipeline]]
 - [[slice-304-not-the-public-site]]: public site stays TanStack Start. blocked_by: none
 - [[slice-307-layout-tests-later]]: native layout tests stay a frozen algorithm, not a Taffy list at the tests location. blocked_by: none
+- [[slice-311-js-backend]]: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript. blocked_by: none
 
 ## Slices out
 
