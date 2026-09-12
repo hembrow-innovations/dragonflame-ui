@@ -8,7 +8,7 @@ domain: ui-framework
 area: js-backend
 tags: [contract]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-12"
 ---
 
 # JS backend contract
@@ -23,4 +23,6 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: this checkout does not ship dead native stubs in the web package
 - `js-backend.emit:no-emit-here`: JS emit into a browser is already true in the sibling toolchain. This repo does not rebuild JS emit.
   test: this repo does not copy JS emit from the sibling toolchain
+- `js-backend.path:frontend-ir-js`: Web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript. Callers keep the existing dragonflame-ui import. This package does not grow a compile helper, Frontend type, or IR type.
+  test: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript
 - `js-backend.false-path:not-rn-but-bytecode`: The path is not a JS thread, a shadow thread, a UI thread, a Draconic interpreter, and a bridge.

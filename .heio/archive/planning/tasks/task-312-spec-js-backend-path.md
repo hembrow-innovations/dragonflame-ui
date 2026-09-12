@@ -2,14 +2,14 @@
 id: "task-312-spec-js-backend-path"
 title: "Spec JS backend path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-311-js-backend"
 tags: []
 created_at: "2026-09-12T14:00:00Z"
-updated_at: "2026-09-12T14:00:00Z"
+updated_at: "2026-09-12T06:32:06Z"
 ---
 
 # Spec JS backend path
@@ -68,10 +68,10 @@ scope: docs/specs/ui-framework/js-backend/
 - Promises must not add a public compile helper, Frontend type, or IR type
 
 **Acceptance criteria:**
-- [ ] contract and test.md lock `js-backend.path:frontend-ir-js`
-- [ ] test.md names the oracle command above
-- [ ] locked honesty promises are not rewritten
-- [ ] No product code
+- [x] contract and test.md lock `js-backend.path:frontend-ir-js`
+- [x] test.md names the oracle command above
+- [x] locked honesty promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a new spec folder
