@@ -24,5 +24,6 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
 - `renderer-portability.wrong-target:hard-error`: A portable Program cannot import Metal or `document` directly. Wrong-target use hard-errors and is not a runtime no-op.
   test: importing document from portable code hard-errors
 - `renderer-portability.web:js-only-dom`: The web path talks to the DOM through JS-only bindings.
+  test: web path uses JS-only DOM bindings
 - `renderer-portability.host-io:forbid-browser`: The surface is not Host I/O as a browser. A DOM is not put into Host I/O.
 - `renderer-portability.program:forbid-os`: Portable code does not talk to the OS.

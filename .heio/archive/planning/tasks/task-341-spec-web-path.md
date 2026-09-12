@@ -2,14 +2,14 @@
 id: "task-341-spec-web-path"
 title: "Spec Web path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-340-web-path"
 tags: []
 created_at: "2026-09-12T05:47:51Z"
-updated_at: "2026-09-12T05:47:51Z"
+updated_at: "2026-09-12T08:15:23Z"
 ---
 
 # Spec Web path
@@ -70,10 +70,10 @@ The existing folder locks one oracle: the web path uses JS-only DOM bindings. Or
 - Promises must not add a public `document` export, Host I/O as a browser, Host type, canvas switch, or paint API on `dragonflame-ui/portable`
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md cover Web path
-- [ ] test.md names the oracle command above
-- [ ] locked thin-surface, native-path, and dom-only-host promises are not rewritten
-- [ ] No product code
+- [x] purpose, contract, and test.md cover Web path
+- [x] test.md names the oracle command above
+- [x] locked thin-surface, native-path, and dom-only-host promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a new spec folder
