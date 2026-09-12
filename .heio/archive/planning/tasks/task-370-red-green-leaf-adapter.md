@@ -2,7 +2,7 @@
 id: "task-370-red-green-leaf-adapter"
 title: "Red-green Leaf Adapter"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-369-spec-leaf-adapter"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-368-leaf-adapter"
 tags: []
 created_at: "2026-09-12T07:44:54Z"
-updated_at: "2026-09-12T07:44:54Z"
+updated_at: "2026-09-12T10:31:26Z"
 ---
 
 # Red-green Leaf Adapter
@@ -65,10 +65,14 @@ The oracle command passes. Named test: only the leaf adapter knows DOM versus UI
 - No public HostConfig or Host
 
 **Acceptance criteria:**
-- [ ] `node --test tests/leaf-kit/config-at-leaves.test.mjs` passes
-- [ ] The named test owns the Leaf adapter prove, not steal, closed-set render, or portable-program oracles
-- [ ] No public HostConfig or Host
-- [ ] Steal and closed-set tests still pass
+- [x] `node --test tests/leaf-kit/config-at-leaves.test.mjs` passes
+- [x] The named test owns the Leaf adapter prove, not steal, closed-set render, or portable-program oracles
+- [x] No public HostConfig or Host
+- [x] Steal and closed-set tests still pass
+
+## Gauntlet
+
+- **round 1**: `node --test tests/leaf-kit/config-at-leaves.test.mjs` win. Named test locks `leaf-kit.host:config-at-leaves`. Host tokens live in private `src/renderer/adapter.js`. No public HostConfig or Host. Steal and closed-set tests still pass.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/host-config/no-jsi.test.mjs`

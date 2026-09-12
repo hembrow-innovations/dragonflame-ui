@@ -1,14 +1,6 @@
 import { Owner } from "../owner/owner.js";
 import { follow } from "../signals/signal.js";
-
-const hostTag = {
-	view: "div",
-	text: "span",
-	image: "img",
-	scroll: "div",
-	"text-input": "input",
-	pressable: "button",
-};
+import { hostTag } from "./adapter.js";
 
 function mount(tree, parent) {
 	if (typeof tree.type === "function") {

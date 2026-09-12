@@ -44,5 +44,4 @@ Tests for this folder. They will lock `leaf-kit.set:closed`, `leaf-kit.layout:cs
 - No test yet for `leaf-kit.text:per-host-metrics`, `leaf-kit.set:forbid-html`, `leaf-kit.layout:forbid-taffy-on-web`, `leaf-kit.style:forbid-css-engine`, `leaf-kit.layout:not-pixel-identical`, or `leaf-kit.host:forbid-jsi-hermes`.
 - Steal oracles stay on [[test-host-config]].
 - Portable Program oracles stay on [[test-renderer-portability]].
-- The oracle tests are not in the repo yet. This folder is ladder only.
 - No test yet that extra leaf types outside the closed set fail.

@@ -2,12 +2,12 @@
 id: "slice-368-leaf-adapter"
 title: "Leaf adapter"
 kind: slice
-status: frozen
+status: active
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T07:44:54Z"
-updated_at: "2026-09-12T07:44:54Z"
+updated_at: "2026-09-12T10:31:26Z"
 ---
 
 # Leaf adapter
@@ -30,10 +30,10 @@ A public HostConfig or Host. Freezing Compile-time platform, New Architecture st
 
 ## Oracle checklist
 
-- [ ] O1: only the leaf adapter knows DOM versus UIView versus engine draw lists
+- [x] O1: only the leaf adapter knows DOM versus UIView versus engine draw lists
   CHECK: node --test tests/leaf-kit/config-at-leaves.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0 (node --test tests/leaf-kit/config-at-leaves.test.mjs)
 
 ## Pool
 
