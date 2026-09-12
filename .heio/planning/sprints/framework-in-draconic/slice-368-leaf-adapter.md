@@ -2,12 +2,12 @@
 id: "slice-368-leaf-adapter"
 title: "Leaf adapter"
 kind: slice
-status: active
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T07:44:54Z"
-updated_at: "2026-09-12T10:31:26Z"
+updated_at: "2026-09-12T10:35:00Z"
 ---
 
 # Leaf adapter
