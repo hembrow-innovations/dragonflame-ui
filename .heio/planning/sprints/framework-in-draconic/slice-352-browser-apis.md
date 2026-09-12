@@ -2,12 +2,12 @@
 id: "slice-352-browser-apis"
 title: "Browser APIs"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T06:33:10Z"
-updated_at: "2026-09-12T06:33:10Z"
+updated_at: "2026-09-12T09:32:56Z"
 ---
 
 # Browser APIs
@@ -30,10 +30,10 @@ Naming the browser API set. A public catalog, BrowserAPI type, or compile helper
 
 ## Oracle checklist
 
-- [ ] O1: that package uses browser APIs and the source does not name the API set
+- [x] O1: that package uses browser APIs and the source does not name the API set
   CHECK: node --test tests/js-backend/browser-apis.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0 (node --test tests/js-backend/browser-apis.test.mjs)
 
 ## Pool
 
