@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-302-red-green-mobile-follows-desktop-honesty**: archived red-green mobile follows desktop honesty; host shells are cfg siblings in `crates/embedder`; no public AfterDesktop; O1 `tests/after-desktop/mobile-follows-desktop-honesty.test.mjs` pass.
 - **task-301-spec-after-desktop**: archived after-desktop spec ladder; mobile follows desktop honesty; O1 `tests/after-desktop/mobile-follows-desktop-honesty.test.mjs` named.
 - **task-298-red-green-one-vsync**: archived red-green one vsync; two Clock subscribers share one embedder pulse and the same t; O1 `tests/animation-clocks/one-vsync.test.mjs` pass.
 - **task-297-spec-one-vsync**: archived animation-clocks spec ladder one-vsync; clocks share one embedder vsync and the same t; O1 `tests/animation-clocks/one-vsync.test.mjs` named.

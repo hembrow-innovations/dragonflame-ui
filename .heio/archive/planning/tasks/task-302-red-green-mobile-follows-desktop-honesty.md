@@ -2,7 +2,7 @@
 id: "task-302-red-green-mobile-follows-desktop-honesty"
 title: "Red-green mobile follows desktop honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-301-spec-after-desktop"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-300-desktop-first"
 tags: []
 created_at: "2026-09-11T23:43:50Z"
-updated_at: "2026-09-11T23:43:50Z"
+updated_at: "2026-09-12T05:56:00Z"
 ---
 
 # Red-green mobile follows desktop honesty
@@ -43,3 +43,7 @@ scope: tests/after-desktop/ crates/embedder/ docs/specs/ui-framework/after-deskt
 - [[slice-300-desktop-first]]
 - [[task-301-spec-after-desktop]]
 - [[rounds-299-freeze-desktop-first]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/after-desktop/mobile-follows-desktop-honesty.test.mjs`; win; 1 pass 0 fail
