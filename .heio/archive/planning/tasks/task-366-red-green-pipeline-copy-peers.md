@@ -2,7 +2,7 @@
 id: "task-366-red-green-pipeline-copy-peers"
 title: "Red-green pipeline copy peers"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-365-lock-pipeline-copy-promise"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-364-pipeline-copy"
 tags: []
 created_at: "2026-09-12T07:25:41Z"
-updated_at: "2026-09-12T07:25:41Z"
+updated_at: "2026-09-12T10:20:00Z"
 ---
 
 # Red-green pipeline copy peers
@@ -43,3 +43,7 @@ scope: tests/talk-and-measure/ docs/specs/ui-framework/talk-and-measure/
 - [[slice-364-pipeline-copy]]
 - [[task-365-lock-pipeline-copy-promise]]
 - [[rounds-363-freeze-pipeline-copy]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/talk-and-measure/pipeline-copy-peers.test.mjs`; win; 1 pass 0 fail

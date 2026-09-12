@@ -2,13 +2,13 @@
 id: "slice-364-pipeline-copy"
 title: "Pipeline copy"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T07:25:41Z"
-updated_at: "2026-09-12T07:25:41Z"
+updated_at: "2026-09-12T10:20:00Z"
 ---
 
 # Pipeline copy
@@ -31,10 +31,10 @@ Restaging [[slice-80-ios-counter]], [[slice-81-android-counter]], [[slice-82-sto
 
 ## Oracle checklist
 
-- [ ] O1: a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers
+- [x] O1: a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers
   CHECK: node --test tests/talk-and-measure/pipeline-copy-peers.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0
 
 ## Pool
 
