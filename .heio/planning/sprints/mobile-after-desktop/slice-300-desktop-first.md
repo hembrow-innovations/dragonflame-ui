@@ -2,13 +2,13 @@
 id: "slice-300-desktop-first"
 title: "Desktop first"
 kind: slice
-status: frozen
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-11T23:43:50Z"
-updated_at: "2026-09-11T23:43:50Z"
+updated_at: "2026-09-12T05:57:30Z"
 ---
 
 # Desktop first
@@ -31,10 +31,10 @@ Funding grain. Phase 3 gate unstated. Restaging [[slice-80-ios-counter]], [[slic
 
 ## Oracle checklist
 
-- [ ] O1: mobile follows desktop honesty
+- [x] O1: mobile follows desktop honesty
   CHECK: node --test tests/after-desktop/mobile-follows-desktop-honesty.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0 (2026-09-12T05:57:30Z)
 
 ## Pool
 
