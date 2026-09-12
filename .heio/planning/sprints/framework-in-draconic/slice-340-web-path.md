@@ -2,12 +2,12 @@
 id: "slice-340-web-path"
 title: "Web path"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T05:47:51Z"
-updated_at: "2026-09-12T05:47:51Z"
+updated_at: "2026-09-12T08:21:00Z"
 ---
 
 # Web path
@@ -30,10 +30,10 @@ A public `document` or `createElement` export on `dragonflame-ui/portable`. Host
 
 ## Oracle checklist
 
-- [ ] O1: the web path uses JS-only DOM bindings
+- [x] O1: the web path uses JS-only DOM bindings
   CHECK: node --test tests/renderer-portability/web-path.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/renderer-portability/web-path.test.mjs pass 1 fail 0
 
 ## Pool
 
