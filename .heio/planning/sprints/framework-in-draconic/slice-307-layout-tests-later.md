@@ -2,12 +2,12 @@
 id: "slice-307-layout-tests-later"
 title: "Layout tests later"
 kind: slice
-status: frozen
+status: active
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T13:00:00Z"
-updated_at: "2026-09-12T13:00:00Z"
+updated_at: "2026-09-12T17:45:00Z"
 ---
 
 # Layout tests later
@@ -30,10 +30,10 @@ Inventing a Taffy case list here. Rewriting [[location-42-native-layout]]. A pub
 
 ## Oracle checklist
 
-- [ ] O1: this tests location does not invent a Taffy test list
+- [x] O1: this tests location does not invent a Taffy test list
   CHECK: node --test tests/layout-tests/no-taffy-list.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/layout-tests/no-taffy-list.test.mjs; 1 pass 0 fail
 
 ## Pool
 

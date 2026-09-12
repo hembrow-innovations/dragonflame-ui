@@ -2,7 +2,7 @@
 id: "task-309-red-green-layout-tests-later"
 title: "Red-green layout tests later"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-308-spec-layout-tests-later"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-307-layout-tests-later"
 tags: []
 created_at: "2026-09-12T13:00:00Z"
-updated_at: "2026-09-12T13:00:00Z"
+updated_at: "2026-09-12T17:45:00Z"
 ---
 
 # Red-green layout tests later
@@ -65,11 +65,11 @@ The oracle command passes. Named test: this tests location does not invent a Taf
 - No public LayoutEngine, Yoga, or layout-test helper
 
 **Acceptance criteria:**
-- [ ] `node --test tests/layout-tests/no-taffy-list.test.mjs` passes
-- [ ] The named test owns placement, not a Taffy case list
-- [ ] No public LayoutEngine
-- [ ] `tests/ffi-scene-commands/taffy-rect.test.mjs` still passes
-- [ ] `tests/web-layout/no-taffy-on-web.test.mjs` still passes
+- [x] `node --test tests/layout-tests/no-taffy-list.test.mjs` passes
+- [x] The named test owns placement, not a Taffy case list
+- [x] No public LayoutEngine
+- [x] `tests/ffi-scene-commands/taffy-rect.test.mjs` still passes
+- [x] `tests/web-layout/no-taffy-on-web.test.mjs` still passes
 
 **Out of scope:**
 - Inventing a Taffy case list
@@ -77,3 +77,8 @@ The oracle command passes. Named test: this tests location does not invent a Taf
 - Restaging web-layout honesty
 - Rewriting [[location-42-native-layout]]
 - Implementing the compiler
+
+## Gauntlet
+
+- **round 1**: `node --test tests/layout-tests/no-taffy-list.test.mjs`; lose; `no-taffy-on-web` treated `no-taffy-list` as Taffy-on-web
+- **round 2**: `node --test tests/layout-tests/no-taffy-list.test.mjs`; win; 1 pass 0 fail; `isTaffyOnWebPath` ignores `no-taffy`

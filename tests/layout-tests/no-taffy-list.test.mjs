@@ -1,17 +1,16 @@
 import assert from "node:assert/strict";
-import { readdirSync, readFileSync, statSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
-const skip = new Set([".git", "node_modules", "target"]);
+const here = dirname(fileURLToPath(import.meta.url));
 const self = fileURLToPath(import.meta.url);
 
 function walk(dir) {
 	const out = [];
 	for (const name of readdirSync(dir)) {
-		if (skip.has(name)) continue;
 		const path = join(dir, name);
 		if (statSync(path).isDirectory()) out.push(...walk(path));
 		else out.push(path);
@@ -23,33 +22,26 @@ function rel(path) {
 	return relative(root, path).split("\\").join("/");
 }
 
-function isNote(path) {
-	const r = rel(path);
-	return r.startsWith("docs/") || r.startsWith(".heio/") || r.startsWith(".opencode/");
+function isTaffyCasePath(r) {
+	return /taffy/i.test(r);
 }
 
-function isTaffyOnWebPath(r) {
-	return /(?<!no-)taffy/i.test(r);
+function isTaffyCaseSource(src) {
+	return /\btaffy\b/i.test(src) || /\bcompute_layout\b/.test(src) || /\bLayoutEngine\b/.test(src);
 }
 
-function isTaffyOnWebSource(src) {
-	return /\btaffy\b/i.test(src);
-}
-
-test("this checkout does not force Taffy on web", () => {
-	const files = walk(root).filter((path) => {
-		if (path === self || isNote(path)) return false;
-		const r = rel(path);
-		return !r.startsWith("crates/") && !r.startsWith("tests/ffi-scene-commands/");
-	});
+test("this tests location does not invent a Taffy test list", () => {
+	assert.equal(rel(here), "tests/layout-tests");
+	const files = walk(here).filter((path) => path !== self);
 	assert.deepEqual(
-		files.filter((path) => isTaffyOnWebPath(rel(path))),
+		files.filter((path) => isTaffyCasePath(rel(path))),
 		[],
 	);
 	assert.deepEqual(
-		walk(join(root, "src")).filter((path) => isTaffyOnWebSource(readFileSync(path, "utf8"))),
+		files.filter((path) => isTaffyCaseSource(readFileSync(path, "utf8"))),
 		[],
 	);
+	assert.equal(existsSync(join(root, "tests/ffi-scene-commands/taffy-rect.test.mjs")), true);
 	const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
 	assert.deepEqual(
 		[
@@ -57,7 +49,11 @@ test("this checkout does not force Taffy on web", () => {
 			...Object.keys(pkg.devDependencies ?? {}),
 			...Object.keys(pkg.optionalDependencies ?? {}),
 			...Object.keys(pkg.exports ?? {}),
-		].filter((key) => /taffy/i.test(key)),
+		].filter((key) => /layoutengine|yoga/i.test(key)),
+		[],
+	);
+	assert.deepEqual(
+		walk(join(root, "src")).filter((path) => /\bLayoutEngine\b|\bYoga\b/.test(readFileSync(path, "utf8"))),
 		[],
 	);
 });
