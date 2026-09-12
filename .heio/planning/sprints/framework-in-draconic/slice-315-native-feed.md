@@ -2,12 +2,12 @@
 id: "slice-315-native-feed"
 title: "Native feed"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T15:00:00Z"
-updated_at: "2026-09-12T15:00:00Z"
+updated_at: "2026-09-12T06:55:13Z"
 ---
 
 # Native feed
@@ -30,10 +30,10 @@ A public feed mapper. A public LayoutEngine. Taffy types. Implementing Taffy. Im
 
 ## Oracle checklist
 
-- [ ] O1: on native those objects feed layout and paint
+- [x] O1: on native those objects feed layout and paint
   CHECK: node --test tests/native-feed/objects-feed-layout-paint.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/native-feed/objects-feed-layout-paint.test.mjs; 1 pass 0 fail
 
 ## Pool
 
