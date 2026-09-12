@@ -1,0 +1,25 @@
+---
+id: "ticket-371-portable-metal-compile-import"
+title: "Portable metal test still imports compile from portable"
+kind: ticket
+status: open
+ticket_type: bug
+blocked_by: []
+tags: []
+created_at: "2026-09-12T07:54:25Z"
+updated_at: "2026-09-12T07:54:25Z"
+---
+
+# Portable metal test still imports compile from portable
+
+## Signal
+
+After [[task-334-green-thin-surface]], `dragonflame-ui/portable` no longer exports `compile`. `tests/portability-metal/portable-metal.test.mjs` still imports `{ compile }` from that specifier and fails to load.
+
+## Fit
+
+This project, later slice. Portable Program / portability-metal, not [[slice-332-thin-surface]].
+
+## Notes
+
+Facts only. Named test: this checkout does not let a portable Program import Metal. [[task-334-green-thin-surface]] did not restage that file.

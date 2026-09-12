@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-334-green-thin-surface**: archived green thin surface; `dragonflame-ui/portable` exports `h` and host-agnostic leaves; no public `compile`; O1 `tests/renderer-portability/portable-import.test.mjs` pass.
 - **task-333-red-thin-surface**: archived red thin surface; portable Program compiles against `h` and `text` from `dragonflame-ui/portable` without importing `compile`; O1 `tests/renderer-portability/portable-import.test.mjs` red on current barrel plus product `compile`.
 - **task-330-red-green-phase-3-work-stays-behind-desktop-honesty**: archived red-green Phase 3 work stays behind desktop honesty; overview Phase 3 stays unqualified; no public Phase3Gate; O1 `tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs` pass.
 - **task-329-spec-phase-3-gate-unstated**: archived after-desktop unstated-gate promise; Phase 3 work stays behind desktop honesty; O1 `tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs` named.

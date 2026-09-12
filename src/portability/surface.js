@@ -5,11 +5,3 @@ export { image } from "../leaves/image.js";
 export { scroll } from "../leaves/scroll.js";
 export { textInput } from "../leaves/text-input.js";
 export { pressable } from "../leaves/pressable.js";
-export { Owner } from "../owner/owner.js";
-export { Signal } from "../signals/signal.js";
-export { Clock } from "../clocks/clock.js";
-export { StyleSheet } from "../style/stylesheet.js";
-
-export function compile(source) {
-	if (/\b(?:document|Metal)\b/.test(source)) throw new Error("wrong-target");
-}

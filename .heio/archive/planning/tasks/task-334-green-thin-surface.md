@@ -2,7 +2,7 @@
 id: "task-334-green-thin-surface"
 title: "Green Thin surface"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-333-red-thin-surface"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-332-thin-surface"
 tags: []
 created_at: "2026-09-12T05:19:12Z"
-updated_at: "2026-09-12T05:19:12Z"
+updated_at: "2026-09-12T07:54:25Z"
 ---
 
 # Green Thin surface
@@ -66,10 +66,14 @@ The oracle command passes. Named test: portable Program compiles against the por
 - No Host I/O as a browser
 
 **Acceptance criteria:**
-- [ ] `node --test tests/renderer-portability/portable-import.test.mjs` passes
-- [ ] The named test owns the thin-surface prove, not the wrong-target oracle
-- [ ] No public `compile` helper
-- [ ] `tests/renderer-portability/portable-wrong-target.test.mjs` still passes
+- [x] `node --test tests/renderer-portability/portable-import.test.mjs` passes
+- [x] The named test owns the thin-surface prove, not the wrong-target oracle
+- [x] No public `compile` helper
+- [x] `tests/renderer-portability/portable-wrong-target.test.mjs` still passes
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/portable-import.test.mjs`; win; 1 pass 0 fail. `node --test tests/renderer-portability/portable-wrong-target.test.mjs` still passes. No public `compile`.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-wrong-target.test.mjs`
