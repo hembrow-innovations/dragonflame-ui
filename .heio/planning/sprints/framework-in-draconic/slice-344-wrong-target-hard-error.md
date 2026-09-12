@@ -2,12 +2,12 @@
 id: "slice-344-wrong-target-hard-error"
 title: "Wrong-target hard-error"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T06:01:23Z"
-updated_at: "2026-09-12T06:01:23Z"
+updated_at: "2026-09-12T08:57:59Z"
 ---
 
 # Wrong-target hard-error
@@ -30,10 +30,10 @@ A public `document` or Metal export on `dragonflame-ui/portable`. A public `comp
 
 ## Oracle checklist
 
-- [ ] O1: wrong-target use hard-errors
+- [x] O1: wrong-target use hard-errors
   CHECK: node --test tests/renderer-portability/portable-wrong-target.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0; importing document from portable code hard-errors
 
 ## Pool
 
