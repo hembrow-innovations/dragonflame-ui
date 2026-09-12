@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-317-red-green-native-feed**: archived red-green Native feed; on native those objects feed layout and paint; O1 `tests/native-feed/objects-feed-layout-paint.test.mjs` pass.
 - **task-316-spec-native-feed**: archived native-feed spec ladder; on native those objects feed layout and paint; O1 `tests/native-feed/objects-feed-layout-paint.test.mjs` named.
 - **task-313-red-green-js-backend-path**: archived red-green JS backend path; web compile is Frontend to shared IR to the JS backend and the browser runs that JavaScript; O1 `tests/js-backend/frontend-ir-js.test.mjs` pass.
 - **task-312-spec-js-backend-path**: archived js-backend spec ladder path promise; web compile is Frontend to shared IR to the JS backend; O1 `tests/js-backend/frontend-ir-js.test.mjs` named.

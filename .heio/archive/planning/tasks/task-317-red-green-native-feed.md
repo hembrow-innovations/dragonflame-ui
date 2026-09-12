@@ -2,7 +2,7 @@
 id: "task-317-red-green-native-feed"
 title: "Red-green Native feed"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-316-spec-native-feed"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-315-native-feed"
 tags: []
 created_at: "2026-09-12T15:00:00Z"
-updated_at: "2026-09-12T15:00:00Z"
+updated_at: "2026-09-12T06:53:51Z"
 ---
 
 # Red-green Native feed
@@ -65,10 +65,10 @@ The oracle command passes. Named test: on native those objects feed layout and p
 - No public feed mapper, LayoutEngine, or Taffy type
 
 **Acceptance criteria:**
-- [ ] `node --test tests/native-feed/objects-feed-layout-paint.test.mjs` passes
-- [ ] The named test owns the feed prove, not taffy-rect or CSS-forbid oracles
-- [ ] No public feed mapper
-- [ ] Style-as-data honesty tests still pass
+- [x] `node --test tests/native-feed/objects-feed-layout-paint.test.mjs` passes
+- [x] The named test owns the feed prove, not taffy-rect or CSS-forbid oracles
+- [x] No public feed mapper
+- [x] Style-as-data honesty tests still pass
 
 **Out of scope:**
 - Pointing this CHECK at `tests/ffi-scene-commands/taffy-rect.test.mjs`
@@ -76,3 +76,7 @@ The oracle command passes. Named test: on native those objects feed layout and p
 - Implementing Taffy
 - Implementing native hosts
 - Freezing Taffy or Constraints
+
+## Gauntlet
+
+- **round 1**: `node --test tests/native-feed/objects-feed-layout-paint.test.mjs`; win; 1 pass 0 fail; honesty still pass
