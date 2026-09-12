@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-12T08:45:03Z"
+updated_at: "2026-09-12T09:00:39Z"
 ---
 
 # Mobile after desktop
@@ -30,6 +30,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 - [[slice-373-engine-glyphs]]: native glyphs live in the Rust engine. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-381-io-font-load]]: font load runs on the IO thread. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-385-single-ui-thread]]: heavy work is off the UI thread and platform views stay an escape hatch, not the default. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
+- [[slice-389-input]]: the embedder owns input, IME, clipboard, and accessibility plumbing. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 
 ## Slices out
 
