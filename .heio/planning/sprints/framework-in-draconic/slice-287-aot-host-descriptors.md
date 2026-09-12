@@ -2,14 +2,14 @@
 id: "slice-287-aot-host-descriptors"
 title: "AOT host descriptors"
 kind: slice
-status: active
+status: met
 sprint: "framework-in-draconic"
 blocked_by:
   - "slice-77-draw-a-rect"
   - "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-12T08:30:00Z"
-updated_at: "2026-09-12T17:25:00Z"
+updated_at: "2026-09-12T17:30:00Z"
 ---
 
 # AOT host descriptors
