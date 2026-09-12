@@ -2,7 +2,7 @@
 id: "task-338-red-green-native-path"
 title: "Red-green Native path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-337-spec-native-path"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-336-native-path"
 tags: []
 created_at: "2026-09-12T05:33:19Z"
-updated_at: "2026-09-12T05:33:19Z"
+updated_at: "2026-09-12T08:08:29Z"
 ---
 
 # Red-green Native path
@@ -65,10 +65,14 @@ The oracle command passes. Named test: native path uses extern C and unboxed num
 - No public `extern "C"` export, packed-scene field names, JSI, or platform channels on `dragonflame-ui/portable`
 
 **Acceptance criteria:**
-- [ ] `node --test tests/renderer-portability/native-path.test.mjs` passes
-- [ ] The named test owns the native-path prove, not taffy-rect or thin-surface oracles
-- [ ] No public FFI types on `dragonflame-ui/portable`
-- [ ] Thin-surface tests still pass
+- [x] `node --test tests/renderer-portability/native-path.test.mjs` passes
+- [x] The named test owns the native-path prove, not taffy-rect or thin-surface oracles
+- [x] No public FFI types on `dragonflame-ui/portable`
+- [x] Thin-surface tests still pass
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/native-path.test.mjs`; win; 1 pass 0 fail. Thin-surface tests still pass. No public FFI on `dragonflame-ui/portable`.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/ffi-scene-commands/taffy-rect.test.mjs`

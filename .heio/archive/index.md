@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-338-red-green-native-path**: archived red-green native path; private mapping uses `extern "C"` and unboxed numbers and structs; no public FFI on `dragonflame-ui/portable`; O1 `tests/renderer-portability/native-path.test.mjs` pass.
 - **task-337-spec-native-path**: archived renderer-portability native-path promise; the native path uses `extern "C"` and unboxed numbers and structs; O1 `tests/renderer-portability/native-path.test.mjs` named.
 - **task-334-green-thin-surface**: archived green thin surface; `dragonflame-ui/portable` exports `h` and host-agnostic leaves; no public `compile`; O1 `tests/renderer-portability/portable-import.test.mjs` pass.
 - **task-333-red-thin-surface**: archived red thin surface; portable Program compiles against `h` and `text` from `dragonflame-ui/portable` without importing `compile`; O1 `tests/renderer-portability/portable-import.test.mjs` red on current barrel plus product `compile`.

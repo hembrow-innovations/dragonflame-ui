@@ -1,0 +1,2 @@
+type HostNums = { a: f32; b: f32 };
+extern "C" function host_map(nums: HostNums): void;
