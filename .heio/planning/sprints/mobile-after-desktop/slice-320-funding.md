@@ -2,13 +2,13 @@
 id: "slice-320-funding"
 title: "Funding"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T04:10:34Z"
-updated_at: "2026-09-12T04:10:34Z"
+updated_at: "2026-09-12T07:10:10Z"
 ---
 
 # Funding
@@ -31,10 +31,10 @@ Phase 3 gate unstated. Restaging [[slice-300-desktop-first]], [[slice-80-ios-cou
 
 ## Oracle checklist
 
-- [ ] O1: mobile is pursued only if native UI is funded
+- [x] O1: mobile is pursued only if native UI is funded
   CHECK: node --test tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs; 1 pass 0 fail
 
 ## Pool
 

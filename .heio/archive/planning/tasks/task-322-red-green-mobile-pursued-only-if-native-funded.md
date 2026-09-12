@@ -2,7 +2,7 @@
 id: "task-322-red-green-mobile-pursued-only-if-native-funded"
 title: "Red-green mobile pursued only if native funded"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-321-spec-funding-after-desktop"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-320-funding"
 tags: []
 created_at: "2026-09-12T04:10:34Z"
-updated_at: "2026-09-12T04:10:34Z"
+updated_at: "2026-09-12T07:10:10Z"
 ---
 
 # Red-green mobile pursued only if native funded
@@ -43,3 +43,7 @@ scope: tests/after-desktop/ crates/embedder/ docs/specs/ui-framework/after-deskt
 - [[slice-320-funding]]
 - [[task-321-spec-funding-after-desktop]]
 - [[rounds-319-freeze-funding]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs`; win; 1 pass 0 fail
