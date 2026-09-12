@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-358-red-green-not-toolchain-triples**: archived red-green ios-embedder not-toolchain triples; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/ios-embedder/not-toolchain-triples.test.mjs` pass.
 - **task-357-lock-not-toolchain-promise**: archived ios-embedder not-toolchain promise lock; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/ios-embedder/not-toolchain-triples.test.mjs` named.
 - **task-354-red-green-browser-apis**: archived red-green unnamed browser API usage; callers keep dragonflame-ui; no catalog, BrowserAPI, or compile helper; O1 `tests/js-backend/browser-apis.test.mjs` pass.
 - **task-353-spec-browser-apis**: archived js-backend spec ladder browser-apis promise; that package uses browser APIs and the source does not name the API set; O1 `tests/js-backend/browser-apis.test.mjs` named.

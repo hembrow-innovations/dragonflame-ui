@@ -2,7 +2,7 @@
 id: "task-358-red-green-not-toolchain-triples"
 title: "Red-green not-toolchain triples"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-357-lock-not-toolchain-promise"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-356-not-toolchain-d04"
 tags: []
 created_at: "2026-09-12T06:52:16Z"
-updated_at: "2026-09-12T06:52:16Z"
+updated_at: "2026-09-12T09:44:48Z"
 ---
 
 # Red-green not-toolchain triples
@@ -43,3 +43,7 @@ scope: tests/ios-embedder/ docs/specs/ui-framework/ios-embedder/ hosts/ios/
 - [[slice-356-not-toolchain-d04]]
 - [[task-357-lock-not-toolchain-promise]]
 - [[rounds-355-freeze-not-toolchain-d04]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/ios-embedder/not-toolchain-triples.test.mjs`; win; 1 pass 0 fail

@@ -39,7 +39,7 @@ Tests for this folder. They will lock `ios-embedder.window:embedder-owns`, `ios-
   - **How:** fails unless iOS arm64 device is in scope as `aarch64-apple-ios` plus Xcode arm64 ARCHS. Simulator-only is not done
   - **Why:** promise `ios-embedder.triples:arm64-device`
 - **tests/ios-embedder/not-toolchain-triples.test.mjs**: `iOS triples are this product's mobile packaging, not toolchain D04`
-  - **How:** fails if this checkout files iOS triples as toolchain D04 or language ROADMAP work
+  - **How:** fails if this checkout files iOS triples as toolchain D04 or language ROADMAP work, if packaging is missing from `hosts/ios/` plus the embedder ios module, if a public `TargetTriple`, `IosTriple`, or `shippedTriples()` type exists, if rustc target strings appear on the framework API, or if `docs/specs/ui-framework/ios-triples/` exists. Does not fail on the purpose grain sentence naming D04
   - **Why:** promise `ios-embedder.triples:not-toolchain`
 
 ## Gaps
