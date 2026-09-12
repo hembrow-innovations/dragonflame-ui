@@ -2,12 +2,12 @@
 id: "slice-332-thin-surface"
 title: "Thin surface"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T05:19:12Z"
-updated_at: "2026-09-12T05:19:12Z"
+updated_at: "2026-09-12T07:55:50Z"
 ---
 
 # Thin surface
@@ -30,10 +30,10 @@ A public `compile` helper. Host I/O as a browser. A public `render` on the porta
 
 ## Oracle checklist
 
-- [ ] O1: the API is a thin Draconic surface between portable UI code and a host
+- [x] O1: the API is a thin Draconic surface between portable UI code and a host
   CHECK: node --test tests/renderer-portability/portable-import.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2026-09-12T07:55:50Z node --test tests/renderer-portability/portable-import.test.mjs pass 1 fail 0
 
 ## Pool
 
