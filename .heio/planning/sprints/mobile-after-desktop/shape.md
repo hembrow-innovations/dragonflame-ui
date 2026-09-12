@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-12T07:25:41Z"
+updated_at: "2026-09-12T08:00:25Z"
 ---
 
 # Mobile after desktop
@@ -27,6 +27,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 - [[slice-356-not-toolchain-d04]]: these triples are this product's mobile packaging, not toolchain D04. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-360-android-not-toolchain-d04]]: these triples are this product's mobile packaging, not toolchain D04. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-364-pipeline-copy]]: a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
+- [[slice-373-engine-glyphs]]: native glyphs live in the Rust engine. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 
 ## Slices out
 
