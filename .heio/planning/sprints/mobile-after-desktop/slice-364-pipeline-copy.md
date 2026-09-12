@@ -2,13 +2,13 @@
 id: "slice-364-pipeline-copy"
 title: "Pipeline copy"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T07:25:41Z"
-updated_at: "2026-09-12T10:20:00Z"
+updated_at: "2026-09-12T10:14:05Z"
 ---
 
 # Pipeline copy
