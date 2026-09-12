@@ -2,14 +2,14 @@
 id: "task-345-red-wrong-target"
 title: "Red Wrong-target hard-error"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-344-wrong-target-hard-error"
 tags: []
 created_at: "2026-09-12T06:01:23Z"
-updated_at: "2026-09-12T06:01:23Z"
+updated_at: "2026-09-12T08:52:45Z"
 ---
 
 # Red Wrong-target hard-error
@@ -69,10 +69,14 @@ The named test is red. Importing `document` from portable code hard-errors. It d
 - No public `document` or Metal on `dragonflame-ui/portable`
 
 **Acceptance criteria:**
-- [ ] `tests/renderer-portability/portable-wrong-target.test.mjs` fails without a product `compile` import
-- [ ] The named test does not import `compile` from `dragonflame-ui/portable`
-- [ ] No product code
-- [ ] `tests/renderer-portability/portable-import.test.mjs` is not rewritten
+- [x] `tests/renderer-portability/portable-wrong-target.test.mjs` fails without a product `compile` import
+- [x] The named test does not import `compile` from `dragonflame-ui/portable`
+- [x] No product code
+- [x] `tests/renderer-portability/portable-import.test.mjs` is not rewritten
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/portable-wrong-target.test.mjs`; win; named test red (empty private gate); no product `compile` import.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/renderer-portability/portable-import.test.mjs`
