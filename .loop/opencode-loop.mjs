@@ -5,10 +5,11 @@
 //        node .loop/opencode-loop.mjs 5 "fix the failing tests"
 // Extra opencode flags: put them after `--`, e.g. ... "prompt" -- -m xai/grok-4.5
 // Optional sleep between loops (seconds): SLEEP=60 node .loop/opencode-loop.mjs 5 "prompt"
+// Idle watchdog (seconds, 0 disables): IDLE=1800 node .loop/opencode-loop.mjs 5 "prompt"
 
 import { spawn } from "node:child_process";
-import { createInterface } from "node:readline";
 import { createHarness } from "./harness/index.mjs";
+import { attachWatchdog, parseIdleMs } from "./watchdog.mjs";
 
 const [, , loopsArg, ...rest] = process.argv;
 const loops = Number.parseInt(loopsArg, 10);
@@ -31,6 +32,7 @@ const flags = [
 	"json",
 ];
 
+const idleMs = parseIdleMs();
 const run = (i) =>
 	new Promise((resolve) => {
 		process.stdout.write(`\n===== loop ${i}/${loops} =====\n`);
@@ -42,22 +44,40 @@ const run = (i) =>
 				stdio: ["inherit", "pipe", "inherit"],
 			},
 		);
-		createInterface({ input: child.stdout }).on("line", (line) => {
-			if (!line.trim()) return;
-			try {
-				const view = harness.format(JSON.parse(line));
-				if (view) process.stdout.write(`${view}\n`);
-			} catch {
-				console.log(line);
-			}
+		let timedOut = false;
+		attachWatchdog(child, {
+			idleMs,
+			onLine: (line) => {
+				if (!line.trim()) return;
+				try {
+					const view = harness.format(JSON.parse(line));
+					if (view) process.stdout.write(`${view}\n`);
+				} catch {
+					console.log(line);
+				}
+			},
+			onBeat: (silent) => {
+				console.error(
+					`loop ${i} idle ${Math.round(silent / 1000)}s (watchdog ${idleMs / 1000}s)`,
+				);
+			},
+			onIdle: (silent) => {
+				timedOut = true;
+				console.error(
+					`loop ${i} idle ${Math.round(silent / 1000)}s, killing opencode`,
+				);
+			},
 		});
-		child.on("close", (code) => resolve(code ?? 0));
+		child.on("close", (code) => resolve(timedOut ? 124 : (code ?? 0)));
 	});
 
 const sleepMs = (Number.parseFloat(process.env.SLEEP) || 0) * 1000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 console.log(
 	`sleep between loops: ${sleepMs / 1000}s (set with SLEEP=<seconds>)`,
+);
+console.log(
+	`idle watchdog: ${idleMs / 1000}s (set with IDLE=<seconds>, 0 disables)`,
 );
 
 for (let i = 1; i <= loops; i++) {
