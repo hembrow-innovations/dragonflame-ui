@@ -8,7 +8,7 @@ domain: ui-framework
 area: ios-embedder
 tags: [contract]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # iOS embedder contract
@@ -34,6 +34,7 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
 - `ios-embedder.triples:arm64-device`: iOS arm64 device is in scope as `aarch64-apple-ios` plus Xcode arm64 ARCHS. Simulator-only is not done.
   test: iOS arm64 device is in scope
 - `ios-embedder.triples:not-toolchain`: These triples are this product's mobile packaging, not toolchain D04.
+  test: iOS triples are this product's mobile packaging, not toolchain D04
 - `ios-embedder.engine:forbid-skia`: There is no Skia requirement and no Flutter Engine as a product dependency.
 - `ios-embedder.layers:uncollapsed`: Engine, Runtime, and Embedder stay uncollapsed. Runtime is language GC and jobs.
 - `ios-embedder.types:forbid-uikitview`: Public `UiKitView` stays unnamed.

@@ -2,14 +2,14 @@
 id: "task-357-lock-not-toolchain-promise"
 title: "Lock not-toolchain promise"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-356-not-toolchain-d04"
 tags: []
 created_at: "2026-09-12T06:52:16Z"
-updated_at: "2026-09-12T06:52:16Z"
+updated_at: "2026-09-12T09:38:43Z"
 ---
 
 # Lock not-toolchain promise

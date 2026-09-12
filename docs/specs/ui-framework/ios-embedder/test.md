@@ -8,7 +8,7 @@ domain: ui-framework
 area: ios-embedder
 tags: [test]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # iOS embedder tests
@@ -17,11 +17,12 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `ios-embedder.window:embedder-owns`, `ios-embedder.vsync:embedder-supplies`, `ios-embedder.gpu:engine-owns`, `ios-embedder.counter:draw-lists`, `ios-embedder.host:forbid-webview`, `ios-embedder.host:forbid-js-engine`, `ios-embedder.triples:simulator`, and `ios-embedder.triples:arm64-device`. Oracle commands:
+Tests for this folder. They will lock `ios-embedder.window:embedder-owns`, `ios-embedder.vsync:embedder-supplies`, `ios-embedder.gpu:engine-owns`, `ios-embedder.counter:draw-lists`, `ios-embedder.host:forbid-webview`, `ios-embedder.host:forbid-js-engine`, `ios-embedder.triples:simulator`, `ios-embedder.triples:arm64-device`, and `ios-embedder.triples:not-toolchain`. Oracle commands:
 
 - node --test tests/ios-embedder/counter-on-simulator.test.mjs
 - node --test tests/ios-embedder/no-webview-no-js-engine.test.mjs
 - node --test tests/ios-embedder/arm64-device-in-scope.test.mjs
+- node --test tests/ios-embedder/not-toolchain-triples.test.mjs
 
 ## Tests
 
@@ -37,10 +38,13 @@ Tests for this folder. They will lock `ios-embedder.window:embedder-owns`, `ios-
 - **tests/ios-embedder/arm64-device-in-scope.test.mjs**: `iOS arm64 device is in scope`
   - **How:** fails unless iOS arm64 device is in scope as `aarch64-apple-ios` plus Xcode arm64 ARCHS. Simulator-only is not done
   - **Why:** promise `ios-embedder.triples:arm64-device`
+- **tests/ios-embedder/not-toolchain-triples.test.mjs**: `iOS triples are this product's mobile packaging, not toolchain D04`
+  - **How:** fails if this checkout files iOS triples as toolchain D04 or language ROADMAP work
+  - **Why:** promise `ios-embedder.triples:not-toolchain`
 
 ## Gaps
 
-- No test yet for `ios-embedder.triples:not-toolchain`, `ios-embedder.engine:forbid-skia`, `ios-embedder.layers:uncollapsed`, or `ios-embedder.types:forbid-uikitview`.
+- No test yet for `ios-embedder.engine:forbid-skia`, `ios-embedder.layers:uncollapsed`, or `ios-embedder.types:forbid-uikitview`.
 - Input, IME, clipboard, and accessibility plumbing stay unimplemented.
 - UIView attach stays on [[slice-84-platform-view-hatch]].
 - Desktop no-webview and no-js-engine oracles stay on [[test-desktop-embedder]].
