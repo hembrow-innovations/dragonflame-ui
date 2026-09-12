@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-12T09:18:42Z"
+updated_at: "2026-09-12T09:33:44Z"
 ---
 
 # Mobile after desktop
@@ -32,6 +32,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 - [[slice-385-single-ui-thread]]: heavy work is off the UI thread and platform views stay an escape hatch, not the default. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-389-input]]: the embedder owns input, IME, clipboard, and accessibility plumbing. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-393-engine-images]]: the engine owns images, with image decode on the IO thread. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
+- [[slice-397-engine-compositing]]: the engine composites a layer tree of offset, clip, transform, picture, and platform-view. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 
 ## Slices out
 
