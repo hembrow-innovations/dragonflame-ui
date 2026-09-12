@@ -2,7 +2,7 @@
 id: "task-273-spec-store-packaging"
 title: "Spec store packaging"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-267-red-green-counter-on-simulator"
@@ -11,7 +11,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-82-store-binaries"
 tags: []
 created_at: "2026-09-11T10:05:49Z"
-updated_at: "2026-09-11T10:05:49Z"
+updated_at: "2026-09-12T03:58:40Z"
 ---
 
 # Spec store packaging
@@ -68,10 +68,10 @@ A spec folder locks two oracles: a packaged binary artifact exists off the thin 
 - Promises must not name App Store, Play, IPA, AAB, or APK
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for store-packaging
-- [ ] test.md names both oracle commands above
-- [ ] Stores and formats stay unnamed
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for store-packaging
+- [x] test.md names both oracle commands above
+- [x] Stores and formats stay unnamed
+- [x] No product code
 
 **Out of scope:**
 - Implementing the packaged artifact

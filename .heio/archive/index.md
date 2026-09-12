@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-273-spec-store-packaging**: archived store-packaging spec ladder; packaged binary after thin shells, native updates are new binaries not OTA JS, stores and formats unnamed; O1 `tests/store-packaging/packaged-binary.test.mjs`, O2 `tests/store-packaging/not-ota-js.test.mjs` named.
 - **task-272-red-green-counter-on-emulator**: archived red-green Android counter on emulator; thin Gradle shell at `hosts/android/` shows counter text through engine draw lists; Android View is not the default leaf; O1 `tests/android-embedder/counter-on-emulator.test.mjs` pass.
 - **task-284-spec-framework-source**: archived framework-source spec ladder; library authored in Draconic, compiled by sibling `draconic build --target js`; O1 `tests/framework-source/draconic-authored.test.mjs`, O2 `tests/framework-source/sibling-compile.test.mjs` named.
 - **task-282-red-green-slot-occupied-on-ios**: archived red-green slot occupied on iOS; iOS embedder occupies the existing hatch slot by slot id; no async Bridge; O2 `tests/platform-views/slot-occupied-on-ios.test.mjs` pass.
