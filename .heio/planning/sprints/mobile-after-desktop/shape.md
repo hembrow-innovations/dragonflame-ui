@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-12T09:50:13Z"
+updated_at: "2026-09-12T10:06:12Z"
 ---
 
 # Mobile after desktop
@@ -34,6 +34,7 @@ Location: [[location-19-mobile-embedders]]. Phase 3 demos after desktop honesty.
 - [[slice-393-engine-images]]: the engine owns images, with image decode on the IO thread. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-397-engine-compositing]]: the engine composites a layer tree of offset, clip, transform, picture, and platform-view. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 - [[slice-401-engine-vsync-client]]: the engine is a vsync client and one vsync comes from the embedder. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
+- [[slice-405-engine-gpu-surface]]: the engine owns the GPU surface. blocked_by: [[slice-76-desktop-vsync-window]]. frozen
 
 ## Slices out
 
