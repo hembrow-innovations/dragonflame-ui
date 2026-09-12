@@ -25,4 +25,6 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: this repo does not copy JS emit from the sibling toolchain
 - `js-backend.path:frontend-ir-js`: Web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript. Callers keep the existing dragonflame-ui import. This package does not grow a compile helper, Frontend type, or IR type.
   test: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript
+- `js-backend.browser:uses-apis`: That package uses browser APIs. The source does not name the API set. Callers keep the existing dragonflame-ui import. This package does not grow a catalog, BrowserAPI type, or compile helper.
+  test: that package uses browser APIs. The source does not name the API set
 - `js-backend.false-path:not-rn-but-bytecode`: The path is not a JS thread, a shadow thread, a UI thread, a Draconic interpreter, and a bridge.

@@ -8,7 +8,7 @@ domain: ui-framework
 area: js-backend
 tags: [purpose]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-12"
 ---
 
 # JS backend purpose
@@ -27,6 +27,7 @@ Planning sitting [[rounds-111-js-backend-honesty]] and [[intent]]:
 Child destination sentences from [[location-30-js-backend]]:
 
 - **JS backend**: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript.
+- **Browser APIs**: unnamed usage. That package uses browser APIs.
 - **Compile-time split**: platform is a compile-time split, not a runtime JS bundle with dead native stubs.
 - **Not RN-but-bytecode**: the path is not a JS thread, a shadow thread, a UI thread, a Draconic interpreter, and a bridge.
 - **No eval**: `eval` is not embedded as a mini-Hermes and screens are not eval'd from strings.

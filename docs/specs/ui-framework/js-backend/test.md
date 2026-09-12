@@ -17,12 +17,13 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `js-backend.eval:no-eval-host`, `js-backend.split:no-native-stubs`, `js-backend.emit:no-emit-here`, and `js-backend.path:frontend-ir-js`. Oracle commands:
+Tests for this folder. They will lock `js-backend.eval:no-eval-host`, `js-backend.split:no-native-stubs`, `js-backend.emit:no-emit-here`, `js-backend.path:frontend-ir-js`, and `js-backend.browser:uses-apis`. Oracle commands:
 
 - node --test tests/js-backend/no-eval-here.test.mjs
 - node --test tests/js-backend/no-native-stubs.test.mjs
 - node --test tests/js-backend/no-emit-here.test.mjs
 - node --test tests/js-backend/frontend-ir-js.test.mjs
+- node --test tests/js-backend/browser-apis.test.mjs
 
 ## Tests
 
@@ -38,6 +39,9 @@ Tests for this folder. They will lock `js-backend.eval:no-eval-host`, `js-backen
 - **tests/js-backend/frontend-ir-js.test.mjs**: `web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript`
   - **How:** fails unless web compile is Frontend to shared IR to the JS backend and the browser runs that JavaScript. Callers keep the existing dragonflame-ui import. Fails if this checkout grows a compile API or Frontend or IR types. Does not point CHECK at `tests/framework-source/sibling-compile.test.mjs`
   - **Why:** promise `js-backend.path:frontend-ir-js`
+- **tests/js-backend/browser-apis.test.mjs**: `that package uses browser APIs. The source does not name the API set`
+  - **How:** fails unless that package uses browser APIs and the source does not name the API set. Callers keep the existing dragonflame-ui import. Fails if this checkout publishes an API catalog, greps a named global list as the prove, or grows a BrowserAPI type or public compile helper. Does not point CHECK at `tests/js-backend/frontend-ir-js.test.mjs`, `tests/renderer-portability/web-path.test.mjs`, or `tests/renderer-portability/portable-program.test.mjs`
+  - **Why:** promise `js-backend.browser:uses-apis`
 
 ## Gaps
 

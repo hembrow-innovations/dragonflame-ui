@@ -2,14 +2,14 @@
 id: "task-353-spec-browser-apis"
 title: "Spec Browser APIs"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-352-browser-apis"
 tags: []
 created_at: "2026-09-12T06:33:10Z"
-updated_at: "2026-09-12T06:33:10Z"
+updated_at: "2026-09-12T09:25:37Z"
 ---
 
 # Spec Browser APIs
@@ -70,10 +70,10 @@ scope: docs/specs/ui-framework/js-backend/
 - Promises must not add a public catalog, BrowserAPI type, or compile helper
 
 **Acceptance criteria:**
-- [ ] contract and test.md lock `js-backend.browser:uses-apis`
-- [ ] test.md names the oracle command above
-- [ ] locked honesty and path promises are not rewritten
-- [ ] No product code
+- [x] contract and test.md lock `js-backend.browser:uses-apis`
+- [x] test.md names the oracle command above
+- [x] locked honesty and path promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a new spec folder
