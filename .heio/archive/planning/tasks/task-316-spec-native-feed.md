@@ -2,14 +2,14 @@
 id: "task-316-spec-native-feed"
 title: "Spec Native feed"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-315-native-feed"
 tags: []
 created_at: "2026-09-12T15:00:00Z"
-updated_at: "2026-09-12T15:00:00Z"
+updated_at: "2026-09-12T06:46:00Z"
 ---
 
 # Spec Native feed
@@ -69,10 +69,10 @@ A spec folder locks one oracle: on native those objects feed layout and paint. O
 - Promises must not add a public feed mapper, LayoutEngine, or Taffy type
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for native-feed
-- [ ] test.md names the oracle command above
-- [ ] locked style-as-data honesty promises are not rewritten
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for native-feed
+- [x] test.md names the oracle command above
+- [x] locked style-as-data honesty promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a style-as-data promise
