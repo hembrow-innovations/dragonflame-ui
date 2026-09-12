@@ -2,14 +2,14 @@
 id: "task-297-spec-one-vsync"
 title: "Spec one vsync"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-296-one-vsync"
 tags: []
 created_at: "2026-09-12T10:30:00Z"
-updated_at: "2026-09-12T10:30:00Z"
+updated_at: "2026-09-12T05:36:25Z"
 ---
 
 # Spec one vsync
@@ -68,10 +68,10 @@ The animation-clocks ladder locks one oracle: two `Clock` subscribers share one 
 - Promises must not add a public Ticker, SchedulerBinding, AnimationController, or VsyncPort
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md lock `animation-clocks.vsync:one-source`
-- [ ] test.md names the oracle command above
-- [ ] `animation-clocks.vsync:web-raf` is kept, not repeated as a new oracle
-- [ ] No product code
+- [x] purpose, contract, and test.md lock `animation-clocks.vsync:one-source`
+- [x] test.md names the oracle command above
+- [x] `animation-clocks.vsync:web-raf` is kept, not repeated as a new oracle
+- [x] No product code
 
 **Out of scope:**
 - Native embedder vsync driving Clock
@@ -79,3 +79,8 @@ The animation-clocks ladder locks one oracle: two `Clock` subscribers share one 
 - Repeating [[slice-292-tickers-beside-pipeline]] beside-pipeline oracles
 - Repeating [[purpose-desktop-embedder]] window vsync oracles
 - Implementing the compiler
+
+## Gauntlet
+
+- **Round 1**: lose. Purpose used tracker voice and grafted VsyncPort onto the rounds-291 public-surface bullet.
+- **Round 2**: win. Purpose, contract, and test.md name the one-vsync oracle. `animation-clocks.vsync:one-source` points at `two Clock subscribers share one embedder vsync and the same t`. `animation-clocks.vsync:web-raf` stays locked on `rAF clock ticks`. No product code.

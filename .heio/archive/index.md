@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-297-spec-one-vsync**: archived animation-clocks spec ladder one-vsync; clocks share one embedder vsync and the same t; O1 `tests/animation-clocks/one-vsync.test.mjs` named.
 - **task-294-red-green-tickers-beside-pipeline**: archived red-green tickers beside pipeline; callers keep Clock; engine does not own animation state; setState is not the ticker; O1 `tests/animation-clocks/tickers-beside-pipeline.test.mjs` pass, O2 `tests/animation-clocks/no-engine-animation-state.test.mjs` pass.
 - **task-293-spec-tickers-beside-pipeline**: archived animation-clocks spec ladder leftover promises; tickers beside pipeline, engine does not own animation state, setState is not the ticker; O1 `tests/animation-clocks/tickers-beside-pipeline.test.mjs`, O2 `tests/animation-clocks/no-engine-animation-state.test.mjs` named.
 - **task-290-red-green-sync-ui-layout**: archived red-green sync layout and measure on the Runtime job queue; no JS shadow thread; no async Bridge for layout or measure; O2 `tests/aot-host-descriptors/sync-ui-layout.test.mjs` pass.

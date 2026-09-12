@@ -21,6 +21,8 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: rAF clock ticks
 - `animation-clocks.vsync:web-raf`: One vsync comes from the embedder, and on web vsync is requestAnimationFrame.
   test: rAF clock ticks
+- `animation-clocks.vsync:one-source`: Clocks share one embedder vsync and the same t. They do not each have their own time source.
+  test: two Clock subscribers share one embedder vsync and the same t
 - `animation-clocks.signals:not-tickers`: Signals replace build dirtying only.
   test: signals replace build dirtying only
 - `animation-clocks.tickers:beside-pipeline`: Vsync tickers exist beside the pipeline, layers, input, and a11y copy.

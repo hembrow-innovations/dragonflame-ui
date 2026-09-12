@@ -17,13 +17,14 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They lock `animation-clocks.framework:in-library`, `animation-clocks.vsync:web-raf`, `animation-clocks.signals:not-tickers`, `animation-clocks.tickers:beside-pipeline`, `animation-clocks.engine:forbid-owned-state`, and `animation-clocks.tickers:forbid-setstate`. Oracle commands:
+Tests for this folder. They lock `animation-clocks.framework:in-library`, `animation-clocks.vsync:web-raf`, `animation-clocks.vsync:one-source`, `animation-clocks.signals:not-tickers`, `animation-clocks.tickers:beside-pipeline`, `animation-clocks.engine:forbid-owned-state`, and `animation-clocks.tickers:forbid-setstate`. Oracle commands:
 
 - node --test tests/animation-clocks/raf-clock.test.mjs
 - node --test tests/animation-clocks/tickers-beside-pipeline.test.mjs
 - node --test tests/animation-clocks/no-engine-animation-state.test.mjs
+- node --test tests/animation-clocks/one-vsync.test.mjs
 
-The rAF command is the existing oracle. It is not a new oracle. Keep `animation-clocks.vsync:web-raf`.
+The rAF command is the existing oracle. It is not a new oracle. Keep `animation-clocks.vsync:web-raf`. The tickers-beside-pipeline command is the existing oracle. It is not a new oracle. Keep `animation-clocks.tickers:beside-pipeline`.
 
 ## Tests
 
@@ -42,6 +43,9 @@ The rAF command is the existing oracle. It is not a new oracle. Keep `animation-
 - **tests/animation-clocks/no-engine-animation-state.test.mjs**: `setState is not the ticker`
   - **How:** fails unless setState is not the ticker
   - **Why:** promise `animation-clocks.tickers:forbid-setstate`
+- **tests/animation-clocks/one-vsync.test.mjs**: `two Clock subscribers share one embedder vsync and the same t`
+  - **How:** two Clock subscribers share one embedder vsync and the same t. Callers keep `Clock`. No public VsyncPort
+  - **Why:** promise `animation-clocks.vsync:one-source`
 
 ## Gaps
 
