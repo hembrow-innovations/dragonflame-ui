@@ -2,14 +2,14 @@
 id: "task-288-spec-aot-host-descriptors"
 title: "Spec AOT host descriptors"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-287-aot-host-descriptors"
 tags: []
 created_at: "2026-09-12T08:30:00Z"
-updated_at: "2026-09-12T08:30:00Z"
+updated_at: "2026-09-12T14:40:00Z"
 ---
 
 # Spec AOT host descriptors
@@ -66,10 +66,10 @@ A spec folder locks two oracles: native leaves become compile-time typed FFI str
 - Promises must not add a public HostConfig, ShadowTree, or measure
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for aot-host-descriptors
-- [ ] test.md names both oracle commands above
-- [ ] `host-config.steal:forbid-jsi` is kept, not repeated as a new oracle
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for aot-host-descriptors
+- [x] test.md names both oracle commands above
+- [x] `host-config.steal:forbid-jsi` is kept, not repeated as a new oracle
+- [x] No product code
 
 **Out of scope:**
 - Implementing LeafDesc
