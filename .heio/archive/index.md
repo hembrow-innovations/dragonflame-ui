@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-301-spec-after-desktop**: archived after-desktop spec ladder; mobile follows desktop honesty; O1 `tests/after-desktop/mobile-follows-desktop-honesty.test.mjs` named.
 - **task-298-red-green-one-vsync**: archived red-green one vsync; two Clock subscribers share one embedder pulse and the same t; O1 `tests/animation-clocks/one-vsync.test.mjs` pass.
 - **task-297-spec-one-vsync**: archived animation-clocks spec ladder one-vsync; clocks share one embedder vsync and the same t; O1 `tests/animation-clocks/one-vsync.test.mjs` named.
 - **task-294-red-green-tickers-beside-pipeline**: archived red-green tickers beside pipeline; callers keep Clock; engine does not own animation state; setState is not the ticker; O1 `tests/animation-clocks/tickers-beside-pipeline.test.mjs` pass, O2 `tests/animation-clocks/no-engine-animation-state.test.mjs` pass.

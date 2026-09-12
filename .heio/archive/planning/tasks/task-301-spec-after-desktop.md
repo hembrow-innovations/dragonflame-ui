@@ -2,14 +2,14 @@
 id: "task-301-spec-after-desktop"
 title: "Spec after-desktop"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-300-desktop-first"
 tags: []
 created_at: "2026-09-11T23:43:50Z"
-updated_at: "2026-09-11T23:43:50Z"
+updated_at: "2026-09-12T05:50:25Z"
 ---
 
 # Spec after-desktop
