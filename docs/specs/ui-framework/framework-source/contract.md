@@ -21,6 +21,6 @@ Keep `js-backend.emit:no-emit-here` on [[contract-js-backend]]. Do not repeat it
 
 - `framework-source.authoring:draconic`: At least one public dragonflame-ui export is authored as Draconic. Framework `.drac` sources exist for that export.
   test: at least one public export is authored as Draconic
-- `framework-source.compile:sibling-js`: Sibling `draconic build --target js` produces the JavaScript callers import for that export. The shipped JavaScript is sibling emit, not hand-written.
-  test: sibling draconic build --target js produces the JavaScript callers import
+- `framework-source.compile:path-draconic`: PATH `draconic check` and `draconic build --target js` prove that export's `.drac` source. The prove tool is the installed CLI, not `cargo run` of the sibling checkout. The package barrel may stay JavaScript until emit preserves `export`.
+  test: PATH draconic check and build prove the authored export
 - `framework-source.scope:remaining-js-later`: Remaining JS modules wait on later slices. They stay out of this ladder.

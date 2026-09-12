@@ -37,7 +37,7 @@ Tests for this folder. They will lock `js-backend.eval:no-eval-host`, `js-backen
   - **How:** fails if this checkout copies JS emit from the sibling toolchain
   - **Why:** promise `js-backend.emit:no-emit-here`
 - **tests/js-backend/frontend-ir-js.test.mjs**: `web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript`
-  - **How:** fails unless web compile is Frontend to shared IR to the JS backend and the browser runs that JavaScript. Callers keep the existing dragonflame-ui import. Fails if this checkout grows a compile API or Frontend or IR types. Does not point CHECK at `tests/framework-source/sibling-compile.test.mjs`
+  - **How:** fails unless web compile is Frontend to shared IR to the JS backend and the browser runs that JavaScript. Callers keep the existing dragonflame-ui import. Fails if this checkout grows a compile API or Frontend or IR types. Does not point CHECK at `tests/framework-source/path-compile.test.mjs`
   - **Why:** promise `js-backend.path:frontend-ir-js`
 - **tests/js-backend/browser-apis.test.mjs**: `that package uses browser APIs. The source does not name the API set`
   - **How:** fails unless that package uses browser APIs and the source does not name the API set. Callers keep the existing dragonflame-ui import. Fails if this checkout publishes an API catalog, greps a named global list as the prove, or grows a BrowserAPI type or public compile helper. Does not point CHECK at `tests/js-backend/frontend-ir-js.test.mjs`, `tests/renderer-portability/web-path.test.mjs`, or `tests/renderer-portability/portable-program.test.mjs`
