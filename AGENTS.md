@@ -53,7 +53,6 @@ Open product questions may be closed by an AFK planning sitting with the smalles
 - No CI/CD or GitHub Actions
 - Markdown: never tables — use `- **{text}**: {text}`
 - Do not invent work when the user did not name a task and planning has not published ready tasks, except the afk-cycle campaign
-- Extremely concise output
 - No em dashes (`—`)
 - Prefer matching this repo's existing patterns over inventing new ones.
 - After any work or change do housekeeping on `.heio/` and commit in work packages.
