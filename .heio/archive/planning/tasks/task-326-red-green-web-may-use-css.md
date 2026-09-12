@@ -2,7 +2,7 @@
 id: "task-326-red-green-web-may-use-css"
 title: "Red-green Web may use CSS"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-325-spec-web-may-use-css"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-324-web-may-use-css"
 tags: []
 created_at: "2026-09-12T05:03:08Z"
-updated_at: "2026-09-12T05:03:08Z"
+updated_at: "2026-09-12T07:23:07Z"
 ---
 
 # Red-green Web may use CSS
@@ -65,10 +65,10 @@ The oracle command passes. Named test: web may use CSS because the browser alrea
 - No public `css`, `parseCss`, CSS mapper, or LayoutEngine
 
 **Acceptance criteria:**
-- [ ] `node --test tests/web-may-use-css/css-because-browser-has-it.test.mjs` passes
-- [ ] The named test owns the web-css prove, not leaf-view-text-style or CSS-forbid oracles
-- [ ] No public CSS mapper
-- [ ] Style-as-data honesty tests still pass
+- [x] `node --test tests/web-may-use-css/css-because-browser-has-it.test.mjs` passes
+- [x] The named test owns the web-css prove, not leaf-view-text-style or CSS-forbid oracles
+- [x] No public CSS mapper
+- [x] Style-as-data honesty tests still pass
 
 **Out of scope:**
 - Pointing this CHECK at `tests/leaf-kit/leaf-view-text-style.test.mjs`
@@ -76,3 +76,7 @@ The oracle command passes. Named test: web may use CSS because the browser alrea
 - One CSS engine for both hosts
 - CSS as the native layout runtime
 - Freezing StyleSheet shape or Native feed
+
+## Gauntlet
+
+- **round 1**: `node --test tests/web-may-use-css/css-because-browser-has-it.test.mjs`; win; 1 pass 0 fail; honesty still pass
