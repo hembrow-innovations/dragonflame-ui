@@ -2,7 +2,7 @@
 id: "slice-81-android-counter"
 title: "Android counter"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
