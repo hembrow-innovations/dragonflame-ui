@@ -2,13 +2,13 @@
 id: "slice-292-tickers-beside-pipeline"
 title: "Tickers beside pipeline"
 kind: slice
-status: active
+status: met
 sprint: "framework-in-draconic"
 blocked_by:
   - "slice-74-raf-clock"
 tags: []
 created_at: "2026-09-12T09:20:00Z"
-updated_at: "2026-09-12T05:28:19Z"
+updated_at: "2026-09-12T05:29:46Z"
 ---
 
 # Tickers beside pipeline
