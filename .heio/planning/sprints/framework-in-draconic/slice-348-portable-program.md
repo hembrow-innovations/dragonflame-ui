@@ -2,12 +2,12 @@
 id: "slice-348-portable-program"
 title: "Portable Program"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T06:16:32Z"
-updated_at: "2026-09-12T06:16:32Z"
+updated_at: "2026-09-12T09:18:32Z"
 ---
 
 # Portable Program
@@ -30,10 +30,10 @@ A public Metal or `document` host module. A public `compile` helper. Locking `re
 
 ## Oracle checklist
 
-- [ ] O1: a portable Program cannot import Metal or `document` directly
+- [x] O1: a portable Program cannot import Metal or `document` directly
   CHECK: node --test tests/renderer-portability/portable-program.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: 2026-09-12T09:18:32Z node --test tests/renderer-portability/portable-program.test.mjs pass 1 fail 0
 
 ## Pool
 
