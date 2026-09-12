@@ -2,13 +2,13 @@
 id: "purpose-renderer-portability"
 title: "Renderer portability purpose"
 kind: purpose
-description: "Product brief: job, scope, non-goals for the portable web import surface."
+description: "Product brief: job, scope, non-goals for the portable import surface. Native path uses extern C and unboxed numbers and structs."
 status: active
 domain: ui-framework
 area: renderer-portability
 tags: [purpose]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-12"
 ---
 
 # Renderer portability purpose
@@ -19,18 +19,22 @@ A portable Program imports a thin Draconic surface, not Metal or `document`, and
 
 ## In scope
 
-Child destination sentences from [[location-41-renderer-portability]], web path only:
+Child destination sentences from [[location-41-renderer-portability]]:
 
 - **Thin surface**: the API is a thin Draconic surface between portable UI code and a host.
+- **Native path**: the native path uses `extern "C"` and unboxed numbers and structs.
 - **Web path**: the web path uses JS-only DOM bindings.
 - **Wrong-target hard-error**: wrong-target use hard-errors.
 - **Portable Program**: a portable Program cannot import Metal or `document` directly.
 
-This area's oracles prove a portable Program compiles against the portability API and that importing `document` from portable code hard-errors. They do not prove native `extern "C"`.
+This area's oracles prove a portable Program compiles against the portability API, that importing `document` from portable code hard-errors, and that the native path uses `extern "C"` and unboxed numbers and structs. They do not prove one packed-scene submit. Those live on [[purpose-ffi-scene-commands]].
 
 ## Out of scope
 
-- Native `extern "C"` path and unboxed numbers and structs. That waits on funding. See [[location-40-ffi-scene-commands]].
+- A public `extern "C"` export on `dragonflame-ui/portable`.
+- Packed-scene field names.
+- Restaging `renderer-portability.surface:thin`. Those live on this folder's thin-surface oracle.
+- Restaging `ffi-scene-commands.submit:one-packed-scene`. Those live on [[purpose-ffi-scene-commands]].
 - Host I/O as a browser.
 - Putting a DOM into Host I/O.
 - Platform channels or JSI as the surface.
@@ -38,16 +42,17 @@ This area's oracles prove a portable Program compiles against the portability AP
 - Portable code talking to the OS.
 - Second IR.
 - Implementing the compiler in this repo.
+- Rewriting [[location-41-renderer-portability]].
 
 ## Surfaces
 
-The portable Program on the web host, compiling against the portability API.
+The portable Program compiling against the portability API. Callers keep `h` and `text` from `dragonflame-ui/portable`. Native host mapping stays behind that specifier.
 
 ## Authority
 
 - Behaviour: [[contract]]
 - Tests: [[test]]
-- Decisions: none. Settled answers live on [[location-41-renderer-portability]], [[location-28-dom-renderer]], [[location-35-host-config]], and [[architecture-layer-cake]].
+- Decisions: none. Settled answers live on [[location-41-renderer-portability]], [[location-40-ffi-scene-commands]], [[location-28-dom-renderer]], [[location-35-host-config]], [[intent]], [[glossary]], and [[architecture-layer-cake]].
 
 ## Open product questions
 

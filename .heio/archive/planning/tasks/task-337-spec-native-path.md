@@ -2,14 +2,14 @@
 id: "task-337-spec-native-path"
 title: "Spec Native path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-336-native-path"
 tags: []
 created_at: "2026-09-12T05:33:19Z"
-updated_at: "2026-09-12T05:33:19Z"
+updated_at: "2026-09-12T12:30:00Z"
 ---
 
 # Spec Native path
@@ -70,10 +70,10 @@ The existing folder locks one new oracle: the native path uses `extern "C"` and 
 - Promises must not add a public `extern "C"` export, packed-scene field names, JSI, or platform channels on `dragonflame-ui/portable`
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md cover Native path
-- [ ] test.md names the oracle command above
-- [ ] locked thin-surface and ffi-scene-commands promises are not rewritten
-- [ ] No product code
+- [x] purpose, contract, and test.md cover Native path
+- [x] test.md names the oracle command above
+- [x] locked thin-surface and ffi-scene-commands promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a new spec folder
