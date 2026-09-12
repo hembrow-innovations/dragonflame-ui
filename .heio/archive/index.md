@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-329-spec-phase-3-gate-unstated**: archived after-desktop unstated-gate promise; Phase 3 work stays behind desktop honesty; O1 `tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs` named.
 - **task-326-red-green-web-may-use-css**: archived red-green Web may use CSS; web may use CSS because the browser already has it; O1 `tests/web-may-use-css/css-because-browser-has-it.test.mjs` pass.
 - **task-325-spec-web-may-use-css**: archived web-may-use-css spec ladder; web may use CSS because the browser already has it; O1 `tests/web-may-use-css/css-because-browser-has-it.test.mjs` named.
 - **task-322-red-green-mobile-pursued-only-if-native-funded**: archived red-green mobile pursued only if native funded; cite Native is funded; no public NativeFunded; O1 `tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs` pass.

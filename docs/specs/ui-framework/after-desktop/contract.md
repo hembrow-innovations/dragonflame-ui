@@ -2,7 +2,7 @@
 id: "contract-after-desktop"
 title: "After desktop contract"
 kind: contract
-description: "Durable, plain-language promises for follow-desktop honesty and the funding gate. Locked promises carry a test pointer."
+description: "Durable, plain-language promises for follow-desktop honesty, the funding gate, and the unstated Phase 3 gate. Locked promises carry a test pointer."
 status: active
 domain: ui-framework
 area: after-desktop
@@ -29,3 +29,9 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: mobile is pursued only if native UI is funded
 - `after-desktop.types:forbid-public-funding-token`: There is no public NativeFunded or mayPursueMobile type.
   test: mobile is pursued only if native UI is funded
+- `after-desktop.phase-3:stay-behind-desktop-honesty`: Phase 3 work stays behind desktop honesty. Phase 3 work is not scheduled as if a Phase 3 gate were written. The overview Phase 3 bullet has no already-true, after-human-decision, if-native-funded, or optional words.
+  test: Phase 3 work stays behind desktop honesty
+- `after-desktop.host:no-second-gate-crate`: There is no second gate crate.
+  test: Phase 3 work stays behind desktop honesty
+- `after-desktop.types:forbid-public-phase-3-gate`: There is no public Phase3Gate or mayStartPhase3 type.
+  test: Phase 3 work stays behind desktop honesty
