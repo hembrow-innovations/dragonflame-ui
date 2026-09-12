@@ -2,13 +2,13 @@
 id: "slice-296-one-vsync"
 title: "One vsync"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by:
   - "slice-292-tickers-beside-pipeline"
 tags: []
 created_at: "2026-09-12T10:30:00Z"
-updated_at: "2026-09-12T10:30:00Z"
+updated_at: "2026-09-12T05:42:28Z"
 ---
 
 # One vsync
@@ -31,10 +31,10 @@ Native embedder vsync driving `Clock`. Repeating rAF oracles. Repeating tickers-
 
 ## Oracle checklist
 
-- [ ] O1: clocks share one vsync
+- [x] O1: clocks share one vsync
   CHECK: node --test tests/animation-clocks/one-vsync.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/animation-clocks/one-vsync.test.mjs; 1 pass 0 fail
 
 ## Pool
 
