@@ -2,7 +2,7 @@
 id: "task-342-red-green-web-path"
 title: "Red-green Web path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-341-spec-web-path"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-340-web-path"
 tags: []
 created_at: "2026-09-12T05:47:51Z"
-updated_at: "2026-09-12T05:47:51Z"
+updated_at: "2026-09-12T08:19:05Z"
 ---
 
 # Red-green Web path
@@ -65,10 +65,14 @@ The oracle command passes. Named test: web path uses JS-only DOM bindings. Fail 
 - No public `document` export, Host I/O as a browser, Host type, canvas switch, or paint API on `dragonflame-ui/portable`
 
 **Acceptance criteria:**
-- [ ] `node --test tests/renderer-portability/web-path.test.mjs` passes
-- [ ] The named test owns the web-path prove, not no-host-io-dom or thin-surface oracles
-- [ ] No public DOM types on `dragonflame-ui/portable`
-- [ ] Thin-surface tests still pass
+- [x] `node --test tests/renderer-portability/web-path.test.mjs` passes
+- [x] The named test owns the web-path prove, not no-host-io-dom or thin-surface oracles
+- [x] No public DOM types on `dragonflame-ui/portable`
+- [x] Thin-surface tests still pass
+
+## Gauntlet
+
+- **round 1**: `node --test tests/renderer-portability/web-path.test.mjs`; win; 1 pass 0 fail. Thin-surface tests still pass. No public DOM types on `dragonflame-ui/portable`.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/dom-only-host/no-host-io-dom.test.mjs`

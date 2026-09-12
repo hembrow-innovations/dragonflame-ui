@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-342-red-green-web-path**: archived red-green web path; private mapping uses JS-only DOM bindings; no public DOM types on `dragonflame-ui/portable`; O1 `tests/renderer-portability/web-path.test.mjs` pass.
 - **task-341-spec-web-path**: archived renderer-portability web-path promise; the web path uses JS-only DOM bindings; O1 `tests/renderer-portability/web-path.test.mjs` named.
 - **task-338-red-green-native-path**: archived red-green native path; private mapping uses `extern "C"` and unboxed numbers and structs; no public FFI on `dragonflame-ui/portable`; O1 `tests/renderer-portability/native-path.test.mjs` pass.
 - **task-337-spec-native-path**: archived renderer-portability native-path promise; the native path uses `extern "C"` and unboxed numbers and structs; O1 `tests/renderer-portability/native-path.test.mjs` named.

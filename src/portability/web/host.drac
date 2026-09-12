@@ -1,0 +1,2 @@
+let document = globalThis.document;
+document.createElement("div");
