@@ -1,9 +1,7 @@
+import { attach, detach } from "./vsync.js";
+
 export function Clock(onTick) {
-	let id;
-	const frame = (t) => {
-		onTick(t);
-		id = requestAnimationFrame(frame);
-	};
-	id = requestAnimationFrame(frame);
-	return () => cancelAnimationFrame(id);
+	const tick = (t) => onTick(t);
+	attach(tick);
+	return () => detach(tick);
 }

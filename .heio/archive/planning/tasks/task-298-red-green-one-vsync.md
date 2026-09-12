@@ -2,7 +2,7 @@
 id: "task-298-red-green-one-vsync"
 title: "Red-green one vsync"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-297-spec-one-vsync"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-296-one-vsync"
 tags: []
 created_at: "2026-09-12T10:30:00Z"
-updated_at: "2026-09-12T10:30:00Z"
+updated_at: "2026-09-12T16:50:00Z"
 ---
 
 # Red-green one vsync
@@ -67,10 +67,10 @@ The oracle command passes. Callers still import `Clock`. Two subscribers share o
 - No public Ticker, SchedulerBinding, AnimationController, or VsyncPort
 
 **Acceptance criteria:**
-- [ ] `node --test tests/animation-clocks/one-vsync.test.mjs` passes
-- [ ] Two `Clock` subscribers share one vsync and the same `t`
-- [ ] No public Ticker, SchedulerBinding, AnimationController, or VsyncPort
-- [ ] rAF clock tests still pass
+- [x] `node --test tests/animation-clocks/one-vsync.test.mjs` passes
+- [x] Two `Clock` subscribers share one vsync and the same `t`
+- [x] No public Ticker, SchedulerBinding, AnimationController, or VsyncPort
+- [x] rAF clock tests still pass
 
 **Out of scope:**
 - Native embedder vsync driving Clock
@@ -78,3 +78,7 @@ The oracle command passes. Callers still import `Clock`. Two subscribers share o
 - Repeating tickers-beside-pipeline oracles
 - Repeating desktop vsync-window oracles
 - Implementing the compiler
+
+## Gauntlet
+
+- **Round 1**: win. `node --test tests/animation-clocks/one-vsync.test.mjs` pass. Two Clock subscribers share one rAF pulse and the same t. Stop one leaves the other ticking. Last stop cancels. No public Ticker, SchedulerBinding, AnimationController, or VsyncPort. `raf-clock.test.mjs` still pass.
