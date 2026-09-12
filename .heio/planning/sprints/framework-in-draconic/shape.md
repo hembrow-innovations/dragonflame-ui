@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T05:03:08Z"
+updated_at: "2026-09-12T05:19:12Z"
 ---
 
 # Framework in Draconic
@@ -25,6 +25,7 @@ Location: [[location-17-web-component-library]]. Intent says the Framework libra
 - [[slice-311-js-backend]]: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript. blocked_by: none
 - [[slice-315-native-feed]]: on native StyleSheet-shaped objects feed layout and paint. blocked_by: none
 - [[slice-324-web-may-use-css]]: web may use CSS because the browser already has it. blocked_by: none
+- [[slice-332-thin-surface]]: the API is a thin Draconic surface between portable UI code and a host. blocked_by: none
 
 ## Slices out
 
