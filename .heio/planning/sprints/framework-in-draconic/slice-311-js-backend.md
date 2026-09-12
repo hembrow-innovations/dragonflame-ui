@@ -2,12 +2,12 @@
 id: "slice-311-js-backend"
 title: "JS backend"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T14:00:00Z"
-updated_at: "2026-09-12T14:00:00Z"
+updated_at: "2026-09-12T06:39:16Z"
 ---
 
 # JS backend
@@ -30,10 +30,10 @@ A public compile API. Implementing the compiler here. Copying JS emit. Emitting 
 
 ## Oracle checklist
 
-- [ ] O1: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript
+- [x] O1: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript
   CHECK: node --test tests/js-backend/frontend-ir-js.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/js-backend/frontend-ir-js.test.mjs; 1 pass 0 fail
 
 ## Pool
 
