@@ -2,12 +2,12 @@
 id: "slice-304-not-the-public-site"
 title: "Not the public site"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T12:10:00Z"
-updated_at: "2026-09-12T12:10:00Z"
+updated_at: "2026-09-12T16:05:00Z"
 ---
 
 # Not the public site
@@ -30,10 +30,10 @@ Rewriting the public site. Treating it as the first app of this library. A publi
 
 ## Oracle checklist
 
-- [ ] O1: public site stays TanStack Start
+- [x] O1: public site stays TanStack Start
   CHECK: node --test --test-name-pattern "public site stays TanStack Start and is not a rewrite destination" tests/git-package/git-package.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test --test-name-pattern "public site stays TanStack Start and is not a rewrite destination" tests/git-package/git-package.test.mjs; 1 pass 0 fail
 
 ## Pool
 
