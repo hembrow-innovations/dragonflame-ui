@@ -2,13 +2,13 @@
 id: "slice-320-funding"
 title: "Funding"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T04:10:34Z"
-updated_at: "2026-09-12T07:10:10Z"
+updated_at: "2026-09-12T07:11:25Z"
 ---
 
 # Funding
