@@ -2,13 +2,13 @@
 id: "slice-356-not-toolchain-d04"
 title: "Not toolchain D04"
 kind: slice
-status: active
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T06:52:16Z"
-updated_at: "2026-09-12T09:44:48Z"
+updated_at: "2026-09-12T09:45:54Z"
 ---
 
 # Not toolchain D04
