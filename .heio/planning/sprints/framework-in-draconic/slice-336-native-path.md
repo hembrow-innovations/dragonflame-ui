@@ -2,12 +2,12 @@
 id: "slice-336-native-path"
 title: "Native path"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T05:33:19Z"
-updated_at: "2026-09-12T05:33:19Z"
+updated_at: "2026-09-12T08:09:42Z"
 ---
 
 # Native path
@@ -30,10 +30,10 @@ A public `extern "C"` export on `dragonflame-ui/portable`. Packed-scene field na
 
 ## Oracle checklist
 
-- [ ] O1: the native path uses `extern "C"` and unboxed numbers and structs
+- [x] O1: the native path uses `extern "C"` and unboxed numbers and structs
   CHECK: node --test tests/renderer-portability/native-path.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/renderer-portability/native-path.test.mjs pass 1 fail 0
 
 ## Pool
 
