@@ -2,14 +2,14 @@
 id: "task-374-lock-engine-glyphs-promise"
 title: "Lock forbid-skia-text promise"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-373-engine-glyphs"
 tags: []
 created_at: "2026-09-12T08:00:25Z"
-updated_at: "2026-09-12T08:00:25Z"
+updated_at: "2026-09-12T18:47:24Z"
 ---
 
 # Lock forbid-skia-text promise

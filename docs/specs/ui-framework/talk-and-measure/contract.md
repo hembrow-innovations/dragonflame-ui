@@ -33,4 +33,5 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
 - `talk-and-measure.fonts:load-on-io`: Font load is `loadFont` on the IO thread. Font load is not on the UI thread.
   test: measureText is per-host and loadFont is not on the UI thread
 - `talk-and-measure.surface:forbid-unnamed`: The first tracer does not export `SemanticsOwner`, Flutter `SemanticsBinding`, RN `AccessibilityInfo`, `accessibilityHint`, `liveRegion`, `UIAccessibility`, `AccessibilityNodeInfo`, `Paragraph.layout`, or `TextPainter`.
-- `talk-and-measure.engine:forbid-skia-text`: Skia is not pulled in for text. Glyph atlas and font file formats stay unnamed.
+- `talk-and-measure.engine:forbid-skia-text`: Native glyphs live in the Rust engine. Skia is not pulled in for text. Glyph atlas and font file formats stay unnamed.
+  test: native glyphs live in the Rust engine and Skia is not pulled in for text

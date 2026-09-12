@@ -2,13 +2,13 @@
 id: "slice-373-engine-glyphs"
 title: "Engine glyphs"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T08:00:25Z"
-updated_at: "2026-09-12T08:00:25Z"
+updated_at: "2026-09-12T12:00:00Z"
 ---
 
 # Engine glyphs

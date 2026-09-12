@@ -31,6 +31,11 @@ Planning sitting [[rounds-363-freeze-pipeline-copy]] and [[location-54-accessibi
 - **Pipeline copy**: a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers.
 - **Public surface**: callers keep `SemanticsNode`, `GestureArena`, and `Clock`. No public `Pipeline`. No `Pipeline.flush*`. No `updateSemantics` as app API.
 
+Planning sitting [[rounds-372-freeze-engine-glyphs]] and [[location-55-text]]:
+
+- **Engine glyphs**: native glyphs live in the Rust engine.
+- **Public surface**: callers keep `Scene`, `submit`, `DrawRect`, and `recorded_draw_list`. No public Glyphs type. No `Paragraph.layout`. No `TextPainter`.
+
 ## In scope
 
 Child destination sentences from [[location-54-accessibility]]:
@@ -47,7 +52,7 @@ Child destination sentences from [[location-55-text]]:
 - **Text leaf**: this is working when text is a host leaf. See [[location-32-host-leaves]]
 - **IO font load**: this is working when font load runs on the IO thread.
 
-This area's oracles prove a `SemanticsNode` dump via `toStringDeep` that reuses `testID` and `accessibilityLabel`, that signals do not replace that dump, a per-host `measureText` seam, that CSS is not iOS layout, `loadFont` on the IO thread, and that a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers. They do not prove web a11y and test ID props. Those live on [[purpose-a11y-test-ids]]. They do not prove iOS host honesty. Those live on [[purpose-ios-embedder]]. They do not prove text as a host leaf. Those live on [[purpose-host-leaves]] and [[purpose-leaf-kit]]. They do not prove engine glyphs. They do not prove press-wins or embedder packets. Those live on [[purpose-gesture-arena]]. They do not prove tickers-beside-pipeline. Those live on [[purpose-animation-clocks]] and the embedder specs.
+This area's oracles prove a `SemanticsNode` dump via `toStringDeep` that reuses `testID` and `accessibilityLabel`, that signals do not replace that dump, a per-host `measureText` seam, that CSS is not iOS layout, `loadFont` on the IO thread, that a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers, and that native glyphs live in the Rust engine. They do not prove web a11y and test ID props. Those live on [[purpose-a11y-test-ids]]. They do not prove iOS host honesty. Those live on [[purpose-ios-embedder]]. They do not prove text as a host leaf. Those live on [[purpose-host-leaves]] and [[purpose-leaf-kit]]. They do not prove press-wins or embedder packets. Those live on [[purpose-gesture-arena]]. They do not prove tickers-beside-pipeline. Those live on [[purpose-animation-clocks]] and the embedder specs. They do not prove no-Skia-at-all. Those live on [[purpose-desktop-embedder]], [[purpose-ios-embedder]], and [[purpose-android-embedder]]. They do not prove FFI packed-scene submit. Those live on [[purpose-ffi-scene-commands]].
 
 ## Out of scope
 
@@ -67,17 +72,20 @@ This area's oracles prove a `SemanticsNode` dump via `toStringDeep` that reuses 
 - Repeating tickers-beside-pipeline oracles. Those live on [[purpose-animation-clocks]].
 - Public `Pipeline`. `Pipeline.flush*`. `updateSemantics` as app API.
 - Skipping accessibility until after store packaging.
+- Public Glyphs type.
+- Repeating no-Skia-at-all oracles. Those live on [[purpose-desktop-embedder]], [[purpose-ios-embedder]], and [[purpose-android-embedder]].
+- Repeating FFI packed-scene submit oracles. Those live on [[purpose-ffi-scene-commands]].
 - Implementing the compiler in this repo.
 
 ## Surfaces
 
-Framework dumps `SemanticsNode` with `toStringDeep` beside the render tree. Callers reuse `testID` and `accessibilityLabel`. `measureText` is the per-host metrics seam. `loadFont` runs on the IO thread. Callers keep `SemanticsNode`, `GestureArena`, and `Clock` as Framework library peers. Callers do not import a second native a11y prop set. Callers do not import `SemanticsOwner`. Callers do not import `AccessibilityInfo`. Callers do not import `Paragraph.layout`. Callers do not import `TextPainter`. Callers do not import `Pipeline`. Callers do not import `updateSemantics`.
+Framework dumps `SemanticsNode` with `toStringDeep` beside the render tree. Callers reuse `testID` and `accessibilityLabel`. `measureText` is the per-host metrics seam. `loadFont` runs on the IO thread. Callers keep `SemanticsNode`, `GestureArena`, and `Clock` as Framework library peers. Native glyphs live in the Rust engine. Callers keep `Scene`, `submit`, `DrawRect`, and `recorded_draw_list`. Callers do not import a second native a11y prop set. Callers do not import `SemanticsOwner`. Callers do not import `AccessibilityInfo`. Callers do not import `Paragraph.layout`. Callers do not import `TextPainter`. Callers do not import `Pipeline`. Callers do not import `updateSemantics`. Callers do not import a public Glyphs type.
 
 ## Authority
 
 - Behaviour: [[contract]]
 - Tests: [[test]]
-- Decisions: none. Settled answers live on [[rounds-258-name-phase3-apis]], [[rounds-363-freeze-pipeline-copy]], [[ticket-68-phase3-apis-unnamed]], [[location-54-accessibility]], [[location-55-text]], [[glossary]], and [[architecture-layer-cake]].
+- Decisions: none. Settled answers live on [[rounds-258-name-phase3-apis]], [[rounds-363-freeze-pipeline-copy]], [[rounds-372-freeze-engine-glyphs]], [[ticket-68-phase3-apis-unnamed]], [[location-54-accessibility]], [[location-55-text]], [[location-37-rust-engine]], [[glossary]], and [[architecture-layer-cake]].
 
 ## Open product questions
 
