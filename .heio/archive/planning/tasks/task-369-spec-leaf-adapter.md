@@ -2,14 +2,14 @@
 id: "task-369-spec-leaf-adapter"
 title: "Spec Leaf Adapter"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-368-leaf-adapter"
 tags: []
 created_at: "2026-09-12T07:44:54Z"
-updated_at: "2026-09-12T07:44:54Z"
+updated_at: "2026-09-12T10:19:48Z"
 ---
 
 # Spec Leaf Adapter
@@ -70,10 +70,10 @@ scope: docs/specs/ui-framework/leaf-kit/
 - Promises must not add a public HostConfig or Host
 
 **Acceptance criteria:**
-- [ ] contract and test.md lock `leaf-kit.host:config-at-leaves`
-- [ ] test.md names the oracle command above
-- [ ] locked steal and closed-set promises are not rewritten
-- [ ] No product code
+- [x] contract and test.md lock `leaf-kit.host:config-at-leaves`
+- [x] test.md names the oracle command above
+- [x] locked steal and closed-set promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a new spec folder

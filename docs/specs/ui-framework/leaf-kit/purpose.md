@@ -8,7 +8,7 @@ domain: ui-framework
 area: leaf-kit
 tags: [purpose]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-12"
 ---
 
 # Leaf kit purpose
@@ -33,7 +33,7 @@ Child destination sentences from [[location-31-web-layout]], [[location-32-host-
 - **Text leaf**: text is a host leaf.
 - **Per-host metrics**: text measurement disagrees across DOM, UIKit, and a native canvas engine, and a per-host metrics seam exists.
 
-This kit's oracles prove view and text with style data on CSS, image and scroll, and text input and pressable. They do not prove native layout, native glyphs, or a metrics API.
+This kit's oracles prove view and text with style data on CSS, image and scroll, text input and pressable, and that only the leaf adapter knows DOM versus UIView versus engine draw lists. They do not prove native layout, native glyphs, or a metrics API. They do not prove steal honesty. Those live on [[purpose-host-config]]. They do not prove portable Program import. Those live on [[purpose-renderer-portability]]. They do not prove native UIView versus engine draw lists as this folder's proof.
 
 ## Out of scope
 
@@ -50,12 +50,15 @@ This kit's oracles prove view and text with style data on CSS, image and scroll,
 - Native style objects feeding Taffy and paint.
 - Compile-time platform split as this kit's proof.
 - New Architecture steal lessons as this kit's proof. Do not steal JSI or Hermes.
+- A public HostConfig or Host.
+- Repeating steal oracles. Those live on [[purpose-host-config]].
+- Repeating portable Program oracles. Those live on [[purpose-renderer-portability]].
 - First-class a11y and test IDs. That is [[location-34-a11y-test-ids]].
 - Gesture arena. Pressable joining the arena is [[location-46-gesture-arena]].
 
 ## Surfaces
 
-The closed host leaf set on the web DOM host.
+The closed host leaf set on the web DOM host. Callers keep `h`, `render`, and the closed leaf kit. They do not import HostConfig or Host.
 
 ## Authority
 

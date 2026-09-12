@@ -8,7 +8,7 @@ domain: ui-framework
 area: leaf-kit
 tags: [contract]
 created_at: "2026-09-10"
-updated_at: "2026-09-10"
+updated_at: "2026-09-12"
 ---
 
 # Leaf kit contract
@@ -27,7 +27,8 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: view and text with style data on CSS
 - `leaf-kit.text:is-leaf`: Text is a host leaf.
   test: view and text with style data on CSS
-- `leaf-kit.host:config-at-leaves`: Only the leaf adapter knows DOM versus UIView versus engine draw lists. Shared code is composite components. A portable Program imports the renderer portability API, not Metal or `document`.
+- `leaf-kit.host:config-at-leaves`: Only the leaf adapter knows DOM versus UIView versus engine draw lists. Shared code is composite components. Callers keep `h`, `render`, and the closed leaf kit. This package does not grow a public HostConfig or Host.
+  test: only the leaf adapter knows DOM versus UIView versus engine draw lists
 - `leaf-kit.text:per-host-metrics`: Text measurement disagrees across hosts, and a per-host metrics seam exists.
 - `leaf-kit.set:forbid-html`: HTML is not the leaf set. Every UIKit class is not the leaf set.
 - `leaf-kit.layout:forbid-taffy-on-web`: Web layout is not Taffy.

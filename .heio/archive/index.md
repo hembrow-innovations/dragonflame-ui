@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-369-spec-leaf-adapter**: archived leaf-kit spec ladder config-at-leaves promise; only the leaf adapter knows DOM versus UIView versus engine draw lists; O1 `tests/leaf-kit/config-at-leaves.test.mjs` named.
 - **task-366-red-green-pipeline-copy-peers**: archived red-green pipeline-copy peers; SemanticsNode, GestureArena, and Clock are Framework library peers beside the render tree; a11y is not skipped until after store packaging; O1 `tests/talk-and-measure/pipeline-copy-peers.test.mjs` pass.
 - **task-365-lock-pipeline-copy-promise**: archived talk-and-measure pipeline-copy promise lock; a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers; O1 `tests/talk-and-measure/pipeline-copy-peers.test.mjs` named.
 - **task-362-red-green-android-not-toolchain-triples**: archived red-green android-embedder not-toolchain triples; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/android-embedder/not-toolchain-triples.test.mjs` pass.
