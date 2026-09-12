@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T07:44:54Z"
+updated_at: "2026-09-12T08:10:57Z"
 ---
 
 # Framework in Draconic
@@ -32,6 +32,7 @@ Location: [[location-17-web-component-library]]. Intent says the Framework libra
 - [[slice-348-portable-program]]: a portable Program cannot import Metal or `document` directly. blocked_by: none
 - [[slice-352-browser-apis]]: that package uses browser APIs. The source does not name the API set. blocked_by: none
 - [[slice-368-leaf-adapter]]: only the leaf adapter knows DOM versus UIView versus engine draw lists. blocked_by: none
+- [[slice-377-forbid-metal]]: this checkout does not let a portable Program import Metal. blocked_by: none
 
 ## Slices out
 
