@@ -2,14 +2,14 @@
 id: "task-293-spec-tickers-beside-pipeline"
 title: "Spec tickers beside pipeline"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-292-tickers-beside-pipeline"
 tags: []
 created_at: "2026-09-12T09:20:00Z"
-updated_at: "2026-09-12T09:20:00Z"
+updated_at: "2026-09-12T12:00:00Z"
 ---
 
 # Spec tickers beside pipeline
@@ -67,10 +67,10 @@ The animation-clocks ladder locks two oracles: tickers sit beside pipeline, laye
 - Promises must not add a public Ticker, SchedulerBinding, or AnimationController
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md lock the three leftover promises
-- [ ] test.md names both oracle commands above
-- [ ] `animation-clocks.vsync:web-raf` is kept, not repeated as a new oracle
-- [ ] No product code
+- [x] purpose, contract, and test.md lock the three leftover promises
+- [x] test.md names both oracle commands above
+- [x] `animation-clocks.vsync:web-raf` is kept, not repeated as a new oracle
+- [x] No product code
 
 **Out of scope:**
 - Retargeting Clock onto desktop embedder vsync
