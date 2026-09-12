@@ -2,14 +2,14 @@
 id: "slice-82-store-binaries"
 title: "Store binaries"
 kind: slice
-status: frozen
+status: met
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-80-ios-counter"
   - "slice-81-android-counter"
 tags: []
 created_at: "2026-09-09T23:30:00Z"
-updated_at: "2026-09-11T10:05:49Z"
+updated_at: "2026-09-12T04:20:00Z"
 ---
 
 # Store binaries
@@ -32,14 +32,14 @@ Inventing App Store or Play formats. OTA JS bundle. Signing and upload.
 
 ## Oracle checklist
 
-- [ ] O1: packaged binary exists
+- [x] O1: packaged binary exists
   CHECK: node --test tests/store-packaging/packaged-binary.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: not OTA JS
+  EVIDENCE: node --test tests/store-packaging/packaged-binary.test.mjs; 1 pass 0 fail
+- [x] O2: not OTA JS
   CHECK: node --test tests/store-packaging/not-ota-js.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/store-packaging/not-ota-js.test.mjs; 1 pass 0 fail
 
 ## Pool
 
