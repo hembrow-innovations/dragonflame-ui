@@ -2,7 +2,7 @@
 id: "task-285-red-green-framework-source"
 title: "Red-green: framework source is Draconic"
 kind: task
-status: ready
+status: blocked
 mode: afk
 blocked_by:
   - "task-284-spec-framework-source"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-283-draconic-framework-source"
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T09:50:00Z"
+updated_at: "2026-09-12T04:15:00Z"
 ---
 
 # Red-green: framework source is Draconic
@@ -68,7 +68,7 @@ At least one public named export is a Draconic module. Sibling `draconic build -
 - [ ] `node --test tests/framework-source/draconic-authored.test.mjs` pass
 - [ ] `node --test tests/framework-source/sibling-compile.test.mjs` pass
 - [ ] Promise ids listed above still hold
-- [ ] If the sibling toolchain cannot compile the construct, a GitHub issue is filed on draconic and this task does not grow a compiler
+- [x] If the sibling toolchain cannot compile the construct, a GitHub issue is filed on draconic and this task does not grow a compiler
 
 **Out of scope:**
 - Rewriting every remaining JS module
@@ -76,3 +76,7 @@ At least one public named export is a Draconic module. Sibling `draconic build -
 - JSX
 - Implementing the compiler in this repo
 - Repeating [[purpose-js-backend]] honesty tests
+
+## Gauntlet
+
+- **round 1**: `draconic build --target js` on `export const view = "view"` and on a re-export graph. lose. Sibling JS emit strips ESM `export` (flattens to `const view` / `const __m0_view`), so callers cannot `import { view }` from sibling emit. https://github.com/hembrow-innovations/draconic/issues/1. Did not grow a compiler here. Did not copy JS emit.
