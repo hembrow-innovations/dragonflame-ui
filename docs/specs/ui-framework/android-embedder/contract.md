@@ -8,7 +8,7 @@ domain: ui-framework
 area: android-embedder
 tags: [contract]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # Android embedder contract
@@ -34,6 +34,7 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
 - `android-embedder.triples:arm64-v8a`: Android arm64-v8a is in scope as `aarch64-linux-android` plus Gradle abiFilters arm64-v8a. Emulator-only is not done.
   test: Android arm64-v8a is in scope
 - `android-embedder.triples:not-toolchain`: These triples are this product's mobile packaging, not toolchain D04.
+  test: Android triples are this product's mobile packaging, not toolchain D04
 - `android-embedder.engine:forbid-skia`: There is no Skia requirement and no Flutter Engine as a product dependency.
 - `android-embedder.layers:uncollapsed`: Engine, Runtime, and Embedder stay uncollapsed. Runtime is language GC and jobs.
 - `android-embedder.types:forbid-androidview`: Public `AndroidView` stays unnamed.

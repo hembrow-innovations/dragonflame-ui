@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-361-lock-android-not-toolchain-promise**: archived android-embedder not-toolchain promise lock; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/android-embedder/not-toolchain-triples.test.mjs` named.
 - **task-358-red-green-not-toolchain-triples**: archived red-green ios-embedder not-toolchain triples; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/ios-embedder/not-toolchain-triples.test.mjs` pass.
 - **task-357-lock-not-toolchain-promise**: archived ios-embedder not-toolchain promise lock; these triples are this product's mobile packaging, not toolchain D04; O1 `tests/ios-embedder/not-toolchain-triples.test.mjs` named.
 - **task-354-red-green-browser-apis**: archived red-green unnamed browser API usage; callers keep dragonflame-ui; no catalog, BrowserAPI, or compile helper; O1 `tests/js-backend/browser-apis.test.mjs` pass.

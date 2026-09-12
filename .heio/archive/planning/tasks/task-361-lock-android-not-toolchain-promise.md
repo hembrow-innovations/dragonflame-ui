@@ -2,16 +2,15 @@
 id: "task-361-lock-android-not-toolchain-promise"
 title: "Lock Android not-toolchain promise"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-360-android-not-toolchain-d04"
 tags: []
 created_at: "2026-09-12T07:06:39Z"
-updated_at: "2026-09-12T07:06:39Z"
+updated_at: "2026-09-12T09:51:00Z"
 ---
-
 # Lock Android not-toolchain promise
 
 ## Blocked by

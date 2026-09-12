@@ -8,7 +8,7 @@ domain: ui-framework
 area: android-embedder
 tags: [test]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # Android embedder tests
@@ -17,11 +17,12 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `android-embedder.window:embedder-owns`, `android-embedder.vsync:embedder-supplies`, `android-embedder.gpu:engine-owns`, `android-embedder.counter:draw-lists`, `android-embedder.host:forbid-webview`, `android-embedder.host:forbid-js-engine`, `android-embedder.triples:emulator`, and `android-embedder.triples:arm64-v8a`. Oracle commands:
+Tests for this folder. They will lock `android-embedder.window:embedder-owns`, `android-embedder.vsync:embedder-supplies`, `android-embedder.gpu:engine-owns`, `android-embedder.counter:draw-lists`, `android-embedder.host:forbid-webview`, `android-embedder.host:forbid-js-engine`, `android-embedder.triples:emulator`, `android-embedder.triples:arm64-v8a`, and `android-embedder.triples:not-toolchain`. Oracle commands:
 
 - node --test tests/android-embedder/counter-on-emulator.test.mjs
 - node --test tests/android-embedder/no-webview-no-js-engine.test.mjs
 - node --test tests/android-embedder/arm64-v8a-in-scope.test.mjs
+- node --test tests/android-embedder/not-toolchain-triples.test.mjs
 
 ## Tests
 
@@ -37,10 +38,13 @@ Tests for this folder. They will lock `android-embedder.window:embedder-owns`, `
 - **tests/android-embedder/arm64-v8a-in-scope.test.mjs**: `Android arm64-v8a is in scope`
   - **How:** fails unless Android arm64-v8a is in scope as `aarch64-linux-android` plus Gradle abiFilters arm64-v8a. Emulator-only is not done
   - **Why:** promise `android-embedder.triples:arm64-v8a`
+- **tests/android-embedder/not-toolchain-triples.test.mjs**: `Android triples are this product's mobile packaging, not toolchain D04`
+  - **How:** fails if this checkout files Android triples as toolchain D04 or language ROADMAP work, if packaging is missing from `hosts/android/` plus the embedder android module, if a public `TargetTriple`, `AndroidTriple`, or `shippedTriples()` type exists, if rustc target strings appear on the framework API, or if `docs/specs/ui-framework/android-triples/` exists. Does not fail on the purpose grain sentence naming D04
+  - **Why:** promise `android-embedder.triples:not-toolchain`
 
 ## Gaps
 
-- No test yet for `android-embedder.triples:not-toolchain`, `android-embedder.engine:forbid-skia`, `android-embedder.layers:uncollapsed`, or `android-embedder.types:forbid-androidview`.
+- No test yet for `android-embedder.engine:forbid-skia`, `android-embedder.layers:uncollapsed`, or `android-embedder.types:forbid-androidview`.
 - Input, IME, clipboard, and accessibility plumbing stay unimplemented.
 - Android view attach stays on [[slice-84-platform-view-hatch]].
 - Desktop no-webview and no-js-engine oracles stay on [[test-desktop-embedder]].
