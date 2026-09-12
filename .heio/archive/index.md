@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-325-spec-web-may-use-css**: archived web-may-use-css spec ladder; web may use CSS because the browser already has it; O1 `tests/web-may-use-css/css-because-browser-has-it.test.mjs` named.
 - **task-322-red-green-mobile-pursued-only-if-native-funded**: archived red-green mobile pursued only if native funded; cite Native is funded; no public NativeFunded; O1 `tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs` pass.
 - **task-321-spec-funding-after-desktop**: archived after-desktop funding promise; mobile is pursued only if native UI is funded; O1 `tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs` named.
 - **task-317-red-green-native-feed**: archived red-green Native feed; on native those objects feed layout and paint; O1 `tests/native-feed/objects-feed-layout-paint.test.mjs` pass.

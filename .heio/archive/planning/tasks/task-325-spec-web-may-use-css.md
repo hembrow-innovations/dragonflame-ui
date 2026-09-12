@@ -2,14 +2,14 @@
 id: "task-325-spec-web-may-use-css"
 title: "Spec Web may use CSS"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-324-web-may-use-css"
 tags: []
 created_at: "2026-09-12T05:03:08Z"
-updated_at: "2026-09-12T05:03:08Z"
+updated_at: "2026-09-12T07:18:27Z"
 ---
 
 # Spec Web may use CSS
@@ -69,11 +69,11 @@ A spec folder locks one oracle: web may use CSS because the browser already has 
 - Promises must not add a public `css` tagged template, `parseCss`, CSS mapper, or LayoutEngine
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md exist for web-may-use-css
-- [ ] test.md names the oracle command above
-- [ ] locked style-as-data honesty promises are not rewritten
-- [ ] locked leaf-kit CSS-on-web promises are not rewritten
-- [ ] No product code
+- [x] purpose, contract, and test.md exist for web-may-use-css
+- [x] test.md names the oracle command above
+- [x] locked style-as-data honesty promises are not rewritten
+- [x] locked leaf-kit CSS-on-web promises are not rewritten
+- [x] No product code
 
 **Out of scope:**
 - Creating a style-as-data promise
