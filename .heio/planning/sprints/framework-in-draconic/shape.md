@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T15:00:00Z"
+updated_at: "2026-09-12T05:03:08Z"
 ---
 
 # Framework in Draconic
@@ -24,6 +24,7 @@ Location: [[location-17-web-component-library]]. Intent says the Framework libra
 - [[slice-307-layout-tests-later]]: native layout tests stay a frozen algorithm, not a Taffy list at the tests location. blocked_by: none
 - [[slice-311-js-backend]]: web compile is Frontend to shared IR to the JS backend, and the browser runs that JavaScript. blocked_by: none
 - [[slice-315-native-feed]]: on native StyleSheet-shaped objects feed layout and paint. blocked_by: none
+- [[slice-324-web-may-use-css]]: web may use CSS because the browser already has it. blocked_by: none
 
 ## Slices out
 
