@@ -2,7 +2,7 @@
 id: "task-313-red-green-js-backend-path"
 title: "Red-green JS backend path"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-312-spec-js-backend-path"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-311-js-backend"
 tags: []
 created_at: "2026-09-12T14:00:00Z"
-updated_at: "2026-09-12T14:00:00Z"
+updated_at: "2026-09-12T06:38:26Z"
 ---
 
 # Red-green JS backend path
@@ -65,12 +65,12 @@ The oracle command passes. Named test: web compile is Frontend to shared IR to t
 - No public compile helper, Frontend type, or IR type
 
 **Acceptance criteria:**
-- [ ] `node --test tests/js-backend/frontend-ir-js.test.mjs` passes
-- [ ] The named test owns the path prove, not sibling-compile or honesty oracles
-- [ ] No public compile helper
-- [ ] `tests/js-backend/no-eval-here.test.mjs` still passes
-- [ ] `tests/js-backend/no-native-stubs.test.mjs` still passes
-- [ ] `tests/js-backend/no-emit-here.test.mjs` still passes
+- [x] `node --test tests/js-backend/frontend-ir-js.test.mjs` passes
+- [x] The named test owns the path prove, not sibling-compile or honesty oracles
+- [x] No public compile helper
+- [x] `tests/js-backend/no-eval-here.test.mjs` still passes
+- [x] `tests/js-backend/no-native-stubs.test.mjs` still passes
+- [x] `tests/js-backend/no-emit-here.test.mjs` still passes
 
 **Out of scope:**
 - Pointing this CHECK at `tests/framework-source/sibling-compile.test.mjs`
