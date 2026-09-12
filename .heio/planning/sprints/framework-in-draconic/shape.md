@@ -5,7 +5,7 @@ kind: sprint
 status: active
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T05:33:19Z"
+updated_at: "2026-09-12T05:47:51Z"
 ---
 
 # Framework in Draconic
@@ -27,6 +27,7 @@ Location: [[location-17-web-component-library]]. Intent says the Framework libra
 - [[slice-324-web-may-use-css]]: web may use CSS because the browser already has it. blocked_by: none
 - [[slice-332-thin-surface]]: the API is a thin Draconic surface between portable UI code and a host. blocked_by: none
 - [[slice-336-native-path]]: the native path uses `extern "C"` and unboxed numbers and structs. blocked_by: none
+- [[slice-340-web-path]]: the web path uses JS-only DOM bindings. blocked_by: none
 
 ## Slices out
 
