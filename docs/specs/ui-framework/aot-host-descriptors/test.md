@@ -17,7 +17,7 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They lock `aot-host-descriptors.leaf:typed-aot-ffi`. They will lock `aot-host-descriptors.layout:sync-runtime-queue`. Oracle commands:
+Tests for this folder. They lock `aot-host-descriptors.leaf:typed-aot-ffi` and `aot-host-descriptors.layout:sync-runtime-queue`. Oracle commands:
 
 - node --test tests/aot-host-descriptors/typed-leaf-ffi.test.mjs
 - node --test tests/aot-host-descriptors/sync-ui-layout.test.mjs
@@ -34,7 +34,6 @@ Tests for this folder. They lock `aot-host-descriptors.leaf:typed-aot-ffi`. They
 ## Gaps
 
 - No test yet for `aot-host-descriptors.api:forbid-public-fabric`.
-- `tests/aot-host-descriptors/sync-ui-layout.test.mjs` is not in the repo yet.
 - No-JSI and no-Hermes oracles stay on [[test-host-config]].
 - Taffy-rect and GPU-not-UI oracles stay on [[test-ffi-scene-commands]].
 - Run-once oracles stay on [[test-counter]].

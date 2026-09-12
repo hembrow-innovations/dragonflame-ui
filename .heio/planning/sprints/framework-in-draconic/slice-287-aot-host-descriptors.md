@@ -9,7 +9,7 @@ blocked_by:
   - "slice-153-host-config-honesty"
 tags: []
 created_at: "2026-09-12T08:30:00Z"
-updated_at: "2026-09-12T16:50:00Z"
+updated_at: "2026-09-12T17:25:00Z"
 ---
 
 # AOT host descriptors
@@ -36,10 +36,10 @@ A public HostConfig. A public ShadowTree. A public measure. Repeating no-JSI or 
   CHECK: node --test tests/aot-host-descriptors/typed-leaf-ffi.test.mjs
   EXPECT: pass
   EVIDENCE: node --test tests/aot-host-descriptors/typed-leaf-ffi.test.mjs; 1 pass 0 fail
-- [ ] O2: sync UI layout
+- [x] O2: sync UI layout
   CHECK: node --test tests/aot-host-descriptors/sync-ui-layout.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/aot-host-descriptors/sync-ui-layout.test.mjs; 1 pass 0 fail
 
 ## Pool
 

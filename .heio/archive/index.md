@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-290-red-green-sync-ui-layout**: archived red-green sync layout and measure on the Runtime job queue; no JS shadow thread; no async Bridge for layout or measure; O2 `tests/aot-host-descriptors/sync-ui-layout.test.mjs` pass.
 - **task-289-red-green-typed-leaf-ffi**: archived red-green typed AOT leaf FFI; native leaves are compile-time typed `repr(C)` structs behind the leaf adapter, not JS host objects or string tags; O1 `tests/aot-host-descriptors/typed-leaf-ffi.test.mjs` pass.
 - **task-288-spec-aot-host-descriptors**: archived aot-host-descriptors spec ladder; typed AOT leaf FFI, sync layout and measure on the Runtime job queue; O1 `tests/aot-host-descriptors/typed-leaf-ffi.test.mjs`, O2 `tests/aot-host-descriptors/sync-ui-layout.test.mjs` named.
 - **task-275-red-green-not-ota-js**: archived red-green native updates are new binaries not Expo-style OTA of a JS bundle; update path hangs off thin shells; O2 `tests/store-packaging/not-ota-js.test.mjs` pass.
