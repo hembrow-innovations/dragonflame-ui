@@ -2,7 +2,7 @@
 id: "task-321-spec-funding-after-desktop"
 title: "Spec funding after-desktop"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-301-spec-after-desktop"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-320-funding"
 tags: []
 created_at: "2026-09-12T04:10:34Z"
-updated_at: "2026-09-12T04:10:34Z"
+updated_at: "2026-09-12T07:02:52Z"
 ---
 
 # Spec funding after-desktop

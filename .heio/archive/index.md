@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-321-spec-funding-after-desktop**: archived after-desktop funding promise; mobile is pursued only if native UI is funded; O1 `tests/after-desktop/mobile-pursued-only-if-native-funded.test.mjs` named.
 - **task-317-red-green-native-feed**: archived red-green Native feed; on native those objects feed layout and paint; O1 `tests/native-feed/objects-feed-layout-paint.test.mjs` pass.
 - **task-316-spec-native-feed**: archived native-feed spec ladder; on native those objects feed layout and paint; O1 `tests/native-feed/objects-feed-layout-paint.test.mjs` named.
 - **task-313-red-green-js-backend-path**: archived red-green JS backend path; web compile is Frontend to shared IR to the JS backend and the browser runs that JavaScript; O1 `tests/js-backend/frontend-ir-js.test.mjs` pass.
