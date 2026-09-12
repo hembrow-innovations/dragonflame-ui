@@ -2,12 +2,12 @@
 id: "slice-324-web-may-use-css"
 title: "Web may use CSS"
 kind: slice
-status: frozen
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-12T05:03:08Z"
-updated_at: "2026-09-12T05:03:08Z"
+updated_at: "2026-09-12T07:24:17Z"
 ---
 
 # Web may use CSS
@@ -30,10 +30,10 @@ A public `css` tagged template. A public `parseCss`. CSS source strings as style
 
 ## Oracle checklist
 
-- [ ] O1: web may use CSS because the browser already has it
+- [x] O1: web may use CSS because the browser already has it
   CHECK: node --test tests/web-may-use-css/css-because-browser-has-it.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/web-may-use-css/css-because-browser-has-it.test.mjs; 1 pass 0 fail
 
 ## Pool
 
