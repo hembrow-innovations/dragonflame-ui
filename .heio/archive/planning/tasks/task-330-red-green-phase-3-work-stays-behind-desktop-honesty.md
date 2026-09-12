@@ -2,7 +2,7 @@
 id: "task-330-red-green-phase-3-work-stays-behind-desktop-honesty"
 title: "Red-green Phase 3 work stays behind desktop honesty"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-329-spec-phase-3-gate-unstated"
@@ -10,7 +10,7 @@ sprint: "mobile-after-desktop"
 slice: "slice-328-phase-3-gate-unstated"
 tags: []
 created_at: "2026-09-12T05:12:35Z"
-updated_at: "2026-09-12T05:12:35Z"
+updated_at: "2026-09-12T07:36:11Z"
 ---
 
 # Red-green Phase 3 work stays behind desktop honesty
@@ -43,3 +43,7 @@ scope: tests/after-desktop/ crates/embedder/ docs/specs/ui-framework/after-deskt
 - [[slice-328-phase-3-gate-unstated]]
 - [[task-329-spec-phase-3-gate-unstated]]
 - [[rounds-327-freeze-phase-3-gate-unstated]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs`; win; 1 pass 0 fail

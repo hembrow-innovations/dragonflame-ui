@@ -2,13 +2,13 @@
 id: "slice-328-phase-3-gate-unstated"
 title: "Phase 3 gate unstated"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T05:12:35Z"
-updated_at: "2026-09-12T05:12:35Z"
+updated_at: "2026-09-12T07:36:11Z"
 ---
 
 # Phase 3 gate unstated
@@ -31,10 +31,10 @@ Restaging [[slice-300-desktop-first]], [[slice-320-funding]], [[slice-80-ios-cou
 
 ## Oracle checklist
 
-- [ ] O1: Phase 3 work stays behind desktop honesty
+- [x] O1: Phase 3 work stays behind desktop honesty
   CHECK: node --test tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: node --test tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs; 1 pass 0 fail
 
 ## Pool
 

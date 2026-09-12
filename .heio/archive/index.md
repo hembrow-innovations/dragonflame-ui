@@ -2,6 +2,7 @@
 
 One-liners of what landed. Newest first.
 
+- **task-330-red-green-phase-3-work-stays-behind-desktop-honesty**: archived red-green Phase 3 work stays behind desktop honesty; overview Phase 3 stays unqualified; no public Phase3Gate; O1 `tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs` pass.
 - **task-329-spec-phase-3-gate-unstated**: archived after-desktop unstated-gate promise; Phase 3 work stays behind desktop honesty; O1 `tests/after-desktop/phase-3-work-stays-behind-desktop-honesty.test.mjs` named.
 - **task-326-red-green-web-may-use-css**: archived red-green Web may use CSS; web may use CSS because the browser already has it; O1 `tests/web-may-use-css/css-because-browser-has-it.test.mjs` pass.
 - **task-325-spec-web-may-use-css**: archived web-may-use-css spec ladder; web may use CSS because the browser already has it; O1 `tests/web-may-use-css/css-because-browser-has-it.test.mjs` named.
