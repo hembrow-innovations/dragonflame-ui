@@ -2,14 +2,14 @@
 id: "task-308-spec-layout-tests-later"
 title: "Spec layout tests later"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "framework-in-draconic"
 slice: "slice-307-layout-tests-later"
 tags: []
 created_at: "2026-09-12T13:00:00Z"
-updated_at: "2026-09-12T13:00:00Z"
+updated_at: "2026-09-12T16:30:00Z"
 ---
 
 # Spec layout tests later
@@ -70,10 +70,10 @@ The layout-tests ladder locks one oracle: this tests location does not invent a 
 - Promises must not add a public LayoutEngine, Yoga, or layout-test helper
 
 **Acceptance criteria:**
-- [ ] purpose, contract, and test.md lock `layout-tests.placement:no-taffy-list`
-- [ ] test.md names the oracle command above
-- [ ] `ffi-scene-commands.layout:taffy` and [[contract-web-layout]] are not repeated as new oracles
-- [ ] No product code
+- [x] purpose, contract, and test.md lock `layout-tests.placement:no-taffy-list`
+- [x] test.md names the oracle command above
+- [x] `ffi-scene-commands.layout:taffy` and [[contract-web-layout]] are not repeated as new oracles
+- [x] No product code
 
 **Out of scope:**
 - Inventing a Taffy case list
