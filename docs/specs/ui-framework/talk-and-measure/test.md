@@ -8,7 +8,7 @@ domain: ui-framework
 area: talk-and-measure
 tags: [test]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # Talk and measure tests
@@ -17,10 +17,11 @@ Purpose: [[purpose]]. Contract: [[contract]].
 
 ## Coverage
 
-Tests for this folder. They will lock `talk-and-measure.tree:semantics-node`, `talk-and-measure.props:reuse`, `talk-and-measure.tree:signals-do-not-replace`, `talk-and-measure.tree:forbid-aria-only`, `talk-and-measure.metrics:measure-text`, and `talk-and-measure.fonts:load-on-io`. Oracle commands:
+Tests for this folder. They will lock `talk-and-measure.tree:semantics-node`, `talk-and-measure.props:reuse`, `talk-and-measure.tree:signals-do-not-replace`, `talk-and-measure.tree:forbid-aria-only`, `talk-and-measure.tree:pipeline-copy`, `talk-and-measure.metrics:measure-text`, and `talk-and-measure.fonts:load-on-io`. Oracle commands:
 
 - node --test tests/talk-and-measure/semantics-dump.test.mjs
 - node --test tests/talk-and-measure/per-host-metrics.test.mjs
+- node --test tests/talk-and-measure/pipeline-copy-peers.test.mjs
 
 ## Tests
 
@@ -30,6 +31,9 @@ Tests for this folder. They will lock `talk-and-measure.tree:semantics-node`, `t
 - **tests/talk-and-measure/per-host-metrics.test.mjs**: `measureText is per-host and loadFont is not on the UI thread`
   - **How:** `measureText` is the per-host metrics seam. Sizes may disagree across DOM, UIKit, and the engine. Fails if CSS is iOS layout. `loadFont` runs on the IO thread, not the UI thread
   - **Why:** promises `talk-and-measure.metrics:measure-text` and `talk-and-measure.fonts:load-on-io`
+- **tests/talk-and-measure/pipeline-copy-peers.test.mjs**: `a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers`
+  - **How:** `SemanticsNode`, `GestureArena`, and `Clock` are Framework library peers beside the render tree. Accessibility is not skipped until after store packaging. Fails if a public `Pipeline`, `Pipeline.flush*`, or `updateSemantics` is app API. Does not restage dump, press-wins, or tickers-beside-pipeline oracles
+  - **Why:** promise `talk-and-measure.tree:pipeline-copy`
 
 ## Gaps
 
@@ -39,3 +43,5 @@ Tests for this folder. They will lock `talk-and-measure.tree:semantics-node`, `t
 - iOS host honesty oracles stay on [[test-ios-embedder]].
 - Six-leaf oracles stay on [[test-leaf-kit]].
 - Signal-dirtying oracles stay on [[test-signal-dirtying]].
+- Press-wins and embedder packet oracles stay on [[test-gesture-arena]].
+- Tickers-beside-pipeline oracles stay on [[test-animation-clocks]].

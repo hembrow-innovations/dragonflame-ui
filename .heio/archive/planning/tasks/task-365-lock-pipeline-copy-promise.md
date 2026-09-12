@@ -2,14 +2,14 @@
 id: "task-365-lock-pipeline-copy-promise"
 title: "Lock pipeline-copy promise"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by: []
 sprint: "mobile-after-desktop"
 slice: "slice-364-pipeline-copy"
 tags: []
 created_at: "2026-09-12T07:25:41Z"
-updated_at: "2026-09-12T07:25:41Z"
+updated_at: "2026-09-12T10:06:34Z"
 ---
 
 # Lock pipeline-copy promise

@@ -8,7 +8,7 @@ domain: ui-framework
 area: talk-and-measure
 tags: [contract]
 created_at: "2026-09-11"
-updated_at: "2026-09-11"
+updated_at: "2026-09-12"
 ---
 
 # Talk and measure contract
@@ -25,6 +25,8 @@ Purpose: [[purpose]]. Tests: [[test]]. A promise with a `test:` pointer is locke
   test: SemanticsNode dumps with toStringDeep
 - `talk-and-measure.tree:forbid-aria-only`: ARIA-only DOM is not the native a11y model.
   test: SemanticsNode dumps with toStringDeep
+- `talk-and-measure.tree:pipeline-copy`: A semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers.
+  test: a semantics tree is copied as architecture beside the render tree, with a gesture arena and vsync tickers
 - `talk-and-measure.embedder:owns-plumbing`: The embedder owns accessibility plumbing. OS a11y class lists stay unnamed.
 - `talk-and-measure.metrics:measure-text`: The per-host metrics seam is `measureText`. Sizes may disagree across DOM, UIKit, and the engine. CSS is not iOS layout.
   test: measureText is per-host and loadFont is not on the UI thread
