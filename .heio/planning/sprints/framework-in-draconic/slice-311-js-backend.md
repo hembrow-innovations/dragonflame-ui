@@ -26,7 +26,7 @@ None.
 
 ## Non-goals
 
-A public compile API. Implementing the compiler here. Copying JS emit. Emitting TypeScript. Forking IR. Naming the browser API set. Freezing Browser APIs, Compile-time split, Not RN-but-bytecode, No eval, or Phase 0 assumed. Restaging `js-backend.eval:no-eval-host`, `js-backend.split:no-native-stubs`, or `js-backend.emit:no-emit-here`. Restaging [[slice-283-draconic-framework-source]]. Restaging [[purpose-absence]] TypeScript, IR-fork, or bytecode-VM filename oracles. Pointing this slice CHECK at `tests/framework-source/sibling-compile.test.mjs`. JSX.
+A public compile API. Implementing the compiler here. Copying JS emit. Emitting TypeScript. Forking IR. Naming the browser API set. Freezing Browser APIs, Compile-time split, Not RN-but-bytecode, No eval, or Phase 0 assumed. Restaging `js-backend.eval:no-eval-host`, `js-backend.split:no-native-stubs`, or `js-backend.emit:no-emit-here`. Restaging [[slice-283-draconic-framework-source]]. Restaging [[purpose-absence]] TypeScript, IR-fork, or bytecode-VM filename oracles. Pointing this slice CHECK at `tests/framework-source/path-compile.test.mjs`. JSX.
 
 ## Oracle checklist
 

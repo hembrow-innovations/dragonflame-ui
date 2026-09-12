@@ -2,6 +2,8 @@
 
 One-liners of what landed. Newest first.
 
+- **ticket-252-framework-not-draconic**: closed; first public export authored in Draconic; PATH `draconic` proves `src/leaves/view.drac`; package barrel stays JS until emit preserves `export`; slice-283 met.
+- **task-285-red-green-framework-source**: archived red-green framework source; `view` authored in Draconic; PATH `draconic check` and `draconic build --target js` prove it; O1 `tests/framework-source/draconic-authored.test.mjs` pass, O2 `tests/framework-source/path-compile.test.mjs` pass.
 - **task-370-red-green-leaf-adapter**: archived red-green leaf adapter; only the leaf adapter knows DOM versus UIView versus engine draw lists; no public HostConfig or Host; O1 `tests/leaf-kit/config-at-leaves.test.mjs` pass.
 - **task-369-spec-leaf-adapter**: archived leaf-kit spec ladder config-at-leaves promise; only the leaf adapter knows DOM versus UIView versus engine draw lists; O1 `tests/leaf-kit/config-at-leaves.test.mjs` named.
 - **task-366-red-green-pipeline-copy-peers**: archived red-green pipeline-copy peers; SemanticsNode, GestureArena, and Clock are Framework library peers beside the render tree; a11y is not skipped until after store packaging; O1 `tests/talk-and-measure/pipeline-copy-peers.test.mjs` pass.

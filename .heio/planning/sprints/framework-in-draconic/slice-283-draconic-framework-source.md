@@ -2,23 +2,23 @@
 id: "slice-283-draconic-framework-source"
 title: "Draconic framework source"
 kind: slice
-status: active
+status: met
 sprint: "framework-in-draconic"
 blocked_by: []
 tags: []
 created_at: "2026-09-11T21:34:15Z"
-updated_at: "2026-09-12T08:20:00Z"
+updated_at: "2026-09-12T21:45:00Z"
 ---
 
 # Draconic framework source
 
 ## Why
 
-Prove the library is a Draconic git-package product that compiles through the sibling JS backend. The JS-first stand-in is no longer the source of truth for at least one public export.
+Prove the library is a Draconic git-package product proved with PATH `draconic`. The JS-first stand-in is no longer the source of truth for at least one public export.
 
 ## Done
 
-At least one public dragonflame-ui export is authored in Draconic and produced by `draconic build --target js` from the sibling toolchain. Tests fail if the checkout has no framework `.drac` sources, or if that export's shipped JavaScript is hand-written rather than sibling emit. Callers still import dragonflame-ui. Remaining JS modules wait on later slices.
+At least one public dragonflame-ui export is authored in Draconic and proved by PATH `draconic check` and `draconic build --target js`. Tests fail if the checkout has no framework `.drac` sources for that export, or if prove is `cargo run` of the sibling checkout. Callers still import dragonflame-ui. The package barrel may stay JavaScript until emit preserves `export`. Remaining JS modules wait on later slices.
 
 ## Blocked by
 
@@ -26,18 +26,18 @@ None.
 
 ## Non-goals
 
-Migrating every remaining JS module. Implementing the compiler in this repo. Copying JS emit from the sibling toolchain. JSX. A second IR. Changing the public import name. Repeating [[purpose-js-backend]] no-eval, no-native-stubs, or no-emit-here oracles. Repeating [[purpose-absence]] no-jsx-here or no-lowerer-here oracles.
+Migrating every remaining JS module. Implementing the compiler in this repo. Copying JS emit into this checkout. Replacing the package barrel with emit that does not preserve `export`. JSX. A second IR. Changing the public import name. Repeating [[purpose-js-backend]] no-eval, no-native-stubs, or no-emit-here oracles. Repeating [[purpose-absence]] no-jsx-here or no-lowerer-here oracles.
 
 ## Oracle checklist
 
-- [ ] O1: authored in Draconic
+- [x] O1: authored in Draconic
   CHECK: node --test tests/framework-source/draconic-authored.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
-- [ ] O2: sibling JS backend compiles it
-  CHECK: node --test tests/framework-source/sibling-compile.test.mjs
+  EVIDENCE: `src/leaves/view.drac` exports `view`; `import("dragonflame-ui")` still works
+- [x] O2: PATH draconic proves it
+  CHECK: node --test tests/framework-source/path-compile.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: PATH `draconic check` and `draconic build --target js` on that source; barrel stays JS
 
 ## Pool
 

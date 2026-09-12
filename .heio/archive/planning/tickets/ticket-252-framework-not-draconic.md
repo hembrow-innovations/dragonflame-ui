@@ -2,12 +2,12 @@
 id: "ticket-252-framework-not-draconic"
 title: "Framework source is not Draconic"
 kind: ticket
-status: promoted
+status: closed
 ticket_type: observation
 blocked_by: []
 tags: []
 created_at: "2026-09-11T06:43:12Z"
-updated_at: "2026-09-11T21:34:15Z"
+updated_at: "2026-09-12T21:45:00Z"
 ---
 
 # Framework source is not Draconic
@@ -22,7 +22,7 @@ This slice → [[slice-283-draconic-framework-source]] in sprint `framework-in-d
 
 ## Notes
 
-Facts only. [[contract-js-backend]] locks `js-backend.emit:no-emit-here`: this repo does not copy JS emit from the sibling toolchain. Remaining JS modules wait on later slices after the first public export compiles. Do not implement the compiler here.
+Facts only. [[contract-js-backend]] locks `js-backend.emit:no-emit-here`: this repo does not copy JS emit from the language toolchain. Remaining JS modules wait on later slices after the first public export. Do not implement the compiler here. Prove tool is PATH `draconic`, not `cargo run` of the sibling checkout.
 
 ## Comments
 
@@ -33,8 +33,9 @@ Facts only. [[contract-js-backend]] locks `js-backend.emit:no-emit-here`: this r
 **What we've established so far:**
 
 - Counterpart asked to unpark and promote. Framework library is Draconic per [[intent]].
-- First cut is one public export authored in Draconic, compiled by sibling `draconic build --target js`.
+- First cut is one public export authored in Draconic, proved by PATH `draconic check` and `draconic build --target js`.
 - Spec task [[task-284-spec-framework-source]], then [[task-285-red-green-framework-source]].
+- Slice-283 is met. `src/leaves/view.drac` is the tracer. The package barrel stays JavaScript until emit preserves `export`.
 
 **What we still need from you:**
 
