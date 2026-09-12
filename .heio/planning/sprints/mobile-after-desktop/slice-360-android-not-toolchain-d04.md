@@ -2,15 +2,14 @@
 id: "slice-360-android-not-toolchain-d04"
 title: "Android not toolchain D04"
 kind: slice
-status: frozen
+status: active
 sprint: "mobile-after-desktop"
 blocked_by:
   - "slice-76-desktop-vsync-window"
 tags: []
 created_at: "2026-09-12T07:06:39Z"
-updated_at: "2026-09-12T07:06:39Z"
+updated_at: "2026-09-12T12:15:00Z"
 ---
-
 # Android not toolchain D04
 
 ## Why
@@ -31,10 +30,10 @@ Restaging [[slice-80-ios-counter]], [[slice-81-android-counter]], [[slice-82-sto
 
 ## Oracle checklist
 
-- [ ] O1: these triples are this product's mobile packaging, not toolchain D04
+- [x] O1: these triples are this product's mobile packaging, not toolchain D04
   CHECK: node --test tests/android-embedder/not-toolchain-triples.test.mjs
   EXPECT: pass
-  EVIDENCE: pending
+  EVIDENCE: pass 1 fail 0
 
 ## Pool
 

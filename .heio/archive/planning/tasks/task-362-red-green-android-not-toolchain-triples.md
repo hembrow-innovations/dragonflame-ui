@@ -2,7 +2,7 @@
 id: "task-362-red-green-android-not-toolchain-triples"
 title: "Red-green Android not-toolchain triples"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-361-lock-android-not-toolchain-promise"
@@ -10,9 +10,8 @@ sprint: "mobile-after-desktop"
 slice: "slice-360-android-not-toolchain-d04"
 tags: []
 created_at: "2026-09-12T07:06:39Z"
-updated_at: "2026-09-12T07:06:39Z"
+updated_at: "2026-09-12T12:15:00Z"
 ---
-
 # Red-green Android not-toolchain triples
 
 ## Blocked by
@@ -43,3 +42,7 @@ scope: tests/android-embedder/ docs/specs/ui-framework/android-embedder/ hosts/a
 - [[slice-360-android-not-toolchain-d04]]
 - [[task-361-lock-android-not-toolchain-promise]]
 - [[rounds-359-freeze-android-not-toolchain-d04]]
+
+## Gauntlet
+
+- **round 1**: `node --test tests/android-embedder/not-toolchain-triples.test.mjs`; win; 1 pass 0 fail
