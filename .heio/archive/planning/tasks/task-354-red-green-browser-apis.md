@@ -2,7 +2,7 @@
 id: "task-354-red-green-browser-apis"
 title: "Red-green Browser APIs"
 kind: task
-status: ready
+status: completed
 mode: afk
 blocked_by:
   - "task-353-spec-browser-apis"
@@ -10,7 +10,7 @@ sprint: "framework-in-draconic"
 slice: "slice-352-browser-apis"
 tags: []
 created_at: "2026-09-12T06:33:10Z"
-updated_at: "2026-09-12T06:33:10Z"
+updated_at: "2026-09-12T09:32:00Z"
 ---
 
 # Red-green Browser APIs
@@ -65,10 +65,14 @@ The oracle command passes. Named test: that package uses browser APIs. The sourc
 - No public catalog, BrowserAPI type, or compile helper
 
 **Acceptance criteria:**
-- [ ] `node --test tests/js-backend/browser-apis.test.mjs` passes
-- [ ] The named test owns the Browser APIs prove, not frontend-ir-js, web-path, or portable-program oracles
-- [ ] No public catalog
-- [ ] Honesty and path tests still pass
+- [x] `node --test tests/js-backend/browser-apis.test.mjs` passes
+- [x] The named test owns the Browser APIs prove, not frontend-ir-js, web-path, or portable-program oracles
+- [x] No public catalog
+- [x] Honesty and path tests still pass
+
+## Gauntlet
+
+- **round 1**: `node --test tests/js-backend/browser-apis.test.mjs` win. Named test locks `js-backend.browser:uses-apis` without a catalog, BrowserAPI type, compile helper, or named global list.
 
 **Out of scope:**
 - Pointing this CHECK at `tests/js-backend/frontend-ir-js.test.mjs`
