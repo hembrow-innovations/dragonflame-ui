@@ -6,4 +6,4 @@ Web compiles to ordinary JavaScript, not WASM. Native is LLVM binaries with no W
 
 This repo is the dragonflame-ui library product. Folder, package, and repo match. Import `dragonflame-ui` from this checkout.
 
-Committed product truth will live under `docs/overview/`. Day-to-day planning lives under `.heio/planning/`.
+This product is a submodule of [dragonflame-workbench](https://github.com/hembrow-innovations/dragonflame-workbench). Committed product truth lives in `dragonflame-documentation`. Day-to-day planning lives in `dragonflame-planning`.
